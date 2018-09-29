@@ -1,0 +1,13 @@
+div.form {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    height: 25px;
+    border: 4px solid black;
+    font-size: 50px;
+}
