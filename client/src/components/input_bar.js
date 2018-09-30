@@ -4,7 +4,7 @@ import './input_bar.css';
 class InputBar extends Component {
     render() {
         return (
-          <div className="form">
+          <div className="search-form">
             <input className="search-bar" type="text"/>
           </div>
         )
