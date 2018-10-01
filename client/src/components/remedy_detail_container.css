@@ -1,0 +1,84 @@
+.condition-detail-container {
+    width: 100%;
+    height: 84%;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.condition-detail-group, .condition-results-container {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.condition-detail-header, .other-treatment-result-total-message {
+    font-size: 25px;
+    color: white;
+    width: 70%;
+    height: 15%;
+    margin-bottom: 7%;
+}
+
+.condition-detail-header {
+    color: #DCF0D2;
+}
+
+.condition-detail-description {
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.detail-paragraph {
+    font-size: 15px;
+    padding-left: 10%;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    overflow:scroll
+}
+
+.other-treatment-result-total-message {
+    background-color: #DEC2DB;
+    opacity: 0.8;
+}
+
+.end-of-result-message {
+    font-size: 20px;
+    color: white;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+
+.condition-detail-header > span, .other-treatment-result-total-message > span {
+    padding-left: 10%;
+}
+
+.remedy-results-group {
+    flex-direction: column;
+    overflow:scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.condition-name {
+    padding-left: 10%;
+    font-size: 20px;
+    color: white;
+}
+
+.condition-name-container {
+    width: 100%;
+    height: 10%;
+    border-radius: 50px;
+    background-color: #DEC2DB;
+    opacity: 0.8;
+    margin-bottom: 2%;
+}
