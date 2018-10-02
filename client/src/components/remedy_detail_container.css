@@ -1,19 +1,19 @@
 .condition-detail-container {
     width: 100%;
-    height: 84%;
+    height: 100%;
     flex-wrap: wrap;
     display: flex;
 }
 
-.condition-detail-group, .condition-results-container {
+.remedy-detail-group, .condition-results-container {
     width: 100%;
-    height: 45%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.condition-detail-header, .other-treatment-result-total-message {
+.remedy-detail-header, .other-treatment-result-total-message {
     font-size: 25px;
     color: white;
     width: 70%;
@@ -21,11 +21,11 @@
     margin-bottom: 7%;
 }
 
-.condition-detail-header {
+.remedy-detail-header {
     color: #DCF0D2;
 }
 
-.condition-detail-description {
+.remedy-detail-description {
     width: 70%;
     height: 80%;
     background-color: white;
@@ -56,7 +56,7 @@
     height: 10%;
 }
 
-.condition-detail-header > span, .other-treatment-result-total-message > span {
+.remedy-detail-header > span, .other-treatment-result-total-message > span {
     padding-left: 10%;
 }
 
