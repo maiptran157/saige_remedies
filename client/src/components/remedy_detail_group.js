@@ -3,11 +3,11 @@ import './remedy_detail_container.css';
 
 const RemedyDetailGroup = (props) => {
     return (
-        <div className="condition-detail-group">
-            <h3 className="condition-detail-header">
+        <div className="remedy-detail-group">
+            <h3 className="remedy-detail-header">
                 <span>Lorem Ipsum</span>
             </h3>
-            <div className="condition-detail-description">
+            <div className="remedy-detail-description">
                 <p className="detail-paragraph">
                     1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend
                     sodales dolor varius ultrices. Sed vulputate fringilla arcu vel elementum.
