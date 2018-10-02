@@ -1,37 +1,13 @@
 import React, { Component } from 'react';
 import './condition_container.css';
+import AilmentContainer from './ailment_container';
 
 class ConditionsContainer extends Component {
     render() {
         return (
+
             <div className="condition-container">
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
-                <div className="ailment">
-                    <span className="condition-name">Lorem Ipsum</span>
-                </div>
+                <AilmentContainer />
             </div>
 
         )
