@@ -1,5 +1,6 @@
 import React from 'react';
 import './condition_detail_container.css';
+import dummyData from '../dummy_data/data';
 
 const ConditionDetailGroup = (props) => {
     return (
