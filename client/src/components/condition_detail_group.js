@@ -1,9 +1,14 @@
 import React from 'react';
 import './condition_detail_container.css';
+// import thumbsUp from '../images/symbol-thumbs-up.jpg';
 
 const style = {
     fontWeight: 'bold'
 }
+
+// const thumbsUpBackground = {
+//     backgroundImage: `url(${thumbsUp})`
+// }
 
 const ConditionDetailGroup = (props) => {
     // console.log("props of ConditionDetailGroup:", props);
@@ -46,9 +51,10 @@ const ConditionDetailGroup = (props) => {
     const description_detail = description_presentation();
     return (
         <div className="condition-detail-group">
-            <h3 className="condition-detail-header">
-                <span>{name}</span>
-            </h3>
+            <div className="condition-detail-header">
+                <h3 className="condition-detail-name">{name}</h3>
+                {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
+            </div>
             <div className="condition-detail-description">
                 {description_detail}
             </div>
