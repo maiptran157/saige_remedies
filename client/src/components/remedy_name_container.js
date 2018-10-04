@@ -3,7 +3,7 @@ import './condition_detail_container.css';
 import { Link } from 'react-router-dom';
 
 export default props => {
-    console.log(props.name);
+    console.log(props);
     return (
         <div className="remedy-name-container">
             <Link to={`/remedy/${props._id}`} className="remedy-name">{props.name}</Link>
