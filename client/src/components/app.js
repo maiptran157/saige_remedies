@@ -2,6 +2,7 @@ import React from 'react';
 import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
+import UmbrellaConditions from './umbrella_conditions';
 import { Route } from 'react-router-dom';
 import './app.css';
 import backgroundImg from '../images/background_image_v1.jpg'
@@ -13,9 +14,10 @@ const style = {
 
 const App = () => (
     <div className="container" style={style}>
-        <Route path="/" component={ConditionContainer} />
+        {/* <UmbrellaConditions/> */}
+        <Route path="/" component={ConditionContainer} /> 
         <Route path="" component={ConditionDetailContainer} />
-        <RemedyDetailContainer />
+        {/* <RemedyDetailContainer />  */}
     </div>
 );
 
