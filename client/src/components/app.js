@@ -14,10 +14,12 @@ const style = {
 
 const App = () => (
     <div className="container" style={style}>
+
         <UmbrellaConditions path="/" exact component={UmbrellaConditions}/>
         <Route path="/conditions" component={ConditionContainer} /> 
-        {/* <Route path="" component={ConditionDetailContainer} /> */}
-        <RemedyDetailContainer />  
+        <Route path="/condition/:conditionId" component={ConditionDetailContainer} />
+        <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+
     </div>
 );
 

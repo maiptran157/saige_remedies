@@ -5,20 +5,35 @@
     display: flex;
 }
 
-.condition-detail-group, .remedy-results-container {
+.condition-detail-group {
     width: 100%;
     height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
-.condition-detail-header, .remedy-result-total-message {
-    font-size: 25px;
+.remedy-results-container {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.condition-detail-header {
+    font-size: 4.5vh;
+    width: 85%;
+    height: 35%;
+}
+
+.remedy-result-total-message {
+    font-size: 4vh;
     color: white;
-    width: 70%;
+    width: 85%;
     height: 15%;
-    margin-bottom: 7%;
 }
 
 .condition-detail-header {
@@ -26,15 +41,14 @@
 }
 
 .condition-detail-description {
-    width: 70%;
-    height: 80%;
+    width: 85%;
+    height: 78%;
     background-color: white;
     opacity: 0.8;
-    margin-bottom: 30px;
 }
 
 .detail-paragraph {
-    font-size: 15px;
+    font-size: 3vh;
     padding-left: 10%;
     width: 80%;
     height: 80%;
@@ -43,6 +57,8 @@
 }
 
 .remedy-result-total-message {
+    display: flex;
+    align-items: center;
     background-color: #DEC2DB;
     opacity: 0.8;
 }
@@ -56,11 +72,13 @@
     height: 10%;
 }
 
-.condition-detail-header > span, .remedy-result-total-message > span {
+.condition-detail-name, .remedy-result-total-message > span {
     padding-left: 10%;
 }
 
 .remedy-results-group {
+    width: 85%;
+    height: 75%;
     flex-direction: column;
     overflow:scroll;
     display: flex;
@@ -70,13 +88,13 @@
 
 .remedy-name {
     padding-left: 10%;
-    font-size: 20px;
+    font-size: 7.5vw;
     color: white;
 }
 
 .remedy-name-container {
-    width: 100%;
-    height: 10%;
+    min-width: 100%;
+    min-height: 40%;
     border-radius: 50px;
     background-color: #DEC2DB;
     opacity: 0.8;
