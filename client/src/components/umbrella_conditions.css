@@ -1,27 +1,16 @@
-.umbrella {
+.categories-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
 }
 
-.umbrella-conditions {
+.categories-content {
     width: 100%;
-    height: 85%;
+    height: 84%;
+    /* background-color: red; */
     display: flex;
-    flex-direction: column;
-} 
-
-.umbrella-category {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    flex-direction: row;
-    border: 2px solid white;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: scroll;
 }
-
-.category-name {
-    border: 2px solid white;
-    width: 50%;
-    height: 100%;
-} 
