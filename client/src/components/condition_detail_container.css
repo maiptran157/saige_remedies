@@ -78,6 +78,7 @@
 
 .remedy-results-group {
     width: 85%;
+    height: 75%;
     flex-direction: column;
     overflow:scroll;
     display: flex;

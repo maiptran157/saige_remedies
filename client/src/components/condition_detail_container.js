@@ -3,7 +3,7 @@ import './condition_detail_container.css';
 import ConditionDetailGroup from './condition_detail_group';
 import RemedyResultsContainer from './remedy_result_container';
 import Header from './header';
-import dummyData from '../dummy_data/data';
+import dummyData from '../dummy_data/data_for_condition_detail';
 
 const ConditionDetailContainer = (props) => {
     // console.log(dummyData);

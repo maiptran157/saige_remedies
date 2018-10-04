@@ -8,7 +8,15 @@ const RemedyResultsContainer = (props) => {
     const { treatment } = props;
     let numberOfResults = treatment.length;
     let remedyName = treatment.map((treatmentInfo, index) => {
-        return <RemedyNameContainer key={index} remedyName={treatmentInfo.Herb} />
+        console.log("treatmentInfo:", treatmentInfo)
+        return <RemedyNameContainer
+            key={index}
+            _id={treatmentInfo._id}
+            name={treatmentInfo.Herb}
+        // remedy={treatmentInfo.Remedy}
+        // caution={treatmentInfo.Caution}
+        // note={treatmentInfo.Note}
+        />
     })
     return (
         <div className="remedy-results-container">
@@ -23,7 +31,7 @@ const RemedyResultsContainer = (props) => {
                     <EndingMessage />
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
