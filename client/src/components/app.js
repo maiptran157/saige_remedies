@@ -13,9 +13,9 @@ const style = {
 
 const App = () => (
     <div className="container" style={style}>
-        {/* <Route exact path="/" component={ConditionContainer} /> */}
-        <Route path="" component={ConditionDetailContainer} />
-        {/* <RemedyDetailContainer /> */}
+        <Route exact path="/" component={ConditionContainer} />
+        <Route path="/condition/:conditionId" component={ConditionDetailContainer} />
+        <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
     </div>
 );
 
