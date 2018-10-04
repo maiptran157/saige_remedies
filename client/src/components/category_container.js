@@ -1,9 +1,15 @@
 import React from 'react';
 import './category_container.css';
+import { Link } from 'react-router-dom';
+import dummyData from '../dummy_data/data';
 
 export default props => {
-    console.log(props.conditionName);
+    console.log('Condition Name:', props.name);
+    console.log('Condition Category:', props.category);
     return (
-        <div className="category-name">{props.conditionName}</div>
+        <Link to={`/conditions/${props.category}`} className="category-name">
+            <div>{props.category}</div>
+        </Link>
+        
     )
 }

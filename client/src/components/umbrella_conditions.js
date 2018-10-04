@@ -11,9 +11,9 @@ class UmbrellaConditions extends Component {
 
     render() {
         const { data } = this.state;
-        console.log(data);
+        // console.log(data);
         const conditions = data.map( (condition, index) => {
-            return <CategoryContainer index={index} key={condition._id} conditionName={condition.name}/>
+            return <CategoryContainer name={condition.name} key={condition._id} category={condition.category}/>
         });
 
         return (
@@ -23,7 +23,6 @@ class UmbrellaConditions extends Component {
                     {conditions}
                 </div>
             </div>
-            
         )
     }
 }
