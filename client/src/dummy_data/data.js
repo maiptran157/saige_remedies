@@ -49,7 +49,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "004",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -65,7 +65,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "005",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -81,7 +81,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "006",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -97,7 +97,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "007",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -113,7 +113,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "008",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -129,7 +129,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "009",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",
@@ -145,7 +145,7 @@ export default [
             }]
     },
     {
-        _id: "003",
+        _id: "010",
         name: "Eczema",
         category: "allergies",
         description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods.The allergens trigger a reaction in those who have a built -in or natural sensitivity.",

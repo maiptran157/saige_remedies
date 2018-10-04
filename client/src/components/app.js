@@ -15,7 +15,7 @@ const style = {
 const App = () => (
     <div className="container" style={style}>
 
-        <UmbrellaConditions path="/" exact component={UmbrellaConditions}/>
+        <Route path="/" exact component={UmbrellaConditions}/>
         <Route path="/conditions" component={ConditionContainer} /> 
         <Route path="/condition/:conditionId" component={ConditionDetailContainer} />
         <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
