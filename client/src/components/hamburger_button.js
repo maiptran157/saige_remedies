@@ -1,5 +1,5 @@
 import React from 'react';
-import './hamburger_button.css';
+import './hamburger_button.scss';
 
 export default props => {
     return (
