@@ -1,7 +1,7 @@
-import React, { Component }from 'react';
-import dummyData from '../dummy_data/data';
-import Header from './header';
-import CategoryContainer from './category_container';
+import React, { Component } from 'react';
+import dummyData from '../../dummy_data/data';
+import Header from '../header';
+import CategoryContainer from '../category_container';
 import './umbrella_conditions.css';
 
 class UmbrellaConditions extends Component {
@@ -13,14 +13,14 @@ class UmbrellaConditions extends Component {
         const { data } = this.state;
 
         // console.log(data);
-        const conditions = data.map( (condition, index) => {
-            return <CategoryContainer name={condition.name} key={condition._id} category={condition.category}/>
+        const conditions = data.map((condition, index) => {
+            return <CategoryContainer name={condition.name} key={condition._id} category={condition.category} />
 
         });
 
         return (
             <div className="categories-container">
-                <Header/>    
+                <Header />
                 <div className="categories-content">
                     {conditions}
                 </div>

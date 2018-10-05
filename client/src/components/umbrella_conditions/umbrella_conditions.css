@@ -8,7 +8,6 @@
 .categories-content {
     width: 100%;
     height: 84%;
-    /* background-color: red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

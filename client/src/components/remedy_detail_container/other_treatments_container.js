@@ -1,7 +1,6 @@
 import React from 'react';
 import './remedy_detail_container.css';
 import OtherTreatmentNameContainer from './other_treatment_name_container';
-import EndingMessage from './end_of_result_message';
 
 const OtherTreatmentsContainer = (props) => {
     return (
@@ -14,7 +13,7 @@ const OtherTreatmentsContainer = (props) => {
             <div className="remedy-results-group">
                 <div className="remedy-results">
                     <OtherTreatmentNameContainer />
-                    <EndingMessage />
+                    <div className="end-of-result-message">End of results</div>
                 </div>
             </div>
         </div>

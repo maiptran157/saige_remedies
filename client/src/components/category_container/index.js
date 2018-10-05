@@ -1,7 +1,6 @@
 import React from 'react';
 import './category_container.css';
 import { Link } from 'react-router-dom';
-import dummyData from '../dummy_data/data';
 
 export default props => {
     console.log('Condition Name:', props.name);
