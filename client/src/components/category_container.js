@@ -10,6 +10,5 @@ export default props => {
         <Link to={`/conditions/${props.category}`} className="category-name">
             <div>{props.category}</div>
         </Link>
-        
     )
 }

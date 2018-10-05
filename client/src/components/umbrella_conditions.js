@@ -11,9 +11,11 @@ class UmbrellaConditions extends Component {
 
     render() {
         const { data } = this.state;
+
         // console.log(data);
         const conditions = data.map( (condition, index) => {
             return <CategoryContainer name={condition.name} key={condition._id} category={condition.category}/>
+
         });
 
         return (
