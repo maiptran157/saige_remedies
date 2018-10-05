@@ -1,7 +1,6 @@
 import React from 'react';
 import './condition_detail_container.css';
 import RemedyNameContainer from './remedy_name_container';
-import EndingMessage from './end_of_result_message';
 
 const RemedyResultsContainer = (props) => {
     // console.log("props for RemedyResultsContainer:", props);
@@ -13,9 +12,6 @@ const RemedyResultsContainer = (props) => {
             key={index}
             _id={treatmentInfo._id}
             name={treatmentInfo.Herb}
-        // remedy={treatmentInfo.Remedy}
-        // caution={treatmentInfo.Caution}
-        // note={treatmentInfo.Note}
         />
     })
     return (
@@ -28,7 +24,7 @@ const RemedyResultsContainer = (props) => {
             <div className="remedy-results-group">
                 <div className="remedy-results">
                     {remedyName}
-                    <EndingMessage />
+                    <div className="end-of-result-message">End of results</div>
                 </div>
             </div>
         </div >
