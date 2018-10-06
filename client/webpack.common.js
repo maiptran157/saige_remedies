@@ -4,8 +4,8 @@ const webpack = require('webpack');
 module.exports = {
     output: {
         filename: 'bundle.js',
-        path: resolve(__dirname, 'dist'),
-        publicPath: '/'
+        path: resolve(__dirname, 'public', 'dist'),
+        publicPath: '/dist/'
     },
     context: resolve(__dirname, 'src'),
     module: {
@@ -16,12 +16,8 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
