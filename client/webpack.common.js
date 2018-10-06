@@ -1,5 +1,8 @@
 const { resolve } = require('path');
-const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const env = process.env.NODE_ENV;
 
 module.exports = {
     output: {
@@ -17,7 +20,23 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: env === 'production'
+                    ? ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: ['css-loader']
+                    })
+                    : ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    env !== 'production'
+                        ? 'style-loader'
+                        : MiniCssExtractPlugin.loader,
+                    'css-loader?minimize',
+                    'resolve-url-loader',
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
