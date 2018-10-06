@@ -1,53 +1,25 @@
-// export default {
-//     Name: "Allergies",
-
-//     Description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
-
-//     Treatment: [
-
-//         {
-//             Herb: ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
-
-//             Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
-//         },
-
-//         {
-//             Herb: ["Baical skullcap(Scutellaria baicalensis) "],
-
-//             Remedy: "Make a decoction from the herb and take 11/4 cups (300 ml) a day."
-//         }]
-// }
-
 export default {
     _id: "12347",
 
-    Name: "Varicose Veins",
+    Name: "Allergies",
 
-    Description: "Varicose veins result from a weakness, or increased pressure, in the veins. This causes the thin supporting walls of the veins to bulge out, resulting in distended veins and the pooling of blood.",
-
-    Self_help: "Home treatment should aim to relieve pressure on the veins. Varicose vein sufferers should avoid tight clothing around the waist or legs.",
-
-    Caution: "Do not massage or rub varicose veins.",
+    Description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
 
     Treatment: [
 
         {
             _id: "12345",
 
-            Herb: "Witch hazel, Calendula",
+            Herb: ["Nettle (Urtica dioica) and Elderflower (Sambucus nigra)"],
 
-            Remedy: "Gently apply distilled witch hazel or witch hazel cream or ointment to the affected area 1–2 times a day, or combine equal parts of the creams of both herbs and apply 1–2 times a day.",
-
-            Note: "This remedy is particularly effective on painful varicose veins."
+            Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
         },
 
         {
             _id: "12346",
 
-            Herb: "Yarrow",
+            Herb: ["Baical skullcap(Scutellaria baicalensis) "],
 
-            Remedy: "(External) Wash varicose veins in a cool infusion, or apply the ointment 1–2 times a day.   (Internal) Make an infusion and leave for 10 minutes. Take 3/4–11/4 cups (150–300 ml) a day for up to 10 weeks.",
-
-            Caution: "Do not take yarrow during pregnancy."
+            Remedy: "Make a decoction from the herb and take 11/4 cups (300 ml) a day."
         }]
 }

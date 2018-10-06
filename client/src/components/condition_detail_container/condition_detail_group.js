@@ -52,7 +52,7 @@ const ConditionDetailGroup = (props) => {
     return (
         <div className="condition-detail-group">
             <div className="condition-detail-header">
-                <h3 className="condition-detail-name">{name}</h3>
+                <h5 className="condition-detail-name">Ailment: {name}</h5>
                 {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
             </div>
             <div className="condition-detail-description">
