@@ -45,8 +45,7 @@ const RemedyDetailGroup = (props) => {
     const fullDesc = displayRemedyDesc();
     return (
         <div className="remedy-detail-group">
-            <h3 className="remedy-detail-header">
-                <span>{name}</span>
+            <h3 className="remedy-detail-header">Ingredient:<span>{name}</span>
             </h3>
             <div className="remedy-detail-description">
                 {fullDesc}
