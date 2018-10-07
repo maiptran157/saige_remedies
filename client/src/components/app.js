@@ -16,8 +16,8 @@ const App = () => (
     <div className="container" style={style}>
 
         <Route path="/" exact component={UmbrellaConditions} />
-        <Route path="/conditions/:category" component={ConditionContainer} />
-        <Route path="/condition/:conditionId" component={ConditionDetailContainer} />
+        <Route path="/conditions/:category" exact component={ConditionContainer} />
+        <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
         <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
 
     </div>

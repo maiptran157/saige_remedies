@@ -9,20 +9,15 @@ class ConditionsContainer extends Component {
 
     render() {
         const { category } = this.props.match.params;
-        console.log("Category:", category)
+        // console.log("Category:", category)
         const filteredConditions = dummyData.map((item, index) => {
-            console.log('Dummy Data Category:', item['category']);
-
+            // console.log('Dummy Data Category:', item['category']);
             if (category === item['category']) {
                 console.log('Condition Name:', item.name);
-                return <AilmentContainer key={item._id} name={item.name} />
+                return <AilmentContainer key={item._id} _id={item._id} name={item.name} category={item.category} />
             }
 
         });
-
-        // const listOfConditions = dummyData.map( (condition, index) => {
-        //     return <AilmentContainer key={condition._id} name={filteredConditions}/>
-        // });
 
         return (
             <div className="condition-container">
