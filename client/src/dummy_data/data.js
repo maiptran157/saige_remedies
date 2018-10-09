@@ -1,371 +1,138 @@
 
 export default [
-    {
-        _id: "001",
-        name: "Allergy",
-        category: "Allergies",
-        description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
-        treatment: [
-            {
-                Herb: ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
-                Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
-            },
-            {
-                Herb: ["Baical skullcap (Scutellaria baicalensis)"],
-                Remedy: "Make a decoction from the herb and take 11/4 cups (300 ml) a day."
-            }]
-    },
-
 
     {
-        _id: "002",
-        name: "Hay Fever",
-        category: "Allergies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-        treatment: [
+        name: "Allergies",
+        conditions: [
             {
-                Herb: ["Elderflower (Sambucus nigra)"],
-                Remedy: "Make an infusion and take 11/4–12/3 cups (300–450 ml) a day. Take for a few months before, as well as during, the hay fever season.."
-            }]
+                _id: '001',
+                name: 'Allergy'
+            },
+            {
+                _id: '002',
+                name: 'Hay Fever'
+            },
+            {
+                _id: '003',
+                name: 'Eczema'
+            },
+            {
+                _id: "004",
+                name: "Wheezing",
+            },
+            {
+                _id: "005",
+                name: "Shortness of Breath",
+            },
+            {
+                _id: "006",
+                name: "Breathing Difficulty",
+            },
+            {
+                _id: "007",
+                name: "Tight Chest",
+            }
+        ],
+        img: '../../assets/images/category/allergies.png'
     },
-
-
     {
-        _id: "003",
-        name: "Eczema",
-        category: "Allergies",
-        description: "Characterized by red, inflamed skin, eczema causes irritation, flaking, scaling, and tiny blisters. Although it is often the result of an allergic reaction to certain substances, eczema can also be inherited, result from prolonged contact with an irritant, or it may simply appear for an unknown reason. It is best to consult a professional practitioner as eczema is difficult to self-treat. However, the following remedies, taken for at least a week, can bring relief. Two remedies may be used at once. Chickweed reduces soreness or itchiness, and oats can be used to impart a soothing, emollient effect to bathwater. See also Skin Rashes.",
-        Caution: "If there is no improvement, or if the condition deteriorates, consult a professional practitioner.",
-        treatment: [
+        name: "Circulatory Problems",
+        conditions: [
             {
-                Herb: ["Peppermint (Mentha x piperita)", "Chickweed (Stellaria media)"],
-                Remedy: "Make peppermint lotion by infusing 1 tsp of herb to 3/4 cup (150 ml) of water. Leave for 10 minutes, then strain and cool. Use to wash gently over the affected skin 2–3 times a day.",
-                Option: "Add 2 drops of peppermint oil to 1 tsp of any of the chickweed preparations."
+                _id: '008',
+                name: 'Anemia'
             },
             {
-                Herb: ["Gotu kola (Centella asiatica)"],
-                Remedy: "Dust the affected area with powder 2–3 times a day. Alternatively, mix the powder with enough water to make a thick paste and spread over the affected area 1–2 times a day."
-            }]
+                _id: '009',
+                name: "High Blood Pressure"
+            },
+            {
+                _id: '010',
+                name: 'Arteriosclerosis'
+            },
+            {
+                _id: "011",
+                name: "Palpitations"
+            },
+            {
+                _id: "012",
+                name: "Panic Attacks"
+            },
+            {
+                _id: "013",
+                name: "Poor Circulation"
+            },
+            {
+                _id: "014",
+                name: "Varicose Veins"
+            },
+            {
+                _id: "015",
+                name: "Hemorrhoids"
+            }
+        ],
+        img: '../../assets/images/category/circulatory_problems.png'
     },
-
-
     {
-        _id: "004",
-        name: "Wheezing",
-        category: "Allergies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-        treatment: [
+        name: "Skin Problems",
+        conditions: [
             {
-                Herb: ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
-                Remedy: "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
+                _id: "016", name: "Hives"
             },
             {
-                Herb: ["German chamomile (Chamomilla recutita)"],
-                Remedy: "Make an infusion with 2 heaping tsp of the herb to 3/4 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
-                Option: "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
+                _id: "017", name: "Skin Rashes"
             },
             {
-                Herb: ["Baical skullcap (Scutellaria baicalensis)"],
-                Remedy: "Make a decoction and take up to 11/4 cups (300 ml) a day."
-            }]
+                _id: "018", name: "Burn"
+            },
+            {
+                _id: "019", name: "Healing Wounds"
+            },
+            {
+                _id: "020", name: "Bruises"
+            },
+            {
+                _id: "021", name: "Cold Sores"
+            }
+        ],
+        img: '../../assets/images/category/all.png'
     },
-
-
     {
-        _id: "005",
-        name: "Shortness of Breath",
-        category: "Allergies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-        treatment: [
-            {
-                Herb: ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
-                Remedy: "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
-            },
-            {
-                Herb: ["German chamomile (Chamomilla recutita)"],
-                Remedy: "Make an infusion with 2 heaping tsp of the herb to 3/4 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
-                Option: "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
-            },
-            {
-                Herb: ["Baical skullcap (Scutellaria baicalensis)"],
-                Remedy: "Make a decoction and take up to 11/4 cups (300 ml) a day."
-            }]
+        name: 'Digestive Disorders',
+        img: '../../assets/images/category/digestive_disorders.png'
     },
-
-
     {
-        _id: "006",
-        name: "Breathing Difficulty",
-        category: "Allergies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-        treatment: [
-            {
-                Herb: ["Cramp Bark (Viburnum opulus)"],
-                Remedy: "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
-            }]
+        name: 'Nerve & Stress-Related Problems',
+        img: '../../assets/images/category/nerve_&_stress_related_problems.png'
     },
-
     {
-        _id: "007",
-        name: "Tight Chest",
-        category: "Allergies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-        treatment: [
-            {
-                Herb: ["Cramp bark (Viburnum opulus)"],
-                Remedy: "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
-            }]
+        name: 'Respiratory Tract Problems',
+        img: '../../assets/images/category/respiratory_tract_problems.png'
     },
-
     {
-        _id: "008",
-        name: "Anemia",
-        category: "Circulatory Problems",
-        description: "There are several types of anemia. Iron deficiency anemia, caused by blood loss from a wound or menstrual bleeding, can be countered with herbs. Bitter herbs, such as gentian, improve the absorption of nutrients, and nettle contains plenty of iron. Increase your intake of other green herbs that contain iron.",
-        Caution: "Seek professional advice to determine the type of anemia you have before home treatment.",
-        treatment: [
-            {
-                Herb: ["Gentian (Gentiana lutea)", "wormwood (Artemisia absinthium)"],
-                Remedy: "Take 2–5 drops of either tincture with water, half an hour before meals.",
-                Caution: "Do not take wormwood during pregnancy."
-            },
-            {
-                Herb: ["Chiretta (Swertia chirata)"],
-                Remedy: "Take 5–10 drops of tincture with water 3 times a day before meals."
-            }]
+        name: 'Musculoskeletal Problems',
+        img: '../../assets/images/category/musculoskeletal_problems.png'
     },
-
-
     {
-        _id: "009",
-        name: "High Blood Pressure",
-        category: "Circulatory Problems",
-        description: "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
-        Caution: "Seek professional advice, especially if already taking medication for a circulatory condition.",
-        treatment: [
-            {
-                Herb: ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
-                Remedy: "Take a garlic tablet or eat 1–2 fresh garlic cloves each day. Drink 1/2 cup (125 ml) of beetroot or pomegranate juice once a day.",
-                Note: "These are most effective when used to support a healthy circulation and prevent illness."
-            },
-            {
-                Herb: ["Ginkgo (Ginkgo biloba)"],
-                Remedy: "Take tablets or 1⁄2 tsp of fluid extract with water twice a day for approximately 2–3 months at a time."
-            },
-            {
-                Herb: ["Ginger (Zingiber officinale)"],
-                Remedy: "Grate 1 tsp of fresh ginger into your food each day."
-            }]
+        name: 'Reproductive & Menstrual Problems',
+        img: '../../assets/images/category/reproductive_&_menstrual_problems.png'
     },
-
     {
-        _id: "010", name: "Arteriosclerosis",
-        category: "Circulatory Problems",
-        description: "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
-        Caution: "Seek professional advice, especially if already taking medication for a circulatory condition.",
-        treatment: [
-            {
-                Herb: ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
-                Remedy: "Take a garlic tablet or eat 1–2 fresh garlic cloves each day. Drink 1/2 cup (125 ml) of beetroot or pomegranate juice once a day.",
-                Note: "These are most effective when used to support a healthy circulation and prevent illness."
-            },
-            {
-                Herb: ["Ginkgo (Ginkgo biloba)"],
-                Remedy: "Take tablets or 1⁄2 tsp of fluid extract with water twice a day for approximately 2–3 months at a time."
-            },
-            {
-                Herb: ["Ginger (Zingiber officinale)"],
-                Remedy: "Grate 1 tsp of fresh ginger into your food each day."
-            }]
+        name: 'Infants & Children',
+        img: '../../assets/images/category/infants_&_children.png'
     },
-
-
-    // {
-    //     _id: "011", name: "Palpitations",
-    //     category: "Circulatory Problems",
-    //     description: "Palpitations occur when the heart suddenly beats faster or irregularly. They can result from stress, anxiety, and nervous tension; however, they may also be caused simply by drinking too much caffeine (in tea, coffee, and cola drinks). In rare cases, palpitations indicate a heart problem. They are a key symptom of panic attacks, which are characterized by sudden, acute feelings of fear and anxiety.",
-    //     Caution: "Seek immediate professional advice if palpitations last for several minutes.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Linden (Tilia spp.)"],
-    //             Remedy: "Make an infusion with up to 20 g of linden to 3 cups (750 ml) of water. Divide into 3–4 doses and drink throughout the day."
-    //         },
-    //         {
-    //             Herb: ["Dan shen (Salvia miltiorrhiza)"],
-    //             Remedy: "Make a decoction and take 3–4 doses during the day for up to 1 week. Alternatively, take half the daily dose for up to 2 –3 weeks.",
-    //             Cautions: "Do not take dan shen with anticoagulant or antiplatelet drugs, or during pregnancy."
-    //         }]
-    // },
-
-    // {
-    //     _id: "012", name: "Panic Attacks",
-    //     category: "Circulatory Problems",
-    //     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Linden (Tilia spp.), Valerian (Valeriana officinalis)"],
-    //             Remedy: "Make an infusion using 1 tsp of linden and 1⁄2 tsp of powdered valerian to 3/4 cup (150 ml) of water. Drink 21/3 cups (600 ml) a day."
-    //         },
-    //         {
-    //             Herb: ["Motherwort (Leonurus cardiaca)", "linden (Tilia spp.)"],
-    //             Remedy: "Make an infusion of motherwort or make an infusion using 1⁄2 tsp of each herb to 1 cup (150 ml) of water. Drink up to 4 cups (600 ml) of either remedy a day.",
-    //             Caution: "Do not take motherwort during pregnancy."
-    //         }]
-    // },
-
-    // {
-    //     _id: "013", name: "Poor Circulation",
-    //     category: "Circulatory Problems",
-    //     description: "Poor circulation can cause discomfort and painful chilblains (sores caused by poor local blood flow) on the fingers and toes. By stimulating the circulation and getting more "warmth" into the system with herbs and exercise, the blood flow to the hands and feet is improved.",
-    //     Caution: "Seek professional advice if fingers and toes frequently become cold and numb.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Cayenne (Capsicum frutescens)"],
-    //             Remedy: "Take cayenne tablets in winter.",
-    //             Option: "Add a pinch of cayenne powder or cayenne sauce to every main meal.",
-    //             Caution: "Do not take tablets during pregnancy."
-    //         },
-    //         {
-    //             Herb: ["Cramp bark (Viburnum opulus)"],
-    //             Remedy: "Make a decoction using 15 g of cramp bark to 3 cups (750 ml) of water and take 3 doses each day."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "014", name: "Varicose Veins",
-    //     category: "Circulatory Problems",
-    //     description: "Varicose veins result from a weakness, or increased pressure, in the veins. This causes the thin supporting walls of the veins to bulge out, resulting in distended veins and the pooling of blood.",
-    //     Self_help: "Home treatment should aim to relieve pressure on the veins. Varicose vein sufferers should avoid tight clothing around the waist or legs.",
-    //     Caution: "Do not massage or rub varicose veins.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Witch hazel (Hamamelis virginiana)", "Calendula (Calendula officinalis)"],
-    //             Remedy: "Gently apply distilled witch hazel or witch hazel cream or ointment to the affected area 1–2 times a day, or combine equal parts of the creams of both herbs and apply 1–2 times a day.",
-    //             Note: "This remedy is particularly effective on painful varicose veins."
-    //         },
-    //         {
-    //             Herb: ["Yarrow (Achillea millefolium)"],
-    //             Remedy: "(External) Wash varicose veins in a cool infusion, or apply the ointment 1–2 times a day.   (Internal) Make an infusion and leave for 10 minutes. Take 3/4–11/4 cups (150–300 ml) a day for up to 10 weeks.",
-    //             Caution: "Do not take yarrow during pregnancy."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "015", name: "Hemorrhoids",
-    //     category: "Circulatory Problems",
-    //     description: "Hemorrhoids are usually caused by constipation. Many herbs can be of use in relieving these conditions.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Witch Hazel (Hamamelis virginiana)", "Lesser Celandine (Ranunculus ficaria)"],
-    //             Remedy: "Apply either distilled witch hazel or witch hazel ointment, or lesser Celandine ointment, 1–2 times a day."
-    //         },
-    //         {
-    //             Herb: [" Common Oak (Quercus robur)", "Calendula (Calendula officinalis)"],
-    //             Remedy: "Mix 1 tsp of common oak bark powder with 21⁄2 tbsp of calendula ointment and apply 1–2 times a day."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "016", name: "Hives",
-    //     category: "Skin Problems",
-    //     description: "Are  usually caused by an allergic reaction, but can also be triggered by heat, cold, or sunlight. They only last for a few hours but will often recur. For the most effective relief, apply chickweed cream and take one of the internal remedies.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Nettle (Urtica dioica)", "Heartsease (Viola tricolor)", "Calendula (Calendula officinalis)"],
-    //             Remedy: "(Internal) Drink an infusion of 5 g of each herb and 3 cups (750 ml) of water regularly during the day. Repeat for 1 week. If symptoms persist, take for another week."
-    //         },
-    //         {
-    //             Herb: ["Dandelion (Taraxacum officinale)", "Yellow Dock (Rumex crispus)", "Burdock (Arctium lappa)"],
-    //             Remedy: "(Internal) Make a decoction with 5 g of each root to 3 cups (750 ml) of water. Drink 11/4 cups (300 ml) a day and repeat for at least 1 week.",
-    //             Caution: "Do not take yellow dock in pregnancy."
-    //         },
-    //         {
-    //             Herb: ["Chickweed (Stellaria media)"],
-    //             Remedy: "(External) Apply cream as required."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "017", name: "Skin Rashes",
-    //     category: "Skin Problems",
-    //     description: "Have many causes, such as allergy, infection, irritation, bites, stings, and temperature changes. Use these remedies to alleviate itchiness and swelling.",
-    //     Caution: "If there is any sign of infection seek professional advice.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Calendula (Calendula officinalis)", "Comfrey (Symphytum officinale)"],
-    //             Remedy: "Apply calendula or comfrey ointment, cream, or lotion to troubled areas 2–4 times a day. For the lotion, make an infusion, strain, cool, and then apply.",
-    //             Caution: "Do not apply comfrey to broken skin."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "018", name: "Burn",
-    //     category: "Skin Problems",
-    //     description: "(small-scale) usually respond well to herbal medicine, but even small burns may be deep and can quickly become infected. Before using a remedy, bathe the burned area in clean, cold water and keep the area cool for up to 3 hours with a clean cotton cloth that has been soaked in cold water.",
-    //     Caution: "If there is any sign of infection seek professional advice.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Aloe Vera (Aloe vera)", "Lavender (Lavandula officinalis)"],
-    //             Remedy: "Apply aloe vera gel or neat lavender essential oil to the affected area as needed."
-    //         },
-    //         {
-    //             Herb: ["Calendula (Calendula officinalis)"],
-    //             Remedy: "Infuse 1 heaping tbsp of herb in 3/4 cup (150 ml) of water. Strain, cool, and apply as a lotion to the affected area as required."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "019", name: "Healing Wounds",
-    //     description: "Minor wounds, bruises, and grazes are part of everyday life, and the remedies listed make effective home treatments.",
-    //     Caution: "Seek immediate medical attention for serious or deep wounds, bruising, or scrapes, especially if the pain has not considerably lessened after 24 hours.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Comfrey (Symphytum officinale), Aloe Vera (Aloe vera)"],
-    //             Remedy: "Apply comfrey ointment at the edges of the wound or, once a scab has formed, use a comfrey poultice. Use aloe vera gel to cleanse the wound.",
-    //             Caution: "Do not use comfrey on an open wound."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "020", name: "Bruises",
-    //     category: "Skin Problems",
-    //     description: "Minor wounds, bruises, and grazes are part of everyday life, and the remedies listed make effective home treatments.",
-    //     Caution: "Seek immediate medical attention for serious or deep wounds, bruising, or scrapes, especially if the pain has not considerably lessened after 24 hours.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Herb name (Binomial nomenclature)"],
-    //             Remedy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
-    //         },
-    //         {
-    //             Herb: ["Herb name (Binomial nomenclature)", "Herb name (Binomial nomenclature)"],
-    //             Remedy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
-    //         }]
-    // },
-
-
-    // {
-    //     _id: "021", name: "Cold Sores",
-    //     category: "Skin Problems",
-    //     description: "Cold sores are caused by the herpes simplex virus, and usually occur when the body has an infection or has been exposed to sunshine or wind. Tiny blisters form, mainly around the nostrils and lips.",
-    //     treatment: [
-    //         {
-    //             Herb: ["Echinacea (Echinacea spp.)", "St. John’s Wort (Hypericum perforatum)"],
-    //             Remedy: "Take 1⁄2 tsp of tincture of either herb with water 2–3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John’s wort and drink up to 3/4 cup (150 ml) a day."
-    //         },
-    //         {
-    //             Herb: ["Garlic (Allium sativum)", "Ginger (Zingiber officinale), lemon (Citrus limon)"],
-    //             Remedy: "(Internal) Eat 1–2 cloves of garlic and 1–2 slices (1 g) of fresh ginger a day. (External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
-    //         }]
-    // },
-
-
+    {
+        name: 'Elderly',
+        img: '../../assets/images/category/elderly.png'
+    },
+    {
+        name: 'Urinary & Fungal Infections',
+        img: '../../assets/images/category/urinary_&_fungal_infections.png'
+    },
+    {
+        name: 'All',
+        img: '../../assets/images/category/all.png'
+    }
     // {
     //     _id: "022", name: "Shingles",
     //     category: "Skin Problems",
