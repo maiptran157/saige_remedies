@@ -3,6 +3,7 @@ import './modal.css';
 
 class Modal extends Component {
     render() {
+        console.log(this.props);
         if (this.props.isOpen === false) {
             return null;
         }

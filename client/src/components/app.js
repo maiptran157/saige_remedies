@@ -22,7 +22,7 @@ class App extends Component {
         };
     }
     componentDidMount() {
-        // this.openModal();
+        this.openModal();
     }
 
     openModal() {
@@ -40,8 +40,8 @@ class App extends Component {
     render() {
         return (
         <div className="container" style={style}>
-            <Modal >
-                <h1>DANGER DANGER</h1>
+            <Modal isOpen={this.state.isModalOpen} >
+                <h1>DANGER</h1>
                 <button onClick={this.closeModal}>Close Modal</button>
             </Modal>
             <Route path="/" exact component={UmbrellaConditions}/>
