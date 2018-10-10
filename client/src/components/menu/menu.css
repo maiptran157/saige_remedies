@@ -1,8 +1,35 @@
-.hamburger {
-    background-image: url('../assets/images/hamburger_white_shadow.png');
+.hamburger-icon > img {
+    width: 60%;
+    height: 60%;
 }
 
-.menu-container {
+.hamburger-modal {
+    width: 200px;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around
+}
+
+
+.hamburger-icon {
+    width: 94px;
+    height: 114px;
+    position: absolute;
+}
+
+.hamburger-container {
+    padding-left: 5%;
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.hamburger-modal > ul > li {
+    list-style-type: none;
 }
