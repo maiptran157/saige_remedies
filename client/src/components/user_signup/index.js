@@ -10,14 +10,18 @@ class SignUp extends Component {
     }
 
     render() {
-        console.log('Sign Up:', this.props);
-
         const { handleSubmit } = this.props;
         return (
             <div className="sign-up-container">
                 <h1 className="sign-up-header">Sign Up!</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
-                    <Field name="first-name" label="First Name" component={renderInput} type="text"/>                </form>
+                    <Field name="firstName" label="First Name" component={renderInput} type="text"/>           
+                    <Field name="lastName" label="Last Name" component={renderInput} type="text"/>           
+                    <Field name="Email" label="Email" component={renderInput} type="text"/>   
+                    <Field name="Password" label="Password" component={renderInput} type="password"/>           
+                    <Field name="Confirm Password" label="Confirm Password" component={renderInput} type="password"/>           
+                    <button>Sign Up</button>
+                </form>
             </div>
         )
     }
