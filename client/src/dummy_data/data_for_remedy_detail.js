@@ -1,6 +1,6 @@
 export default [
     {
-        _id: "12345", Herb: ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
+        _id: "12345", Herb: ["Nettle and Elderflower"],
         Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
     },
     {

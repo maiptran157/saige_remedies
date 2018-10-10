@@ -3,7 +3,6 @@ import './condition_detail_container.css';
 import RemedyNameContainer from './remedy_name_container';
 
 const RemedyResultsContainer = (props) => {
-    // console.log("props for RemedyResultsContainer:", props);
     const { treatment } = props;
     let numberOfResults = treatment.length;
     let remedyName = treatment.map((treatmentInfo, index) => {
@@ -27,7 +26,7 @@ const RemedyResultsContainer = (props) => {
                     <div className="end-of-result-message">End of results</div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

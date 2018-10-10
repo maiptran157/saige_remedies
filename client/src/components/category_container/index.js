@@ -19,10 +19,6 @@ const textStyle = {
 }
 
 export default props => {
-    console.log(props);
-    // const backgroundImg = {
-    //     backgroundImage: `url(${props.img})`
-    // }
     return (
         <div className="category-box">
             <Link to={`/conditions/${props.name}`} className="category-img">
