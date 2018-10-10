@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import SignUp from './user_signup/'
 import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
 import { Route } from 'react-router-dom';
 import './app.css';
-import backgroundImg from '../assets/images/background_image_v1.jpg'
-import Modal from '../components/modal/index';
+import backgroundImg from '../assets/images/background_image_v1.jpg';
+// import Modal from '../components/modal/index';
 
 const style = {
     backgroundImage: `url(${backgroundImg})`,
-    backgroundSize: `cover`
+    backgroundSize: `cover`,
 }
 
 class App extends Component {
@@ -40,12 +41,13 @@ class App extends Component {
     render() {
         return (
         <div className="container" style={style}>
-            <Modal isOpen={this.state.isModalOpen} >
+            {/* <Modal isOpen={this.state.isModalOpen} >
                 <h1>DANGER</h1>
                 <button onClick={this.closeModal}>Close Modal</button>
-            </Modal>
+            </Modal> */}
+            <Route path="/sign-up" exact component={SignUp}/>
             <Route path="/" exact component={UmbrellaConditions}/>
-            <Route path="/conditions/:category" exact component={ConditionContainer}/>
+            <Route path="/conditions/:category" component={ConditionContainer}/>
             <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer}/>
             <Route path="/remedy/:remedyId" component={RemedyDetailContainer}/>
         </div>
