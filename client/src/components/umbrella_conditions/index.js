@@ -3,6 +3,7 @@ import dummyData from '../../dummy_data/data';
 import Header from '../header';
 import CategoryContainer from '../category_container';
 import './umbrella_conditions.css';
+import saigeLogo from '../../assets/images/saige_square_small.png';
 
 class UmbrellaConditions extends Component {
     state = {
@@ -18,7 +19,7 @@ class UmbrellaConditions extends Component {
 
         return (
             <div className="categories-container">
-                <Header />
+                <Header logo={saigeLogo} />
                 <div className="categories-content">
                     {category}
                 </div>

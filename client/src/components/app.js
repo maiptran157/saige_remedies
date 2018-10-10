@@ -6,6 +6,7 @@ import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
 import { Route } from 'react-router-dom';
 import './app.css';
+
 import backgroundImg from '../assets/images/background_image_v1.jpg';
 // import Modal from '../components/modal/index';
 
@@ -40,6 +41,7 @@ class App extends Component {
 
     render() {
         return (
+
         <div className="container" style={style}>
             {/* <Modal isOpen={this.state.isModalOpen} >
                 <h1>DANGER</h1>
