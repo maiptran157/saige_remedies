@@ -1,11 +1,15 @@
 import React from 'react';
 import './remedy_detail_container.css';
-import OtherTreatmentNameContainer from './other_treatment_name_container';
+import ReviewList from './review_section';
+// import OtherTreatmentNameContainer from './other_treatment_name_container';
 
 const OtherTreatmentsContainer = (props) => {
     return (
         <div className="condition-results-container">
-            <div className="other-treatment-result-total-message">
+            <ReviewList />
+
+
+            {/* <div className="other-treatment-result-total-message">
                 <span>Other Treatment:
                         <span className="other-treatment-result-total-number">7</span>
                 </span>
@@ -15,7 +19,7 @@ const OtherTreatmentsContainer = (props) => {
                     <OtherTreatmentNameContainer />
                     <div className="end-of-result-message">End of results</div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -42,17 +42,17 @@ class App extends Component {
     render() {
         return (
 
-        <div className="container" style={style}>
-            {/* <Modal isOpen={this.state.isModalOpen} >
+            <div className="container" style={style}>
+                {/* <Modal isOpen={this.state.isModalOpen} >
                 <h1>DANGER</h1>
                 <button onClick={this.closeModal}>Close Modal</button>
             </Modal> */}
-            <Route path="/sign-up" exact component={SignUp}/>
-            <Route path="/" exact component={UmbrellaConditions}/>
-            <Route path="/conditions/:category" component={ConditionContainer}/>
-            <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer}/>
-            <Route path="/remedy/:remedyId" component={RemedyDetailContainer}/>
-        </div>
+                <Route path="/" exact component={UmbrellaConditions} />
+                <Route path="/sign-up" exact component={SignUp} />
+                <Route path="/conditions/:category" exact component={ConditionContainer} />
+                <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
+                <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+            </div>
         )
     }
 }

@@ -12,7 +12,6 @@ class UmbrellaConditions extends Component {
 
     render() {
         const { data } = this.state;
-        console.log(data);
         const category = data.map((category, index) => {
             return <CategoryContainer name={category.name} key={index} conditions={category.conditions} img={category.img} />
         });
