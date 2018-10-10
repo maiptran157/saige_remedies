@@ -3,6 +3,7 @@ import './condition_container.css';
 import AilmentContainer from '../ailment_container';
 import Header from '../header';
 import dummyData from '../../dummy_data/data';
+import backButton from '../../assets/images/back_arrow_white_shadow.png';
 
 class ConditionsContainer extends Component {
     constructor(props) {
@@ -16,10 +17,7 @@ class ConditionsContainer extends Component {
         this.setState({
             items: dummyData
         });
-
-
     }
-
 
     render() {
         const { category } = this.props.match.params;
@@ -37,7 +35,7 @@ class ConditionsContainer extends Component {
         }
         return (
             <div className="condition-container" >
-                <Header />
+                <Header logo={backButton} buttonType="back-button" />
                 {ailment()}
             </div>
 
