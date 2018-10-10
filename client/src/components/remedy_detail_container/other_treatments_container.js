@@ -4,9 +4,10 @@ import ReviewList from './review_section';
 // import OtherTreatmentNameContainer from './other_treatment_name_container';
 
 const OtherTreatmentsContainer = (props) => {
+    console.log("OtherTreatmentsContainer", props);
     return (
         <div className="condition-results-container">
-            <ReviewList />
+            <ReviewList id={props._id} />
 
 
             {/* <div className="other-treatment-result-total-message">
