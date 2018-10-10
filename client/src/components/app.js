@@ -7,6 +7,7 @@ import { Route } from 'react-router-dom';
 import './app.css';
 import backgroundImg from '../assets/images/background_image_v1.jpg'
 import Modal from '../components/modal/index';
+import DropDownMenu from './menu';
 
 const style = {
     backgroundImage: `url(${backgroundImg})`,
@@ -39,16 +40,18 @@ class App extends Component {
 
     render() {
         return (
-        <div className="container" style={style}>
-            <Modal isOpen={this.state.isModalOpen} >
-                <h1>DANGER</h1>
-                <button onClick={this.closeModal}>Close Modal</button>
-            </Modal>
-            <Route path="/" exact component={UmbrellaConditions}/>
-            <Route path="/conditions/:category" exact component={ConditionContainer}/>
-            <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer}/>
-            <Route path="/remedy/:remedyId" component={RemedyDetailContainer}/>
-        </div>
+            <div className="container" style={style}>
+                <Modal isOpen={this.state.isModalOpen} >
+                    <h1>DANGER</h1>
+                    <button onClick={this.closeModal}>Close Modal</button>
+                </Modal>
+                {/* <DropDownMenu /> */}
+                <Route path="/" exact component={UmbrellaConditions} />
+                <Route path="/conditions/:category" exact component={ConditionContainer} />
+                <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
+                <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+
+            </div>
         )
     }
 }

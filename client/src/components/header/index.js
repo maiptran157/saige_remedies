@@ -1,15 +1,17 @@
 import React from 'react';
 import Logo from './logo';
 import InputBar from './input_bar';
-import HamburgerMenu from './hamburger_menu';
+import DropDownMenu from '../menu';
+
 import './header.css';
 
 export default props => {
+    const { logo, buttonType } = props;
     return (
         <div className="header">
-            <Logo />
+            <Logo logo={logo} buttonType={buttonType} />
             <InputBar />
-            <HamburgerMenu />
+            <DropDownMenu />
         </div>
     )
 }

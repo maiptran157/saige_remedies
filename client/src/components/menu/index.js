@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
+import './menu.css';
+import { Link } from 'react-router-dom';
+
+const textStyle = {
+    textDecoration: 'none',
+    color: 'white'
+}
 
 class DropDownMenu extends Component {
     constructor() {
         super();
-
         this.state = {
             showMenu: false,
         }
-
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
     }
@@ -15,15 +21,14 @@ class DropDownMenu extends Component {
     showMenu(event) {
         event.preventDefault();
 
-        this.setState({showMenu: true,}, () => {
+        this.setState({ showMenu: true, }, () => {
             document.addEventListener('click', this.closeMenu)
         });
     }
 
     closeMenu(event) {
-
-        if(!this.dropdownMenu.contains(event.target)) {
-            this.setState({showMenu: false,}, () => {
+        if (!this.dropdownMenu.contains(event.target)) {
+            this.setState({ showMenu: false, }, () => {
                 document.removeEventListener('click', this.closeMenu)
             });
         }
@@ -31,25 +36,25 @@ class DropDownMenu extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.showMenu}> 
-                {/* this btn will be replaced with hamburger menu icon, v.2 will be an animated hamburger menu icon */}
-                    Show Menu 
-                </button>
+            <div className="hamburger-container">
+                <div className="hamburger-icon" onClick={this.showMenu}>
+                    {/* this btn will be replaced with hamburger menu icon, v.2 will be an animated hamburger menu icon */}
+                    <img src={hamburgerMenu} alt="" />
+                </div>
                 {
                     this.state.showMenu
-                        ?  (
-                            <div 
-                            className="menu-container"
-                            ref={(element) => {
-                                this.dropdownMenu = element;
-                            }}>
+                        ? (
+                            <div className="hamburger-modal"
+                                ref={(element) => {
+                                    this.dropdownMenu = element;
+                                }}>
                                 {/* how am I linking the pages/where are they linking to or rare they built out? */}
+                                <div className="close-symbol" onClick={this.closeMenu}>X</div>
                                 <ul>
-                                    <li><a href="sign_in">Sign In</a></li>
-                                    <li>About</li>
-                                    <li>Conditions List</li>
-                                    <li>Favorites</li>
+                                    <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
+                                    <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
+                                    <li><Link style={textStyle} to="/favorites">My Favorites</Link></li>
+                                    <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
                                 </ul>
                             </div>
                         )
