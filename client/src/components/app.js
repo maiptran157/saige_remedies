@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignUp from './user_signup/'
+import SignUp from './user_signup/';
 import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';

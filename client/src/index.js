@@ -4,8 +4,8 @@ import App from './components/app';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import think from '../src/components/middleware/think';
-import rootReducer from '../src/components/reducers/index';
+import think from '../src/middleware/think';
+import rootReducer from '../src/reducers/index';
 
 const store = createStore(rootReducer, {}, applyMiddleware(think));
 

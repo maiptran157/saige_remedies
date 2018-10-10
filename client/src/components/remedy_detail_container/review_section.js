@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getReviewList } from '../actions';
+import { getReviewList } from '../../actions';
+
 
 class ReviewList extends Component {
     componentDidMount() {
