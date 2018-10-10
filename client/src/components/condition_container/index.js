@@ -33,7 +33,6 @@ class ConditionsContainer extends Component {
                 }
             }
         }
-
         return (
             <div className="condition-container" >
                 <Header logo={backButton} buttonType="back-button" />
