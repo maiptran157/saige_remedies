@@ -1,6 +1,6 @@
 import types from './types';
 import axios from 'axios';
-import dummyReviewList from '../../dummy_data/data_for_remedy_review';
+import dummyReviewList from '../dummy_data/data_for_remedy_review';
 
 export function addReview(review) {
     const response = review;
@@ -23,10 +23,13 @@ export function addReview(review) {
 
 export function getReviewList(id) {
     const response = dummyReviewList;
-    const reviewList = [];
+    let reviewList = [];
     if (id === response._id) {
-        reviewList[0] = response.reviews[0]
+        reviewList = response.reviews
     }
+
+    console.log('ACTION CREATOR REVIEW LIST:', reviewList);
+
     return {
         type: types.GET_REVIEW_LIST,
         payload: reviewList
