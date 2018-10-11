@@ -50,4 +50,8 @@ export function getSingleReview(id) {
 
 export const signUp = (userInfo) => {
     console.log(userInfo)
+    return (dispatch) => {
+        
+    }
 }
+
