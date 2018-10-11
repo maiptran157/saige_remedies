@@ -3,17 +3,25 @@
     height: 60%;
 }
 
+
 .hamburger-modal {
-    width: 200px;
+    width: 50vw;
     height: 100vh;
     z-index: 1;
     position: absolute;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.90);
     color: white;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around
+    justify-content: space-around;
+    transition-duration: 500ms;
+    max-width: 0;
+    overflow: hidden;
+}
+
+.full-size {
+    max-width: 200px;
 }
 
 
@@ -24,7 +32,7 @@
 }
 
 .hamburger-container {
-    padding-left: 5%;
+    padding-left: 0%;
     width: 20%;
     height: 100%;
     position: relative;
@@ -32,4 +40,20 @@
 
 .hamburger-modal > ul > li {
     list-style-type: none;
+    padding: 10% 0;
+
+}
+
+.hamburger-modal > ul > li:first-child {
+    font-weight: bold;
+}
+
+.hamburger-modal > ul > li:hover {
+    font-weight: bold;
+}
+
+.close-symbol {
+    width: 5%;
+    font-weight: bolder;
+    padding: 5px;    
 }
