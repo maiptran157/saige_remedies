@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignUp from './user_signup/';
+import SignIn from './user_signin';
 import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
@@ -48,10 +49,11 @@ class App extends Component {
                 <button onClick={this.closeModal}>Close Modal</button>
             </Modal> */}
                 <Route path="/" exact component={UmbrellaConditions} />
-                <Route path="/sign-up" exact component={SignUp} />
                 <Route path="/conditions/:category" exact component={ConditionContainer} />
                 <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
                 <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+                <Route path="/sign-up" component={SignUp} />
+                <Route path="/sign-in" component={SignIn}/> 
             </div>
         )
     }
