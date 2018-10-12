@@ -2,9 +2,6 @@ import React from 'react';
 import './category_container.scss';
 import { Link } from 'react-router-dom';
 
-const textStyle = {
-    textDecoration: 'none'
-}
 
 export default props => {
     console.log(props);

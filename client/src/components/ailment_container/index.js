@@ -1,6 +1,6 @@
 import React from 'react';
 import './ailment_container.css';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const textStyle = {
     textDecoration: 'none'
