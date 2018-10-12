@@ -3,7 +3,7 @@ import dummyData from '../../dummy_data/data';
 import Header from '../header';
 import CategoryContainer from '../category_container';
 import './umbrella_conditions.css';
-import saigeLogo from '../../assets/images/saige_square_small.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 
 class UmbrellaConditions extends Component {
     state = {
