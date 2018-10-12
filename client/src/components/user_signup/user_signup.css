@@ -1,18 +1,25 @@
 .sign-up-container {
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
 }
 
 .sign-up-header {
     width: 100%;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 form {
     width: 100%;
     display: flex; 
-    align-content: center;
+    align-items: center;
     flex-direction: column;
-    height: 500px;
+    height: 900px;
+}
+
+button {
+    width: 40%;
+    background-color: white;
+    height: 40px;
+    margin-top: 3.5%;
 }

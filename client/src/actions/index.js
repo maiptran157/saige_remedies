@@ -10,17 +10,6 @@ export function addReview(review) {
     }
 }
 
-// export function getSomeData(){
-//     return function async (dispatch){
-//         const resp = await axios.get('/get/data/from/server');
-
-//         dispatch({
-//             type: types.SOMETHING,
-//             data: resp.data
-//         });
-//     }
-// }
-
 export function getReviewList(id) {
     const response = dummyReviewList;
     let reviewList = [];
@@ -49,5 +38,8 @@ export function getSingleReview(id) {
 }
 
 export const signUp = (userInfo) => {
-    console.log(userInfo)
+    return async (dispatch) => {
+        
+    }
 }
+
