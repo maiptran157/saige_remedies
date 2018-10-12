@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { getReviewList } from '../../actions';
 import './review_section.scss'
@@ -9,13 +10,11 @@ const textStyle = {
 }
 
 class ReviewList extends Component {
-
     componentDidMount() {
         const { id } = this.props;
         this.props.getReviewList(id);
     }
     render() {
-        // console.log('======REVIEW LIST=====', this.props);
         const { reviewList } = this.props;
         console.log("reviewList:", reviewList);
         const review = () => {
@@ -38,7 +37,14 @@ class ReviewList extends Component {
                 <div>Reviews:</div>
             </div>
             <div className="reviews-container">
+
                 {review()}
+
+                <form action="">
+                    <textarea name="" placeholder="Leave a review..."></textarea>
+                    <button className="add-review-button">+</button>
+                </form>
+
             </div>
         </div >
         )
@@ -50,6 +56,10 @@ function mapStateToProps(state) {
         reviewList: state.list.reviewList
     }
 }
+
+ReviewList = reduxForm({
+    form: 'add_review',
+})(ReviewList);
 
 export default connect(mapStateToProps, {
     getReviewList: getReviewList

@@ -18,10 +18,30 @@
 }
 
 .reviews-container {
-    color: #DEC2DB;
+    color: #1E332E;
     display: flex;
     flex-direction: column-reverse;
-    align-content: space-between
+    align-content: space-between;
+    form {
+        // width: 325px;
+        display: flex;
+        flex-direction: row;
+        height: 40%;
+        align-content: space-evenly;
+        margin: 1em;
+        textarea {
+            width: 290px;
+            height: 90px;
+        };
+        button {
+            width: 35px;
+            height: 34px;
+            background: #EFC11D;
+            border-radius: 10px;
+            font-size: 3vh;
+            margin: 0 0 2.5em 1em;
+        }
+    }
 }
 
 .review-detail {

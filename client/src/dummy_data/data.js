@@ -33,7 +33,7 @@ export default [
                 name: "Tight Chest",
             }
         ],
-        img: '../../assets/images/category/allergies.png'
+        img: './category_images/allergies.png'
     },
     {
         name: "Circulatory Problems",
@@ -71,7 +71,7 @@ export default [
                 name: "Hemorrhoids"
             }
         ],
-        img: '../../assets/images/category/circulatory_problems.png'
+        img: './category_images/circulatory_problems.png'
     },
     {
         name: "Skin Problems",
@@ -95,43 +95,43 @@ export default [
                 _id: "021", name: "Cold Sores"
             }
         ],
-        img: '../../assets/images/category/all.png'
+        img: './category_images/skin_problems.png'
     },
     {
         name: 'Digestive Disorders',
-        img: '../../assets/images/category/digestive_disorders.png'
+        img: './category_images/digestive_disorders.png'
     },
     {
         name: 'Nerve & Stress-Related Problems',
-        img: '../../assets/images/category/nerve_&_stress_related_problems.png'
+        img: './category_images/nerve_&_stress_related_problems.png'
     },
     {
         name: 'Respiratory Tract Problems',
-        img: '../../assets/images/category/respiratory_tract_problems.png'
+        img: './category_images/respiratory_tract_problems.png'
     },
     {
         name: 'Musculoskeletal Problems',
-        img: '../../assets/images/category/musculoskeletal_problems.png'
+        img: './category_images/musculoskeletal_problems.png'
     },
     {
         name: 'Reproductive & Menstrual Problems',
-        img: '../../assets/images/category/reproductive_&_menstrual_problems.png'
+        img: './category_images/reproductive_&_menstrual_problems.png'
     },
     {
         name: 'Infants & Children',
-        img: '../../assets/images/category/infants_&_children.png'
+        img: './category_images/infants_&_children.jpeg'
     },
     {
         name: 'Elderly',
-        img: '../../assets/images/category/elderly.png'
+        img: './category_images/elderly.png'
     },
     {
         name: 'Urinary & Fungal Infections',
-        img: '../../assets/images/category/urinary_&_fungal_infections.png'
+        img: './category_images/urinary_&_fungal_infections.png'
     },
     {
         name: 'All',
-        img: '../../assets/images/category/all.png'
+        img: './category_images/all.png'
     }
     // {
     //     _id: "022", name: "Shingles",
