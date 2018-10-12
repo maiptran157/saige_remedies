@@ -7,7 +7,7 @@ import UmbrellaConditions from './umbrella_conditions';
 import { Route } from 'react-router-dom';
 import './app.css';
 
-import backgroundImg from '../assets/images/background_image_v1.jpg';
+import backgroundImg from '../assets/images/background_image.jpeg';
 // import Modal from '../components/modal/index';
 
 const style = {
