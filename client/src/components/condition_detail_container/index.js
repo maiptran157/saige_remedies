@@ -4,6 +4,7 @@ import ConditionDetailGroup from './condition_detail_group';
 import RemedyResultsContainer from './remedy_result_container';
 import Header from '../header';
 import dummyData from '../../dummy_data/data_for_condition_detail';
+import backButton from '../../assets/images/back_arrow_white_shadow.png';
 
 const ConditionDetailContainer = (props) => {
     // console.log(props);
@@ -24,7 +25,7 @@ const ConditionDetailContainer = (props) => {
     const { name, description, self_help, caution, treatment } = filteredDataObj;
     return (
         <div className="condition-detail-container">
-            <Header />
+            <Header logo={backButton} buttonType="back-button" />
             <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
             <RemedyResultsContainer treatment={treatment} />
         </div>
