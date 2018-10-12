@@ -3,7 +3,6 @@
     height: 60%;
 }
 
-
 .hamburger-modal {
     width: 50vw;
     height: 100vh;
@@ -24,7 +23,6 @@
     max-width: 200px;
 }
 
-
 .hamburger-icon {
     width: 94px;
     height: 114px;
@@ -32,7 +30,7 @@
 }
 
 .hamburger-container {
-    padding-left: 20%;
+    margin-left: 15%;
     width: 20%;
     height: 100%;
     position: relative;
