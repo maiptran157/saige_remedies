@@ -1,5 +1,5 @@
 .category-img {
-    width: 100%;
+    width: 95%;
     background: rgba(232, 226, 234, 0.9);
     box-shadow: 0px 10px 10px #000000;
     color: white;
@@ -9,13 +9,18 @@
     justify-content: center;
 
     img {
-    width: 100%
+
+    width: 95%;
     }
 }
 .category-box {
-    width: 30%;
+    width: 27%;
 }
 .category-name {
+    text-align: center;
+    width: 100%
+    }
+}
     color: white;
     font-weight: bold;
     text-align: center;
