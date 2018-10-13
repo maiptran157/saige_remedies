@@ -2,19 +2,23 @@
     display: flex;
     align-content: center;
     color: white;
+    margin-left: 1em;
     div {
-        padding: 0.5em 1em;
         font-size: 4vh;
+    }
+    span {
+        margin-left: .5em;
     }
 }
 
-.review {
+.single-review {
     padding: 1em;
     background-color: white;
     width: 325px;
     list-style-type: none;
     font-size: 15px;
     margin: 1em;
+    border-radius: 20px;
 }
 
 .reviews-container {
@@ -29,9 +33,29 @@
         height: 40%;
         align-content: space-evenly;
         margin: 1em;
-        textarea {
+        .review {
             width: 290px;
             height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-around;
+            div {
+                display: flex;
+                align-items: space-around;
+                span {
+                    color: white;
+                }
+                .rating-area {
+                    width: 230px;
+                    height: 20px;
+                    margin-left: .5em;
+                    margin-bottom: .5em;
+                }
+            }
+            .review-area {
+                width: 290px;
+                height: 50px;
+            }
         };
         button {
             width: 35px;

@@ -4,6 +4,7 @@ import dummyReviewList from '../dummy_data/data_for_remedy_review';
 
 export function addReview(review) {
     const response = review;
+    dummyReviewList.reviews.push(response);
     return {
         type: types.ADD_REVIEW,
         payload: response
@@ -17,7 +18,7 @@ export function getReviewList(id) {
         reviewList = response.reviews
     }
 
-    console.log('ACTION CREATOR REVIEW LIST:', reviewList);
+    // console.log('ACTION CREATOR REVIEW LIST:', reviewList);
 
     return {
         type: types.GET_REVIEW_LIST,
@@ -39,7 +40,7 @@ export function getSingleReview(id) {
 
 export const signUp = (userInfo) => {
     return async (dispatch) => {
-        
+
     }
 }
 
