@@ -34,8 +34,6 @@ $decode = json_decode($json_data,true);
 
         if($symptomResult){
             $symptomID = mysqli_fetch_assoc($symptomResult)['ID']; //works outside the for loop
-            //REMOVED $symptomSymRemQuery = "INSERT INTO symptom_remedy SET symptom_id = '$symptomID'";
-            //REMOVED $symptomSymGroupQuery = "INSERT INTO symptoms_groups SET symptom_id = '$symptomID'";
         }
 
         //Establishing current category ID
@@ -52,7 +50,7 @@ $decode = json_decode($json_data,true);
             //Inserting categoryID to symptoms_remedies table
             $categorySymGroupQuery = "INSERT INTO symptoms_groups SET ID = null,symptom_group_id = '$categoryID',symptom_id = '$symptomID'";
             //Query to run:============================================================================================= 
-            //TURNED OFF $categorySymGroupResult = mysqli_query($conn, $categorySymGroupQuery);
+            //COMPLETED $categorySymGroupResult = mysqli_query($conn, $categorySymGroupQuery);
         }
 
             for($u = 0; $u < count($decode[$i]['Treatment']); $u++){
@@ -72,13 +70,13 @@ $decode = json_decode($json_data,true);
                     $remedyID = mysqli_fetch_assoc($remedyResult)['ID'];
                     $remedySymRemQuery = "INSERT INTO symptom_remedy SET ID = null,symptom_id = '$symptomID',remedy_id = '$remedyID'";
                     //Query to run:============================================================================================= 
-                    //TURNED OFF $insertRemedyID = mysqli_query($conn, $remedySymRemQuery);
+                    //COMPLETED $insertRemedyID = mysqli_query($conn, $remedySymRemQuery);
                     // REMOVED $remedyRemIngrQuery = "INSERT INTO remedies_ingredients SET remedy_id = '$remedyID'";
                     if($ingredientResult){
                         $ingredientID = mysqli_fetch_assoc($ingredientResult)['ID'];
                         $ingredientRemIngrQuery = "INSERT INTO remedies_ingredients SET ID = null,remedy_id = '$remedyID',ingredient_id = '$ingredientID'";
                     //Query to run:=============================================================================================
-                    // REMOVED $insertIngredientID = mysqli_query($conn, $ingredientRemIngrQuery);
+                    //COMPLETED $insertIngredientID = mysqli_query($conn, $ingredientRemIngrQuery);
                     // print($ingredientID);
                     // print($remedyID);
 
@@ -88,12 +86,16 @@ $decode = json_decode($json_data,true);
                     $ingredientID = mysqli_fetch_assoc($ingredientResult)['ID'];
 
                     //Insert into ingredients_classifications table
-                    $classificationID = "SELECT ID FROM ingredient_classification WHERE name = 'Herb'";
-                    // REMOVED $ingredientClassificationQuery = "INSERT INTO ingredients_classifications SET ingredient_classification_id = '$classificationID'";
+                    $classificationIDQuery = "SELECT * FROM ingredient_classification WHERE name = 'Herb'";
+
+                    $classificationQueryResult = mysqli_query($conn,$classificationIDQuery);
+                    $classificationID = mysqli_fetch_assoc($classificationQueryResult)['ID']; 
+                    
+
 
                     $ingredientQueryIngrClass = "INSERT INTO ingredients_classifications SET ID = null,ingredient_id = '$ingredientID',ingredient_classification_id = '$classificationID'";
                     //Query to run:============================================================================================= 
-                    $ingredientResultIngrClass = mysqli_query($conn, $ingredientQueryIngrClass);
+                    // $ingredientResultIngrClass = mysqli_query($conn, $ingredientQueryIngrClass);
                     // print($ingredientID);
                     // print($classificationID);
             }}
