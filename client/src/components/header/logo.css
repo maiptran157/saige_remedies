@@ -1,18 +1,11 @@
 .logo-container {
-    padding-left: 5%;
-    width: 20%;
-    height: 80%;
+    margin-left: 2%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo {
-    width: 100%;
-    height: 70%;
-}
-
 .logo > img {
-    
-    height: 50px;
+    width: 100%;
 }
