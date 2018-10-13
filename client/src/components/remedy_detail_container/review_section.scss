@@ -2,9 +2,12 @@
     display: flex;
     align-content: center;
     color: white;
+    margin-left: 1em;
     div {
-        padding: 0.5em 1em;
         font-size: 4vh;
+    }
+    span {
+        margin-left: .5em;
     }
 }
 

@@ -5,12 +5,28 @@ import { connect } from 'react-redux';
 import { addReview } from '../../actions';
 import { getReviewList } from '../../actions';
 import './review_section.scss';
+// import StarRating from '../star_rating/star_rating_of _user';
+import '../star_rating/star_rating.scss';
+import StarRatingComponent from 'react-star-rating-component';
+import StarRatingTotal from '../star_rating/star_rating_total';
 
 const textStyle = {
     color: 'grey'
 }
 
 class ReviewList extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            rating: 0
+        };
+    }
+
+    onStarClick(nextValue, prevValue, name) {
+        this.setState({ rating: nextValue });
+    }
+
     componentDidMount() {
         const { id } = this.props;
         this.props.getReviewList(id);
@@ -19,32 +35,27 @@ class ReviewList extends Component {
     renderInput(props) {
         console.log("renderInput props:", props);
         const { input, name, type, placeholder, meta: { touched, error } } = props;
-        if (type === "text") {
-            return (
-                <input {...input} type="text" className="review-area" autoComplete="off" placeholder={placeholder ? placeholder : null} />
-            )
-        } else if (type === "number") {
-            return (
-                <input {...input} type="number" className="rating-area" />
-            )
-        }
+        return (
+            <input {...input} type={type} className="review-area" autoComplete="off" placeholder={placeholder ? placeholder : null} />
+        )
 
     }
 
-    saveReview = (values) => {
-        console.log("Form Values:", values);
-        this.props.addReview(values);
+    saveReview = (value) => {
+        // console.log("rating on submit", this.state.rating);
+        // console.log("review on submit", value.review);
+        this.props.addReview({ review: value.review, rating: this.state.rating });
         const { id } = this.props;
         this.props.getReviewList(id);
     }
 
     render() {
+        const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
-        // console.log("reviewList:", reviewList);
         const displayReview = () => {
             if (reviewList.length > 0) {
                 return reviewList.map((reviewItem, index) => {
-                    console.log("reviewItem:", reviewItem)
+
                     return (
                         <ul className="single-review" key={index}>
                             <li>{reviewItem.username}</li>
@@ -56,9 +67,11 @@ class ReviewList extends Component {
                 })
             }
         }
+
         return (<div>
             <div className="review-header">
                 <div>Reviews:</div>
+                <span><StarRatingTotal /></span>
             </div>
             <div className="reviews-container">
 
@@ -67,7 +80,15 @@ class ReviewList extends Component {
                 <form action="" onSubmit={handleSubmit(this.saveReview)}>
                     <div className="review">
                         <div>
-                            <span>Rating:</span><Field type="number" name="rating" component={this.renderInput} />
+                            <div className="star-rating-area">
+                                <div className="star-rating-count">Rating:<span> {rating}</span></div>
+                                <StarRatingComponent
+                                    name="rating"
+                                    starCount={5}
+                                    value={rating}
+                                    onStarClick={this.onStarClick.bind(this)}
+                                />
+                            </div>
                         </div>
 
                         <Field type="text" name="review" component={this.renderInput} placeholder="Leave a review..." />

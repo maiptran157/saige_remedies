@@ -18,7 +18,7 @@ export function getReviewList(id) {
         reviewList = response.reviews
     }
 
-    console.log('ACTION CREATOR REVIEW LIST:', reviewList);
+    // console.log('ACTION CREATOR REVIEW LIST:', reviewList);
 
     return {
         type: types.GET_REVIEW_LIST,
