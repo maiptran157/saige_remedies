@@ -1,0 +1,6 @@
+export default {
+    url: 'YOUR URL HERE',
+    App_Id: 'YOUR APP ID HERE',
+    App_Key: 'YOUR APP KEY HERE',
+    Content_Type: 'YOUR CONTENT TYPE HERE'
+}
