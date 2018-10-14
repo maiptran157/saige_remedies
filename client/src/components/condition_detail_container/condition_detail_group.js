@@ -16,13 +16,13 @@ const ConditionDetailGroup = (props) => {
     const description_presentation = () => {
         if (typeof self_help === "undefined" && typeof caution === "undefined") {
             return (
-                <p className="detail-paragraph">
+                <p className="condition-detail-paragraph">
                     {description}
                 </p>
             )
         } else if (typeof self_help === "undefined") {
             return (
-                <p className="detail-paragraph">
+                <p className="condition-detail-paragraph">
                     {description}
                     <br />
                     <span style={style}>Caution:</span> {caution}
@@ -30,7 +30,7 @@ const ConditionDetailGroup = (props) => {
             )
         } else if (typeof caution === "undefined") {
             return (
-                <p className="detail-paragraph">
+                <p className="condition-detail-paragraph">
                     {description}
                     <br />
                     <span style={style}>Self-help:</span> {self_help}
@@ -38,7 +38,7 @@ const ConditionDetailGroup = (props) => {
             )
         } else {
             return (
-                <p className="detail-paragraph">
+                <p className="condition-detail-paragraph">
                     {description}
                     <br />
                     <span style={style}>Self-help:</span> {self_help}
@@ -53,7 +53,7 @@ const ConditionDetailGroup = (props) => {
         <div className="condition-detail-group">
             <div className="condition-detail-header">
                 <div className="condition-detail-name">
-                    <div><span>Ailment: </span>{name}</div>
+                    <div>{name}</div>
                 </div>
                 {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
             </div>
