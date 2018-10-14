@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import CategoryContainer from '../category_container';
 import './umbrella_conditions.css';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
-import { get } from 'https';
 
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
 
@@ -19,12 +18,8 @@ class UmbrellaConditions extends Component {
     }
 
     async getCategoryList() {
-        const response = await axios({
-            method: 'get',
-            url: CATEGORY_URL,
-            responseType: 'JSON',
-        });
         try {
+            const response = await axios.get(`${CATEGORY_URL}`);
             this.setState({
                 data: response.data,
             })
@@ -35,7 +30,7 @@ class UmbrellaConditions extends Component {
     }
 
     render() {
-        console.log('state:', this.state.data);
+        console.log('State:', this.state.data)
         // const { data } = this.state;
         // const category = data.map((category, index) => {
         //     return <CategoryContainer name={category.name} key={index} conditions={category.conditions} img={category.img} />
