@@ -4,7 +4,7 @@ require_once('mysql_connect.php');
 
 $output=[];
 
-print('symptom_category running: ');
+//print('symptom_category running: ');
 
 $query = "SELECT ID AS _id, short_name AS name, `URL` as img FROM symptom_group";
 

@@ -9,7 +9,7 @@ $output = [
 
 require_once('post/mysql_connect.php');
 
-print('connection working');
+//print('connection working');
 
 $request = $_GET['request'];
 
