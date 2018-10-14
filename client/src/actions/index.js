@@ -2,6 +2,8 @@ import types from './types';
 import axios from 'axios';
 import dummyReviewList from '../dummy_data/data_for_remedy_review';
 
+const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
+
 export function addReview(review) {
     const response = review;
     dummyReviewList.reviews.push(response);
@@ -38,9 +40,19 @@ export function getSingleReview(id) {
     }
 }
 
-export const signUp = (userInfo) => {
-    return async (dispatch) => {
+// export async function getCategorylist() {
+//    const response = await axios.get(`${CATEGORY_URL}`);
+//    console.log('Response in actions index', response);
 
-    }
-}
+//    return {
+//        type: types.GET_CATEGORY_LIST,
+//        payload: response,
+//    }
+
+
+// export const signUp = (userInfo) => {
+//     return async (dispatch) => {
+
+//     }
+
 
