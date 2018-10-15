@@ -10,23 +10,28 @@ import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
 
 class UmbrellaConditions extends Component {
-    state = {
-        data: [],
-    }
-
     componentDidMount() {
         this.props.getCategoryList();
     }
 
-    renderInput() {
-
-    }
     render() {
-        console.log('Category Name:', this.props.categories)
+        console.log(this.props.categories);
+        const { categories } = this.props;
+        
+        if (!categories) {
+            return null;
+        }
+
+        const categoryList = categories.map( (category)=> {
+            console.log(category);
+            return <CategoryContainer img={category.img} key={category._id} name={category.name}/>
+        });
+  
         return (
             <div className="categories-container">
                 <Header logo={saigeLogo} />
                 <div className="categories-content">
+                    {categoryList}
                 </div>
             </div>
         )
@@ -34,7 +39,6 @@ class UmbrellaConditions extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.category.categoryName.data);
     return {
         categories: state.category.categoryName.data
     }
