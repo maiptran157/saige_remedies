@@ -1,35 +1,77 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './condition_detail_container.css';
 import ConditionDetailGroup from './condition_detail_group';
 import RemedyResultsContainer from './remedy_result_container';
 import Header from '../header';
-import dummyData from '../../dummy_data/data_for_condition_detail';
+// import dummyData from '../../dummy_data/data_for_condition_detail';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import axios from 'axios';
+import config from '../../config';
+import { formatPostData } from '../../helpers';
 
-const ConditionDetailContainer = (props) => {
-    // console.log(props);
-    const { match: { params } } = props;
-    const { category, conditionId } = params;
-    // console.log("category:", category);
-    // console.log("conditionId:", conditionId)
-    // console.log("dummyData:", dummyData);
-    const filteredData = () => {
-        for (let dummyIndex = 0; dummyIndex < dummyData.length; dummyIndex++) {
-            if (dummyData[dummyIndex].category === category && dummyData[dummyIndex]._id === conditionId) {
-                return dummyData[dummyIndex];
-            }
+class ConditionDetailContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            conditionDetail: []
         }
     }
 
-    const filteredDataObj = filteredData();
-    const { name, description, self_help, caution, treatment } = filteredDataObj;
-    return (
-        <div className="condition-detail-container">
-            <Header logo={backButton} buttonType="back-button" />
-            <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
-            <RemedyResultsContainer treatment={treatment} />
-        </div>
-    )
+    componentDidMount() {
+        this.getConditionDetail();
+    }
+
+    async getConditionDetail() {
+        const { match: { params } } = this.props;
+        const { category, conditionId } = params;
+        console.log("category:", category);
+        console.log("conditionId:", conditionId);
+
+        const dataToSend = formatPostData({ ID: 10071 });
+
+        // axios.get('/api/something?ID=4&more=stuff', {
+        //     params:  {
+        //         ID: 4
+        //     }
+        // })
+
+        try {
+            const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
+            console.log("response:", response);
+            this.setState({
+                conditionDetail: response
+            })
+        } catch (error) {
+            this.setState({
+                conditionDetail: []
+            })
+        }
+    }
+
+    render() {
+
+        return (
+            <div className="condition-detail-container">
+                <Header logo={backButton} buttonType="back-button" />
+                {/* <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
+            <RemedyResultsContainer treatment={treatment} /> */}
+            </div>
+        )
+    }
+
+
+    // const filteredData = () => {
+    //     for (let dummyIndex = 0; dummyIndex < dummyData.length; dummyIndex++) {
+    //         if (dummyData[dummyIndex].category === category && dummyData[dummyIndex]._id === conditionId) {
+    //             return dummyData[dummyIndex];
+    //         }
+    //     }
+    // }
+
+    // const filteredDataObj = filteredData();
+    // const { name, description, self_help, caution, treatment } = filteredDataObj;
+
+
 }
 
 export default ConditionDetailContainer;
