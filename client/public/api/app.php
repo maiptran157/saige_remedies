@@ -9,8 +9,6 @@ $output = [
 
 require_once('post/mysql_connect.php');
 
-//print('connection working');
-
 $request = $_GET['request'];
 
 switch($request){
