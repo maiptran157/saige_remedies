@@ -54,6 +54,18 @@ export const getCategoryList = () => async dispatch => {
     }
 }
 
+export const getConditionsList = (id) => async dispatch => {
+    try {
+        const response = await axios.post({
+            url: CATEGORY_URL,
+            id: id
+        });
+
+    } catch(error) {
+        console.log(err.message);
+    }
+}
+
 // export const signUp = (userInfo) => {
 //     return async (dispatch) => {
 

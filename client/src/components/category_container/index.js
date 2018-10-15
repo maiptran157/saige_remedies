@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 
 export default props => {
-    console.log("Properties in category component:", props);
+    console.log(props);
     return (
         <div className="category-box">
-            <Link to={`/conditions/${props.name}`} className="category-img">
+            <Link to={`/conditions/${props.id}`} className="category-img">
                 <img src={props.img} alt="" />
             </Link>
             <div className="category-name">{props.name}</div>

@@ -23,8 +23,7 @@ class UmbrellaConditions extends Component {
         }
 
         const categoryList = categories.map( (category)=> {
-            console.log(category);
-            return <CategoryContainer img={category.img} key={category._id} name={category.name}/>
+            return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name}/>
         });
   
         return (

@@ -22,6 +22,7 @@ class ConditionsContainer extends Component {
     render() {
         const { category } = this.props.match.params;
         const { items } = this.state;
+        console.log(this.props.match.params.categoryId);
         const ailment = () => {
             for (let i = 0; i < items.length; i++) {
                 if (category === items[i].name) {
