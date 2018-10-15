@@ -13,8 +13,10 @@ class UmbrellaConditions extends Component {
     state = {
         data: [],
     }
+
     componentDidMount() {
-        this.getCategoryList();
+        this.getCategoryList(); 
+        console.log('Component did mount');
     }
 
     async getCategoryList() {
@@ -28,18 +30,15 @@ class UmbrellaConditions extends Component {
             console.log(error.message)
         }
     }
-
+    renderInput() {
+        const data = this.state;
+        
+    }
     render() {
-        console.log('State:', this.state.data)
-        // const { data } = this.state;
-        // const category = data.map((category, index) => {
-        //     return <CategoryContainer name={category.name} key={index} conditions={category.conditions} img={category.img} />
-        // });
         return (
             <div className="categories-container">
                 <Header logo={saigeLogo} />
                 <div className="categories-content">
-                    {/* {category} */}
                 </div>
             </div>
         )
