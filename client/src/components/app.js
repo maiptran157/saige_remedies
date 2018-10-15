@@ -1,26 +1,64 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SignUp from './user_signup/';
+import SignIn from './user_signin';
 import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
+import SymptomCheck from './symptom_check';
 import { Route } from 'react-router-dom';
 import './app.css';
-import backgroundImg from '../assets/images/background_image_v1.jpg'
+
+import backgroundImg from '../assets/images/background_image.jpeg';
+// import Modal from '../components/modal/index';
 
 const style = {
     backgroundImage: `url(${backgroundImg})`,
-    backgroundSize: `cover`
+    backgroundSize: `cover`,
 }
 
-const App = () => (
-    <div className="container" style={style}>
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-        <Route path="/" exact component={UmbrellaConditions} />
-        <Route path="/conditions/:category" component={ConditionContainer} />
-        <Route path="/condition/:conditionId" component={ConditionDetailContainer} />
-        <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+        this.state = {
+            isModalOpen: false,
+        };
+    }
+    componentDidMount() {
+        this.openModal();
+    }
 
-    </div>
-);
+    openModal() {
+        this.setState({
+            isModalOpen: true,
+        });
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false,
+        });
+    }
+
+    render() {
+        return (
+
+            <div className="container" style={style}>
+                {/* <Modal isOpen={this.state.isModalOpen} >
+                <h1>DANGER</h1>
+                <button onClick={this.closeModal}>Close Modal</button>
+            </Modal> */}
+                <Route path="/" exact component={UmbrellaConditions} />
+                <Route path="/conditions/:category" exact component={ConditionContainer} />
+                <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
+                <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+                <Route path="/sign-up" component={SignUp} />
+                <Route path="/sign-in" component={SignIn} />
+                <Route path="/symptom-check" component={SymptomCheck} />
+            </div>
+        )
+    }
+}
 
 export default App;

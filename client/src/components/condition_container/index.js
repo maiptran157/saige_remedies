@@ -3,31 +3,40 @@ import './condition_container.css';
 import AilmentContainer from '../ailment_container';
 import Header from '../header';
 import dummyData from '../../dummy_data/data';
+import backButton from '../../assets/images/back_arrow_white_shadow.png';
 
 class ConditionsContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: []
+        }
+    }
 
+    componentDidMount() {
+        this.setState({
+            items: dummyData
+        });
+    }
 
     render() {
         const { category } = this.props.match.params;
-        console.log("Category:", category)
-        const filteredConditions = dummyData.map((item, index) => {
-            console.log('Dummy Data Category:', item['category']);
-
-            if (category === item['category']) {
-                console.log('Condition Name:', item.name);
-                return <AilmentContainer key={item._id} name={item.name} />
+        const { items } = this.state;
+        const ailment = () => {
+            for (let i = 0; i < items.length; i++) {
+                if (category === items[i].name) {
+                    const conditionsArray = items[i].conditions;
+                    console.log('conditionsArray:', conditionsArray);
+                    return conditionsArray.map((item) => {
+                        return <AilmentContainer key={item._id} _id={item._id} name={item.name} category={category} />
+                    })
+                }
             }
-
-        });
-
-        // const listOfConditions = dummyData.map( (condition, index) => {
-        //     return <AilmentContainer key={condition._id} name={filteredConditions}/>
-        // });
-
+        }
         return (
-            <div className="condition-container">
-                <Header />
-                {filteredConditions}
+            <div className="condition-container" >
+                <Header logo={backButton} buttonType="back-button" />
+                {ailment()}
             </div>
 
         )

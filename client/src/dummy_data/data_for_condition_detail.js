@@ -1,53 +1,180 @@
-// export default {
-//     Name: "Allergies",
+export default [
+    {
+        _id: "001",
+        name: "Allergy",
+        category: "Allergies",
+        description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
+        treatment: [
+            {
+                _id: "12345", Herb: ["Nettle and Elderflower"],
+                Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
+            },
+            {
+                _id: "12346", Herb: ["Baical skullcap"],
+                Remedy: "Make a decoction from the herb and take 11/4 cups (300 ml) a day."
+            }]
+    },
 
-//     Description: "Allergies often develop when the body’s immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
 
-//     Treatment: [
+    {
+        _id: "002",
+        name: "Hay Fever",
+        category: "Allergies",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+        treatment: [
+            {
+                _id: "12347", Herb: ["Elderflower (Sambucus nigra)"],
+                Remedy: "Make an infusion and take 11/4–12/3 cups (300–450 ml) a day. Take for a few months before, as well as during, the hay fever season.."
+            }]
+    },
 
-//         {
-//             Herb: ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
 
-//             Remedy: "Make a nettle infusion. Take 12/3–2 1/3 cups (450–600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 11/4 cups (300 ml) of water and take daily for 3 months at a time."
-//         },
+    {
+        _id: "003",
+        name: "Eczema",
+        category: "Allergies",
+        description: "Characterized by red, inflamed skin, eczema causes irritation, flaking, scaling, and tiny blisters. Although it is often the result of an allergic reaction to certain substances, eczema can also be inherited, result from prolonged contact with an irritant, or it may simply appear for an unknown reason. It is best to consult a professional practitioner as eczema is difficult to self-treat. However, the following remedies, taken for at least a week, can bring relief. Two remedies may be used at once. Chickweed reduces soreness or itchiness, and oats can be used to impart a soothing, emollient effect to bathwater. See also Skin Rashes.",
+        caution: "If there is no improvement, or if the condition deteriorates, consult a professional practitioner.",
+        treatment: [
+            {
+                _id: "12348", Herb: ["Peppermint (Mentha x piperita)", "Chickweed (Stellaria media)"],
+                Remedy: "Make peppermint lotion by infusing 1 tsp of herb to 3/4 cup (150 ml) of water. Leave for 10 minutes, then strain and cool. Use to wash gently over the affected skin 2–3 times a day.",
+                Option: "Add 2 drops of peppermint oil to 1 tsp of any of the chickweed preparations."
+            },
+            {
+                _id: "12349", Herb: ["Gotu kola (Centella asiatica)"],
+                Remedy: "Dust the affected area with powder 2–3 times a day. Alternatively, mix the powder with enough water to make a thick paste and spread over the affected area 1–2 times a day."
+            }]
+    },
 
-//         {
-//             Herb: ["Baical skullcap(Scutellaria baicalensis) "],
 
-//             Remedy: "Make a decoction from the herb and take 11/4 cups (300 ml) a day."
-//         }]
-// }
+    {
+        _id: "004",
+        name: "Wheezing",
+        category: "Allergies",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+        treatment: [
+            {
+                _id: "12350", Herb: ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
+                Remedy: "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
+            },
+            {
+                _id: "12351", Herb: ["German chamomile (Chamomilla recutita)"],
+                Remedy: "Make an infusion with 2 heaping tsp of the herb to 3/4 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
+                Option: "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
+            },
+            {
+                _id: "12352", Herb: ["Baical skullcap (Scutellaria baicalensis)"],
+                Remedy: "Make a decoction and take up to 11/4 cups (300 ml) a day."
+            }]
+    },
 
-export default {
-    _id: "12347",
 
-    Name: "Varicose Veins",
+    {
+        _id: "005",
+        name: "Shortness of Breath",
+        category: "Allergies",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+        treatment: [
+            {
+                _id: "12353", Herb: ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
+                Remedy: "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
+            },
+            {
+                _id: "12354", Herb: ["German chamomile (Chamomilla recutita)"],
+                Remedy: "Make an infusion with 2 heaping tsp of the herb to 3/4 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
+                Option: "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
+            },
+            {
+                _id: "12355", Herb: ["Baical skullcap (Scutellaria baicalensis)"],
+                Remedy: "Make a decoction and take up to 11/4 cups (300 ml) a day."
+            }]
+    },
 
-    Description: "Varicose veins result from a weakness, or increased pressure, in the veins. This causes the thin supporting walls of the veins to bulge out, resulting in distended veins and the pooling of blood.",
 
-    Self_help: "Home treatment should aim to relieve pressure on the veins. Varicose vein sufferers should avoid tight clothing around the waist or legs.",
+    {
+        _id: "006",
+        name: "Breathing Difficulty",
+        category: "Allergies",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+        treatment: [
+            {
+                _id: "12356", Herb: ["Cramp Bark (Viburnum opulus)"],
+                Remedy: "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
+            }]
+    },
 
-    Caution: "Do not massage or rub varicose veins.",
+    {
+        _id: "007",
+        name: "Tight Chest",
+        category: "Allergies",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+        treatment: [
+            {
+                _id: "12357", Herb: ["Cramp bark (Viburnum opulus)"],
+                Remedy: "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
+            }]
+    },
 
-    Treatment: [
+    {
+        _id: "008",
+        name: "Anemia",
+        category: "Circulatory Problems",
+        description: "There are several types of anemia. Iron deficiency anemia, caused by blood loss from a wound or menstrual bleeding, can be countered with herbs. Bitter herbs, such as gentian, improve the absorption of nutrients, and nettle contains plenty of iron. Increase your intake of other green herbs that contain iron.",
+        caution: "Seek professional advice to determine the type of anemia you have before home treatment.",
+        treatment: [
+            {
+                _id: "12358", Herb: ["Gentian (Gentiana lutea)", "wormwood (Artemisia absinthium)"],
+                Remedy: "Take 2–5 drops of either tincture with water, half an hour before meals.",
+                caution: "Do not take wormwood during pregnancy."
+            },
+            {
+                _id: "12359", Herb: ["Chiretta (Swertia chirata)"],
+                Remedy: "Take 5–10 drops of tincture with water 3 times a day before meals."
+            }]
+    },
 
-        {
-            _id: "12345",
 
-            Herb: "Witch hazel, Calendula",
+    {
+        _id: "009",
+        name: "High Blood Pressure",
+        category: "Circulatory Problems",
+        description: "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
+        caution: "Seek professional advice, especially if already taking medication for a circulatory condition.",
+        treatment: [
+            {
+                _id: "12360", Herb: ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
+                Remedy: "Take a garlic tablet or eat 1–2 fresh garlic cloves each day. Drink 1/2 cup (125 ml) of beetroot or pomegranate juice once a day.",
+                Note: "These are most effective when used to support a healthy circulation and prevent illness."
+            },
+            {
+                _id: "12361", Herb: ["Ginkgo (Ginkgo biloba)"],
+                Remedy: "Take tablets or 1⁄2 tsp of fluid extract with water twice a day for approximately 2–3 months at a time."
+            },
+            {
+                _id: "12362", Herb: ["Ginger (Zingiber officinale)"],
+                Remedy: "Grate 1 tsp of fresh ginger into your food each day."
+            }]
+    },
 
-            Remedy: "Gently apply distilled witch hazel or witch hazel cream or ointment to the affected area 1–2 times a day, or combine equal parts of the creams of both herbs and apply 1–2 times a day.",
-
-            Note: "This remedy is particularly effective on painful varicose veins."
-        },
-
-        {
-            _id: "12346",
-
-            Herb: "Yarrow",
-
-            Remedy: "(External) Wash varicose veins in a cool infusion, or apply the ointment 1–2 times a day.   (Internal) Make an infusion and leave for 10 minutes. Take 3/4–11/4 cups (150–300 ml) a day for up to 10 weeks.",
-
-            Caution: "Do not take yarrow during pregnancy."
-        }]
-}
+    {
+        _id: "010", name: "Arteriosclerosis",
+        category: "Circulatory Problems",
+        description: "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
+        caution: "Seek professional advice, especially if already taking medication for a circulatory condition.",
+        treatment: [
+            {
+                _id: "12363", Herb: ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
+                Remedy: "Take a garlic tablet or eat 1–2 fresh garlic cloves each day. Drink 1/2 cup (125 ml) of beetroot or pomegranate juice once a day.",
+                Note: "These are most effective when used to support a healthy circulation and prevent illness."
+            },
+            {
+                _id: "12364", Herb: ["Ginkgo (Ginkgo biloba)"],
+                Remedy: "Take tablets or 1⁄2 tsp of fluid extract with water twice a day for approximately 2–3 months at a time."
+            },
+            {
+                _id: "12365", Herb: ["Ginger (Zingiber officinale)"],
+                Remedy: "Grate 1 tsp of fresh ginger into your food each day."
+            }]
+    }
+]
