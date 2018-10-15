@@ -5,6 +5,7 @@ import ConditionContainer from './condition_container';
 import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
+import SymptomCheck from './symptom_check';
 import { Route } from 'react-router-dom';
 import './app.css';
 
@@ -53,7 +54,8 @@ class App extends Component {
                 <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
                 <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
                 <Route path="/sign-up" component={SignUp} />
-                <Route path="/sign-in" component={SignIn}/> 
+                <Route path="/sign-in" component={SignIn} />
+                <Route path="/symptom-check" component={SymptomCheck} />
             </div>
         )
     }

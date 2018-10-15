@@ -4,4 +4,6 @@ export default {
     GET_SINGLE_REVIEW: 'get_single_review',
     GET_CATEGORY_LIST: 'get_category_list',
     SIGN_UP: 'sign_up',
+    GET_SYMPTOM: 'get_symptom',
+    GET_SYMPTOM_ERROR: 'get_symptom_error'
 };
