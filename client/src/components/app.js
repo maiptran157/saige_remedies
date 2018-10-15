@@ -50,7 +50,7 @@ class App extends Component {
                 <button onClick={this.closeModal}>Close Modal</button>
             </Modal> */}
                 <Route path="/" exact component={UmbrellaConditions} />
-                <Route path="/conditions/:category" exact component={ConditionContainer} />
+                <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
                 <Route path="/conditions/:category/:conditionId" component={ConditionDetailContainer} />
                 <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
                 <Route path="/sign-up" component={SignUp} />
