@@ -61,6 +61,11 @@ export const getConditionsList = (id) => async dispatch => {
             id: id
         });
 
+        dispatch({
+            type: types.GET_CONDITIONS_LIST,
+            payload: response.data,
+        })
+
     } catch(error) {
         console.log(err.message);
     }

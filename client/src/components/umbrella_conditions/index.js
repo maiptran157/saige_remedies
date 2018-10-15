@@ -15,7 +15,7 @@ class UmbrellaConditions extends Component {
     }
 
     render() {
-        console.log(this.props.categories);
+        // console.log(this.props.categories);
         const { categories } = this.props;
         
         if (!categories) {
