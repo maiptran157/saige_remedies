@@ -82,7 +82,7 @@
 	"Description": "There are several types of anemia. Iron deficiency anemia, caused by blood loss from a wound or menstrual bleeding, can be countered with herbs. Bitter herbs, such as gentian, improve the absorption of nutrients, and nettle contains plenty of iron. Increase your intake of other green herbs that contain iron.",
 	"Caution": "Seek professional advice to determine the type of anemia you have before home treatment.",
 	"Treatment": [{
-		"Herb": ["Gentian (Gentiana lutea)", "wormwood (Artemisia absinthium)"],
+		"Herb": ["Gentian (Gentiana lutea)", "Wormwood (Artemisia absinthium)"],
 		"Remedy": "Take 2 to 5 drops of either tincture with water, half an hour before meals.",
 		"Caution": "Do not take wormwood during pregnancy."
 	}, {
@@ -139,7 +139,7 @@
 	"Category": "Circulatory Problems",
 	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
 	"Treatment": [{
-		"Herb": ["Linden (Tilia spp.), Valerian (Valeriana officinalis)"],
+		"Herb": ["Linden (Tilia spp.)", "Valerian (Valeriana officinalis)"],
 		"Remedy": "Make an infusion using 1 tsp of linden and .5 tsp of powdered valerian to .75 cup (150 ml) of water. Drink 2.33 cups (600 ml) a day."
 	}, {
 		"Herb": ["Motherwort (Leonurus cardiaca)", "linden (Tilia spp.)"],
@@ -225,11 +225,11 @@
 	}]
 }, {
     "Name": "Healing Wounds",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Minor wounds, bruises, and grazes are part of everyday life, and the remedies listed make effective home treatments.",
 	"Caution": "Seek immediate medical attention for serious or deep wounds, bruising, or scrapes, especially if the pain has not considerably lessened after 24 hours.",
 	"Treatment": [{
-		"Herb": ["Comfrey (Symphytum officinale), Aloe Vera (Aloe vera)"],
+		"Herb": ["Comfrey (Symphytum officinale)", "Aloe Vera (Aloe vera)"],
 		"Remedy": "Apply comfrey ointment at the edges of the wound or, once a scab has formed, use a comfrey poultice. Use aloe vera gel to cleanse the wound.",
 		"Caution": "Do not use comfrey on an open wound."
 	}]
@@ -253,7 +253,7 @@
 		"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
 		"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
 	}, {
-		"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale), lemon (Citrus limon)"],
+		"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
 		"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day.(External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
 	}]
 }, {
@@ -346,16 +346,16 @@
 	}]
 }, {
 	"Name": "Nausea",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Nausea can occur for various reasons, including food poisoning, infections, fever, migraine, stress, or emotional problems, as well as travel sickness. For short-term conditions, there are many herbs that reduce or relieve the unpleasant, empty, gnawing symptoms of nausea and vomiting. Most of the herbs listed are also very useful for travel sickness.",
 	"Caution": "Seek professional advice if nausea is severe or is recurrent. ",
 	"Treatment": [{
-		"Herb": [" Ginger (Zingiber officinale), Galangal (Alpinia officinarum), Turmeric (Curcuma longa"],
-		"Remedy": " Make an infusion with one of the herbs listed using about 1 to 2 slices (0.5 g) of fresh root or .25 to .5 tsp of dried, powdered, or grated root to .75 cup (150 ml) of water. Use the fresh root if possible. Infuse for at least 5 minutes and sip while hot. Drink up to 3 cups (750 ml) a day. Add 1 to 2 cloves (Eugenia caryophyllata) if desired."
+		"Herb": ["Ginger (Zingiber officinale)", "Galangal (Alpinia officinarum)", "Turmeric (Curcuma longa"],
+		"Remedy": "Make an infusion with one of the herbs listed using about 1 to 2 slices (0.5 g) of fresh root or .25 to .5 tsp of dried, powdered, or grated root to .75 cup (150 ml) of water. Use the fresh root if possible. Infuse for at least 5 minutes and sip while hot. Drink up to 3 cups (750 ml) a day. Add 1 to 2 cloves (Eugenia caryophyllata) if desired."
 	}]
 }, {
 	"Name": "Vomitting",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Vomitting can occur for various reasons, including food poisoning, infections, fever, migraine, stress, or emotional problems, as well as travel sickness. For short-term conditions, there are many herbs that reduce or relieve the unpleasant, empty, gnawing symptoms of nausea and vomiting. Most of the herbs listed are also very useful for travel sickness.",
 	"Caution": "Seek professional advice if nausea is severe or is recurrent. ",
 	"Treatment": [{
@@ -367,20 +367,20 @@
 	}]
 }, {
 	"Name": "Gas",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Gas and Bloating are common digestive problems. As a preventative, take bitter herbs, such as centaury and gentian, which improve digestion. Infusions of aromatic plants such as fennel, cardamom, anise, lemon verbena, or peppermint are effective remedies. All the herbs listed under General Remedies can be combined by adjusting the measurements of each herb using the same proportion to water.",
 	"Caution": "Bitters are generally unsuitable and unpalatable for children under 5. All types or species of mint (Mentha spp.) are unsuitable for children under 5.",
 	"Treatment": [{
-		"Herb": [" Centaury (Erythraea centaurium), Gentian (Gentiana lutea)"],
+		"Herb": ["Centaury (Erythraea centaurium)", "Gentian (Gentiana lutea)"],
 		"Remedy": "Take 5 to 10 drops of tincture 3 times a day with water."
 	}, {
-		"Herb": [" Fennel (Foeniculum vulgare), Anise (Pimpinella anisum)"],
+		"Herb": ["Fennel (Foeniculum vulgare)", "Anise (Pimpinella anisum)"],
 		"Remedy": "Make an infusion with .25 to .5 tsp of fennel or anise seeds per .75 cup (150 ml) of water and drink up to 3 cups (750 ml) a day."
 	}, {
 		"Herb": ["Cardamom (Elettaria cardamomum)"],
 		"Remedy": " Make an infusion with the crushed seeds of 2 cardamoms per .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
 	}, {
-		"Herb": ["  Lemon verbena (Lippia citriodora)"],
+		"Herb": ["Lemon verbena (Lippia citriodora)"],
 		"Remedy": "Make an infusion using 1 tsp of dried or 2 tsp of fresh leaves per 1 cup (150 ml) of water and take up to 3 cups (750 ml) a day."
 	}, {
 		"Herb": ["Peppermint (Mentha x piperita)"],
@@ -388,7 +388,7 @@
 	}]
 }, {
 	"Name": "Bloating",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Gas and Bloating are common digestive problems. As a preventative, take bitter herbs, such as centaury and gentian, which improve digestion. Infusions of aromatic plants such as fennel, cardamom, anise, lemon verbena, or peppermint are effective remedies. All the herbs listed under General Remedies can be combined by adjusting the measurements of each herb using the same proportion to water.",
 	"Caution": "Bitters are generally unsuitable and unpalatable for children under 5. All types or species of mint (Mentha spp.) are unsuitable for children under 5.",
 	"Treatment": [{
@@ -409,7 +409,7 @@
 	}]
 }, {
 	"Name": "Mouth Ulcers",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Many astringent herbs can be used to treat mouth ulcers and tighten up weak gums and loose teeth. Sage is particularly effective as it also disinfects the mouth. Myrrh tincture will sting, but it will also increase the rate of healing.",
 	"Treatment": [{
 		"Herb": ["Myrrh (Commiphora molmol)"],
@@ -423,7 +423,7 @@
 	}]
 }, {
 	"Name": "Constipation",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Herbs help both constipation and diarrhea by gently restoring normal bowel function. Constipation often results from insufficient intake of fruit, vegetables, and whole grains, while diarrhea is usually caused by intestinal infection or inflammation, such as food poisoning. Irritable bowel syndrome gives rise to alternating bouts of constipation and diarrhea, and spastic constipation results from tension and muscle spasm in the colon.",
 	"Caution": "Seek professional advice for persistent constipation or diarrhea.",
 	"Treatment": [{
@@ -434,18 +434,18 @@
 	}]
 }, {
 	"Name": "Diarrhea",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Herbs help both constipation and diarrhea by gently restoring normal bowel function. Constipation often results from insufficient intake of fruit, vegetables, and whole grains, while diarrhea is usually caused by intestinal infection or inflammation, such as food poisoning. Irritable bowel syndrome gives rise to alternating bouts of constipation and diarrhea, and spastic constipation results from tension and muscle spasm in the colon.",
 	"Caution": "Seek professional advice for persistent constipation or diarrhea.",
 	"Treatment": [{
-		"Herb": ["Agrimony (Agrimonia eupatoria)", "Sage (Salvia officinalis)", "Bael (Aegle marmelos)", "Bistort (Polygonum bistorta), Black Catechu (Acacia catechu)"],
+		"Herb": ["Agrimony (Agrimonia eupatoria)", "Sage (Salvia officinalis)", "Bael (Aegle marmelos)", "Bistort (Polygonum bistorta)", "Black Catechu (Acacia catechu)"],
 		"Remedy": "The above herbs are listed in ascending order of astringency. Make a decoction using 1 heaping tsp of one herb to 1 cup (225 ml) of water and simmer for 15 to 20 minutes. Take up to 1.66 cups (450 ml) a day for no longer than 3 days.",
 		"Note": "If using Bistort or Black Catechu (the most astringent herbs), mix with demulcents such as Psyllium Seeds (Plantago spp.) or Marshmallow Root (Althaea officinalis). Add 1 tsp, plus a pinch of Peppermint (Mentha x piperita) or other Mint (Mentha spp.), per 1 cup (225 ml) of decoction.",
 		"Caution": "Do not take for more than 3 days at a time and do not take again for 3 days. If there is no improvement, seek professional advice. Do not take sage in pregnancy. Do not give mint to children under 5."
 	}]
 }, {
 	"Name": "Acidity",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Acidity, caused by too much acid production, suggests a poor or inappropriate diet. Cut out acidic foods, such as oranges, red meat, spinach, and tomatoes, as well as alcohol and tobacco if possible.",
 	"Treatment": [{
 		"Herb": ["Slippery Elm (Ulmus rubra)", "Arrowroot (Maranta arundinacea)", "Iceland Moss (Cetraria islandica)"],
@@ -456,7 +456,7 @@
 	}]
 }, {
 	"Name": "Indigestion",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Indigestion, caused by too much acid production, suggests a poor or inappropriate diet. Cut out acidic foods, such as oranges, red meat, spinach, and tomatoes, as well as alcohol and tobacco if possible.",
 	"Treatment": [{
 		"Herb": ["German chamomile (Chamomilla recutita)"],
@@ -464,7 +464,7 @@
 	}]
 }, {
 	"Name": "Anxiety",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as stress, anxiety, and tension take hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
@@ -480,7 +480,7 @@
 	}]
 }, {
 	"Name": "Depression",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as depression takes hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
@@ -493,7 +493,7 @@
 	}]
 }, {
 	"Name": "Tension",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as stress, anxiety, and tension take hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
@@ -506,7 +506,7 @@
 	}]
 }, {
 	"Name": "Head Pain",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Neuralgia is the pain caused by an irritated, damaged, or trapped nerve. It usually occurs in brief, severe bouts and can be felt shooting along the nerve. Although it is difficult to treat, the following remedies may bring relief to minor problems.",
 	"Treatment": [{
 		"Herb": ["Clove (Eugenia caryophyllata)"],
@@ -521,7 +521,7 @@
 	}]
 }, {
 	"Name": "Toothache",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Neuralgia is the pain caused by an irritated, damaged, or trapped nerve. It usually occurs in brief, severe bouts and can be felt shooting along the nerve. Although it is difficult to treat, the following remedies may bring relief to minor problems.",
 	"Caution": "Seek professional advice if there is fever, or swelling of the gums with toothache",
 	"Treatment": [{
@@ -537,7 +537,7 @@
 	}]
 }, {
 	"Name": "Headache",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Headaches are caused by many factors, such as toothache, neck tension, eyestrain, and hangovers. It is important to diagnose and treat the underlying cause, which could mean visiting a dentist, optician, or osteopath in the first instance. Herbal medicine can be very helpful for headaches, although choosing the right herbs can be difficult.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
@@ -546,7 +546,7 @@
 	}]
 }, {
 	"Name": "Sinus Headache",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Headaches are caused by many factors, such as toothache, neck tension, eyestrain, and hangovers. It is important to diagnose and treat the underlying cause, which could mean visiting a dentist, optician, or osteopath in the first instance. Herbal medicine can be very helpful for headaches, although choosing the right herbs can be difficult.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
@@ -558,7 +558,7 @@
 	}]
 }, {
 	"Name": "Migraine",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Migraine is a more specific problem. The remedies aim both to prevent the onset of a migraine as well as treat the symptoms.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
@@ -570,7 +570,7 @@
 	}]
 }, {
 	"Name": "Hangover",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Hangovers are not a nerve problem in a direct sense, but they should be treated in the same way as any other type of mild poisoning that requires detoxification and headache relief. Make sure you also drink plenty of water.",
 	"Treatment": [{
 		"Herb": ["Dandelion (Taraxacum officinale)"],
@@ -578,7 +578,7 @@
 	}]
 }, {
 	"Name": "Insomnia",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Difficulty in sleeping affects everyone at one time or another. Herbs can provide a safe and gentle solution to this problem.",
 	"Treatment": [{
 		"Herb": ["German Chamomile (Chamomilla recutita)", "Linden (Tilia spp.)", "Lavender (Lavandula officinalis)", "Passionflower (Passiflora incarnata)"],
@@ -586,7 +586,7 @@
 	}]
 }, {
 	"Name": "Cough",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "The act of coughing is usually a reaction to irritant particles in the bronchial tubes. It is worthwhile to consider the type of cough you have and where it is centered. Herbal remedies can then be chosen to work effectively to clear or ease the cough. Productive, chest coughs may produce white, yellow, or green phlegm. Unproductive coughs are dry and irritant and often take a long time to clear. Bronchitis occurs when the lining of the lungs' airways becomes inflamed, resulting in a chest cough, possible breathlessness, and a raised temperature. Use both an external and an internal remedy.",
 	"Caution": "Seek professional advice if a cough lasts for more than 1 week without a cold or infection.",
 	"Treatment": [{
@@ -596,7 +596,7 @@
 	}]
 }, {
 	"Name": "Sore & Tired Eyes",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Rather than treating the eyes themselves, these remedies benefit the mucous tissue lining the eyes, which is contiguous with the nose and throat. Problems affecting the linings of the eyes often respond well to local treatment with herbal remedies, but care must be taken not to irritate the eyes with particles of herbs left in the lotion.",
 	"Treatment": [{
 		"Herb": ["German Chamomile (Chamomilla recutita)", "Ju Hua (Chrysanthemum x morifolium)"],
@@ -604,7 +604,7 @@
 	}]
 }, {
 	"Name": "Conjunctivitis",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Rather than treating the eyes themselves, these remedies benefit the mucous tissue lining the eyes, which is contiguous with the nose and throat. Problems affecting the linings of the eyes often respond well to local treatment with herbal remedies, but care must be taken not to irritate the eyes with particles of herbs left in the lotion.",
 	"Treatment": [{
 		"Herb": ["Eyebright (Euphrasia officinalis)", "Cornflower (Centaurea cyanus)"],
@@ -613,7 +613,7 @@
 	}]
 }, {
 	"Name": "Nosebleeds",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "Many herbs are reputed to stop nosebleeds, and most are effective. Using an herb as snuff is a traditional way of staunching a nosebleed.",
 	"Self-help": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet.",
 	"Caution": "If the nosebleed continues for some hours or is very heavy, seek immediate professional advice.",
@@ -626,7 +626,7 @@
 	}]
 }, {
 	"Name": "Colds",
-    "Category": "null",
+    "Category": "Umbrella Conditon",
 	"Description": "The common cold, with which most of us are only too familiar, is a viral infection normally affecting the nose and throat. Flu is considerably more debilitating and may include fever, headache, muscular pain, nausea, and vomiting. Both have a habit of striking when we are stressed or run down. Herbal home treatment is especially suitable for these familiar 'self-limiting' ailments since it enables us to make life more comfortable, control fever, and improve the body's recovery rate.",
 	"Self-help": "Reduce fever and temperature by washing with cool or cold water and drinking plenty of liquid, especially when sweating.",
 	"Caution": "Remember that in the very young and very old, even a common cold can develop into pneumonia. Always seek professional advice if symptoms persist or suddenly get worse.",
