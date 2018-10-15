@@ -24,7 +24,7 @@ class UmbrellaConditions extends Component {
                 data: response.data,
             })
 
-        } catch(error) {
+        } catch (error) {
             console.log(error.message)
         }
     }
