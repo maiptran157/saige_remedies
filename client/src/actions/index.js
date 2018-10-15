@@ -40,15 +40,19 @@ export function getSingleReview(id) {
     }
 }
 
-// export async function getCategorylist() {
-//    const response = await axios.get(`${CATEGORY_URL}`);
-//    console.log('Response in actions index', response);
+export const getCategoryList = () => async dispatch => {
+    try {
+        const response = await axios.get(`${CATEGORY_URL}`);
 
-//    return {
-//        type: types.GET_CATEGORY_LIST,
-//        payload: response,
-//    }
+        dispatch({
+            type: types.GET_CATEGORY_LIST,
+            payload: response.data,
+        })
 
+    } catch(err) {
+        console.log(err.message);
+    }
+}
 
 // export const signUp = (userInfo) => {
 //     return async (dispatch) => {
