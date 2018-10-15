@@ -3,6 +3,8 @@ import axios from 'axios';
 import dummyReviewList from '../dummy_data/data_for_remedy_review';
 
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
+const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_list';
+
 
 export function addReview(review) {
     const response = review;
@@ -56,10 +58,10 @@ export const getCategoryList = () => async dispatch => {
 
 export const getConditionsList = (id) => async dispatch => {
     try {
-        const response = await axios.post({
-            url: CATEGORY_URL,
-            id: id
+        const response = await axios.post(`${CONDITIONS_URL}`, {
+            id: id,
         });
+        console.log(response);
 
         dispatch({
             type: types.GET_CONDITIONS_LIST,

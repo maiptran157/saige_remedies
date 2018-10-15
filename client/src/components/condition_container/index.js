@@ -4,15 +4,16 @@ import { connect } from 'react-redux';
 import AilmentContainer from '../ailment_container';
 import { getConditionsList } from '../../actions/index'; 
 import Header from '../header';
-import dummyData from '../../dummy_data/data';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
 
 class ConditionsContainer extends Component {
     componentDidMount() {
-
+        const { categoryId } = this.props.match.params
+        this.props.getConditionsList(categoryId);
     }
 
     render() {
+        console.log(this.props);
         // const { items } = this.state;
         console.log(this.props.match.params.categoryId);
         return (
@@ -27,6 +28,9 @@ class ConditionsContainer extends Component {
 
 function mapStateToProps(state) {
     console.log(state);
+    return {
+        conditions: state,
+    }
 }
 
 export default connect(mapStateToProps, {
