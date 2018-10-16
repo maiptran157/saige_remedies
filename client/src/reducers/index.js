@@ -8,11 +8,11 @@ import symptomCheckReducer from './symptom_check_reducer';
 
 
 const rootReducer = combineReducers({
+    category: categoryReducer,
+    conditions: conditionsReducer,
     form: formReducer,
     user: userReducer,
     list: listReducer,
-    category: categoryReducer,
-    conditions: conditionsReducer,
     symptom: symptomCheckReducer
 });
 

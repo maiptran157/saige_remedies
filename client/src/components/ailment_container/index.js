@@ -7,7 +7,6 @@ const textStyle = {
 }
 
 export default props => {
-    console.log('Ailment Props:', props);
     const { _id, name, category } = props;
     return (
         <div className="ailment">

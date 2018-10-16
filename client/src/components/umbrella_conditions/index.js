@@ -12,9 +12,7 @@ class UmbrellaConditions extends Component {
         this.props.getCategoryList();
     }
 
-
     render() {
-        console.log('CATEGORIES:', this.props.categories);
         const { categories } = this.props;
 
         const categoryList = () => {

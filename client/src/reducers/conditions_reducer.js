@@ -4,9 +4,9 @@ const DEFAULT_STATE = {
     conditionList: [],
 }
 
-export function getConditionsList(state = DEFAULT_STATE, action) {
+export default function getConditionsList(state = DEFAULT_STATE, action) {
     switch (action.type) {
-        case types.GET_CATEGORY_LIST:
+        case types.GET_CONDITIONS_LIST:
             return { ...state, conditionList: action.payload}
         default:
             return state;

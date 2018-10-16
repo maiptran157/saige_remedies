@@ -2,9 +2,10 @@ import types from './types';
 import axios from 'axios';
 import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
+import { formatPostData } from '../helpers';
+
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
 const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_list';
-import formatPostData from '../helpers';
 
 export function addReview(review) {
     const response = review;
@@ -42,7 +43,6 @@ export function getSingleReview(id) {
     }
 }
 
-
 export const getCategoryList = () => async dispatch => {
     try {
         const response = await axios.get(`${CATEGORY_URL}`);
@@ -53,58 +53,59 @@ export const getCategoryList = () => async dispatch => {
         })
 
     } catch (err) {
-        console.log(err.message);
+        console.log("error message here:",err.message);
     }
 }
 
 export const getConditionsList = (id) => async dispatch => {
+    const dataToSend = formatPostData( {ID: id} )
+
     try {
-        const response = await axios.post(`${CONDITIONS_URL}`, {
-            id: id,
-        });
-        console.log(response);
+        const response = await axios.post(`${CONDITIONS_URL}`, dataToSend)
+
+        console.log('Get Conditions List:', response);
         dispatch({
             type: types.GET_CONDITIONS_LIST,
             payload: response.data,
         })
 
     } catch (error) {
-        console.log(err.message);
+        console.log(error.message);
     }
 }
 
-export const getSymptom = (userInput) => {
-    console.log("userInput for getSymptom:", userInput);
-    const dataToSend = formatPostData(userInput);
-    return async (dispatch) => {
-        try {
-            const response = await axios.post(config.INFERMEDICA_URL, dataToSend)
-            // const response = await axios({
-            //     url: INFERMEDICA_URL,
-            //     method: 'post',
-            //     headers: {
-            //         'App-Id': APP_ID,
-            //         'App-Key': APP_KEY,
-            //         'Content-Type': CONTENT_TYPE
-            //     },
-            //     data: {
-            //         'text': userInput
-            //     }
-            // })
-            console.log("getSymptom resp:", response);
-            dispatch({
-                type: types.GET_SYMPTOM,
-                payload: response
-            })
-        } catch (error) {
-            console.log("getSymptom err:", error);
-            dispatch({
-                type: types.GET_SYMPTOM_ERROR,
-                error: 'Error getting symptom'
-            })
-        }
-    }
-}
+// export const getSymptom = (userInput) => {
+//     console.log("userInput for getSymptom:", userInput);
+//     const dataToSend = formatPostData(userInput);
+//     return async (dispatch) => {
+//         try {
+//             const response = await axios.post(config.INFERMEDICA_URL, dataToSend)
+//             // const response = await axios({
+//             //     url: INFERMEDICA_URL,
+//             //     method: 'post',
+//             //     headers: {
+//             //         'App-Id': APP_ID,
+//             //         'App-Key': APP_KEY,
+//             //         'Content-Type': CONTENT_TYPE
+//             //     },
+//             //     data: {
+//             //         'text': userInput
+//             //     }
+//             // })
+//             console.log("getSymptom resp:", response);
+//             dispatch({
+//                 type: types.GET_SYMPTOM,
+//                 payload: response
+//             })
+//         } catch (error) {
+//             console.log("getSymptom err:", error);
+//             dispatch({
+//                 type: types.GET_SYMPTOM_ERROR,
+//                 error: 'Error getting symptom'
+//             })
+//         }
+//     }
+// }
 
 // export async function getCategorylist() {
 //    const response = await axios.get(`${CATEGORY_URL}`);
