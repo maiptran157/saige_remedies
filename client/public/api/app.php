@@ -33,6 +33,9 @@ switch($request){
     case 'symptom_list':
         require_once('post/symptom_list.php');
         break;
+    case 'search_symptom':
+        require_once('post/search_symptom.php');
+        break;
     default:
         $output['Errors'] = 'Request URL failed';
 }
