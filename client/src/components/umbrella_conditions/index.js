@@ -14,22 +14,24 @@ class UmbrellaConditions extends Component {
 
 
     render() {
-        // console.log(this.props.categories);
+        console.log('CATEGORIES:', this.props.categories);
         const { categories } = this.props;
-        
-        if (!categories) {
-            return null;
+
+        const categoryList = () => {
+            if (!categories) {
+                return null;
+            } else {
+                return categories.map((category) => {
+                    return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
+                });
+            }
         }
 
-        const categoryList = categories.map( (category) => {
-            return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name}/>
-        });
-  
         return (
             <div className="categories-container">
                 <Header logo={saigeLogo} />
                 <div className="categories-content">
-                    {categoryList}
+                    {categoryList()}
                 </div>
             </div>
         )
@@ -38,7 +40,7 @@ class UmbrellaConditions extends Component {
 
 function mapStateToProps(state) {
     return {
-        categories: state.category.categoryName.data
+        categories: state.category.categories
     }
 }
 

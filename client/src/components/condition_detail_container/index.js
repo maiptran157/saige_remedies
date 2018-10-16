@@ -3,7 +3,6 @@ import './condition_detail_container.css';
 import ConditionDetailGroup from './condition_detail_group';
 import RemedyResultsContainer from './remedy_result_container';
 import Header from '../header';
-// import dummyData from '../../dummy_data/data_for_condition_detail';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
 import axios from 'axios';
 import config from '../../config';
@@ -58,19 +57,6 @@ class ConditionDetailContainer extends Component {
             </div>
         )
     }
-
-
-    // const filteredData = () => {
-    //     for (let dummyIndex = 0; dummyIndex < dummyData.length; dummyIndex++) {
-    //         if (dummyData[dummyIndex].category === category && dummyData[dummyIndex]._id === conditionId) {
-    //             return dummyData[dummyIndex];
-    //         }
-    //     }
-    // }
-
-    // const filteredDataObj = filteredData();
-    // const { name, description, self_help, caution, treatment } = filteredDataObj;
-
 
 }
 
