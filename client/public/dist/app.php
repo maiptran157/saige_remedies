@@ -7,7 +7,7 @@ $output = [
     'success'=> false
 ];
 
-require_once('post/mysql_connect.php');
+require_once('mysql_connect.php');
 
 // print('connection working');
 
@@ -15,28 +15,28 @@ $request = $_GET['request'];
 
 switch($request){
     case 'symptom_category':
-        require_once('post/symptom_category.php');
+        require_once('symptom_category.php');
         break;
     case 'remedy_detail':
-        require_once('post/remedy_detail.php');
+        require_once('remedy_detail.php');
         break;
     case 'reviews':
-        require_once('post/reviews.php');
+        require_once('reviews.php');
         break;
     case 'login':
-        require_once('post/login.php');
+        require_once('login.php');
         break;
     case 'sign_up': 
-        require_once('post/sign_up.php');
+        require_once('sign_up.php');
         break;
     case 'symptom_details': 
-        require_once('post/symptom_details.php');
+        require_once('symptom_details.php');
         break;
     case 'symptom_list':
-        require_once('post/symptom_list.php');
+        require_once('symptom_list.php');
         break;
     case 'search_symptom':
-        require_once('post/search_symptom.php');
+        require_once('search_symptom.php');
         break;
     default:
         $output['Errors'] = 'Request URL failed';

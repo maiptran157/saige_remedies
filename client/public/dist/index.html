@@ -6,10 +6,80 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PHP React Starter</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <link rel="icon" href="/dist/php-react.png">
+
+    <script>
+    $(document).ready(startApp);
+
+    function startApp(){
+        $("#login").click(login);
+        $("#logout").click(logout);
+        checkLoggedStatus();
+    }
+    
+    function checkLoggedStatus(){
+        $.ajax({
+            url: 'check_login.php',
+            cache: false, //check
+            method: 'post',
+            dataType: 'json'
+        }).then(handleLoggedStatusChanged)
+    }
+    
+    function handleLoggedStatusChanged(){
+        if(data.loggedin){//check
+            $("#userData").show();
+            $("#greeting").text(`Welcome back, ${data.userData.username}`);
+            $("#loginForm").hide();
+        } else {
+            $("#userData").hide();
+            $("#loginForm").show();
+        }
+    }
+
+    function logout(){
+        $.ajax({
+            url: 'logout.php',
+            cache: false,
+            method: 'post',
+            dataType: 'json'
+        }).then(handleLoggedStatusChanged)
+    }
+
+    function login(){
+        var username = $("input[name=username").val();
+        var password = $("input[name=password").val();
+
+        console.log(username);
+        console.log(password);
+
+        $.ajax({
+            url: 'login.php',
+            cache: false,
+            data: {
+                name: username,
+                pass: password
+            },
+            method: 'post',
+            dataType: 'json'
+        }).then(handleLoggedStatusChanged)
+
+    }
+
+
+
+    </script>
 </head>
 <body>
-    <div id="root"></div>
-    <script src="/dist/bundle.js"></script>
+    <!-- <div id="root"></div>
+    <script src="/dist/bundle.js"></script> -->
+
+    <div id="loginForm">
+        <input type="text" name='username' value='testname'>
+        <input type="text" name="password" value="testpass">
+        <button id="login">Submit</button>
+    </div>
+
 </body>
 </html>
