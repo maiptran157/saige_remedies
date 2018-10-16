@@ -14,7 +14,7 @@ class InputBar extends Component {
     console.log(this.state);
     this.setState({
       condition: event.target.value
-    })
+    });
   }
 
   render() {
