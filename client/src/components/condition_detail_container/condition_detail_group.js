@@ -14,13 +14,13 @@ const ConditionDetailGroup = (props) => {
     // console.log("props of ConditionDetailGroup:", props);
     const { name, description, self_help, caution } = props;
     const description_presentation = () => {
-        if (typeof self_help === "undefined" && typeof caution === "undefined") {
+        if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
                     {description}
                 </p>
             )
-        } else if (typeof self_help === "undefined") {
+        } else if (self_help === "") {
             return (
                 <p className="condition-detail-paragraph">
                     {description}
@@ -28,7 +28,7 @@ const ConditionDetailGroup = (props) => {
                     <span style={style}>Caution:</span> {caution}
                 </p>
             )
-        } else if (typeof caution === "undefined") {
+        } else if (caution === "") {
             return (
                 <p className="condition-detail-paragraph">
                     {description}
