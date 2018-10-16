@@ -31,12 +31,13 @@
     align-items: center;
     color: white;
     justify-content: center;
+    text-shadow: 0px 20px 20px black;
 }
 
 .remedy-result-total-message {
     margin-top: 5%;
     font-size: 3vh;
-    color: black;
+    color: white;
     width: 85%;
     height: 15%;
 }
@@ -56,7 +57,7 @@
 .remedy-result-total-message {
     display: flex;
     align-items: center;
-    background-color: white;
+    
 }
 
 .end-of-result-message {
@@ -79,15 +80,24 @@
 
 .remedy-name {
     padding-left: 10%;
+    width: 100%;
     font-size: 5vw;
     color: black;
+    white-space: nowrap;
 }
 
 .remedy-name-container {
-    min-width: 100%;
-    min-height: 45%;
+    /* min-width: 100%;
+    min-height: 45%; */
+    padding: .5em;
     border-radius: 50px;
     background: #EFC11D;
-    margin-bottom: 2%;
+    margin: 1em;
     display: flex;
+    box-shadow: 0px 10px 10px black;
+}
+
+.remedy-results {
+    width: 100%;
+    
 }

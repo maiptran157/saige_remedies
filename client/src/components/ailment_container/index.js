@@ -7,10 +7,11 @@ const textStyle = {
 }
 
 export default props => {
-    const { _id, name, category } = props;
+    console.log("ailemnt props:", props)
+    const { _id, name, categoryId } = props;
     return (
         <div className="ailment">
-            <Link style={textStyle} to={`/conditions/${category}/${_id}`} className="condition-name">{name}</Link>
+            <Link style={textStyle} to={`/conditions/${categoryId}/${_id}`} className="condition-name">{name}</Link>
         </div>
     )
 }

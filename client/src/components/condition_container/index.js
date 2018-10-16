@@ -1,8 +1,8 @@
 import './condition_container.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AilmentContainer from '../ailment_container'; 
-import { getConditionsList } from '../../actions/index'; 
+import AilmentContainer from '../ailment_container';
+import { getConditionsList } from '../../actions/index';
 import Header from '../header';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
 
@@ -14,12 +14,13 @@ class ConditionsContainer extends Component {
 
     render() {
         const { conditions } = this.props;
+        const { categoryId } = this.props.match.params;
         const ailments = () => {
-            if(!conditions) {
+            if (!conditions) {
                 return null;
             } else {
-                return conditions.map( (item) => {
-                    return <AilmentContainer key={item._id} _id={item._id} name={item.name}/>
+                return conditions.map((item) => {
+                    return <AilmentContainer key={item._id} _id={item._id} name={item.name} categoryId={categoryId} />
                 });
             }
         }
@@ -40,4 +41,4 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps, {
     getConditionsList: getConditionsList
-})(ConditionsContainer) ;
+})(ConditionsContainer);
