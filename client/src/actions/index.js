@@ -4,8 +4,8 @@ import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
 import { formatPostData } from '../helpers';
 
-const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
-const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_list';
+const CATEGORY_URL = 'http://localhost:8888/saige/client/public/api/app.php?request=symptom_category';
+const CONDITIONS_URL = 'http://localhost:8888/saige/client/public/api/app.php?request=symptom_list';
 
 export function addReview(review) {
     const response = review;
