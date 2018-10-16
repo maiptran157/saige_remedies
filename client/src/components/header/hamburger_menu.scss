@@ -1,0 +1,23 @@
+.hamburger-menu {
+    width: 20%;
+    height: 70%;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    background-image: url(../../assets/images/hamburger_white_shadow.png);
+    
+}
+
+.hamburger-icon {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.hamburger-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
