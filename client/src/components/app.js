@@ -24,10 +24,10 @@ class App extends Component {
         this.state = {
             isModalOpen: false,
         };
-    }
+    };
     componentDidMount() {
         this.openModal();
-    }
+    };
 
     openModal() {
         this.setState({
