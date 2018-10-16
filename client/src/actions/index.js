@@ -5,7 +5,7 @@ import config from '../config';
 import { formatPostData } from '../helpers';
 
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
-const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_list';
+const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=search_symptom';
 
 export function addReview(review) {
     const response = review;
@@ -45,7 +45,7 @@ export function getSingleReview(id) {
 
 export const getCategoryList = () => async dispatch => {
     try {
-        const response = await axios.get(`${CATEGORY_URL}`);
+        const response = await axios.get(`${config.CATEGORY_URL}`);
 
         dispatch({
             type: types.GET_CATEGORY_LIST,
@@ -61,7 +61,7 @@ export const getConditionsList = (id) => async dispatch => {
     const dataToSend = formatPostData( {ID: id} )
 
     try {
-        const response = await axios.post(`${CONDITIONS_URL}`, dataToSend)
+        const response = await axios.post(`${config.CONDITIONS_URL}`, dataToSend)
 
         console.log('Get Conditions List:', response);
         dispatch({
@@ -73,6 +73,8 @@ export const getConditionsList = (id) => async dispatch => {
         console.log(error.message);
     }
 }
+
+
 
 // export const getSymptom = (userInput) => {
 //     console.log("userInput for getSymptom:", userInput);
