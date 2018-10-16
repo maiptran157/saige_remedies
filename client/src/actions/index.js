@@ -58,7 +58,7 @@ export const getCategoryList = () => async dispatch => {
 }
 
 export const getConditionsList = (id) => async dispatch => {
-    const dataToSend = formatPostData( {ID: id} )
+    const dataToSend = formatPostData( {ID: id} );
 
     try {
         const response = await axios.post(`${config.CONDITIONS_URL}`, dataToSend)
@@ -68,13 +68,24 @@ export const getConditionsList = (id) => async dispatch => {
             type: types.GET_CONDITIONS_LIST,
             payload: response.data,
         })
-
     } catch (error) {
         console.log(error.message);
     }
 }
+export const userSearchTerm = (term) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: term} );
 
-
+    try {
+        const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
+        console.log(response);
+        dispatch({
+            type: types.GET_SEARCH_SYMPTOM,
+            payload: response,
+        })
+    } catch(error) {
+        console.log('Error Message:', error.message)
+    }
+}
 
 // export const getSymptom = (userInput) => {
 //     console.log("userInput for getSymptom:", userInput);
