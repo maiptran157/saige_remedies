@@ -23,9 +23,6 @@ export function getReviewList(id) {
     if (id === response._id) {
         reviewList = response.reviews
     }
-
-    // console.log('ACTION CREATOR REVIEW LIST:', reviewList);
-
     return {
         type: types.GET_REVIEW_LIST,
         payload: reviewList
@@ -64,7 +61,6 @@ export const getConditionsList = (id) => async dispatch => {
     try {
         const response = await axios.post(`${config.CONDITIONS_URL}`, dataToSend)
 
-        console.log('Get Conditions List:', response);
         dispatch({
             type: types.GET_CONDITIONS_LIST,
             payload: response.data,

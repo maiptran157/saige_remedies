@@ -23,16 +23,8 @@ class ConditionDetailContainer extends Component {
     async getConditionDetail() {
         const { match: { params } } = this.props;
         const { categoryId, conditionId } = params;
-        console.log("categoryId:", categoryId);
-        console.log("conditionId:", conditionId);
 
         const dataToSend = formatPostData({ ID: conditionId });
-
-        // axios.get('/api/something?ID=4&more=stuff', {
-        //     params:  {
-        //         ID: 4
-        //     }
-        // })
 
         try {
             const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
