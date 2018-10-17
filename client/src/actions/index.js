@@ -88,6 +88,25 @@ export const userSearchTerm = (term) => async dispatch => {
     }
 }
 
+
+// //////////////
+
+export const userSignInInfo = (info) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: info} );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
+        console.log(response);
+        dispatch({
+            type: types.GET_USER_SIGN_IN_INFO,
+            payload: response,
+        })
+    } catch(error) {
+        console.log('Error Message:', error.message)
+    }
+}
+
+
 // export const getSymptom = (userInput) => {
 //     console.log("userInput for getSymptom:", userInput);
 //     const dataToSend = formatPostData(userInput);

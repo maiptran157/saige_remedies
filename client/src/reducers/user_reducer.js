@@ -8,7 +8,7 @@ const DEFAULT_STATE = {
 
 export default (state = DEFAULT_STATE, action) => {
     switch(action.type) {
-        case types.SIGN_IN:
+        case types.GET_USER_SIGN_IN_INFO:
         case types.SIGN_UP:
             return { ...state, auth: true, signInError: '', signUpError: '' };
         case types.SIGN_OUT:
