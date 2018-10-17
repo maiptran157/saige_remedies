@@ -24,8 +24,6 @@ export function getReviewList(id) {
         reviewList = response.reviews
     }
 
-    // console.log('ACTION CREATOR REVIEW LIST:', reviewList);
-
     return {
         type: types.GET_REVIEW_LIST,
         payload: reviewList
@@ -101,6 +99,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
         })
+    
     } catch(error) {
         console.log('Error Message:', error.message)
     }
