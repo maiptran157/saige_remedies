@@ -23,6 +23,7 @@ export function getReviewList(id) {
     if (id === response._id) {
         reviewList = response.reviews
     }
+
     return {
         type: types.GET_REVIEW_LIST,
         payload: reviewList
@@ -83,6 +84,38 @@ export const userSearchTerm = (term) => async dispatch => {
         console.log('Error Message:', error.message)
     }
 }
+
+export const userSignInInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: userInfo} );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
+        console.log(response);
+        dispatch({
+            type: types.GET_USER_SIGN_IN_INFO,
+            payload: response,
+        })
+    
+    } catch(error) {
+        console.log('Error Message:', error.message)
+    }
+}
+
+export const userSignUpInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: userInfo} );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
+        console.log(response);
+        dispatch({
+            type: types.GET_USER_SIGN_UP_INFO,
+            payload: response,
+        })
+    } catch(error) {
+        console.log('Error Message:', error.message)
+    }
+}
+
 
 // export const getSymptom = (userInput) => {
 //     console.log("userInput for getSymptom:", userInput);
