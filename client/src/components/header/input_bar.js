@@ -14,7 +14,7 @@ class InputBar extends Component {
     console.log(this.state);
     this.setState({
       condition: event.target.value
-    })
+    });
   }
 
   render() {
@@ -22,7 +22,7 @@ class InputBar extends Component {
       return <option key={data._id} value={data.name}></option>
     })
     return (
-      <div className="search-form">
+      <div className="search-form">        
         <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValuechange} />
         <datalist id="browsers">
           {option}

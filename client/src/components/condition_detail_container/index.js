@@ -22,11 +22,11 @@ class ConditionDetailContainer extends Component {
 
     async getConditionDetail() {
         const { match: { params } } = this.props;
-        const { category, conditionId } = params;
-        console.log("category:", category);
+        const { categoryId, conditionId } = params;
+        console.log("categoryId:", categoryId);
         console.log("conditionId:", conditionId);
 
-        const dataToSend = formatPostData({ ID: 10071 });
+        const dataToSend = formatPostData({ ID: conditionId });
 
         // axios.get('/api/something?ID=4&more=stuff', {
         //     params:  {
@@ -36,10 +36,13 @@ class ConditionDetailContainer extends Component {
 
         try {
             const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
-            console.log("response:", response);
-            this.setState({
-                conditionDetail: response
-            })
+
+            if (response.statusText === "OK") {
+                this.setState({
+                    conditionDetail: response.data[0]
+                })
+            }
+
         } catch (error) {
             this.setState({
                 conditionDetail: []
@@ -48,12 +51,13 @@ class ConditionDetailContainer extends Component {
     }
 
     render() {
-
+        const { conditionDetail } = this.state;
+        const { name, description, caution, self_help, treatment } = conditionDetail;
         return (
             <div className="condition-detail-container">
                 <Header logo={backButton} buttonType="back-button" />
-                {/* <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
-            <RemedyResultsContainer treatment={treatment} /> */}
+                <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
+                <RemedyResultsContainer symptomName={name} treatment={treatment} />
             </div>
         )
     }

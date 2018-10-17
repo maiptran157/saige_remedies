@@ -11,9 +11,9 @@ const rootReducer = combineReducers({
     category: categoryReducer,
     conditions: conditionsReducer,
     form: formReducer,
-    user: userReducer,
     list: listReducer,
-    symptom: symptomCheckReducer
+    symptom: symptomCheckReducer,
+    user: userReducer,
 });
 
 export default rootReducer;
