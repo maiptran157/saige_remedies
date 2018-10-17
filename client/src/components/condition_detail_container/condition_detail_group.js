@@ -13,22 +13,11 @@ const style = {
 
 class ConditionDetailGroup extends Component  {
     state = {
-        shown: false,
+        showLess: true,
     }
-
-    toggleShowMore() {
-        this.setState({
-            shown : !this.state.shown,
-        });
-    }
-    slicedDescription() {
-        if ( !this.props.description) {
-            return null;
-        }
-        return <Fragment>{this.props.description.slice(0, 170) + '....'}</Fragment>
-    }
-    descriptionPresent() {
+    descriptionPresent () {
         const { description, caution, self_help } = this.props;
+        console.log(description);
         if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
@@ -63,24 +52,34 @@ class ConditionDetailGroup extends Component  {
             )
         }
     }
+    toggleMore = () => {
+        this.setState({
+            showLess: !this.state.showLess,
+        });
+    }
     render() {
+        const { description } = this.props;
+        if (!description) {
+            return null;
+        }
+        const shortenedDescription = description.slice(0, 150);
+        console.log(this.state.showLess);
         return (
             <div className="condition-detail-group">
                 <div className="condition-detail-header">
                     <div className="condition-detail-name">
                         <div>{this.props.name}</div>
                     </div>
-                    {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
-                </div>
+                        {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
+                    </div>
                 <div className="condition-detail-description">
-                    {this.slicedDescription()}
-                    <a href="">more</a>
+                    { this.state.showLess ? <p>{shortenedDescription}</p> : <p>{this.descriptionPresent()}</p>}
+                    <a onClick={this.toggleMore} href="">More</a>
                 </div>
             </div>
         )
     }
 }
-
 export default ConditionDetailGroup;
 
 
