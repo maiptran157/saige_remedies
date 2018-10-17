@@ -52,12 +52,14 @@ class ConditionDetailGroup extends Component  {
             )
         }
     }
-    toggleMore = () => {
+    toggleMore = (e) => {
+        e.preventDefault();
         this.setState({
             showLess: !this.state.showLess,
         });
     }
     render() {
+        console.log('Rendering...')
         const { description } = this.props;
         if (!description) {
             return null;
