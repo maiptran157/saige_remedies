@@ -91,14 +91,29 @@ export const userSearchTerm = (term) => async dispatch => {
 
 // //////////////
 
-export const userSignInInfo = (info) => async dispatch => {
-    const dataToSend = formatPostData( {search_term: info} );
+export const userSignInInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: userInfo} );
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
         console.log(response);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
+            payload: response,
+        })
+    } catch(error) {
+        console.log('Error Message:', error.message)
+    }
+}
+
+export const userSignUpInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: userInfo} );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
+        console.log(response);
+        dispatch({
+            type: types.GET_USER_SIGN_UP_INFO,
             payload: response,
         })
     } catch(error) {
