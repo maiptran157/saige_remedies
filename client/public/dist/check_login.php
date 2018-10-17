@@ -14,5 +14,6 @@ if(isset($_SESSION['userData'])){
     $output->message = 'User is not logged in';
 }
 
+print(json_encode($output));
 
 ?>

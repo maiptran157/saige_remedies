@@ -15,22 +15,24 @@
     function startApp(){
         $("#login").click(login);
         $("#logout").click(logout);
-        checkLoggedStatus();
+        checkLoginStatus();
     }
     
-    function checkLoggedStatus(){
+    function checkLoginStatus(){
         $.ajax({
             url: 'check_login.php',
             cache: false, //check
             method: 'post',
             dataType: 'json'
-        }).then(handleLoggedStatusChanged)
+        }).then(handleLoginStatusChanged)
     }
     
-    function handleLoggedStatusChanged(){
+    function handleLoginStatusChanged(data){
+        console.log(data);
         if(data.loggedin){//check
+            console.log(data.loggedin);
             $("#userData").show();
-            $("#greeting").text(`Welcome back, ${data.userData.username}`);
+            $("#greeting").text(`Welcome back, ${data.userData.userData.username}`);
             $("#loginForm").hide();
         } else {
             $("#userData").hide();
@@ -44,15 +46,14 @@
             cache: false,
             method: 'post',
             dataType: 'json'
-        }).then(handleLoggedStatusChanged)
+        }).then(handleLoginStatusChanged)
     }
 
     function login(){
         var username = $("input[name=username").val();
         var password = $("input[name=password").val();
 
-        console.log(username);
-        console.log(password);
+        console.log('login clicked');
 
         $.ajax({
             url: 'login.php',
@@ -63,7 +64,7 @@
             },
             method: 'post',
             dataType: 'json'
-        }).then(handleLoggedStatusChanged)
+        }).then(handleLoginStatusChanged)
 
     }
 
@@ -74,10 +75,12 @@
 <body>
     <!-- <div id="root"></div>
     <script src="/dist/bundle.js"></script> -->
-
+    <div id="userData">
+        <div id="greeting">Welcome, user</div><button id="logout">logout</button>
+    </div>
     <div id="loginForm">
-        <input type="text" name='username' value='testname'>
-        <input type="text" name="password" value="testpass">
+        <input type="text" name='username' value=''>
+        <input type="password" name="password" value="">
         <button id="login">Submit</button>
     </div>
 
