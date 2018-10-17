@@ -62,7 +62,6 @@ export const getConditionsList = (id) => async dispatch => {
     try {
         const response = await axios.post(`${config.CONDITIONS_URL}`, dataToSend)
 
-        console.log('Get Conditions List:', response);
         dispatch({
             type: types.GET_CONDITIONS_LIST,
             payload: response.data,
@@ -85,9 +84,6 @@ export const userSearchTerm = (term) => async dispatch => {
         console.log('Error Message:', error.message)
     }
 }
-
-
-// //////////////
 
 export const userSignInInfo = (userInfo) => async dispatch => {
     const dataToSend = formatPostData( {search_term: userInfo} );

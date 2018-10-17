@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component, Fragment }from 'react';
 import './condition_detail_container.css';
+import { renderInput } from '../helper';
 // import thumbsUp from '../images/symbol-thumbs-up.jpg';
 
 const style = {
@@ -10,10 +11,13 @@ const style = {
 //     backgroundImage: `url(${thumbsUp})`
 // }
 
-const ConditionDetailGroup = (props) => {
-    // console.log("props of ConditionDetailGroup:", props);
-    const { name, description, self_help, caution } = props;
-    const description_presentation = () => {
+class ConditionDetailGroup extends Component  {
+    state = {
+        showLess: true,
+    }
+    descriptionPresent () {
+        const { description, caution, self_help } = this.props;
+        console.log(description);
         if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
@@ -48,20 +52,70 @@ const ConditionDetailGroup = (props) => {
             )
         }
     }
-    const description_detail = description_presentation();
-    return (
-        <div className="condition-detail-group">
-            <div className="condition-detail-header">
-                <div className="condition-detail-name">
-                    <div>{name}</div>
+    toggleMore = (e) => {
+        e.preventDefault();
+        this.setState({
+            showLess: !this.state.showLess,
+        });
+    }
+    render() {
+        console.log('Rendering...')
+        const { description } = this.props;
+        if (!description) {
+            return null;
+        };
+        const shortenedDescription = description.slice(0, 131)+'...';
+        console.log(this.state.showLess);
+        return (
+            <div className="condition-detail-group">
+                <div className="condition-detail-header">
+                    <div className="condition-detail-name">
+                        <div>{this.props.name}</div>
+                    </div>
+                        {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
+                    </div>
+                <div className="condition-detail-description">
+                    { this.state.showLess ? <p>{shortenedDescription}<a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                    
                 </div>
-                {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
             </div>
-            <div className="condition-detail-description">
-                {description_detail}
-            </div>
-        </div>
-    )
+        )
+    }
 }
-
 export default ConditionDetailGroup;
+
+
+// if (self_help === "" && caution === "") {
+//     return (
+//         <p className="condition-detail-paragraph">
+//             {description}
+//         </p>
+//     )
+// } else if (self_help === "") {
+//     return (
+//         <p className="condition-detail-paragraph">
+//             {description}
+//             <br />
+//             <span style={style}>Caution:</span> {caution}
+//         </p>
+//     )
+// } else if (caution === "") {
+//     return (
+//         <p className="condition-detail-paragraph">
+//             {description}
+//             <br />
+//             <span style={style}>Self-help:</span> {self_help}
+//         </p>
+//     )
+// } else {
+//     return (
+//         <p className="condition-detail-paragraph">
+//             {description}
+//             <br />
+//             <span style={style}>Self-help:</span> {self_help}
+//             <br />
+//             <span style={style}>Caution:</span> {caution}
+//         </p>
+//     )
+// }
+// }

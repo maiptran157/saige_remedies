@@ -8,7 +8,7 @@ import UmbrellaConditions from './umbrella_conditions';
 import SymptomCheck from './symptom_check';
 import { Route } from 'react-router-dom';
 import './app.css';
-import AgreementModal from '../components/modal/index';
+// import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpeg';
 
 
@@ -22,7 +22,7 @@ class App extends Component {
     render() {
         return (
             <div className="container" style={style}>
-                <AgreementModal/>
+                {/* <AgreementModal/> */}
                 <Route path="/" exact component={UmbrellaConditions} />
                 <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
                 <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
