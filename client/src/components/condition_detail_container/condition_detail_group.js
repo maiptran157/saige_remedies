@@ -63,8 +63,8 @@ class ConditionDetailGroup extends Component  {
         const { description } = this.props;
         if (!description) {
             return null;
-        }
-        const shortenedDescription = description.slice(0, 150);
+        };
+        const shortenedDescription = description.slice(0, 131)+'...';
         console.log(this.state.showLess);
         return (
             <div className="condition-detail-group">
@@ -75,8 +75,8 @@ class ConditionDetailGroup extends Component  {
                         {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
                     </div>
                 <div className="condition-detail-description">
-                    { this.state.showLess ? <p>{shortenedDescription}</p> : <p>{this.descriptionPresent()}</p>}
-                    <a onClick={this.toggleMore} href="">More</a>
+                    { this.state.showLess ? <p>{shortenedDescription}<a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                    
                 </div>
             </div>
         )
