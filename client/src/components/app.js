@@ -8,9 +8,9 @@ import UmbrellaConditions from './umbrella_conditions';
 import SymptomCheck from './symptom_check';
 import { Route } from 'react-router-dom';
 import './app.css';
-
+import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpeg';
-// import Modal from '../components/modal/index';
+
 
 const style = {
     backgroundImage: `url(${backgroundImg})`,
@@ -18,37 +18,11 @@ const style = {
 }
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isModalOpen: false,
-        };
-    };
-    componentDidMount() {
-        this.openModal();
-    };
-
-    openModal() {
-        this.setState({
-            isModalOpen: true,
-        });
-    }
-
-    closeModal = () => {
-        this.setState({
-            isModalOpen: false,
-        });
-    }
 
     render() {
         return (
-
             <div className="container" style={style}>
-                {/* <Modal isOpen={this.state.isModalOpen} >
-                <h1>DANGER</h1>
-                <button onClick={this.closeModal}>Close Modal</button>
-            </Modal> */}
+                <AgreementModal/>
                 <Route path="/" exact component={UmbrellaConditions} />
                 <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
                 <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
