@@ -13,7 +13,7 @@ export default props => {
     return (
         <div className="header" style={ backgroundHeader }>
             <Logo logo={logo} buttonType={buttonType} />
-            <InputBar />
+            <InputBar push={props.push} />
             <DropDownMenu />
         </div>
     )

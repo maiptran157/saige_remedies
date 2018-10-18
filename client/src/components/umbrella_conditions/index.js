@@ -13,8 +13,7 @@ class UmbrellaConditions extends Component {
     }
 
     render() {
-        const { categories } = this.props;
-
+        const { categories, history } = this.props;
         const categoryList = () => {
             if (!categories) {
                 return null;
@@ -27,7 +26,7 @@ class UmbrellaConditions extends Component {
 
         return (
             <div className="categories-container">
-                <Header logo={saigeLogo} />
+                <Header push={history.push} logo={saigeLogo} />
                 <div className="categories-content">
                     {categoryList()}
                 </div>
