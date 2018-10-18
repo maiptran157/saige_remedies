@@ -9,7 +9,7 @@ import SymptomCheck from './symptom_check';
 import { Route } from 'react-router-dom';
 import './app.css';
 // import AgreementModal from '../components/modal/index';
-import backgroundImg from '../assets/images/background_image.jpeg';
+import backgroundImg from '../assets/images/background_image.jpg';
 
 
 const style = {

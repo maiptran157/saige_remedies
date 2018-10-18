@@ -13,6 +13,7 @@ class ConditionsContainer extends Component {
     }
 
     render() {
+        console.log(this.props);
         const { conditions } = this.props;
         const { categoryId } = this.props.match.params;
         const ailments = () => {

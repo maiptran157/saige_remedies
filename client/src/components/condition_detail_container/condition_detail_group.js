@@ -76,46 +76,11 @@ class ConditionDetailGroup extends Component  {
                     </div>
                 <div className="condition-detail-description">
                     { this.state.showLess ? <p>{shortenedDescription}<a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
-                    
                 </div>
             </div>
         )
     }
 }
+
 export default ConditionDetailGroup;
 
-
-// if (self_help === "" && caution === "") {
-//     return (
-//         <p className="condition-detail-paragraph">
-//             {description}
-//         </p>
-//     )
-// } else if (self_help === "") {
-//     return (
-//         <p className="condition-detail-paragraph">
-//             {description}
-//             <br />
-//             <span style={style}>Caution:</span> {caution}
-//         </p>
-//     )
-// } else if (caution === "") {
-//     return (
-//         <p className="condition-detail-paragraph">
-//             {description}
-//             <br />
-//             <span style={style}>Self-help:</span> {self_help}
-//         </p>
-//     )
-// } else {
-//     return (
-//         <p className="condition-detail-paragraph">
-//             {description}
-//             <br />
-//             <span style={style}>Self-help:</span> {self_help}
-//             <br />
-//             <span style={style}>Caution:</span> {caution}
-//         </p>
-//     )
-// }
-// }
