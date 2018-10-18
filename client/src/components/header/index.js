@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from './logo';
 import InputBar from './input_bar';
 import DropDownMenu from '../menu';
-import woodenHeader from '../../assets/images/header.png';
+import woodenHeader from '../../assets/images/wood_bg.jpg';
 
 import './header.css';
 

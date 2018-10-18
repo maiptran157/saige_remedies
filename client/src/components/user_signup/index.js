@@ -1,8 +1,7 @@
 import React, { Component }from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { signUp } from '../../actions';
-import { userSignInInfo } from '../../actions';
+import { userSignUpInfo } from '../../actions';
 import { renderInput } from '../helper';
 import './user_signup.css';
 

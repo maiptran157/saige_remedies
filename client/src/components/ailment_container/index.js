@@ -1,7 +1,7 @@
 import React from 'react';
 import './ailment_container.css';
 import { Link } from 'react-router-dom';
-import woodenBackground from '../../assets/images/button.png'
+import woodenBackground from '../../assets/images/wood_bg.jpg';
 
 const textStyle = {
     textDecoration: 'none',
@@ -11,6 +11,8 @@ const textStyle = {
 
 const background = {
     backgroundImage: `url(${woodenBackground})`,
+    backgroundSize: 'cover',
+    boxShadow: '0 10px 10px #000'
 }
 
 export default props => {
