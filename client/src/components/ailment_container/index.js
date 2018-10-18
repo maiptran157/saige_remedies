@@ -16,8 +16,8 @@ const background = {
 export default props => {
     const { _id, name, categoryId } = props;
     return (
-        <div style={background} className="ailment">
-            <Link style={textStyle} to={`/conditions/${categoryId}/${_id}`} className="condition-name">{name}</Link>
-        </div>
+        <Link to={`/conditions/${categoryId}/${_id}`} style={background} className="ailment">
+            <div style={textStyle} className="ailment-name">{name}</div>
+        </Link>
     )
 }

@@ -8,11 +8,11 @@ import UmbrellaConditions from './umbrella_conditions';
 import SymptomCheck from './symptom_check';
 import AboutSaige from './about_saige';
 import MeetTheTeam from './meet_the_team';
-import { Route } from 'react-router-dom';
+import NotFoundPage from './not_found_page';
+import { Route, Switch } from 'react-router-dom';
 import './app.css';
 // import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
-
 
 const style = {
     backgroundImage: `url(${backgroundImg})`,
@@ -25,15 +25,19 @@ class App extends Component {
         return (
             <div className="container" style={style}>
                 {/* <AgreementModal/> */}
-                <Route path="/" exact component={UmbrellaConditions} />
-                <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
-                <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
-                <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
-                <Route path="/sign-up" component={SignUp} />
-                <Route path="/sign-in" component={SignIn} />
-                <Route path="/symptom-check" component={SymptomCheck} />
-                <Route path="/about-saige" component={AboutSaige} />
-                <Route path="/meet-the-team" component={MeetTheTeam} />
+                <Switch>
+                    <Route path="/" exact component={UmbrellaConditions} />
+                    <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
+                    <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
+                    <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
+                    <Route path="/sign-up" component={SignUp} />
+                    <Route path="/sign-in" component={SignIn} />
+                    <Route path="/symptom-check" component={SymptomCheck} />
+                    <Route path="/about-saige" component={AboutSaige} />
+                    <Route path="/meet-the-team" component={MeetTheTeam} />
+                    <Route component={NotFoundPage} />
+                </Switch>
+
             </div>
         )
     }
