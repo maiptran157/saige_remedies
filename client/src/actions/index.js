@@ -4,7 +4,6 @@ import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
 import { formatPostData } from '../helpers';
 
-
 const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
 const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=search_symptom';
 
@@ -73,7 +72,7 @@ export const getConditionsList = (id) => async dispatch => {
 
 export const userSearchTerm = (term) => async dispatch => {
     const dataToSend = formatPostData( {search_term: term} );
-
+    
     try {
         const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
         console.log(response);
@@ -82,7 +81,7 @@ export const userSearchTerm = (term) => async dispatch => {
             payload: response,
         })
     } catch(error) {
-        console.log('Error Message:', error.message)
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -107,10 +106,10 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
-        console.log(response);
+        console.log(response.data);
         dispatch({
             type: types.GET_USER_SIGN_UP_INFO,
-            payload: response,
+            payload: response.data,
         })
     } catch(error) {
         console.log('Error Message:', error.message)

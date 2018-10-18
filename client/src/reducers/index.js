@@ -5,6 +5,7 @@ import listReducer from './list_reducer';
 import categoryReducer from './category_list_reducer';
 import conditionsReducer from './conditions_reducer';
 import symptomCheckReducer from './symptom_check_reducer';
+import searchReducer from './search_term_reducer';
 
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     conditions: conditionsReducer,
     form: formReducer,
     list: listReducer,
+    search: searchReducer,
     symptom: symptomCheckReducer,
     user: userReducer,
 });
