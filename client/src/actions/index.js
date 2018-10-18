@@ -69,6 +69,7 @@ export const getConditionsList = (id) => async dispatch => {
         console.log(error.message);
     }
 }
+
 export const userSearchTerm = (term) => async dispatch => {
     const dataToSend = formatPostData( {search_term: term} );
 

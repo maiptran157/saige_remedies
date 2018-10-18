@@ -20,7 +20,7 @@ const RemedyDetailContainer = (props) => {
     const { Herb, Remedy, Note, Caution } = remedyDetail;
     console.log("remedyDetail:", remedyDetail);
     return (
-        <div className="condition-detail-container">
+        <div className="remedy-detail-container">
             <Header logo={backButton} buttonType="back-button" />
             <RemedyDetailGroup name={Herb} remedyDesc={Remedy} note={Note} caution={Caution} />
             <RemedyReviews _id={remedyId} />
