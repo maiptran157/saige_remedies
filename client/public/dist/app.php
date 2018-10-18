@@ -32,6 +32,9 @@ switch($request){
     case 'search_symptom':
         require_once('search_symptom.php');
         break;
+    case 'user_sign_up_check':
+        require_once('user_sign_up_check.php');
+        break;
     default:
         $output['Errors'] = 'Request URL failed';
 }
