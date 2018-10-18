@@ -19,8 +19,10 @@ class InputBar extends Component {
   onSubmit = (e) => {
     e.preventDefault(); 
     this.props.userSearchTerm(this.state.condition);
-    this.props.push('/')
-    
+    setTimeout( () => {
+      this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
+    }, 1000)
+   
   }
 
   render() {
@@ -40,7 +42,6 @@ class InputBar extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("STATE IN PROPS:", state);
     return {
       symptomId: state.search.symptomId,
       categoryId: state.search.categoryId
