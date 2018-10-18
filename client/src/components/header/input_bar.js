@@ -21,7 +21,7 @@ class InputBar extends Component {
     this.props.userSearchTerm(this.state.condition);
     setTimeout( () => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
-    }, 300)
+    }, 300);
   }
 
   render() {
