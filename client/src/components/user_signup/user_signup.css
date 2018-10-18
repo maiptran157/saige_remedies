@@ -23,3 +23,7 @@ button {
     height: 40px;
     margin-top: 3.5%;
 }
+
+.auth-error-text {
+    color: darkred;
+}

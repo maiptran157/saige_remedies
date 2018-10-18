@@ -89,8 +89,6 @@ export const userSearchTerm = (term) => async dispatch => {
 export const userSignInInfo = (userInfo) => async dispatch => {
     const dataToSend = formatPostData( userInfo );
 
-    console.log('UserInfo:', userInfo);
-
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
         console.log("response",response);

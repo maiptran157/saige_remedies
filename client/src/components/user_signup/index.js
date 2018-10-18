@@ -2,6 +2,7 @@ import React, { Component }from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { signUp } from '../../actions';
+import { userSignInInfo } from '../../actions';
 import { renderInput } from '../helper';
 import './user_signup.css';
 
@@ -9,7 +10,7 @@ class SignUp extends Component {
 
     userSignUp = (values) => {
         console.log('User Sign Up Info:', values);
-        this.props.SugnUp(values);
+        this.props.userSignUpInfo(values);
     }
     render() {
         const { handleSubmit, authError } = this.props;
@@ -51,7 +52,7 @@ const validate = values => {
 }
 
 SignUp = reduxForm({
-    form: 'sign-up',
+    form: 'get_user_sign_up_info',
     validate: validate
 })(SignUp);
 
@@ -62,5 +63,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {
-    signUp: signUp
+    userSignUpInfo: userSignUpInfo,
 })(SignUp);
