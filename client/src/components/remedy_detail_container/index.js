@@ -26,9 +26,7 @@ class RemedyDetailContainer extends Component {
         const dataToSend = formatPostData({ ID: remedyId });
         try {
             const response = await axios.post(config.REMEDY_DETAIL_URL, dataToSend);
-            // console.log("response from axios call:", response)
             if (response.statusText === "OK") {
-                // console.log('Response Made it here');
                 this.setState({
                     remedyDetail: response.data,
 
@@ -45,7 +43,6 @@ class RemedyDetailContainer extends Component {
 
     render() {
         const { remedyDetail } = this.state;
-        // console.log("remedyDetail:", remedyDetail);
         const { remedy_id, remedy, note, caution, ingredients, reviews } = remedyDetail;
         const remedyName = () => {
             let ingredientsString = "";
@@ -65,7 +62,7 @@ class RemedyDetailContainer extends Component {
         }
 
         return (
-            <div className="condition-detail-container">
+            <div className="remedy-detail-container">
                 <Header logo={backButton} buttonType="back-button" />
                 {ingredients ? remedyName() : null}
                 <RemedyReviews _id={remedy_id} reviews={reviews} />

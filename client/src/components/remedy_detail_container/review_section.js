@@ -92,7 +92,10 @@ class ReviewList extends Component {
         }
 
         return (<div>
-
+            <div className="review-header">
+                <div>Total Rating:</div>
+                <span>{reviewList ? displayRatingTotal() : null}</span>
+            </div>
             <div className="reviews-container">
 
                 {reviewList ? displayReview() : null}
@@ -101,7 +104,7 @@ class ReviewList extends Component {
                     <div className="review">
                         <div>
                             <div className="star-rating-area">
-                                <div className="star-rating-count">Rating:<span> {rating}</span></div>
+                                <div className="star-rating-count">Rating:</div>
                                 <StarRatingComponent
                                     name="rating"
                                     starCount={5}
@@ -112,10 +115,6 @@ class ReviewList extends Component {
                         </div>
 
                         <Field type="text" name="review" title="Leave a review:" component={this.renderInput} />
-                        <div className="review-header">
-                            <div>Reviews</div>
-                            <span>{reviewList ? displayRatingTotal() : null}</span>
-                        </div>
                     </div>
 
                     <button className="add-review-button">+</button>

@@ -4,7 +4,7 @@
     color: white;
     margin-left: 1em;
     div {
-        font-size: 4vh;
+        font-size: 3vh;
     }
     span {
         margin-left: .5em;
@@ -39,6 +39,7 @@
             display: flex;
             flex-direction: column;
             align-content: space-around;
+            
             div {
                 display: flex;
                 align-items: space-around;
@@ -58,12 +59,14 @@
             }
         };
         button {
-            width: 35px;
-            height: 34px;
-            background: #EFC11D;
+            width: 45px;
+            height: 45px;
+            background: #efc11d;
             border-radius: 10px;
             font-size: 3vh;
-            margin: 0 0 2.5em 1em;
+            position: relative;
+            left: 10px;
+            top: 17px;
         }
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignUpInfo } from '../../actions';
@@ -17,11 +17,11 @@ class SignUp extends Component {
             <div className="sign-up-container">
                 <h1 className="sign-up-header">Sign Up!</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
-                    <Field name="firstName" label="First Name:" component={renderInput} type="text"/>           
-                    <Field name="lastName" label="Last Name:" component={renderInput} type="text"/>           
-                    <Field name="email" label="Email:" component={renderInput} type="text"/>   
-                    <Field name="password" label="Password:" component={renderInput} type="password"/>           
-                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password"/>           
+                    <Field name="firstName" label="First Name:" component={renderInput} type="text" />
+                    <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
+                    <Field name="email" label="Email:" component={renderInput} type="text" />
+                    <Field name="password" label="Password:" component={renderInput} type="password" />
+                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -30,7 +30,7 @@ class SignUp extends Component {
 }
 
 const validate = values => {
-    const { firstName, lastName, email, password, confirmPassword} = values;
+    const { firstName, lastName, email, password, confirmPassword } = values;
     const errors = {};
     console.log(firstName);
     if (!firstName) {

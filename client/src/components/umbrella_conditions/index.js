@@ -6,6 +6,7 @@ import { getCategoryList } from '../../actions/index'
 import CategoryContainer from '../category_container';
 import './umbrella_conditions.css';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
+import ReactLoading from 'react-loading';
 
 class UmbrellaConditions extends Component {
     componentDidMount() {
@@ -16,11 +17,12 @@ class UmbrellaConditions extends Component {
         const { categories, history } = this.props;
         const categoryList = () => {
             if (!categories) {
-                return null;
+                return <ReactLoading type='spinningBubbles' color='#EFC11D' />;
             } else {
                 return categories.map((category) => {
                     return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
                 });
+
             }
         }
 

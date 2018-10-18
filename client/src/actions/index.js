@@ -1,6 +1,5 @@
 import types from './types';
 import axios from 'axios';
-import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
 import { formatPostData } from '../helpers';
 
@@ -72,8 +71,8 @@ export const getConditionsList = (id) => async dispatch => {
 
 export const userSearchTerm = (term) => async dispatch => {
 
-    const dataToSend = formatPostData( {search_term: term} );
-    
+    const dataToSend = formatPostData({ search_term: term });
+
     try {
         const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
         console.log(response);
@@ -82,29 +81,29 @@ export const userSearchTerm = (term) => async dispatch => {
             payload: response,
         })
 
-    } catch(error) {
+    } catch (error) {
         console.log('Error Message:', error.message);
     }
 }
 
 export const userSignInInfo = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData( userInfo );
+    const dataToSend = formatPostData(userInfo);
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
-        console.log("response",response);
+        console.log("response", response);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
         })
-    
-    } catch(error) {
+
+    } catch (error) {
         console.log('Error Message:', error.message)
     }
 }
 
 export const userSignUpInfo = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData( {search_term: userInfo} );
+    const dataToSend = formatPostData({ search_term: userInfo });
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
@@ -112,7 +111,7 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
             type: types.GET_USER_SIGN_UP_INFO,
             payload: response.data,
         })
-    } catch(error) {
+    } catch (error) {
 
         console.log('Error Message:', error.message)
     }
