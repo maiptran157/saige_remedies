@@ -40,6 +40,7 @@ class RemedyDetailContainer extends Component {
                 remedyDetail: {}
             })
         }
+
     }
 
     render() {
@@ -71,6 +72,7 @@ class RemedyDetailContainer extends Component {
             </div>
         )
     }
+
 }
 
 export default RemedyDetailContainer;

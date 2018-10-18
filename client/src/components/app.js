@@ -11,7 +11,7 @@ import MeetTheTeam from './meet_the_team';
 import { Route } from 'react-router-dom';
 import './app.css';
 // import AgreementModal from '../components/modal/index';
-import backgroundImg from '../assets/images/background_image.jpeg';
+import backgroundImg from '../assets/images/background_image.jpg';
 
 
 const style = {

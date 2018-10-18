@@ -4,9 +4,6 @@ import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
 import { formatPostData } from '../helpers';
 
-// const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
-// const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=search_symptom';
-
 export function addReview(review) {
     const response = review;
     dummyReviewList.reviews.push(response);
@@ -15,6 +12,7 @@ export function addReview(review) {
         payload: response
     }
 }
+
 
 export const getReviewList = (id) => async dispatch => {
     const dataToSend = formatPostData({ ID: id })
@@ -71,9 +69,11 @@ export const getConditionsList = (id) => async dispatch => {
         console.log(error.message);
     }
 }
-export const userSearchTerm = (term) => async dispatch => {
-    const dataToSend = formatPostData({ search_term: term });
 
+export const userSearchTerm = (term) => async dispatch => {
+
+    const dataToSend = formatPostData( {search_term: term} );
+    
     try {
         const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
         console.log(response);
@@ -81,10 +81,43 @@ export const userSearchTerm = (term) => async dispatch => {
             type: types.GET_SEARCH_SYMPTOM,
             payload: response,
         })
-    } catch (error) {
+
+    } catch(error) {
+        console.log('Error Message:', error.message);
+    }
+}
+
+export const userSignInInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( userInfo );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
+        console.log("response",response);
+        dispatch({
+            type: types.GET_USER_SIGN_IN_INFO,
+            payload: response,
+        })
+    
+    } catch(error) {
         console.log('Error Message:', error.message)
     }
 }
+
+export const userSignUpInfo = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData( {search_term: userInfo} );
+
+    try {
+        const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
+        dispatch({
+            type: types.GET_USER_SIGN_UP_INFO,
+            payload: response.data,
+        })
+    } catch(error) {
+
+        console.log('Error Message:', error.message)
+    }
+}
+
 
 // export const getSymptom = (userInput) => {
 //     console.log("userInput for getSymptom:", userInput);

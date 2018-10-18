@@ -1,9 +1,7 @@
 .ailment {
     width: 350px;
     height: 70px;
-    border-radius: 50px;
-    background: rgba(0, 0, 0, 0.45);
-    opacity: 0.8;
+    border-radius: 20px;
     margin-bottom: 2%;
     margin-top: 2%;
     display: flex;

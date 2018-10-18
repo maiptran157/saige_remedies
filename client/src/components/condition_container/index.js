@@ -13,7 +13,7 @@ class ConditionsContainer extends Component {
     }
 
     render() {
-        const { conditions } = this.props;
+        const { conditions, history } = this.props;
         const { categoryId } = this.props.match.params;
         const ailments = () => {
             if (!conditions) {

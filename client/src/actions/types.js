@@ -7,5 +7,7 @@ export default {
     GET_SEARCH_SYMPTOM: 'get_search_symptom',
     SIGN_UP: 'sign_up',
     GET_SYMPTOM: 'get_symptom',
-    GET_SYMPTOM_ERROR: 'get_symptom_error'
+    GET_SYMPTOM_ERROR: 'get_symptom_error',
+    GET_USER_SIGN_IN_INFO: 'get_user_sign_in_info',
+    GET_USER_SIGN_UP_INFO: 'get_user_sign_up_info',
 };
