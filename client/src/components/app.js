@@ -6,6 +6,8 @@ import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
 import SymptomCheck from './symptom_check';
+import AboutSaige from './about_saige';
+import MeetTheTeam from './meet_the_team';
 import { Route } from 'react-router-dom';
 import './app.css';
 // import AgreementModal from '../components/modal/index';
@@ -30,6 +32,8 @@ class App extends Component {
                 <Route path="/sign-up" component={SignUp} />
                 <Route path="/sign-in" component={SignIn} />
                 <Route path="/symptom-check" component={SymptomCheck} />
+                <Route path="/about-saige" component={AboutSaige} />
+                <Route path="/meet-the-team" component={MeetTheTeam} />
             </div>
         )
     }
