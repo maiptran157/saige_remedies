@@ -53,8 +53,7 @@ if(mysqli_num_rows($symptomDataResult) > 0){
 
                     $remedyRow['ingredients'] = $ingredientsArray;
                     $remedyArray[] = $remedyRow;
-                }}
-        }
+        }}}
 
         while($symptomRow = mysqli_fetch_assoc($symptomDataResult)){
             $symptomRow['treatment'] = $remedyArray;
