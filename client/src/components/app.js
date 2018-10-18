@@ -28,7 +28,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
-                    <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
+                    <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer}/>
                     <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
                     <Route path="/sign-up" component={SignUp} />
                     <Route path="/sign-in" component={SignIn} />

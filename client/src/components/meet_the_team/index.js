@@ -8,7 +8,6 @@ import portfolio from '../../assets/images/desktop.svg';
 import saigeTeam from './saige_team';
 
 export default props => {
-    console.log(saigeTeam);
     const displayMembers = () => {
         if (!saigeTeam) {
             return <div className="meet-the-team">Loading...</div>
