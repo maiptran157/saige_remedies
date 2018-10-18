@@ -1,11 +1,12 @@
 .logo-container {
     margin-left: 2%;
     width: 15%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .logo > img {
-    width: 100%;
+height: -webkit-fill-available;
 }

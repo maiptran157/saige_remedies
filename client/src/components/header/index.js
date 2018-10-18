@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from './logo';
 import InputBar from './input_bar';
 import DropDownMenu from '../menu';
-import woodenHeader from '../../assets/images/wooden_header1080x120.png';
+import woodenHeader from '../../assets/images/wood_bg.jpg';
 
 import './header.css';
 
@@ -13,7 +13,7 @@ export default props => {
     return (
         <div className="header" style={ backgroundHeader }>
             <Logo logo={logo} buttonType={buttonType} />
-            <InputBar />
+            <InputBar push={props.push} />
             <DropDownMenu />
         </div>
     )

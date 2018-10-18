@@ -27,12 +27,12 @@ class DropDownMenu extends Component {
     }
 
     closeMenu(event) {
-        if (!this.dropdownMenu.contains(event.target)) {
+        if (!this.DropDownMenu.contains(event.target)) {
             this.setState({ showMenu: false, }, () => {
                 document.removeEventListener('click', this.closeMenu)
             });
         }
-        this.setState({ showMenu: false});
+        this.setState({ showMenu: false });
     }
 
     render() {
@@ -42,52 +42,23 @@ class DropDownMenu extends Component {
                 <div className="hamburger-icon" onClick={this.showMenu}>
                     <img src={hamburgerMenu} alt="" />
                 </div>
-                {/* {
-                    this.state.showMenu
-                        ? (
-                            <div className="hamburger-modal"
-                                ref={(element) => {
-                                    this.dropdownMenu = element;
-                                }}>
-                                <div className="close-symbol" onClick={this.closeMenu}>X</div>
-                                <div className="buffer-box"></div>
-                                <ul>
-                                    <hr/><li><Link style={textStyle} to="/sign-in">Sign In</Link></li><hr/>
-                                    <li><Link style={textStyle} to="/">Home</Link></li>
-                                    <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
-                                    <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                                    <li><Link style={textStyle} to="/conditon:All">All Conditions</Link></li>
-                                    <li><Link style={textStyle} to="/favorites">My Favorites</Link></li>
-                                    
-                                </ul>
-                            </div>
-                        )
-                        : (
-                            null
-                        )
-                } */}
                 <div className={`hamburger-modal ${this.state.showMenu ? "full-size" : ""}`}
                     ref={(element) => {
-                        this.dropdownMenu = element;
+                        this.DropDownMenu = element;
                     }}>
                     {/* Need to link the pages once they are built out? */}
                     <div className="close-symbol" onClick={this.closeMenu}>X</div>
                     <div className="buffer-box"></div>
                     <ul>
-                        <hr/>
-                        <li>
-                            <Link style={textStyle} to="/sign-in">Sign In</Link>
-                        </li>
-                        <hr/>
+                        <hr />
+                        <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
+                        <hr />
                         <li><Link style={textStyle} to="/">Home</Link></li>
                         <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                         <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                        <li><Link style={textStyle} to="/conditon:All">All Conditions</Link></li>
-                        <li><Link style={textStyle} to="/favorites">My Favorites</Link></li>
-                        <li>
-                            <Link style={textStyle} to="/sign-up">Sign Up</Link>
-                        </li>
-                        
+                        {/* <li><Link style={textStyle} to="/conditon:All">All Conditions</Link></li> */}
+                        {/* <li><Link style={textStyle} to="/favorites">My Favorites</Link></li> */}
+                        <li><Link style={textStyle} to="/sign-up">Sign Up</Link></li>
                     </ul>
                 </div>
             </div>

@@ -11,9 +11,7 @@ class RemedyResultsContainer extends Component {
                 return null;
             } else {
                 return treatment.map((treatmentInfo, index) => {
-                    console.log("treatmentInfo:", treatmentInfo);
                     const { _id, ingredients } = treatmentInfo;
-                    console.log("ingredients:", ingredients);
                     let ingredientsString = "";
                     let matchRegex = / \(([^\)]+)\)/gm;
                     if (ingredients.length === 1) {

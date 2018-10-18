@@ -1,9 +1,8 @@
-.condition-detail-container {
+.remedy-detail-container {
     top: 10%;
     width: 100%;
     height: 90%;
     flex-wrap: wrap;
-    display: flex;
     overflow: scroll;
     position: fixed;
 }
@@ -25,28 +24,26 @@
 }
 
 .remedy-detail-header {
-    font-size: 3vh;
+    font-size: 3.5vh;
     color: white;
     width: 85%;
     height: 20%;
     display: flex;
     align-items: center;
+    margin: .5em;
+    text-shadow: 0px 4px 4px black;
 }
 
 .remedy-detail-description {
     width: 85%;
-    height: 80%;
     background-color: white;
     border-radius: 20px;
 }
 
 .detail-paragraph {
     font-size: 3vh;
-    padding-left: 10%;
     width: 80%;
-    height: 80%;
-    align-items: center;
-    /* overflow:scroll */
+    margin: .5em;
 }
 
 .other-treatment-result-total-message {

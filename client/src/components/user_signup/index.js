@@ -1,24 +1,27 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { userSignUpInfo } from '../../actions';
 import { renderInput } from '../helper';
-// import { signUp } from '../../actions/index';
 import './user_signup.css';
 
 class SignUp extends Component {
-    userSignUp(values) {
+
+    userSignUp = (values) => {
         console.log('User Sign Up Info:', values);
+        this.props.userSignUpInfo(values);
     }
     render() {
-        const { handleSubmit } = this.props;
+        const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
                 <h1 className="sign-up-header">Sign Up!</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
-                    <Field name="firstName" label="First Name:" component={renderInput} type="text"/>           
-                    <Field name="lastName" label="Last Name:" component={renderInput} type="text"/>           
-                    <Field name="email" label="Email:" component={renderInput} type="text"/>   
-                    <Field name="password" label="Password:" component={renderInput} type="password"/>           
-                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password"/>           
+                    <Field name="firstName" label="First Name:" component={renderInput} type="text" />
+                    <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
+                    <Field name="email" label="Email:" component={renderInput} type="text" />
+                    <Field name="password" label="Password:" component={renderInput} type="password" />
+                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -27,7 +30,7 @@ class SignUp extends Component {
 }
 
 const validate = values => {
-    const { firstName, lastName, email, password, confirmPassword} = values;
+    const { firstName, lastName, email, password, confirmPassword } = values;
     const errors = {};
     console.log(firstName);
     if (!firstName) {
@@ -47,7 +50,17 @@ const validate = values => {
     return errors;
 }
 
-export default reduxForm({
-    form: 'sign-up',
+SignUp = reduxForm({
+    form: 'get_user_sign_up_info',
     validate: validate
+})(SignUp);
+
+function mapStateToProps(state) {
+    return {
+        authError: state.user.signUpError
+    }
+}
+
+export default connect(mapStateToProps, {
+    userSignUpInfo: userSignUpInfo,
 })(SignUp);

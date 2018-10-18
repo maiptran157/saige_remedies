@@ -1,6 +1,5 @@
 .hamburger-icon > img {
-    width: 60%;
-    height: 60%;
+    height: 75%;
 }
 
 .hamburger-modal {
@@ -24,9 +23,11 @@
 }
 
 .hamburger-icon {
-    width: 94px;
-    height: 114px;
+    margin: 3%;
     position: absolute;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
 }
 
 .hamburger-container {

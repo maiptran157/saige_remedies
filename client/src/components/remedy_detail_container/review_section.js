@@ -5,18 +5,19 @@ import { connect } from 'react-redux';
 import { addReview } from '../../actions';
 import { getReviewList } from '../../actions';
 import './review_section.scss';
+import '../star_rating/star_rating.scss';
 // import StarRating from '../star_rating/star_rating_of _user';
 import '../star_rating/star_rating.scss';
 import StarRatingComponent from 'react-star-rating-component';
 import StarRatingTotal from '../star_rating/star_rating_total';
 
 const textStyle = {
-    color: 'grey'
+    color: 'white'
 }
 
 class ReviewList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             rating: 0
@@ -27,16 +28,19 @@ class ReviewList extends Component {
         this.setState({ rating: nextValue });
     }
 
-    componentDidMount() {
+    componentWillReceiveProps() {
         const { id } = this.props;
         this.props.getReviewList(id);
     }
 
     renderInput(props) {
         console.log("renderInput props:", props);
-        const { input, name, type, placeholder, meta: { touched, error } } = props;
+        const { input, title, name, type, meta: { touched, error } } = props;
         return (
-            <input {...input} type={type} className="review-area" autoComplete="off" placeholder={placeholder ? placeholder : null} />
+            <Fragment>
+                <label style={textStyle}>{title}</label>
+                <input {...input} type={type} className="review-area" autoComplete="off" />
+            </Fragment>
         )
 
     }
@@ -50,6 +54,7 @@ class ReviewList extends Component {
     }
 
     render() {
+        console.log("ReviewList props:", this.props)
         const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
         const displayReview = () => {
@@ -59,8 +64,8 @@ class ReviewList extends Component {
                     return (
                         <ul className="single-review" key={index}>
                             <li>{reviewItem.username}</li>
-                            <li><span style={textStyle}>rating: </span>{reviewItem.rating}/5</li>
-                            <li>{reviewItem.date_posted}</li>
+                            <li>rating: <StarRatingComponent name="rate1" editing={false} starCount={5} value={parseInt(reviewItem.rating)} /></li>
+                            <li>date: {reviewItem.date_posted}</li>
                             <li className="review-detail">{reviewItem.review}</li>
                         </ul>
                     )
@@ -68,20 +73,38 @@ class ReviewList extends Component {
             }
         }
 
+        const displayRatingTotal = () => {
+            let rating = 0;
+            for (let i = 0; i < reviewList.length; i++) {
+                rating += reviewList[i].rating;
+            }
+            let starTotal = Math.floor(rating / reviewList.length)
+            return (
+                <div className="star-rating-total">
+                    <StarRatingComponent
+                        name="rate1"
+                        editing={false}
+                        starCount={5}
+                        value={starTotal}
+                    />
+                </div>
+            );
+        }
+
         return (<div>
             <div className="review-header">
-                <div>Reviews:</div>
-                <span><StarRatingTotal /></span>
+                <div>Total Rating:</div>
+                <span>{reviewList ? displayRatingTotal() : null}</span>
             </div>
             <div className="reviews-container">
 
-                {displayReview()}
+                {reviewList ? displayReview() : null}
 
                 <form action="" onSubmit={handleSubmit(this.saveReview)}>
                     <div className="review">
                         <div>
                             <div className="star-rating-area">
-                                <div className="star-rating-count">Rating:<span> {rating}</span></div>
+                                <div className="star-rating-count">Rating:</div>
                                 <StarRatingComponent
                                     name="rating"
                                     starCount={5}
@@ -91,7 +114,7 @@ class ReviewList extends Component {
                             </div>
                         </div>
 
-                        <Field type="text" name="review" component={this.renderInput} placeholder="Leave a review..." />
+                        <Field type="text" name="review" title="Leave a review:" component={this.renderInput} />
                     </div>
 
                     <button className="add-review-button">+</button>

@@ -5,19 +5,38 @@ const style = {
     fontWeight: "bold"
 }
 
+const liStyle = {
+    listStyleType: 'none'
+}
+
 const RemedyDetailGroup = (props) => {
     const { name, remedyDesc, note, caution } = props;
+    const displayRemedyDescSteps = () => {
+        const remedyDescSteps = remedyDesc.split(". ");
+        if (remedyDescSteps.length === 1) {
+            return remedyDesc;
+        }
+        let step = 1;
+        for (let i = 0; i < remedyDescSteps.length; i++) {
+            remedyDescSteps[i] = `${step}. ${remedyDescSteps[i]}`
+            step++
+        }
+        return remedyDescSteps.map((remedy, index) => {
+            return <li style={liStyle} key={index}>{remedy}</li>
+        })
+    }
+    console.log(remedyDesc.split(". "))
     const displayRemedyDesc = () => {
         if (note === undefined && caution === undefined) {
             return (
                 <p className="detail-paragraph">
-                    {remedyDesc}
+                    {displayRemedyDescSteps()}
                 </p>
             )
         } else if (note === undefined) {
             return (
                 <p className="detail-paragraph">
-                    {remedyDesc}
+                    {displayRemedyDescSteps()}
                     <br />
                     <span style={style}>Caution:</span>{caution}
                 </p>
@@ -25,7 +44,7 @@ const RemedyDetailGroup = (props) => {
         } else if (caution === undefined) {
             return (
                 <p className="detail-paragraph">
-                    {remedyDesc}
+                    {displayRemedyDescSteps()}
                     <br />
                     <span style={style}>Note:</span>{note}
                 </p>
@@ -33,7 +52,7 @@ const RemedyDetailGroup = (props) => {
         } else {
             return (
                 <p className="detail-paragraph">
-                    {remedyDesc}
+                    {displayRemedyDescSteps()}
                     <br />
                     <span style={style}>Note:</span>{note}
                     <br />
@@ -46,7 +65,7 @@ const RemedyDetailGroup = (props) => {
     return (
         <div className="remedy-detail-group">
             <div className="remedy-detail-header">
-                <div>Ingredient: <span>{name}</span></div>
+                {name}
             </div>
             <div className="remedy-detail-description">
                 {fullDesc}

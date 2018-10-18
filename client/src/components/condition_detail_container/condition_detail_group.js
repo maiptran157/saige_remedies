@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './condition_detail_container.css';
-// import thumbsUp from '../images/symbol-thumbs-up.jpg';
+import { renderInput } from '../helper';
 
 const style = {
     fontWeight: 'bold'
 }
 
-// const thumbsUpBackground = {
-//     backgroundImage: `url(${thumbsUp})`
-// }
-
-const ConditionDetailGroup = (props) => {
-    // console.log("props of ConditionDetailGroup:", props);
-    const { name, description, self_help, caution } = props;
-    const description_presentation = () => {
+class ConditionDetailGroup extends Component {
+    state = {
+        showLess: true,
+    }
+    descriptionPresent() {
+        const { description, caution, self_help } = this.props;
+        console.log(description);
         if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
@@ -48,20 +47,33 @@ const ConditionDetailGroup = (props) => {
             )
         }
     }
-    const description_detail = description_presentation();
-    return (
-        <div className="condition-detail-group">
-            <div className="condition-detail-header">
-                <div className="condition-detail-name">
-                    <div>{name}</div>
+    toggleMore = (event) => {
+        event.preventDefault();
+        this.setState({
+            showLess: !this.state.showLess,
+        });
+    }
+    render() {
+        const { description } = this.props;
+        if (!description) {
+            return null;
+        };
+        const shortenedDescription = description.slice(0, 200) + '...';
+        console.log(this.state.showLess);
+        return (
+            <div className="condition-detail-group">
+                <div className="condition-detail-header">
+
+                    {this.props.name}
+
                 </div>
-                {/* <div className="ratingSymbol" style={thumbsUpBackground}></div> */}
+                <div className="condition-detail-description">
+                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription}<a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                </div>
             </div>
-            <div className="condition-detail-description">
-                {description_detail}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default ConditionDetailGroup;
+
