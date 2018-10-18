@@ -4,7 +4,7 @@ import Header from '../header';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
 import github from '../../assets/images/github_icon.svg';
 import linkedin from '../../assets/images/linkedin_icon.svg';
-import portfolio from '../../assets/images/desktop.svg';
+import portfolio from '../../assets/images/portfolio.png';
 import saigeTeam from './saige_team';
 
 export default props => {
@@ -30,8 +30,9 @@ export default props => {
                                 <img src={portfolio} />
                             </a>
                         </div>
+                        <br/><br/><br/>
                     </div>
-
+                
                 )
             })
         }
