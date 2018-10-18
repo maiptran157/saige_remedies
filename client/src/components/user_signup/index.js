@@ -1,15 +1,18 @@
 import React, { Component }from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { signUp } from '../../actions';
 import { renderInput } from '../helper';
-// import { signUp } from '../../actions/index';
 import './user_signup.css';
 
 class SignUp extends Component {
-    userSignUp(values) {
+
+    userSignUp = (values) => {
         console.log('User Sign Up Info:', values);
+        this.props.SugnUp(values);
     }
     render() {
-        const { handleSubmit } = this.props;
+        const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
                 <h1 className="sign-up-header">Sign Up!</h1>
@@ -47,7 +50,17 @@ const validate = values => {
     return errors;
 }
 
-export default reduxForm({
+SignUp = reduxForm({
     form: 'sign-up',
     validate: validate
+})(SignUp);
+
+function mapStateToProps(state) {
+    return {
+        authError: state.user.signUpError
+    }
+}
+
+export default connect(mapStateToProps, {
+    signUp: signUp
 })(SignUp);
