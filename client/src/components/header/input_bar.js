@@ -21,12 +21,10 @@ class InputBar extends Component {
     this.props.userSearchTerm(this.state.condition);
     setTimeout( () => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
-    }, 1000)
-   
+    }, 300)
   }
 
   render() {
-    console.log("PROPS:", this.props);
     const option = dummyData.map((data, index) => {
       return <option key={data._id} value={data.name}></option>
     })
