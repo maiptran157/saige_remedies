@@ -18,7 +18,7 @@ export default props => {
 
                     <div className="a-team-member" key={index}>
                         <img src={team.img} alt="" />
-                        <h3>{team.name} ( {team.role} )</h3>
+                        <h3>{team.role}</h3>
                         <div className="media">
                             <a href={team.github} target="_blank">
                                 <img src={github} />

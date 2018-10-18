@@ -4,9 +4,8 @@ import dummyReviewList from '../dummy_data/data_for_remedy_review';
 import config from '../config';
 import { formatPostData } from '../helpers';
 
-
-const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
-const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=search_symptom';
+// const CATEGORY_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=symptom_category';
+// const CONDITIONS_URL = 'http://localhost:8888/c718_findhomeremedies/client/public/api/app.php?request=search_symptom';
 
 export function addReview(review) {
     const response = review;
@@ -17,15 +16,18 @@ export function addReview(review) {
     }
 }
 
-export function getReviewList(id) {
-    const response = dummyReviewList;
-    let reviewList = [];
-    if (id === response._id) {
-        reviewList = response.reviews
-    }
-    return {
-        type: types.GET_REVIEW_LIST,
-        payload: reviewList
+export const getReviewList = (id) => async dispatch => {
+    const dataToSend = formatPostData({ ID: id })
+    try {
+        const response = await axios.post(config.REMEDY_DETAIL_URL, dataToSend);
+        let reviewList = response.data.reviews
+        console.log("===reviewList===", reviewList)
+        dispatch({
+            type: types.GET_REVIEW_LIST,
+            payload: reviewList
+        });
+    } catch (error) {
+        console.log("error message here:", error.message)
     }
 }
 
@@ -51,12 +53,12 @@ export const getCategoryList = () => async dispatch => {
         })
 
     } catch (err) {
-        console.log("error message here:",err.message);
+        console.log("error message here:", err.message);
     }
 }
 
 export const getConditionsList = (id) => async dispatch => {
-    const dataToSend = formatPostData( {ID: id} );
+    const dataToSend = formatPostData({ ID: id });
 
     try {
         const response = await axios.post(`${config.CONDITIONS_URL}`, dataToSend)
@@ -70,7 +72,7 @@ export const getConditionsList = (id) => async dispatch => {
     }
 }
 export const userSearchTerm = (term) => async dispatch => {
-    const dataToSend = formatPostData( {search_term: term} );
+    const dataToSend = formatPostData({ search_term: term });
 
     try {
         const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
@@ -79,7 +81,7 @@ export const userSearchTerm = (term) => async dispatch => {
             type: types.GET_SEARCH_SYMPTOM,
             payload: response,
         })
-    } catch(error) {
+    } catch (error) {
         console.log('Error Message:', error.message)
     }
 }
