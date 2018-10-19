@@ -13,8 +13,7 @@ import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
 import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
-// import loadingPage from '../assets/images/loading_page.png';
-import LoadingPage from './loading_page/loading_page';
+// import LoadingPage from './loading_page/loading_page';
 
 const background = {
     backgroundImage: `url(${backgroundImg})`,
@@ -35,9 +34,9 @@ class App extends Component {
     }
 
     render() {
-        if (this.state.loading) {
-            return <LoadingPage/>
-        }
+        // if (this.state.loading) {
+        //     return <LoadingPage/>
+        // }
         return (
             <div className="container" style={background}>
                 <AgreementModal/>
