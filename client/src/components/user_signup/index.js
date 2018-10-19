@@ -22,6 +22,7 @@ class SignUp extends Component {
                 <form onSubmit={handleSubmit(this.userSignUp)}>
                     <Field name="firstName" label="First Name:" component={renderInput} type="text" />
                     <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
+                    <Field name="username" label="User Name" component={renderInput} type="text" />
                     <Field name="email" label="Email:" component={renderInput} type="text" />
                     <Field name="password" label="Password:" component={renderInput} type="password" />
                     <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />

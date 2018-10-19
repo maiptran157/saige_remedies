@@ -24,6 +24,7 @@ class ConditionDetailGroup extends Component {
                 <p className="condition-detail-paragraph">
                     {description}
                     <br />
+                    <hr/>
                     <span style={style}>Caution:</span> {caution}
                 </p>
             )
@@ -32,6 +33,7 @@ class ConditionDetailGroup extends Component {
                 <p className="condition-detail-paragraph">
                     {description}
                     <br />
+                    <hr/>
                     <span style={style}>Self-help:</span> {self_help}
                 </p>
             )
@@ -40,8 +42,10 @@ class ConditionDetailGroup extends Component {
                 <p className="condition-detail-paragraph">
                     {description}
                     <br />
+                    <hr/>
                     <span style={style}>Self-help:</span> {self_help}
                     <br />
+                    <hr/>
                     <span style={style}>Caution:</span> {caution}
                 </p>
             )
@@ -58,17 +62,15 @@ class ConditionDetailGroup extends Component {
         if (!description) {
             return null;
         };
-        const shortenedDescription = description.slice(0, 200) + '...';
+        const shortenedDescription = description.slice(0, 145) + '...';
         console.log(this.state.showLess);
         return (
             <div className="condition-detail-group">
                 <div className="condition-detail-header">
-
                     {this.props.name}
-
                 </div>
                 <div className="condition-detail-description">
-                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription} <br/>  <a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription} <a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
                 </div>
             </div>
         )
