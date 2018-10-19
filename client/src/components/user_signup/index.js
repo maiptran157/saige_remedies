@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import Header from '../header';
+import backButton from '../../assets/images/back_arrow_white_shadow.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignUpInfo } from '../../actions';
 import { renderInput } from '../helper';
+import { Link } from 'react-router-dom';
 import './user_signup.css';
 
 class SignUp extends Component {
@@ -15,6 +18,7 @@ class SignUp extends Component {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
+                <Header logo={backButton} buttonType="back-button" />
                 <h1 className="sign-up-header">Sign Up</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
                     <Field name="firstName" label="First Name:" component={renderInput} type="text" />
@@ -23,6 +27,9 @@ class SignUp extends Component {
                     <Field name="password" label="Password:" component={renderInput} type="password" />
                     <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
                     <button>Sign Up</button>
+                    <br/><br/>
+                    <Link to="/sign-up">Sign In</Link>
+                    <p className="auth-error-text">{ authError }</p>
                 </form>
             </div>
         )
