@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-Ob_start();
+// Ob_start();
 
 require_once('mysql_connect.php');
 
@@ -44,6 +44,6 @@ if($result){
     $output->message = 'Server error';
 }
 
-ob_end_clean();
+// ob_end_clean();
 
 ?>

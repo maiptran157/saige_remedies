@@ -14,9 +14,9 @@ $output = [];
 if($result){
     $numRows = mysqli_num_rows($result);
     if($numRows < 1){
-        $output['message'] = 'New user, sign up valid';
+        $output['userExists'] = true;
     } else{
-        $output['message'] = 'User already exist';
+        $output['userExists'] = false;
 }}
 
 ?>
