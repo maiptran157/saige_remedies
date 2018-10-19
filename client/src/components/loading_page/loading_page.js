@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingPage from '../../assets/images/loading_page.png';
+import loadingPage from '../../assets/images/saige_splash.jpg';
 import './loading_page.css';
 
 const loading = {
@@ -7,10 +7,10 @@ const loading = {
     backgroundSize: `cover`,
 }
 
-export default props => {
+export default () => {
     return ( 
-        <div style={loading}>
-            <img src={loadingPage} alt=""/>
+        <div>
+            <img src={loadingPage}/>
         </div>
     )
 }

@@ -31,7 +31,7 @@ class App extends Component {
             this.setState({
                 loading: false,
             });
-        }, 2000);
+        }, 3000);
     }
 
     render() {
