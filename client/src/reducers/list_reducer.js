@@ -8,10 +8,10 @@ const DEFAULT_STATE = {
 export default (state = DEFAULT_STATE, action) => {
     switch (action.type) {
         case types.GET_REVIEW_LIST:
-            console.log('REDUCER ACTION:', action);
             return { ...state, reviewList: action.payload }
         case types.ADD_REVIEW:
-            console.log(action);
+            console.log("ADD_REVIEW action:", action);
+            return { ...state, review: action.payload }
         case types.GET_SINGLE_REVIEW:
             console.log(action);
         default:

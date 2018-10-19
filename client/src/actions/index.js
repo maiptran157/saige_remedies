@@ -2,6 +2,7 @@ import types from './types';
 import axios from 'axios';
 import config from '../config';
 import { formatPostData } from '../helpers';
+import { userInfo } from 'os';
 
 export function addReview(review) {
     const response = review;
@@ -18,7 +19,6 @@ export const getReviewList = (id) => async dispatch => {
     try {
         const response = await axios.post(config.REMEDY_DETAIL_URL, dataToSend);
         let reviewList = response.data.reviews
-        console.log("===reviewList===", reviewList)
         dispatch({
             type: types.GET_REVIEW_LIST,
             payload: reviewList
@@ -91,7 +91,8 @@ export const userSignInInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
-        console.log("response", response);
+        console.log("response in asctions", response);
+        localStorage.setItem('loggedin', response.data.loggedin);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
@@ -107,6 +108,7 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
+        localStorage.setItem('token', response.data.token);
         dispatch({
             type: types.GET_USER_SIGN_UP_INFO,
             payload: response.data,
@@ -117,47 +119,16 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
     }
 }
 
-
-// export const getSymptom = (userInput) => {
-//     console.log("userInput for getSymptom:", userInput);
-//     const dataToSend = formatPostData(userInput);
-//     return async (dispatch) => {
-//         try {
-//             const response = await axios.post(config.INFERMEDICA_URL, dataToSend)
-//             // const response = await axios({
-//             //     url: INFERMEDICA_URL,
-//             //     method: 'post',
-//             //     headers: {
-//             //         'App-Id': APP_ID,
-//             //         'App-Key': APP_KEY,
-//             //         'Content-Type': CONTENT_TYPE
-//             //     },
-//             //     data: {
-//             //         'text': userInput
-//             //     }
-//             // })
-//             console.log("getSymptom resp:", response);
-//             dispatch({
-//                 type: types.GET_SYMPTOM,
-//                 payload: response
-//             })
-//         } catch (error) {
-//             console.log("getSymptom err:", error);
-//             dispatch({
-//                 type: types.GET_SYMPTOM_ERROR,
-//                 error: 'Error getting symptom'
-//             })
-//         }
-//     }
-// }
-
-// export async function getCategorylist() {
-//    const response = await axios.get(`${CATEGORY_URL}`);
-//    console.log('Response in actions index', response);
-
-// export const signUp = (userInfo) => {
-//     return async (dispatch) => {
-
-//     }
-
+export const checkUserLoginStatus = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData({ userData: userInfo });
+    try {
+        const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS, dataToSend);
+        dispatch({
+            type: types.CHECK_USER_LOG_IN_STATUS,
+            payload: response.success
+        })
+    } catch (error) {
+        console.log(error.message)
+    }
+}
 

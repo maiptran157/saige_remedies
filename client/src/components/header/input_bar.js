@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './input_bar.css';
-import dummyData from '../../dummy_data/data_for_condition_detail';
+import searchOption from './input_bar_predefined_options';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions/index';
 
@@ -17,33 +17,33 @@ class InputBar extends Component {
     });
   }
   onSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     this.props.userSearchTerm(this.state.condition);
-    setTimeout( () => {
+    setTimeout(() => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
     }, 300);
   }
 
   render() {
-    const option = dummyData.map((data, index) => {
-      return <option key={data._id} value={data.name}></option>
+    const option = searchOption.sort().map((data, index) => {
+      return <option key={index} value={data}></option>
     })
     return (
-      <form onSubmit={this.onSubmit} className="search-form">       
-         <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange} />
-         <datalist id="browsers">
+      <form onSubmit={this.onSubmit} className="search-form">
+        <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange} />
+        <datalist id="browsers">
           {option}
-          </datalist>
+        </datalist>
       </form>
     )
   }
 }
 
 function mapStateToProps(state) {
-    return {
-      symptomId: state.search.symptomId,
-      categoryId: state.search.categoryId
-    }
+  return {
+    symptomId: state.search.symptomId,
+    categoryId: state.search.categoryId
+  }
 }
 
 export default connect(mapStateToProps, {

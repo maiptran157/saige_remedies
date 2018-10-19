@@ -15,10 +15,12 @@ class UmbrellaConditions extends Component {
 
     render() {
         const { categories, history } = this.props;
+        console.log("categories:", categories)
         const categoryList = () => {
             if (!categories) {
-                return <ReactLoading type='spinningBubbles' color='#EFC11D' />;
+                return null;
             } else {
+
                 return categories.map((category) => {
                     return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
                 });

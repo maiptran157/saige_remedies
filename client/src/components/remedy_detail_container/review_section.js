@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { addReview } from '../../actions';
-import { getReviewList } from '../../actions';
+import { addReview, getReviewList } from '../../actions';
 import './review_section.scss';
 import '../star_rating/star_rating.scss';
 // import StarRating from '../star_rating/star_rating_of _user';
@@ -34,7 +33,6 @@ class ReviewList extends Component {
     }
 
     renderInput(props) {
-        console.log("renderInput props:", props);
         const { input, title, name, type, meta: { touched, error } } = props;
         return (
             <Fragment>
@@ -45,16 +43,25 @@ class ReviewList extends Component {
 
     }
 
-    saveReview = (value) => {
-        // console.log("rating on submit", this.state.rating);
-        // console.log("review on submit", value.review);
-        this.props.addReview({ review: value.review, rating: this.state.rating });
-        const { id } = this.props;
-        this.props.getReviewList(id);
+
+    validateUserLogIn = (value) => {
+        console.log("auth for validateUserLogIn:", this.props.auth);
+        if (this.props.auth === false) {
+            localStorage.setItem('redirectUrl', this.props.pathname);
+            this.props.push('/sign-in');
+        } else {
+            console.log("review:", value.review)
+        }
     }
 
+
+    // saveReview = (value) => {
+    //     this.props.addReview({ review: value.review, rating: this.state.rating });
+    //     const { id } = this.props;
+    //     this.props.getReviewList(id);
+    // }
+
     render() {
-        console.log("ReviewList props:", this.props)
         const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
         const displayReview = () => {
@@ -100,11 +107,11 @@ class ReviewList extends Component {
 
                 {reviewList ? displayReview() : null}
 
-                <form action="" onSubmit={handleSubmit(this.saveReview)}>
+                <form action="" onSubmit={handleSubmit(this.validateUserLogIn)}>
                     <div className="review">
                         <div>
                             <div className="star-rating-area">
-                                <div className="star-rating-count">Rating:</div>
+                                <div className="star-rating-count">Rate this remedy:</div>
                                 <StarRatingComponent
                                     name="rating"
                                     starCount={5}
@@ -128,7 +135,8 @@ class ReviewList extends Component {
 
 function mapStateToProps(state) {
     return {
-        reviewList: state.list.reviewList
+        reviewList: state.list.reviewList,
+        auth: state.user.auth
     }
 }
 

@@ -6,7 +6,7 @@ const RemedyReviews = (props) => {
     // console.log("RemedyReviews id:", props._id)
     return (
         <div className="remedy-reviews-container">
-            <ReviewList id={props._id} reviews={props.reviews} />
+            <ReviewList push={props.push} pathname={props.pathname} id={props._id} reviews={props.reviews} />
         </div>
     )
 }
