@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once('mysql_connect.php');
-require_once('login.php');
 
 $review = $_POST['review'];
 $rating = $_POST['rating'];
