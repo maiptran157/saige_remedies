@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import './condition_detail_container.css';
-import { renderInput } from '../helper';
 
 const style = {
     fontWeight: 'bold'
@@ -12,7 +11,7 @@ class ConditionDetailGroup extends Component {
     }
     descriptionPresent() {
         const { description, caution, self_help } = this.props;
-        console.log(description);
+        // console.log(description);
         if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
@@ -59,16 +58,14 @@ class ConditionDetailGroup extends Component {
             return null;
         };
         const shortenedDescription = description.slice(0, 200) + '...';
-        console.log(this.state.showLess);
+        // console.log(this.state.showLess);
         return (
             <div className="condition-detail-group">
                 <div className="condition-detail-header">
-
                     {this.props.name}
-
                 </div>
                 <div className="condition-detail-description">
-                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription} <br/>  <a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription} <br />  <a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
                 </div>
             </div>
         )

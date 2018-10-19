@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './remedy_detail_container.css';
 import RemedyDetailGroup from './remedy_detail_group';
 import RemedyReviews from './remedy_reviews';
 import Header from '../header';
-// import dummyData from '../../dummy_data/data_for_remedy_detail';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import axios from 'axios';
 import config from '../../config';
 import { formatPostData } from '../../helpers';
+import ReactLoading from 'react-loading';
+
+const style = {
+    display: 'flex',
+    justifyContent: 'center'
+}
 
 class RemedyDetailContainer extends Component {
     constructor(props) {
@@ -44,6 +49,19 @@ class RemedyDetailContainer extends Component {
     render() {
         const { remedyDetail } = this.state;
         const { remedy_id, remedy, note, caution, ingredients, reviews } = remedyDetail;
+
+        const displayRemedyDesc = () => {
+            if (!remedy) {
+                return <div style={style}>
+                    <ReactLoading type="bubbles" />
+                </div>
+            }
+            return <Fragment>
+                {ingredients ? remedyName() : null}
+                <RemedyReviews _id={remedy_id} reviews={reviews} push={this.props.history.push} pathname={this.props.location.pathname} />
+            </Fragment>
+        }
+
         const remedyName = () => {
             let ingredientsString = "";
             let matchRegex = / \(([^\)]+)\)/gm;
@@ -63,9 +81,8 @@ class RemedyDetailContainer extends Component {
 
         return (
             <div className="remedy-detail-container">
-                <Header logo={backButton} buttonType="back-button" />
-                {ingredients ? remedyName() : null}
-                <RemedyReviews _id={remedy_id} reviews={reviews} push={this.props.history.push} pathname={this.props.location.pathname} />
+                <Header logo={saigeLogo} />
+                {displayRemedyDesc()}
             </div>
         )
     }

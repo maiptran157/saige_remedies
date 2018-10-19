@@ -1,7 +1,7 @@
 import './user_signin.css';
 import React, { Component } from 'react';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignInInfo } from '../../actions';
@@ -28,17 +28,18 @@ class SignIn extends Component {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-in-container">
-                <Header logo={backButton} buttonType="back-button" />
-                <h1 className="sign-in-header">Sign In</h1>
-                <form onSubmit={handleSubmit(this.userSignIn)}>
-                    <Field name="email" label="Email" component={renderInput} type="text" />
-                    <Field name="password" label="Password" component={renderInput} type="password" />
-                    <button>Sign In</button>
-                    <br /><br />
-                    <Link to="/sign-up">Sign Up</Link>
-                    <p className="auth-error-text">{authError}</p>
-
-                </form>
+                <Header logo={saigeLogo} />
+                <div className="sign-in-section">
+                    <h1 className="sign-in-header">Sign In</h1>
+                    <form onSubmit={handleSubmit(this.userSignIn)}>
+                        <Field name="email" label="Email" component={renderInput} type="text" />
+                        <Field name="password" label="Password" component={renderInput} type="password" />
+                        <button>Sign In</button>
+                        <br /><br />
+                        <Link to="/sign-up">Sign Up</Link>
+                        <p className="auth-error-text">{authError}</p>
+                    </form>
+                </div>
             </div>
         )
     }
@@ -49,7 +50,7 @@ function validate(values) {
     const errors = {};
 
     if (!email) {
-        errors.email = 'Please enter your email address';
+        errors.email = 'Please enter your email';
     }
     if (!password) {
         errors.password = 'Please enter your password';

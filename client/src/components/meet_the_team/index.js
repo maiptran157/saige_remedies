@@ -1,7 +1,7 @@
 import React from 'react';
 import './meet_the_team.scss';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import github from '../../assets/images/github_icon.svg';
 import linkedin from '../../assets/images/linkedin_icon.svg';
 import portfolio from '../../assets/images/portfolio.png';
@@ -29,9 +29,9 @@ export default props => {
                                 <img src={portfolio} />
                             </a>
                         </div>
-                        <br/><br/><br/>
+                        <br /><br /><br />
                     </div>
-                
+
                 )
             })
         }
@@ -39,7 +39,7 @@ export default props => {
 
     return (
         <div>
-            <Header logo={backButton} buttonType="back-button" />
+            <Header logo={saigeLogo} />
             <div className="meet-the-team">
                 <h1>Meet The Team</h1>
                 <div className="members" >

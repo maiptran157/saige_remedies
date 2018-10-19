@@ -1,3 +1,13 @@
+.sign-in-section {
+    top: 10%;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .auth-error-text {
     color: darkred;
 }
