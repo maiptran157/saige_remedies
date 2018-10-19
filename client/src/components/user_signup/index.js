@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import './user_signup.css';
 
 class SignUp extends Component {
-
     userSignUp = (values) => {
         console.log('User Sign Up Info:', values);
         this.props.userSignUpInfo(values);
@@ -38,8 +37,8 @@ class SignUp extends Component {
 
 const validate = values => {
     const { firstName, lastName, email, password, confirmPassword } = values;
+    console.log(values);
     const errors = {};
-    console.log(firstName);
     if (!firstName) {
         errors.firstName = "Please enter your first name.";
     }

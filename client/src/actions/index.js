@@ -2,7 +2,7 @@ import types from './types';
 import axios from 'axios';
 import config from '../config';
 import { formatPostData } from '../helpers';
-import { userInfo } from 'os';
+
 
 export const addReview = (reviewInfo) => async dispatch => {
     const dataToSend = formatPostData({
@@ -114,10 +114,11 @@ export const userSignInInfo = (userInfo) => async dispatch => {
 }
 
 export const userSignUpInfo = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData({ search_term: userInfo });
+    const dataToSend = formatPostData( userInfo );
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
+        console.log(response);
         localStorage.setItem('token', response.data.token);
         dispatch({
             type: types.GET_USER_SIGN_UP_INFO,
