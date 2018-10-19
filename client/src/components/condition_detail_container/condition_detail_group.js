@@ -68,7 +68,7 @@ class ConditionDetailGroup extends Component {
 
                 </div>
                 <div className="condition-detail-description">
-                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription}<a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
+                    {this.state.showLess ? <p className="condition-detail-paragraph">{shortenedDescription} <br/>  <a onClick={this.toggleMore} href="">Show more</a></p> : <p>{this.descriptionPresent()}</p>}
                 </div>
             </div>
         )
