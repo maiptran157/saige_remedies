@@ -1,25 +1,36 @@
 import './user_signin.css';
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignInInfo } from '../../actions';
 import { renderInput } from '../helper';
 
 class SignIn extends Component {
-    userSignIn = (values) => {
-        this.props.userSignInInfo(values);
+    userSignIn = async (values) => {
+        await this.props.userSignInInfo(values);
+        //check if there's a past route
+        const url = localStorage.getItem('redirectUrl');
+        const loggedin = localStorage.getItem('loggedin') === 'true';
+        console.log('SignIn props:', this.props);
+        if (url && loggedin) {
+            localStorage.removeItem('redirectUrl');
+            return this.props.history.push(url);
+        } else if (loggedin) {
+            return this.props.history.push("/");
+        }
+        this.props.reset();
     }
 
     render() {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-in-container">
-                <h1 className="sign-in-header">Sign In!</h1>
+                <h1 className="sign-in-header">Sign In</h1>
                 <form onSubmit={handleSubmit(this.userSignIn)}>
-                    <Field name="email" label="Email" component={renderInput} type="text"/>
-                    <Field name="password" label="Password" component={renderInput} type="password"/>
+                    <Field name="email" label="Email" component={renderInput} type="text" />
+                    <Field name="password" label="Password" component={renderInput} type="password" />
                     <button>Sign In</button>
-                    <p className="auth-error-text">{ authError }</p>
+                    <p className="auth-error-text">{authError}</p>
                 </form>
             </div>
         )
@@ -43,10 +54,11 @@ function validate(values) {
 SignIn = reduxForm({
     form: 'get_user_sign_in_info',
     validate: validate
-})(SignIn); 
+})(SignIn);
 
 function mapStateToProps(state) {
     return {
+        auth: state.user.auth,
         authError: state.user.signInError
     }
 }

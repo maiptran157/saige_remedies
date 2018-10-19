@@ -25,7 +25,6 @@ const RemedyDetailGroup = (props) => {
             return <li style={liStyle} key={index}>{remedy}</li>
         })
     }
-    console.log(remedyDesc.split(". "))
     const displayRemedyDesc = () => {
         if (note === undefined && caution === undefined) {
             return (

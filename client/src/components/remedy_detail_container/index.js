@@ -65,7 +65,7 @@ class RemedyDetailContainer extends Component {
             <div className="remedy-detail-container">
                 <Header logo={backButton} buttonType="back-button" />
                 {ingredients ? remedyName() : null}
-                <RemedyReviews _id={remedy_id} reviews={reviews} />
+                <RemedyReviews _id={remedy_id} reviews={reviews} push={this.props.history.push} pathname={this.props.location.pathname} />
             </div>
         )
     }

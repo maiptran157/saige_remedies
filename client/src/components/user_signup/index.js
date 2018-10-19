@@ -15,7 +15,7 @@ class SignUp extends Component {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
-                <h1 className="sign-up-header">Sign Up!</h1>
+                <h1 className="sign-up-header">Sign Up</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
                     <Field name="firstName" label="First Name:" component={renderInput} type="text" />
                     <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
