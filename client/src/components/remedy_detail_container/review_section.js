@@ -83,7 +83,7 @@ class ReviewList extends Component {
                         <ul className="single-review" key={index}>
                             <li>{reviewItem.username}</li>
                             <li>rating: <StarRatingComponent name="rate1" editing={false} starCount={5} value={parseInt(reviewItem.rating)} /></li>
-                            <li>date: {reviewItem.date_posted}</li>
+                            {/* <li>date: {reviewItem.date_posted}</li> */}
                             <li className="review-detail">{reviewItem.review}</li>
                         </ul>
                     )
