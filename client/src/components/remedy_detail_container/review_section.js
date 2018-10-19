@@ -44,22 +44,27 @@ class ReviewList extends Component {
     }
 
 
-    validateUserLogIn = (value) => {
+    validateUserLogInAndAddReview = (value) => {
         console.log("auth for validateUserLogIn:", this.props.auth);
         if (this.props.auth === false) {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
         } else {
-            console.log("review:", value.review)
+            console.log("review:", value.review);
+            console.log('rating:', this.state.rating);
+            console.log('username:', username);
+            console.log('remedyId:', this.props.id);
+            const username = localStorage.getItem('username');
+            const { id } = this.props;
+            this.props.addReview({
+                review: value.review,
+                rating: this.state.rating,
+                id: id
+            })
+            this.props.getReviewList(id);
+            this.props.reset();
         }
     }
-
-
-    // saveReview = (value) => {
-    //     this.props.addReview({ review: value.review, rating: this.state.rating });
-    //     const { id } = this.props;
-    //     this.props.getReviewList(id);
-    // }
 
     render() {
         const { rating } = this.state;
@@ -107,7 +112,7 @@ class ReviewList extends Component {
 
                 {reviewList ? displayReview() : null}
 
-                <form action="" onSubmit={handleSubmit(this.validateUserLogIn)}>
+                <form action="" onSubmit={handleSubmit(this.validateUserLogInAndAddReview)}>
                     <div className="review">
                         <div>
                             <div className="star-rating-area">
@@ -136,6 +141,7 @@ class ReviewList extends Component {
 function mapStateToProps(state) {
     return {
         reviewList: state.list.reviewList,
+        review: state.list.review,
         auth: state.user.auth
     }
 }
