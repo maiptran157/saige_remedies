@@ -20,14 +20,13 @@ class ConditionsContainer extends Component {
     }
 
     render() {
-        console.log("ConditionsContainer:", this.props)
-        const { conditions } = this.props;
+        const { symptoms, symptom_group } = this.props.conditions;
         const { categoryId } = this.props.match.params;
         const ailments = () => {
-            if (!conditions) {
+            if (!symptoms) {
                 return null;
             } else {
-                if (conditions.Errors) {
+                if (symptoms.Errors) {
                     return <h2 style={style}>
                         We apologize for the inconvenience.
                         <br />
@@ -36,7 +35,7 @@ class ConditionsContainer extends Component {
                         Please return to home page.
                     </h2>
                 }
-                return conditions.map((item) => {
+                return symptoms.map((item) => {
                     return <AilmentContainer key={item._id} _id={item._id} name={item.name} categoryId={categoryId} />
                 });
             }
@@ -44,6 +43,9 @@ class ConditionsContainer extends Component {
         return (
             <div className="condition-container" >
                 <Header logo={backButton} buttonType="back-button" />
+                <div>
+                    <h1 className="symptom-name">{symptom_group}</h1>
+                </div>           
                 {ailments()}
             </div>
         )
