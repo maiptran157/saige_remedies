@@ -35,6 +35,9 @@ switch($request){
     case 'user_sign_up_check':
         require_once('user_sign_up_check.php');
         break;
+    case 'submit_review':
+        require_once('submit_review.php');
+        break;
     default:
         $output['Errors'] = 'Request URL failed';
 }
