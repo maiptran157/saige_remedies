@@ -19,8 +19,8 @@ export default props => (
     <div>
         <Header logo={backButton} buttonType="back-button" />
         <div className="about-saige">
-            <h1><span><img src={saigeIcon} alt="" /></span>About Saige</h1>
-            <p>Saige was created based on the idea that natural remedies from moms and grandmas are as effective as your visit to the doctor, and staying healthy can start with natural ingredients around you.</p>
+            <h1>About Saige<span><img src={saigeIcon} alt="" /></span></h1>
+            <p>Saige Remedies was created based on the idea that natural remedies passed down from mothers to the next generation can be as effective as your visit to the doctor, and staying healthy can start with natural ingredients found locally.</p>
             <h2>Technologies used:</h2>
             <div className="tech-used">
                 <div className="front-end-tech">
