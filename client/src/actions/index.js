@@ -57,7 +57,6 @@ export const getCategoryList = () => async dispatch => {
             type: types.GET_CATEGORY_LIST,
             payload: response.data,
         })
-
     } catch (err) {
         console.log("error message:", err.message);
     }
