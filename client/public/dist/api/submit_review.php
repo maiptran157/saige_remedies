@@ -11,7 +11,9 @@ $null = null;
 $output = [];
 
 if($review && $rating){
-    if($userData['status'] === 'active'){
+    print("woohoo");
+    if($userData['status'] == 'active'){
+        print("woohoo");
         $stmtReview = $conn->prepare("INSERT INTO reviews (ID, remedy_id, user_id, rating, review) VALUES (?,?,?,?,?)");
         $stmtReview->bind_param("sssss", $null, $remedyID, $userData['_id'], $rating, $review);
 
