@@ -6,24 +6,40 @@ import ConditionDetailContainer from './condition_detail_container';
 import RemedyDetailContainer from './remedy_detail_container';
 import UmbrellaConditions from './umbrella_conditions';
 import SymptomCheck from './symptom_check';
+import './app.css';
 import AboutSaige from './about_saige';
 import MeetTheTeam from './meet_the_team';
 import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
-import './app.css';
 import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
+// import loadingPage from '../assets/images/loading_page.png';
+import LoadingPage from './loading_page/loading_page';
 
-const style = {
+const background = {
     backgroundImage: `url(${backgroundImg})`,
     backgroundSize: `cover`,
 }
 
 class App extends Component {
+    state = {
+        loading: true,
+    }
+
+    componentDidMount() {
+        setTimeout( () => {
+            this.setState({
+                loading: false,
+            });
+        }, 3000);
+    }
 
     render() {
+        if (this.state.loading) {
+            return <LoadingPage/>
+        }
         return (
-            <div className="container" style={style}>
+            <div className="container" style={background}>
                 <AgreementModal/>
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
