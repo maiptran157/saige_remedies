@@ -15,7 +15,6 @@ class SignIn extends Component {
         const url = localStorage.getItem('redirectUrl');
         const loggedin = localStorage.getItem('loggedin') === 'true';
         console.log('SignIn props:', this.props);
-        debugger;
         if (url && loggedin) {
             localStorage.removeItem('redirectUrl');
             return this.props.history.push(url);
