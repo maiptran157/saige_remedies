@@ -10,5 +10,6 @@ export default {
     GET_SYMPTOM_ERROR: 'get_symptom_error',
     GET_USER_SIGN_IN_INFO: 'get_user_sign_in_info',
     GET_USER_SIGN_UP_INFO: 'get_user_sign_up_info',
-    CHECK_USER_LOG_IN_STATUS: 'check_user_log_in_status'
+    CHECK_USER_LOG_IN_STATUS: 'check_user_log_in_status',
+    SESSION_CHECK: 'session_check'
 };
