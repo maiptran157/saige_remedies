@@ -50,11 +50,14 @@ class ReviewList extends Component {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
         } else {
+            const username = localStorage.getItem('username');
+            const email = localStorage.getItem('email');
+
             console.log("review:", value.review);
             console.log('rating:', this.state.rating);
             console.log('username:', username);
+            console.log('email:', email);
             console.log('remedyId:', this.props.id);
-            const username = localStorage.getItem('username');
             const { id } = this.props;
             this.props.addReview({
                 review: value.review,
@@ -62,7 +65,10 @@ class ReviewList extends Component {
                 id: id
             })
             this.props.getReviewList(id);
-            this.props.reset();
+            this.props.reset(); //clear form
+            this.setState({
+                rating: 0 //set rating for input back to 0
+            })
         }
     }
 

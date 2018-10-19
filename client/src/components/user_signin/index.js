@@ -1,5 +1,5 @@
 import './user_signin.css';
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import Header from '../header';
 import backButton from '../../assets/images/back_arrow_white_shadow.png';
 import { Field, reduxForm } from 'redux-form';
@@ -15,6 +15,7 @@ class SignIn extends Component {
         const url = localStorage.getItem('redirectUrl');
         const loggedin = localStorage.getItem('loggedin') === 'true';
         console.log('SignIn props:', this.props);
+        debugger;
         if (url && loggedin) {
             localStorage.removeItem('redirectUrl');
             return this.props.history.push(url);
@@ -34,9 +35,9 @@ class SignIn extends Component {
                     <Field name="email" label="Email" component={renderInput} type="text" />
                     <Field name="password" label="Password" component={renderInput} type="password" />
                     <button>Sign In</button>
-                    <br/><br/>
+                    <br /><br />
                     <Link to="/sign-up">Sign Up</Link>
-                    <p className="auth-error-text">{ authError }</p>
+                    <p className="auth-error-text">{authError}</p>
 
                 </form>
             </div>

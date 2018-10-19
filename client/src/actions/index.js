@@ -8,11 +8,11 @@ export const addReview = (reviewInfo) => async dispatch => {
     const dataToSend = formatPostData({
         review: reviewInfo.review,
         rating: reviewInfo.rating,
-        remedy_id: reviewInfo.id
+        remedy_id: reviewInfo.id,
     })
     try {
         const response = await axios.post(config.ADD_REVIEW_URL, dataToSend);
-        console.log("response:", response)
+        console.log("response from addReview axios call:", response)
         dispatch({
             type: types.ADD_REVIEW,
             payload: response
@@ -37,17 +37,17 @@ export const getReviewList = (id) => async dispatch => {
     }
 }
 
-export function getSingleReview(id) {
-    const response = dummyReviewList;
-    for (let index = 0; index < response.reviews[0].length; index++) {
-        if (id === response.reviews[0][index]._id) {
-            return {
-                type: types.ADD_REVIEW,
-                payload: response.reviews[0][index]
-            }
-        }
-    }
-}
+// export function getSingleReview(id) {
+//     const response = dummyReviewList;
+//     for (let index = 0; index < response.reviews[0].length; index++) {
+//         if (id === response.reviews[0][index]._id) {
+//             return {
+//                 type: types.ADD_REVIEW,
+//                 payload: response.reviews[0][index]
+//             }
+//         }
+//     }
+// }
 
 export const getCategoryList = () => async dispatch => {
     try {
@@ -103,6 +103,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
         console.log("response in asctions", response);
         localStorage.setItem('loggedin', response.data.loggedin);
         localStorage.setItem('username', response.data.userData.username);
+        localStorage.setItem('email', response.data.userData.email);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
@@ -141,4 +142,17 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
         console.log(error.message)
     }
 }
+
+// export const checkUserLoginStatus = (userInfo) => async dispatch => {
+//     const dataToSend = formatPostData({ userData: userInfo });
+//     try {
+//         const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS, dataToSend);
+//         dispatch({
+//             type: types.CHECK_USER_LOG_IN_STATUS,
+//             payload: response.success
+//         })
+//     } catch (error) {
+//         console.log(error.message)
+//     }
+// }
 
