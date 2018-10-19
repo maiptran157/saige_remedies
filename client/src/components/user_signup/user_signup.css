@@ -3,9 +3,19 @@
     flex-wrap: wrap;
 }
 
+.sign-up-section {
+    top: 10%;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .sign-up-header {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -14,7 +24,8 @@ form {
     display: flex; 
     align-items: center;
     flex-direction: column;
-    height: 900px;
+    height: 800px;
+    font-size: 2vh;
 }
 
 button {

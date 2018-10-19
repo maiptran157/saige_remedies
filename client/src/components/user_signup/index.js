@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignUpInfo } from '../../actions';
@@ -17,19 +17,21 @@ class SignUp extends Component {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
-                <Header logo={backButton} buttonType="back-button" />
-                <h1 className="sign-up-header">Sign Up</h1>
-                <form onSubmit={handleSubmit(this.userSignUp)}>
-                    <Field name="firstName" label="First Name:" component={renderInput} type="text" />
-                    <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
-                    <Field name="email" label="Email:" component={renderInput} type="text" />
-                    <Field name="password" label="Password:" component={renderInput} type="password" />
-                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
-                    <button>Sign Up</button>
-                    <br/><br/>
-                    <Link to="/sign-up">Sign In</Link>
-                    <p className="auth-error-text">{ authError }</p>
-                </form>
+                <Header logo={saigeLogo} />
+                <div className="sign-up-section">
+                    <h2 className="sign-up-header">Sign Up</h2>
+                    <form onSubmit={handleSubmit(this.userSignUp)}>
+                        <Field name="firstName" label="First Name:" component={renderInput} type="text" />
+                        <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
+                        <Field name="email" label="Email:" component={renderInput} type="text" />
+                        <Field name="password" label="Password:" component={renderInput} type="password" />
+                        <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
+                        <button>Sign Up</button>
+                        <br /><br />
+                        <Link to="/sign-up">Sign In</Link>
+                        <p className="auth-error-text">{authError}</p>
+                    </form>
+                </div>
             </div>
         )
     }

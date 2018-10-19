@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './condition_detail_container.css';
 import ConditionDetailGroup from './condition_detail_group';
 import RemedyResultsContainer from './remedy_result_container';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import axios from 'axios';
 import config from '../../config';
 import { formatPostData } from '../../helpers';
+import ReactLoading from 'react-loading'
+
+const style = {
+    display: 'flex',
+    justifyContent: 'center'
+}
 
 class ConditionDetailContainer extends Component {
     constructor(props) {
@@ -43,11 +49,21 @@ class ConditionDetailContainer extends Component {
     render() {
         const { conditionDetail } = this.state;
         const { name, description, caution, self_help, treatment } = conditionDetail;
-        return (
-            <div className="condition-detail-container">
-                <Header logo={backButton} buttonType="back-button" />
+        const displayConditionDesc = () => {
+            if (!description) {
+                return <div style={style} >
+                    <ReactLoading type="bubbles" />
+                </div>
+            }
+            return <Fragment>
                 <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
                 <RemedyResultsContainer symptomName={name} treatment={treatment} />
+            </Fragment>
+        }
+        return (
+            <div className="condition-detail-container">
+                <Header logo={saigeLogo} />
+                {displayConditionDesc()}
             </div>
         )
     }
