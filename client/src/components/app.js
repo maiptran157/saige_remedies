@@ -11,7 +11,7 @@ import MeetTheTeam from './meet_the_team';
 import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
 import './app.css';
-// import AgreementModal from '../components/modal/index';
+import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
 
 const style = {
@@ -24,7 +24,7 @@ class App extends Component {
     render() {
         return (
             <div className="container" style={style}>
-                {/* <AgreementModal/> */}
+                <AgreementModal/>
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />

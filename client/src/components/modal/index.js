@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './modal.css';
+import axios from 'axios';
+import config from '../../config/index';
 
 class AgreementModal extends Component {
     state = {
@@ -10,11 +12,15 @@ class AgreementModal extends Component {
 
     close = () => this.setState({isOpen: false});
 
-    render(){
+    async modalCheck () {
+        const response = await axios.get(`${config.MODAL_CHECK}`);
+        console.log(response);
+    }
 
+    render() {
         if(this.state.isOpen){
             return (
-                <div className="basic-modal" onClick={this.close}>
+                <div onLoad={this.modalCheck} className="basic-modal" onClick={this.close}>
                     <div onClick={e => e.stopPropagation()} className="basic-modal-content">
                         {/* <div onClick={this.close} className="basic-modal-close">X</div> */}
                         <h1>Disclaimer</h1>
