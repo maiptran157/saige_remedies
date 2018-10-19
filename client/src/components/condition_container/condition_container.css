@@ -1,5 +1,5 @@
 .condition-container {
-    top: 13%;
+    top: 10%;
     width: 100%;
     height: 90%;
     display: flex;
@@ -8,4 +8,11 @@
     align-items: center;
     position: fixed;
     overflow: scroll;
+}
+
+.symptom-name {
+    margin: 0;
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow:rgb(0, 0, 0) 2px 2px;
 }
