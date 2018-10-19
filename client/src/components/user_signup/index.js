@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignUpInfo } from '../../actions';

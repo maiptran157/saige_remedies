@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import AilmentContainer from '../ailment_container';
 import { getConditionsList } from '../../actions/index';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
-
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
+import ReactLoading from 'react-loading';
 
 
 class ConditionsContainer extends Component {
@@ -24,15 +24,20 @@ class ConditionsContainer extends Component {
         const { symptoms, symptom_group } = this.props.conditions;
         const { categoryId } = this.props.match.params;
         const ailments = () => {
-            if (!symptoms) {
+            if (this.props.conditions.Errors) {
                 return <h2 style={style}>
-                We apologize for the inconvenience.
-                <br />
-                The information you are looking for is currently unavailable.
-                <br />
-                Please return to home page.
-            </h2>
+                    We apologize for the inconvenience.
+                    <br />
+                    The information you are looking for is currently unavailable.
+                    <br />
+                    Please return to home page.
+                </h2>
+            }
+
+            if (!symptoms) {
+                return <ReactLoading type="bubbles" />
             } else {
+
                 return symptoms.map((item) => {
                     return <AilmentContainer key={item._id} _id={item._id} name={item.name} categoryId={categoryId} />
                 });
@@ -40,10 +45,10 @@ class ConditionsContainer extends Component {
         }
         return (
             <div className="condition-container" >
-                <Header logo={backButton} buttonType="back-button" />
+                <Header logo={saigeLogo} />
                 <div>
                     <h1 className="symptom-name">{symptom_group}</h1>
-                </div>           
+                </div>
                 {ailments()}
             </div>
         )

@@ -5,10 +5,9 @@ import { connect } from 'react-redux';
 import { addReview, getReviewList } from '../../actions';
 import './review_section.scss';
 import '../star_rating/star_rating.scss';
-// import StarRating from '../star_rating/star_rating_of _user';
 import '../star_rating/star_rating.scss';
 import StarRatingComponent from 'react-star-rating-component';
-import StarRatingTotal from '../star_rating/star_rating_total';
+import ReactLoading from 'react-loading';
 
 const textStyle = {
     color: 'white'
@@ -50,14 +49,8 @@ class ReviewList extends Component {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
         } else {
-            const username = localStorage.getItem('username');
-            const email = localStorage.getItem('email');
-
-            console.log("review:", value.review);
-            console.log('rating:', this.state.rating);
-            console.log('username:', username);
-            console.log('email:', email);
-            console.log('remedyId:', this.props.id);
+            // const username = localStorage.getItem('username');
+            // const email = localStorage.getItem('email');
             const { id } = this.props;
             this.props.addReview({
                 review: value.review,
@@ -83,7 +76,7 @@ class ReviewList extends Component {
                         <ul className="single-review" key={index}>
                             <li>{reviewItem.username}</li>
                             <li>rating: <StarRatingComponent name="rate1" editing={false} starCount={5} value={parseInt(reviewItem.rating)} /></li>
-                            {/* <li>date: {reviewItem.date_posted}</li> */}
+                            <li>date: {reviewItem.date_posted}</li>
                             <li className="review-detail">{reviewItem.review}</li>
                         </ul>
                     )
@@ -131,13 +124,10 @@ class ReviewList extends Component {
                                 />
                             </div>
                         </div>
-
                         <Field type="text" name="review" title="Leave a review:" component={this.renderInput} />
                     </div>
-
                     <button className="add-review-button">+</button>
                 </form>
-
             </div>
         </div >
         )

@@ -37,18 +37,6 @@ export const getReviewList = (id) => async dispatch => {
     }
 }
 
-// export function getSingleReview(id) {
-//     const response = dummyReviewList;
-//     for (let index = 0; index < response.reviews[0].length; index++) {
-//         if (id === response.reviews[0][index]._id) {
-//             return {
-//                 type: types.ADD_REVIEW,
-//                 payload: response.reviews[0][index]
-//             }
-//         }
-//     }
-// }
-
 export const getCategoryList = () => async dispatch => {
     try {
         const response = await axios.get(`${config.CATEGORY_URL}`);
@@ -114,7 +102,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
 }
 
 export const userSignUpInfo = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData( userInfo );
+    const dataToSend = formatPostData(userInfo);
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
@@ -142,17 +130,3 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
         console.log(error.message)
     }
 }
-
-// export const checkUserLoginStatus = (userInfo) => async dispatch => {
-//     const dataToSend = formatPostData({ userData: userInfo });
-//     try {
-//         const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS, dataToSend);
-//         dispatch({
-//             type: types.CHECK_USER_LOG_IN_STATUS,
-//             payload: response.success
-//         })
-//     } catch (error) {
-//         console.log(error.message)
-//     }
-// }
-
