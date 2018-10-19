@@ -4,12 +4,21 @@ import config from '../config';
 import { formatPostData } from '../helpers';
 import { userInfo } from 'os';
 
-export function addReview(review) {
-    const response = review;
-    dummyReviewList.reviews.push(response);
-    return {
-        type: types.ADD_REVIEW,
-        payload: response
+export const addReview = (reviewInfo) => async dispatch => {
+    const dataToSend = formatPostData({
+        review: reviewInfo.review,
+        rating: reviewInfo.rating,
+        remedy_id: reviewInfo.id
+    })
+    try {
+        const response = await axios.post(config.ADD_REVIEW_URL, dataToSend);
+        console.log("response:", response)
+        dispatch({
+            type: types.ADD_REVIEW,
+            payload: response
+        })
+    } catch (error) {
+        console.log("error message:", error.message)
     }
 }
 
@@ -24,7 +33,7 @@ export const getReviewList = (id) => async dispatch => {
             payload: reviewList
         });
     } catch (error) {
-        console.log("error message here:", error.message)
+        console.log("error message:", error.message)
     }
 }
 
@@ -50,7 +59,7 @@ export const getCategoryList = () => async dispatch => {
         })
 
     } catch (err) {
-        console.log("error message here:", err.message);
+        console.log("error message:", err.message);
     }
 }
 
@@ -93,6 +102,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
         console.log("response in asctions", response);
         localStorage.setItem('loggedin', response.data.loggedin);
+        localStorage.setItem('username', response.data.userData.username);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
