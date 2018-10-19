@@ -17,7 +17,7 @@ class SignUp extends Component {
         const { handleSubmit, authError } = this.props;
         return (
             <div className="sign-up-container">
-                <Header logo={backButton} buttonType="back-button" />
+                <Header logo={saigeLogo} buttonType="back-button" />
                 <h1 className="sign-up-header">Sign Up</h1>
                 <form onSubmit={handleSubmit(this.userSignUp)}>
                     <Field name="firstName" label="First Name:" component={renderInput} type="text" />
