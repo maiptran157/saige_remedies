@@ -34,12 +34,12 @@ class App extends Component {
     }
 
     render() {
-        if (this.state.loading) {
-            return <LoadingPage/>
-        }
+        // if (this.state.loading) {
+        //     return <LoadingPage/>
+        // }
         return (
             <div className="container" style={background}>
-                <AgreementModal/>
+                {/* <AgreementModal/> */}
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
