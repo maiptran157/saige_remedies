@@ -27,7 +27,7 @@ class InputBar extends Component {
   render() {
     const option = searchOption.sort().map((data, index) => {
       return <option key={index} value={data}></option>
-    })
+    });
     return (
       <form onSubmit={this.onSubmit} className="search-form">
         <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange} />

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Header from '../header';
 import { connect } from 'react-redux'
 import { getCategoryList } from '../../actions/index'
