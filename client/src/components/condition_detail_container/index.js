@@ -42,7 +42,7 @@ class ConditionDetailContainer extends Component {
         } catch (error) {
             this.setState({
                 conditionDetail: []
-            })
+            });
         }
     }
 
@@ -68,7 +68,6 @@ class ConditionDetailContainer extends Component {
             </div>
         )
     }
-
 }
 
 export default ConditionDetailContainer;

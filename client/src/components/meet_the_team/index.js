@@ -36,10 +36,9 @@ export default props => {
             })
         }
     }
-
     return (
         <div className="meet-the-team-container">
-            <Header logo={saigeLogo} />
+            <Header match={props.match.path} logo={saigeLogo} />
             <div className="meet-the-team">
                 <h1>Meet The Team</h1>
                 <div className="members" >

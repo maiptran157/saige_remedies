@@ -47,7 +47,6 @@ class RemedyDetailContainer extends Component {
     }
 
     render() {
-        console.log("PROPS:", this.props);
         const { remedyDetail } = this.state;
         const { remedy_id, remedy, note, caution, ingredients, reviews } = remedyDetail;
         const { history } = this.props

@@ -10,10 +10,11 @@ const backgroundHeader = { backgroundImage: `url(${woodenHeader})` }
 
 export default props => {
     const { logo, buttonType } = props;
+    console.log("PROPS IN INPUT BAR:", props);
     return (
         <div className="header" style={backgroundHeader}>
             <Logo logo={logo} buttonType={buttonType} />
-            <InputBar push={props.push} />
+            <InputBar match={props.match} push={props.push} />
             <DropDownMenu />
             <WebMenu />
         </div>
