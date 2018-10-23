@@ -1,0 +1,37 @@
+.categories-container {
+    margin-top: 3%;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    position: relative;
+        .categories-content {
+            padding: 2%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            }
+}
+
+@media only screen and (min-width: 769px) {
+    .categories-container {
+        margin: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .categories-content {
+            padding: 0;
+            left: 20%;
+            width: 80%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}

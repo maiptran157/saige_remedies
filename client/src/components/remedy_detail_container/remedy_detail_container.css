@@ -4,10 +4,11 @@
     height: 90%;
     flex-wrap: wrap;
     overflow: scroll;
-    position: fixed;
+    position: relative;
 }
 
 .remedy-detail-group {
+    left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@
 }
 
 .remedy-reviews-container {
+    left: 0;
     width: 100%;
     height: 60%;
     display: flex;
@@ -79,4 +81,35 @@
     background-color: #DEC2DB;
     opacity: 0.8;
     margin-bottom: 2%;
+}
+
+@media only screen and (min-width: 769px) {
+    .remedy-detail-container {
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        overflow: scroll;
+        position: relative;
+    }
+    
+    .remedy-detail-group {
+        left: 20%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .remedy-reviews-container {
+        left: 20%;
+        width: 80%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
 }
