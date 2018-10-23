@@ -18,19 +18,21 @@ class SignUp extends Component {
         return (
             <div className="sign-up-container">
                 <Header logo={saigeLogo} buttonType="back-button" />
-                <h1 className="sign-up-header">Sign Up</h1>
-                <form onSubmit={handleSubmit(this.userSignUp)}>
-                    <Field name="firstName" label="First Name:" component={renderInput} type="text" />
-                    <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
-                    <Field name="username" label="User Name" component={renderInput} type="text" />
-                    <Field name="email" label="Email:" component={renderInput} type="text" />
-                    <Field name="password" label="Password:" component={renderInput} type="password" />
-                    <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
-                    <button>Sign Up</button>
-                    <br/><br/>
-                    <Link to="/sign-up">Sign In</Link>
-                    <p className="auth-error-text">{ authError }</p>
-                </form>
+                <div className="sign-up-section">
+                    <h1 className="sign-up-header">Sign Up</h1>
+                    <form onSubmit={handleSubmit(this.userSignUp)}>
+                        <Field name="firstName" label="First Name:" component={renderInput} type="text" />
+                        <Field name="lastName" label="Last Name:" component={renderInput} type="text" />
+                        <Field name="username" label="User Name" component={renderInput} type="text" />
+                        <Field name="email" label="Email:" component={renderInput} type="text" />
+                        <Field name="password" label="Password:" component={renderInput} type="password" />
+                        <Field name="confirmPassword" label="Confirm Password:" component={renderInput} type="password" />
+                        <button>Sign Up</button>
+                        <br /><br />
+                        <Link to="/sign-in">Sign In</Link>
+                        <p className="auth-error-text">{authError}</p>
+                    </form>
+                </div>
             </div>
         )
     }

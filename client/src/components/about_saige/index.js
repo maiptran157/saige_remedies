@@ -1,7 +1,7 @@
 import React from 'react';
 import './about_saige.scss';
 import Header from '../header';
-import backButton from '../../assets/images/back_arrow_white_shadow.png';
+import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import saigeIcon from '../../assets/images/saige_logo_no_stem_100px.png';
 import cssIcon from '../../assets/images/css.png';
 import es6Icon from '../../assets/images/es6.png';
@@ -17,7 +17,7 @@ import SassIcon from '../../assets/images/Sass.png';
 
 export default props => (
     <div className="about-saige-container">
-        <Header logo={backButton} buttonType="back-button" />
+        <Header logo={saigeLogo} />
         <div className="about-saige">
             <h1>About Saige<span><img src={saigeIcon} alt="" /></span></h1>
             <p>Saige Remedies was created based on the idea that natural remedies passed down from mothers to the next generation can be as effective as your visit to the doctor, and staying healthy can start with natural ingredients found locally.</p>
