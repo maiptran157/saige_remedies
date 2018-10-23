@@ -50,6 +50,9 @@ switch($request){
     case 'user_sign_up_check':
         require_once('user_sign_up_check.php');
         break;
+    case 'infermedica_api':
+        require_once('infermedica_api.php');
+        break;
     default:
         $output['Errors'] = 'Request URL failed';
 }

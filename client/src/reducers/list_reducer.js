@@ -10,10 +10,7 @@ export default (state = DEFAULT_STATE, action) => {
         case types.GET_REVIEW_LIST:
             return { ...state, reviewList: action.payload }
         case types.ADD_REVIEW:
-            console.log("ADD_REVIEW action:", action);
             return { ...state, review: action.payload }
-        case types.GET_SINGLE_REVIEW:
-            console.log(action);
         default:
             return state;
     }
