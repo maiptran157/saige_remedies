@@ -4,7 +4,7 @@ import Header from '../header';
 import { connect } from 'react-redux'
 import { getCategoryList } from '../../actions/index'
 import CategoryContainer from '../category_container';
-import './umbrella_conditions.css';
+import './umbrella_conditions.scss';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 
 class UmbrellaConditions extends Component {

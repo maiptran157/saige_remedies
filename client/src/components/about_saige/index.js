@@ -16,7 +16,7 @@ import SassIcon from '../../assets/images/Sass.png';
 
 
 export default props => (
-    <div>
+    <div className="about-saige-container">
         <Header logo={backButton} buttonType="back-button" />
         <div className="about-saige">
             <h1>About Saige<span><img src={saigeIcon} alt="" /></span></h1>

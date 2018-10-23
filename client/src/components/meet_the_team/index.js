@@ -38,7 +38,7 @@ export default props => {
     }
 
     return (
-        <div>
+        <div className="meet-the-team-container">
             <Header logo={saigeLogo} />
             <div className="meet-the-team">
                 <h1>Meet The Team</h1>

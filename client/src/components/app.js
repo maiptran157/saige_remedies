@@ -21,29 +21,29 @@ const background = {
 }
 
 class App extends Component {
-    state = {
-        loading: true,
-    }
+    // state = {
+    //     loading: true,
+    // }
 
-    componentDidMount() {
-        setTimeout( () => {
-            this.setState({
-                loading: false,
-            });
-        }, 3000);
-    }
+    // componentDidMount() {
+    //     setTimeout( () => {
+    //         this.setState({
+    //             loading: false,
+    //         });
+    //     }, 3000);
+    // }
 
     render() {
-        if (this.state.loading) {
-            return <LoadingPage/>
-        }
+        // if (this.state.loading) {
+        //     return <LoadingPage/>
+        // }
         return (
             <div className="container" style={background}>
-                <AgreementModal/>
+                {/* <AgreementModal/> */}
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
-                    <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer}/>
+                    <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
                     <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />
                     <Route path="/sign-up" component={SignUp} />
                     <Route path="/sign-in" component={SignIn} />

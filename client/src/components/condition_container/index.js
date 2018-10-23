@@ -1,4 +1,4 @@
-import './condition_container.css';
+import './condition_container.scss';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AilmentContainer from '../ailment_container';
@@ -46,10 +46,11 @@ class ConditionsContainer extends Component {
         return (
             <div className="condition-container" >
                 <Header logo={saigeLogo} />
-                <div>
+                <div className="symptom-group">
                     <h1 className="symptom-name">{symptom_group}</h1>
+                    <hr />
+                    {ailments()}
                 </div>
-                {ailments()}
             </div>
         )
     }
