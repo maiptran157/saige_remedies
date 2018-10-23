@@ -86,7 +86,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
-        console.log("response in asctions", response);
+        console.log("response in asctions", response.data.loggedin);
         localStorage.setItem('loggedin', response.data.loggedin);
         localStorage.setItem('username', response.data.userData.username);
         localStorage.setItem('email', response.data.userData.email);

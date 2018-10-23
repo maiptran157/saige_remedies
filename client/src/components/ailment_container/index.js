@@ -18,7 +18,6 @@ const background = {
     boxShadow: '0 10px 10px #000'
 }
 
-
 class AilmentContainer extends Component {
     render() {
         const { _id, name, categoryId } = this.props;

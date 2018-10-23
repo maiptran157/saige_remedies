@@ -47,10 +47,9 @@ class RemedyDetailContainer extends Component {
     }
 
     render() {
-        console.log("PROPS:", this.props);
         const { remedyDetail } = this.state;
         const { remedy_id, remedy, note, caution, ingredients, reviews } = remedyDetail;
-
+        const { history } = this.props
         const displayRemedyDesc = () => {
             if (!remedy) {
                 return <div style={style}>
@@ -82,7 +81,7 @@ class RemedyDetailContainer extends Component {
 
         return (
             <div className="remedy-detail-container">
-                <Header logo={saigeLogo} />
+                <Header push={history.push} logo={saigeLogo} />
                 {displayRemedyDesc()}
             </div>
         )
