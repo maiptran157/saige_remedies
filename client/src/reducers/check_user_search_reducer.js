@@ -6,6 +6,8 @@ const DEFAULT_STATE = {
 
 export default function checkUserSearch(state = DEFAULT_STATE, action) {
     switch(action.type) {
+        case types.CHECK_USER_SEARCH: 
+            return { ...state, checkUserSearch: action.payload}
         default:
             return state;
     }

@@ -112,7 +112,6 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
             payload: response.data,
         })
     } catch (error) {
-
         console.log('Error Message:', error.message);
     }
 }
@@ -133,6 +132,6 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
 export function checkUserSearch(search) {
     return {
         type: types.CHECK_USER_SEARCH,
-        payload: search,
+        payload: !search,
     }
 }
