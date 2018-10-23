@@ -57,6 +57,7 @@ class ConditionDetailGroup extends Component {
         });
     }
     render() {
+        console.log("PROPS IN CONDITION DETAIL:", this.props);
         const { description } = this.props;
         if (!description) {
             return null;

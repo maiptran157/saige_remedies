@@ -11,6 +11,7 @@ class InputBar extends Component {
       condition: ''
     }
   };
+
   handleValueChange = (event) => {
     this.setState({
       condition: event.target.value,
@@ -22,9 +23,12 @@ class InputBar extends Component {
     setTimeout(() => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
     }, 300);
+
+
   }
 
   render() {
+    console.log(this.props);
     const option = searchOption.sort().map((data, index) => {
       return <option key={index} value={data}></option>
     });

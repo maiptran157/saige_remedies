@@ -22,7 +22,6 @@ export const addReview = (reviewInfo) => async dispatch => {
     }
 }
 
-
 export const getReviewList = (id) => async dispatch => {
     const dataToSend = formatPostData({ ID: id })
     try {

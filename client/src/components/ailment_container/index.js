@@ -3,6 +3,7 @@ import './ailment_container.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions'
+import Header from '../header'
 import woodenBackground from '../../assets/images/wood_bg.jpg';
 
 const textStyle = {
@@ -20,17 +21,16 @@ const background = {
 
 class AilmentContainer extends Component {
     render() {
-        console.log("PROPS IN INPUT BAR:", this.props);
         const { _id, name, categoryId } = this.props;
         return (
-            <Link to={`/conditions/${categoryId}/${_id}`} style={background} className="ailment">
-                <div style={textStyle} className="ailment-name">{name}</div>
-            </Link>
+            <div>
+                <Link to={`/conditions/${categoryId}/${_id}`} style={background} className="ailment">
+                    <div style={textStyle} className="ailment-name">{name}</div>
+                </Link>
+            </div>
         )
     }
 }
-
-
 
 function mapStateToProps(state) {
     return {
