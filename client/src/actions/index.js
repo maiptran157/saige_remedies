@@ -135,3 +135,17 @@ export function checkUserSearch(search) {
         payload: !search,
     }
 }
+
+export const getSymptom = (userInput) => async dispatch => {
+    try {
+
+        const response = await axios.post(`${config.INFERMEDICA_URL}`, { prediction: { userInput } });
+        console.log("response in asctions", response);
+        dispatch({
+            type: types.GET_SYMPTOM,
+            payload: response,
+        })
+    } catch (error) {
+        console.log('Error:', error)
+    }
+}

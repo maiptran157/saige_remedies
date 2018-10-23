@@ -56,9 +56,7 @@ class DropDownMenu extends Component {
                         <li><Link style={textStyle} to="/">Home</Link></li>
                         <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                         <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                        {/* <li><Link style={textStyle} to="/conditon:All">All Conditions</Link></li> */}
-                        {/* <li><Link style={textStyle} to="/favorites">My Favorites</Link></li> */}
-                        <li><Link style={textStyle} to="/sign-up">Sign Up</Link></li>
+                        <li><button>Log Out</button></li>
                     </ul>
                 </div>
             </div>

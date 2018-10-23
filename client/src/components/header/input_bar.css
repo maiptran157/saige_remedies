@@ -14,3 +14,13 @@
     font-size: 20px;
     border-radius: 50px;
 }
+
+@media only screen and (min-width: 769px) {
+    .search-form {
+        display: none;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+}

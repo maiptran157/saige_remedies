@@ -10,3 +10,19 @@
 .logo > img {
 height: -webkit-fill-available;
 } 
+
+@media only screen and (min-width: 769px) {
+    .logo-container {
+        margin-left: 2%;
+        width: 25%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo > img {
+    width: 40px;
+    height: 40px;
+    }
+}

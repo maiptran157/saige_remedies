@@ -1,3 +1,4 @@
+@media only screen and (max-width: 768px) {
 .hamburger-icon > img {
     width: 75%;
 }
@@ -40,7 +41,6 @@
 .hamburger-modal > ul > li {
     list-style-type: none;
     padding: 10% 0;
-
 }
 
 .hamburger-modal > ul > li:first-child {
@@ -51,8 +51,39 @@
     font-weight: bold;
 }
 
+.hamburger-modal > ul > li > button {
+    width: 80%;
+    font-size: 2vh;
+}
+
 .close-symbol {
     width: 5%;
     font-weight: bolder;
     padding: 5px;    
+}
+
+.web-menu {
+    display: none;
+}
+}
+
+@media only screen and (min-width: 769px) {
+    .hamburger-container {
+        display: none;
+    }
+    .web-menu {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 15vw;
+        list-style-type: none;
+    }
+    .web-menu > li {
+        margin: 1em;
+    }
+    .web-menu > li > button {
+        width: 60%;
+        font-size: 2vh;
+    }
 }
