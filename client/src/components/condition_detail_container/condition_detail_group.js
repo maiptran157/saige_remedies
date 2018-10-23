@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
 import './condition_detail_container.css';
 
 const style = {
@@ -9,17 +8,11 @@ const style = {
 class ConditionDetailGroup extends Component {
     state = {
         showLess: true,
-        userSubmit: this.props.userSubmit,
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("Prev Props:", prevProps);
-        console.log("Prev State:", prevState);
-        console.log("Snap Shot:", snapshot);
-    }
+    
     descriptionPresent() {
         const { description, caution, self_help } = this.props;
-        // console.log(description);
         if (self_help === "" && caution === "") {
             return (
                 <p className="condition-detail-paragraph">
@@ -87,13 +80,4 @@ class ConditionDetailGroup extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        userSubmit: state.userSearch.checkUserSearch
-    }
-}
-
-export default connect(mapStateToProps, {
-
-})(ConditionDetailGroup);
-
+export default ConditionDetailGroup;

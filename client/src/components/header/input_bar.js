@@ -3,7 +3,6 @@ import './input_bar.css';
 import searchOption from './input_bar_predefined_options';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions/index';
-import { checkUserSearch } from '../../actions/index';
 
 class InputBar extends Component {
   constructor(props) {
@@ -23,8 +22,6 @@ class InputBar extends Component {
     setTimeout(() => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
     }, 300);
-
-    this.props.checkUserSearch(this.state.userSubmit);
   }
 
   render() {
@@ -51,5 +48,4 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps, {
   userSearchTerm: userSearchTerm,
-  checkUserSearch: checkUserSearch,
 })(InputBar);

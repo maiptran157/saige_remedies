@@ -129,13 +129,6 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
     }
 }
 
-export function checkUserSearch(search) {
-    return {
-        type: types.CHECK_USER_SEARCH,
-        payload: !search,
-    }
-}
-
 export const getSymptom = (userInput) => async dispatch => {
     try {
 
