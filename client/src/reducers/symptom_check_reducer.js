@@ -1,8 +1,8 @@
 import types from '../actions/types';
 
 const DEFAULT_STATE = {
-    symptomCheckResult: [],
-    symptomCheckError: [],
+    symptomCheckResult: {},
+    symptomCheckError: {},
 }
 
 export default (state = DEFAULT_STATE, action) => {
