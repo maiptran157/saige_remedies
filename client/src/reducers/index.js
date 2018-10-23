@@ -6,8 +6,6 @@ import categoryReducer from './category_list_reducer';
 import conditionsReducer from './conditions_reducer';
 import symptomCheckReducer from './symptom_check_reducer';
 import searchReducer from './search_term_reducer';
-import userSearchReducer from './check_user_search_reducer';
-
 
 const rootReducer = combineReducers({
     category: categoryReducer,
@@ -17,7 +15,6 @@ const rootReducer = combineReducers({
     search: searchReducer,
     symptom: symptomCheckReducer,
     user: userReducer,
-    userSearch: userSearchReducer,
 });
 
 export default rootReducer;

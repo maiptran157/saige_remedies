@@ -10,8 +10,6 @@ class InputBar extends Component {
     super(props);
     this.state = {
       condition: '',
-      userSubmit: false,
-    }
   };
   handleValueChange = (event) => {
     this.setState({
@@ -44,7 +42,6 @@ class InputBar extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("PROPS:", state);
   return {
     symptomId: state.search.symptomId,
     categoryId: state.search.categoryId,

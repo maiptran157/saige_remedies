@@ -11,6 +11,12 @@ class ConditionDetailGroup extends Component {
         showLess: true,
         userSubmit: this.props.userSubmit,
     }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("Prev Props:", prevProps);
+        console.log("Prev State:", prevState);
+        console.log("Snap Shot:", snapshot);
+    }
     descriptionPresent() {
         const { description, caution, self_help } = this.props;
         // console.log(description);
@@ -59,12 +65,13 @@ class ConditionDetailGroup extends Component {
         });
     }
     render() {
-        console.log("CONDITION DETAIL GROUP:", this.props);
+        console.log("CURRENT PATH:", this.props);
+
         const { description } = this.props;
         if (!description) {
             return null;
         };
-        const shortenedDescription = description.slice(0, 145) + '...';
+        const shortenedDescription = description.slice(0, 140) + '...';
 
         return (
             <div className="condition-detail-group">
@@ -81,7 +88,6 @@ class ConditionDetailGroup extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log("STATE IN CONDITION DETAIL:", state);
     return {
         userSubmit: state.userSearch.checkUserSearch
     }

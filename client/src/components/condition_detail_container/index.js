@@ -57,7 +57,7 @@ class ConditionDetailContainer extends Component {
                 </div>
             }
             return <Fragment>
-                <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
+                <ConditionDetailGroup push={history.push} name={name} description={description} self_help={self_help} caution={caution} />
                 <RemedyResultsContainer symptomName={name} treatment={treatment} />
             </Fragment>
         }
