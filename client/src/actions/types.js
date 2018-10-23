@@ -1,5 +1,6 @@
 export default {
     ADD_REVIEW: 'add_review',
+    CHECK_USER_SEARCH: 'check_user_search',
     GET_REVIEW_LIST: 'get_review_list',
     GET_CATEGORY_LIST: 'get_category_list',
     GET_SINGLE_REVIEW: 'get_single_review',

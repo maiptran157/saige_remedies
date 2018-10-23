@@ -18,7 +18,7 @@ export const addReview = (reviewInfo) => async dispatch => {
             payload: response
         })
     } catch (error) {
-        console.log("error message:", error.message)
+        console.log("error message:", error.message);
     }
 }
 
@@ -32,7 +32,7 @@ export const getReviewList = (id) => async dispatch => {
             payload: reviewList
         });
     } catch (error) {
-        console.log("error message:", error.message)
+        console.log("error message:", error.message);
     }
 }
 
@@ -96,7 +96,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
         })
 
     } catch (error) {
-        console.log('Error Message:', error.message)
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -113,7 +113,7 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
         })
     } catch (error) {
 
-        console.log('Error Message:', error.message)
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -126,6 +126,13 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
             payload: response.success
         })
     } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
+    }
+}
+
+export function checkUserSearch(search) {
+    return {
+        type: types.CHECK_USER_SEARCH,
+        payload: search,
     }
 }

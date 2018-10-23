@@ -8,10 +8,9 @@ class InputBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      condition: ''
+      condition: '',
     }
   };
-
   handleValueChange = (event) => {
     this.setState({
       condition: event.target.value,
@@ -22,19 +21,16 @@ class InputBar extends Component {
     this.props.userSearchTerm(this.state.condition);
     setTimeout(() => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
-    }, 300);
-
-
+    }, 300);  
   }
 
   render() {
-    console.log(this.props);
     const option = searchOption.sort().map((data, index) => {
       return <option key={index} value={data}></option>
     });
     return (
       <form onSubmit={this.onSubmit} className="search-form">
-        <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange} />
+        <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange}/>
         <datalist id="browsers">
           {option}
         </datalist>
@@ -44,9 +40,10 @@ class InputBar extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("PROPS:", state);
   return {
     symptomId: state.search.symptomId,
-    categoryId: state.search.categoryId
+    categoryId: state.search.categoryId,
   }
 }
 

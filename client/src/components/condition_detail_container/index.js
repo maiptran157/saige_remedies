@@ -50,7 +50,6 @@ class ConditionDetailContainer extends Component {
         const { conditionDetail } = this.state;
         const { name, description, caution, self_help, treatment } = conditionDetail;
         const { history } = this.props
-        console.log("PROPS IN CONDITION DETAIL:", this.props);
         const displayConditionDesc = () => {
             if (!description) {
                 return <div style={style} >
