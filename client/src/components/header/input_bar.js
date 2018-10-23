@@ -10,7 +10,8 @@ class InputBar extends Component {
     super(props);
     this.state = {
       condition: '',
-  };
+    };
+  }
   handleValueChange = (event) => {
     this.setState({
       condition: event.target.value,
@@ -21,7 +22,7 @@ class InputBar extends Component {
     this.props.userSearchTerm(this.state.condition);
     setTimeout(() => {
       this.props.push(`/conditions/${this.props.categoryId}/${this.props.symptomId}`);
-    }, 300);  
+    }, 300);
 
     this.props.checkUserSearch(this.state.userSubmit);
   }
@@ -32,7 +33,7 @@ class InputBar extends Component {
     });
     return (
       <form onSubmit={this.onSubmit} className="search-form">
-        <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange}/>
+        <input list="browsers" className="search-bar" placeholder="Search Condition" type="text" onChange={this.handleValueChange} />
         <datalist id="browsers">
           {option}
         </datalist>
