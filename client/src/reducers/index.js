@@ -7,7 +7,6 @@ import conditionsReducer from './conditions_reducer';
 import symptomCheckReducer from './symptom_check_reducer';
 import searchReducer from './search_term_reducer';
 
-
 const rootReducer = combineReducers({
     category: categoryReducer,
     conditions: conditionsReducer,

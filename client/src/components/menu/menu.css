@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
 .hamburger-icon > img {
-    height: 75%;
+    width: 75%;
 }
 
 .hamburger-modal {

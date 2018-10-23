@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 import './condition_detail_container.css';
 
 const style = {
@@ -8,6 +9,13 @@ const style = {
 class ConditionDetailGroup extends Component {
     state = {
         showLess: true,
+        userSubmit: this.props.userSubmit,
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("Prev Props:", prevProps);
+        console.log("Prev State:", prevState);
+        console.log("Snap Shot:", snapshot);
     }
     descriptionPresent() {
         const { description, caution, self_help } = this.props;
@@ -57,12 +65,13 @@ class ConditionDetailGroup extends Component {
         });
     }
     render() {
+        console.log("CURRENT PATH:", this.props);
+
         const { description } = this.props;
         if (!description) {
             return null;
         };
-
-        const shortenedDescription = description.slice(0, 145) + '...';
+        const shortenedDescription = description.slice(0, 140) + '...';
 
         return (
             <div className="condition-detail-group">
@@ -78,5 +87,13 @@ class ConditionDetailGroup extends Component {
     }
 }
 
-export default ConditionDetailGroup;
+function mapStateToProps(state) {
+    return {
+        userSubmit: state.userSearch.checkUserSearch
+    }
+}
+
+export default connect(mapStateToProps, {
+
+})(ConditionDetailGroup);
 

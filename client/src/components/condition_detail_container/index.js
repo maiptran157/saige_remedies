@@ -28,7 +28,7 @@ class ConditionDetailContainer extends Component {
 
     async getConditionDetail() {
         const { match: { params } } = this.props;
-        const { categoryId, conditionId } = params;
+        const { conditionId } = params;
         const dataToSend = formatPostData({ ID: conditionId });
         try {
             const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
@@ -49,6 +49,7 @@ class ConditionDetailContainer extends Component {
     render() {
         const { conditionDetail } = this.state;
         const { name, description, caution, self_help, treatment } = conditionDetail;
+        const { history } = this.props
         const displayConditionDesc = () => {
             if (!description) {
                 return <div style={style} >
@@ -56,13 +57,13 @@ class ConditionDetailContainer extends Component {
                 </div>
             }
             return <Fragment>
-                <ConditionDetailGroup name={name} description={description} self_help={self_help} caution={caution} />
+                <ConditionDetailGroup push={history.push} name={name} description={description} self_help={self_help} caution={caution} />
                 <RemedyResultsContainer symptomName={name} treatment={treatment} />
             </Fragment>
         }
         return (
             <div className="condition-detail-container">
-                <Header logo={saigeLogo} />
+                <Header push={history.push} logo={saigeLogo} />
                 {displayConditionDesc()}
             </div>
         )

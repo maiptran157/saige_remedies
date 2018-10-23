@@ -52,7 +52,6 @@ class App extends Component {
                     <Route path="/meet-the-team" component={MeetTheTeam} />
                     <Route component={NotFoundPage} />
                 </Switch>
-
             </div>
         )
     }

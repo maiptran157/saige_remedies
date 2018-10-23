@@ -15,6 +15,7 @@ class ConditionsContainer extends Component {
     }
 
     render() {
+        const { history } = this.props;
         const style = {
             top: '10%',
             textAlign: 'center',
@@ -33,11 +34,9 @@ class ConditionsContainer extends Component {
                     Please return to home page.
                 </h2>
             }
-
             if (!symptoms) {
                 return <ReactLoading type="bubbles" />
             } else {
-
                 return symptoms.map((item) => {
                     return <AilmentContainer key={item._id} _id={item._id} name={item.name} categoryId={categoryId} />
                 });
@@ -45,7 +44,7 @@ class ConditionsContainer extends Component {
         }
         return (
             <div className="condition-container" >
-                <Header logo={saigeLogo} />
+                <Header push={history.push} logo={saigeLogo} />
                 <div className="symptom-group">
                     <h1 className="symptom-name">{symptom_group}</h1>
                     <hr />
