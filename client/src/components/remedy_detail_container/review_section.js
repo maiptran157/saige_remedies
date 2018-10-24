@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { addReview, getReviewList } from '../../actions';
@@ -7,7 +6,6 @@ import './review_section.scss';
 import '../star_rating/star_rating.scss';
 import '../star_rating/star_rating.scss';
 import StarRatingComponent from 'react-star-rating-component';
-import ReactLoading from 'react-loading';
 
 const textStyle = {
     color: 'white'
@@ -49,8 +47,6 @@ class ReviewList extends Component {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
         } else {
-            // const username = localStorage.getItem('username');
-            // const email = localStorage.getItem('email');
             const { id } = this.props;
             await this.props.addReview({
                 review: value.review,
@@ -110,7 +106,7 @@ class ReviewList extends Component {
 
         return (<div>
             <div className="review-header">
-                <div>Total Rating:</div>
+                <div>Average Rating:</div>
                 <span>{reviewList ? displayRatingTotal() : null}</span>
             </div>
             <div className="reviews-container">
