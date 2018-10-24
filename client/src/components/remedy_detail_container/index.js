@@ -86,7 +86,6 @@ class RemedyDetailContainer extends Component {
             </div>
         )
     }
-
 }
 
 export default RemedyDetailContainer;

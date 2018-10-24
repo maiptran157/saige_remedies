@@ -47,7 +47,6 @@ class ConditionsContainer extends Component {
                 <Header push={history.push} logo={saigeLogo} />
                 <div className="symptom-group">
                     <h1 className="symptom-name">{symptom_group}</h1>
-                    <hr />
                     {ailments()}
                 </div>
             </div>

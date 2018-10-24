@@ -42,7 +42,6 @@ class InputBar extends Component {
   }
 
   render() {
-    // console.log("INPUT BAR COMPONENT:", this.props);
     const option = searchOption.sort().map((data, index) => {
       return <option key={index} value={data}></option>
     });

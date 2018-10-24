@@ -2,7 +2,6 @@
     display: flex;
     align-content: center;
     color: white;
-    margin-left: 1em;
     div {
         font-size: 3vh;
     }
@@ -23,16 +22,15 @@
 
 .reviews-container {
     color: #1E332E;
-    display: flex;
-    flex-direction: column-reverse;
-    align-content: space-between;
+    // display: flex;
+    // flex-direction: column-reverse;
+    // align-content: space-between;
     form {
         // width: 325px;
         display: flex;
         flex-direction: row;
         height: 40%;
         align-content: space-evenly;
-        margin: 1em;
         .review {
             width: 290px;
             height: 90px;
@@ -42,7 +40,6 @@
             
             div {
                 display: flex;
-                align-items: space-around;
                 span {
                     color: white;
                 }
@@ -56,6 +53,7 @@
             .review-area {
                 width: 290px;
                 height: 50px;
+                font-size: 20px;
             }
         };
         button {
@@ -75,3 +73,4 @@
     font-size: 20px;
     color: black;
 }
+
