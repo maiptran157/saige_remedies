@@ -1,16 +1,13 @@
 .remedy-detail-container {
-    top: 10%;
-    width: 100%;
-    height: 90%;
-    flex-wrap: wrap;
+    margin-top: 60px;
     overflow: scroll;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .remedy-detail-group {
     width: 100%;
     display: flex;
-    margin-top: 2%;
     flex-direction: column;
     align-items: center;
 }
@@ -75,6 +72,14 @@
     background-color: #DEC2DB;
     opacity: 0.8;
     margin-bottom: 2%;
+}
+
+@media only screen and (min-width: 360px) {
+    .remedy-reviews-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media only screen and (min-width: 769px) {
