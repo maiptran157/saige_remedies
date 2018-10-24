@@ -26,7 +26,7 @@ class ReviewList extends Component {
         this.setState({ rating: nextValue });
     }
 
-    componentWillReceiveProps() {
+    componentDidMount() {
         const { id } = this.props;
         this.props.getReviewList(id);
     }
@@ -43,7 +43,7 @@ class ReviewList extends Component {
     }
 
 
-    validateUserLogInAndAddReview = (value) => {
+    validateUserLogInAndAddReview = async (value) => {
         console.log("auth for validateUserLogIn:", this.props.auth);
         if (this.props.auth === false) {
             localStorage.setItem('redirectUrl', this.props.pathname);
@@ -52,7 +52,7 @@ class ReviewList extends Component {
             // const username = localStorage.getItem('username');
             // const email = localStorage.getItem('email');
             const { id } = this.props;
-            this.props.addReview({
+            await this.props.addReview({
                 review: value.review,
                 rating: this.state.rating,
                 id: id
@@ -68,6 +68,9 @@ class ReviewList extends Component {
     render() {
         const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
+
+        console.log('Review List:', reviewList);
+
         const displayReview = () => {
             if (reviewList.length > 0) {
                 return reviewList.map((reviewItem, index) => {
@@ -87,16 +90,19 @@ class ReviewList extends Component {
         const displayRatingTotal = () => {
             let rating = 0;
             for (let i = 0; i < reviewList.length; i++) {
-                rating += reviewList[i].rating;
+                rating += parseInt(reviewList[i].rating);
             }
-            let starTotal = Math.floor(rating / reviewList.length)
+            let starAverage = Math.floor(rating / reviewList.length)
+            console.log("Rating:", rating)
+            console.log("Review List Length:", reviewList.length)
+            console.log("Star Average:", starAverage)
             return (
                 <div className="star-rating-total">
                     <StarRatingComponent
                         name="rate1"
                         editing={false}
                         starCount={5}
-                        value={starTotal}
+                        value={starAverage}
                     />
                 </div>
             );
