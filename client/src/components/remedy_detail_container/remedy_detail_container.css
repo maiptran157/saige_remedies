@@ -22,7 +22,6 @@
     font-size: 4vh;
     color: white;
     margin: 2% 0;
-    width: 85%;
     text-align: center;
     text-shadow: 0px 4px 4px black;
 }
@@ -76,9 +75,18 @@
 
 @media only screen and (min-width: 360px) {
     .remedy-reviews-container {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+        width: 360px;
+        padding-top: 5px;
+        margin: 5px;
+    }
+
+    .remedy-detail-description {
+        width: 340px;
+    }
+
+    .detail-paragraph {
+        font-size: 3vh;
+        padding: 15px;
     }
 }
 

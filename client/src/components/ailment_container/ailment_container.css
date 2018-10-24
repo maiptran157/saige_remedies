@@ -1,7 +1,7 @@
 .ailment {
     width: 350px;
     height: 70px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 2%;
     margin-top: 2%;
     display: flex;
@@ -16,4 +16,10 @@
 
 a {
     text-decoration: none;
+}
+
+@media only screen and (min-width: 360px) {
+    .ailment{
+        width: 330px;
+    }
 }
