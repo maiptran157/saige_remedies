@@ -14,8 +14,8 @@ export default props => {
         <div className="header" style={backgroundHeader}>
             <Logo logo={logo} buttonType={buttonType} />
             <InputBar match={props.match} push={props.push} />
-            <DropDownMenu/>
-            <WebMenu/>
+            <DropDownMenu />
+            <WebMenu />
         </div>
     )
 }
