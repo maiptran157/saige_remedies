@@ -1,12 +1,10 @@
 .remedy-detail-container {
     margin-top: 60px;
     overflow: scroll;
-    display: flex;
-    flex-direction: column;
 }
 
 .remedy-detail-group {
-    width: 100%;
+    width: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,9 +73,9 @@
 
 @media only screen and (min-width: 360px) {
     .remedy-reviews-container {
-        width: 360px;
+        width: 340px;
         padding-top: 5px;
-        margin: 5px;
+        margin: 5px;    
     }
 
     .remedy-detail-description {
@@ -88,6 +86,7 @@
         font-size: 3vh;
         padding: 15px;
     }
+    
 }
 
 @media only screen and (min-width: 769px) {

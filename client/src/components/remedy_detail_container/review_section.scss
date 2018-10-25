@@ -22,9 +22,8 @@
 
 .reviews-container {
     color: #1E332E;
-    // display: flex;
-    // flex-direction: column-reverse;
-    // align-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
     form {
         // width: 325px;
         display: flex;
@@ -74,3 +73,14 @@
     color: black;
 }
 
+@media only screen and (min-width: 360px) {
+    .single-review {
+        padding: 1em;
+        background-color: #fff;
+        width: 280px;
+        list-style-type: none;
+        font-size: 15px;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+}
