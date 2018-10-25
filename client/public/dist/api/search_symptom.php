@@ -2,7 +2,9 @@
 
 require_once('mysql_connect.php');
 
-$searchString = addslashes($_POST['search_term']);
+$searchTerm = addslashes($_POST['search_term']);
+$searchString = ucwords(strtolower($searchTerm));
+
 
 $output=[];
 
