@@ -1,7 +1,9 @@
+
 body { 
     margin: 0;
     overflow: hidden;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .container {
@@ -12,4 +14,16 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     overflow: scroll;
+}
+
+
+
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+
+@media only screen and (min-width: 411px) {
+    
 }

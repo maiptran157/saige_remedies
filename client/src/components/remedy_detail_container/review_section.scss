@@ -73,6 +73,12 @@
     color: black;
 }
 
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+
 @media only screen and (min-width: 360px) {
     .single-review {
         padding: 1em;
@@ -82,5 +88,12 @@
         font-size: 15px;
         margin-top: 15px;
         border-radius: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 411px) {
+    .single-review {
+        width: 310px;
     }
 }

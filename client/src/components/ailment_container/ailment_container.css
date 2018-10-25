@@ -18,8 +18,20 @@ a {
     text-decoration: none;
 }
 
+
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+
 @media only screen and (min-width: 360px) {
     .ailment{
         width: 330px;
     }
+}
+
+
+@media only screen and (min-width: 411px) {
+    
 }

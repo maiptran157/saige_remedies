@@ -71,6 +71,11 @@
     margin-bottom: 2%;
 }
 
+@media only screen and (min-width: 320px) {
+    
+}
+
+
 @media only screen and (min-width: 360px) {
     .remedy-reviews-container {
         width: 340px;
@@ -83,11 +88,32 @@
     }
 
     .detail-paragraph {
-        font-size: 3vh;
+        font-size: 20px;
         padding: 15px;
     }
     
 }
+
+@media only screen and (min-width: 411px) {
+    .remedy-detail-container {
+        margin-top: 72px;
+    }
+    
+    .remedy-detail-group {
+        width: 411px;
+    }
+
+    .remedy-detail-description {
+        width: 390px;
+    }
+
+    .remedy-reviews-container {
+        width: 370px;
+        padding-top: 5px;
+        margin: 17px;
+    }
+}
+
 
 @media only screen and (min-width: 769px) {
     .remedy-detail-container {
