@@ -1,12 +1,9 @@
 .review-header{
     display: flex;
-    align-content: center;
     color: white;
     div {
-        font-size: 3vh;
-    }
-    span {
-        margin-left: .5em;
+        font-size: 25px;
+        margin-right: 10px;
     }
 }
 
@@ -32,10 +29,11 @@
         align-content: space-evenly;
         .review {
             width: 290px;
-            height: 90px;
+            height: 95px;
             display: flex;
             flex-direction: column;
             align-content: space-around;
+            font-size: 18px;
             
             div {
                 display: flex;
@@ -63,7 +61,7 @@
             font-size: 3vh;
             position: relative;
             left: 10px;
-            top: 17px;
+            top: 20px;
         }
     }
 }
@@ -74,19 +72,43 @@
 
 
 @media only screen and (min-width: 320px) {
-    
+    .review-header {
+        div {
+            font-size: 22px;
+        }
+    }
+    .reviews-container {
+        form {
+            .review {
+                width: 255px;
+                .review-area {
+                    width: 255px;
+                }
+            }
+        }
+    }
+    .single-review {
+        width: 245px;
+    }
 }
 
 
 @media only screen and (min-width: 360px) {
+    .reviews-container {
+        form {
+            .review {
+                width: 290px;
+                .review-area {
+                    width: 290px;
+                }
+            }
+            button {
+                left: 10px; 
+            }
+        }
+    }
     .single-review {
-        padding: 1em;
-        background-color: #fff;
         width: 280px;
-        list-style-type: none;
-        font-size: 15px;
-        margin-top: 15px;
-        border-radius: 20px;
     }
 }
 
@@ -100,7 +122,7 @@
                 }
             }
             button {
-                left: 45px;
+                left: 45px; 
             }
         }
     }
