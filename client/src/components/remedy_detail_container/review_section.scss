@@ -67,7 +67,6 @@
         }
     }
 }
-
 .review-detail {
     font-size: 20px;
     color: black;
@@ -93,6 +92,18 @@
 
 
 @media only screen and (min-width: 411px) {
+    .reviews-container {
+        form {
+            .review {
+                .review-area {
+                    width: 325px;
+                }
+            }
+            button {
+                left: 45px;
+            }
+        }
+    }
     .single-review {
         width: 310px;
     }
