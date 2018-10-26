@@ -1,12 +1,10 @@
 .review-header{
     display: flex;
-    align-content: center;
     color: white;
+    margin-bottom: 10px;
     div {
-        font-size: 3vh;
-    }
-    span {
-        margin-left: .5em;
+        font-size: 25px;
+        margin-right: 10px;
     }
 }
 
@@ -32,10 +30,11 @@
         align-content: space-evenly;
         .review {
             width: 290px;
-            height: 90px;
+            height: 95px;
             display: flex;
             flex-direction: column;
             align-content: space-around;
+            font-size: 18px;
             
             div {
                 display: flex;
@@ -53,6 +52,7 @@
                 width: 290px;
                 height: 50px;
                 font-size: 20px;
+                padding-left: 5px;
             }
         };
         button {
@@ -63,7 +63,7 @@
             font-size: 3vh;
             position: relative;
             left: 10px;
-            top: 17px;
+            top: 20px;
         }
     }
 }
@@ -73,14 +73,86 @@
     color: black;
 }
 
-@media only screen and (min-width: 360px) {
+
+@media only screen and (min-width: 320px) {
+    .review-header {
+        div {
+            font-size: 22px;
+        }
+    }
+    .reviews-container {
+        form {
+            .review {
+                width: 245px;
+                .review-area {
+                    width: 245px;
+                }
+            }
+            button {
+                left: 13px;
+            }
+        }
+    }
     .single-review {
-        padding: 1em;
-        background-color: #fff;
-        width: 280px;
-        list-style-type: none;
-        font-size: 15px;
-        margin-top: 15px;
-        border-radius: 20px;
+        width: 245px;
     }
 }
+
+
+@media only screen and (min-width: 360px) {
+    .reviews-container {
+        form {
+            .review {
+                width: 290px;
+                .review-area {
+                    width: 290px;
+                }
+            }
+            button {
+                left: 13px; 
+            }
+        }
+    }
+    .single-review {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .reviews-container {
+        form {
+            .review {
+                width: 295px;
+                .review-area {
+                    width: 295px;
+                }
+            }
+            button {
+                left: 13px; 
+            }
+        }
+    }
+    .single-review {
+        width: 280px;
+    }
+}
+
+
+@media only screen and (min-width: 411px) {
+    .reviews-container {
+        form {
+            .review {
+                .review-area {
+                    width: 325px;
+                }
+            }
+            button {
+                left: 48px; 
+            }
+        }
+    }
+    .single-review {
+        width: 310px;
+    }
+}
+

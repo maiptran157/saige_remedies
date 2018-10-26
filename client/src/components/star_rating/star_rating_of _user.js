@@ -20,7 +20,7 @@ class StarRating extends Component {
 
     return (
       <div className="star-rating-area">
-        <div className="star-rating-count">Rating:<span> {rating}</span></div>
+        <div className="star-rating-count">Rating: {rating}</div>
         <StarRatingComponent
           name="rate1"
           starCount={5}

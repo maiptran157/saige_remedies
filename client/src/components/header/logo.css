@@ -11,6 +11,16 @@
 height: -webkit-fill-available;
 } 
 
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+
+@media only screen and (min-width: 411px) {
+    
+}
+
 @media only screen and (min-width: 769px) {
     .logo-container {
         margin-left: 2%;

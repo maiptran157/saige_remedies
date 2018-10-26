@@ -107,7 +107,7 @@ class ReviewList extends Component {
         return (<div>
             <div className="review-header">
                 <div>Average Rating:</div>
-                <span>{reviewList ? displayRatingTotal() : null}</span>
+                {reviewList ? displayRatingTotal() : null}
             </div>
             <div className="reviews-container">
 
