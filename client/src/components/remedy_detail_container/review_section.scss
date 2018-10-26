@@ -51,6 +51,7 @@
                 width: 290px;
                 height: 50px;
                 font-size: 20px;
+                padding-left: 5px;
             }
         };
         button {
@@ -65,6 +66,7 @@
         }
     }
 }
+
 .review-detail {
     font-size: 20px;
     color: black;
@@ -80,10 +82,13 @@
     .reviews-container {
         form {
             .review {
-                width: 255px;
+                width: 245px;
                 .review-area {
-                    width: 255px;
+                    width: 245px;
                 }
+            }
+            button {
+                left: 13px;
             }
         }
     }
@@ -103,7 +108,7 @@
                 }
             }
             button {
-                left: 10px; 
+                left: 13px; 
             }
         }
     }
@@ -122,7 +127,7 @@
                 }
             }
             button {
-                left: 45px; 
+                left: 48px; 
             }
         }
     }
@@ -130,3 +135,4 @@
         width: 310px;
     }
 }
+
