@@ -126,6 +126,13 @@
     }
 }
 
+@media (min-height: 812px) and (min-width: 375px) {
+    .remedy-detail-container {
+        margin-top: 75px;
+    }
+}
+
+
 
 @media only screen and (min-width: 411px) {
     .remedy-detail-container {
@@ -146,6 +153,7 @@
         margin: 13px;
     }
 }
+
 
 
 @media only screen and (min-width: 769px) {

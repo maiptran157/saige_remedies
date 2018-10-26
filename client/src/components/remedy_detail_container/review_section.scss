@@ -1,6 +1,7 @@
 .review-header{
     display: flex;
     color: white;
+    margin-bottom: 10px;
     div {
         font-size: 25px;
         margin-right: 10px;
@@ -105,6 +106,25 @@
                 width: 290px;
                 .review-area {
                     width: 290px;
+                }
+            }
+            button {
+                left: 13px; 
+            }
+        }
+    }
+    .single-review {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .reviews-container {
+        form {
+            .review {
+                width: 295px;
+                .review-area {
+                    width: 295px;
                 }
             }
             button {

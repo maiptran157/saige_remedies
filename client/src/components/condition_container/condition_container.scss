@@ -36,6 +36,14 @@
     }   
 }
 
+@media (min-height: 812px) and (min-width: 375px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 80px;
+        }
+    }
+}
+
 @media (min-height: 731px) and (min-width: 411px) {
     .condition-container {
         .symptom-group {
