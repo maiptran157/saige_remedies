@@ -10,19 +10,10 @@ if($result){
     if($numRows > 0){
         while($symptomName = mysqli_fetch_assoc($result)['name']){
             $soundex = soundex($symptomName);
-            
-            $soundexQuery = "INSERT INTO symptom SET "
-
+            $soundexQuery = "UPDATE symptom SET soundex_value = '$soundex' WHERE name = '$symptomName'";
+            // mysqli_query($conn, $soundexQuery);
         }
     }
 }
-
-print('TEST:');
-print('<br>');
-print(soundex('TEST'));
-
-print('TEST:');
-print('<br>');
-print(soundex('TEST'));
 
 ?>
