@@ -1,0 +1,38 @@
+.search-form {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.search-bar {
+    padding-left: 5%;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.display-none {
+    display: none;
+}
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+@media only screen and (min-width: 411px) {
+    
+}
+
+@media only screen and (min-width: 769px) {
+    .search-form {
+        display: none;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+}

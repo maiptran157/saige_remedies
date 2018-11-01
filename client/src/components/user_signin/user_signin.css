@@ -1,0 +1,63 @@
+.sign-in-container {
+width: 100%;
+height: 100%;
+display:flex;
+flex-wrap: wrap;
+}
+.sign-in-section {
+    top: 10%;
+    left: 0%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-error-text {
+    color: darkred;
+}
+
+.sign-in-header{
+    text-align: center;
+}
+
+@media only screen and (min-width: 320px) {
+    
+}
+
+
+
+@media only screen and (min-width: 411px) {
+    
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    .sign-in-container {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-wrap: wrap;
+    }
+        .sign-in-section {
+        top: 0%;
+        position: relative;
+        left: 20%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .auth-error-text {
+        color: darkred;
+    }
+    
+    .sign-in-header{
+        text-align: center;
+    }
+}
