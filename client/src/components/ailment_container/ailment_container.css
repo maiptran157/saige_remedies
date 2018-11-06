@@ -36,3 +36,13 @@ a {
 @media only screen and (min-width: 411px) {
     
 }
+
+@media only screen and (min-width: 600px) {
+    .ailment {
+        width: 500px;
+    }
+    .ailment-name {
+        padding-left: 40px;
+        font-size: 30px;
+    }
+}

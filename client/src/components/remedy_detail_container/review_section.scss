@@ -35,7 +35,6 @@
             flex-direction: column;
             align-content: space-around;
             font-size: 18px;
-            
             div {
                 display: flex;
                 span {
@@ -156,3 +155,20 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .reviews-container {
+        form {
+            .review {
+                .review-area {
+                    width: 505px;
+                }
+            }
+            button {
+                left: 225px;
+            }
+        }
+    }
+    .single-review {
+        width: 493px;
+    }   
+}
