@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
     userSignIn = async (values) => {
+        console.log("USER SIGN IN:", values);
         await this.props.userSignInInfo(values);
         //check if there's a past route
         const url = localStorage.getItem('redirectUrl');
@@ -35,7 +36,6 @@ class SignIn extends Component {
                         <Field name="email" label="Email" component={renderInput} type="text" />
                         <Field name="password" label="Password" component={renderInput} type="password" />
                         <button>Sign In</button>
-                        <br /><br />
                         <Link to="/sign-up">Sign Up</Link>
                         <p className="auth-error-text">{authError}</p>
                     </form>
