@@ -71,3 +71,11 @@
 @media only screen and (min-width: 600px) {
     
 }
+
+@media (min-height: 1024px) and (min-width: 768px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 105px;
+        }
+    }
+}

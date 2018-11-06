@@ -136,7 +136,6 @@
     }
 }
 
-
 @media only screen and (min-width: 411px) {
     .reviews-container {
         form {
@@ -170,5 +169,24 @@
     }
     .single-review {
         width: 493px;
+    }   
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-container {
+        form {
+            .review {
+                .review-area {
+                    width: 660px;
+                }
+            }
+            button {
+                left: 385px;
+                top: 15px;
+            }
+        }
+    }
+    .single-review {
+        width: 655px;
     }   
 }

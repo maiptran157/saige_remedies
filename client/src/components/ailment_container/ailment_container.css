@@ -46,3 +46,12 @@ a {
         font-size: 30px;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .ailment {
+        width: 600px;
+    }
+    .ailment-name {
+        font-size: 35px;
+    }
+}
