@@ -19,26 +19,14 @@
     display: none;
 }
 
-@media only screen and (min-width: 320px) {
-    
-}
-
-@media only screen and (min-width: 411px) {
-    
-}
-/* 
-@media only screen and (min-width: 769px) {
-    .search-form {
-        display: none;
-    }
-    
-    .search-bar {
-        display: none;
-    }
-} */
-
 @media only screen and (min-width: 768px) {
     .search-form {
         width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .search-form {
+        width: 50%;
     }
 }

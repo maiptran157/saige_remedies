@@ -3,10 +3,11 @@ import Header from '../header';
 import { connect } from 'react-redux'
 import { getCategoryList } from '../../actions/index'
 import CategoryContainer from '../category_container';
+import MediaQuery from "react-responsive";
 import AgreementModal from '../modal';
 import './umbrella_conditions.scss';
+import HomePage from '../desktop/home_page';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
-import MediaQuery from "react-responsive";
 
 
 class UmbrellaConditions extends Component {
@@ -38,8 +39,8 @@ class UmbrellaConditions extends Component {
                 <div className="categories-content">
                     {categoryList()}
                 </div>
-                <MediaQuery>
-                    
+                <MediaQuery query="(min-width: 1024px)">
+                    <HomePage/>
                 </MediaQuery>
             </div>
         )
