@@ -9,9 +9,11 @@ import ReactLoading from 'react-loading';
 
 
 class ConditionsContainer extends Component {
+
     componentDidMount() {
         const { categoryId } = this.props.match.params
         this.props.getConditionsList(categoryId);
+
     }
 
     render() {

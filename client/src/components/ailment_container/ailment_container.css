@@ -25,14 +25,31 @@ a {
     }
 }
 
-
 @media only screen and (min-width: 360px) {
     .ailment{
         width: 330px;
     }
 }
 
-
 @media only screen and (min-width: 411px) {
     
+}
+
+@media only screen and (min-width: 600px) {
+    .ailment {
+        width: 500px;
+    }
+    .ailment-name {
+        padding-left: 40px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ailment {
+        width: 600px;
+    }
+    .ailment-name {
+        font-size: 35px;
+    }
 }
