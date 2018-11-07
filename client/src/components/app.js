@@ -13,7 +13,8 @@ import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
 import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
-import LoadingPage from './loading_page/loading_page';
+import MediaQuery from "react-responsive";
+// import LoadingPage from './loading_page/loading_page';
 
 const background = {
     backgroundImage: `url(${backgroundImg})`,
@@ -21,17 +22,17 @@ const background = {
 }
 
 class App extends Component {
-    // state = {
-    //     loading: true,
-    // }
+    state = {
+        loading: true,
+    }
 
-    // componentDidMount() {
-    //     setTimeout( () => {
-    //         this.setState({
-    //             loading: false,
-    //         });
-    //     }, 3000);
-    // }
+    componentDidMount() {
+        setTimeout( () => {
+            this.setState({
+                loading: false,
+            });
+        }, 3000);
+    }
 
     render() {
         // if (this.state.loading) {

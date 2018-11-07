@@ -6,6 +6,8 @@ import CategoryContainer from '../category_container';
 import AgreementModal from '../modal';
 import './umbrella_conditions.scss';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
+import MediaQuery from "react-responsive";
+
 
 class UmbrellaConditions extends Component {
     state = {
@@ -31,11 +33,14 @@ class UmbrellaConditions extends Component {
         }
         return (
             <div className="categories-container">
-                {modalCheck ? null : <AgreementModal/>  }
+                {modalCheck ? null : <AgreementModal/> }
                 <Header push={history.push} logo={saigeLogo} />
                 <div className="categories-content">
                     {categoryList()}
                 </div>
+                <MediaQuery>
+                    
+                </MediaQuery>
             </div>
         )
     }
@@ -43,7 +48,7 @@ class UmbrellaConditions extends Component {
 
 function mapStateToProps(state) {
     return {
-        categories: state.category.categories
+        categories: state.category.categories,
     }
 }
 
