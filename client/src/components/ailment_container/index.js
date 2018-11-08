@@ -30,13 +30,13 @@ class AilmentContainer extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        symptomId: state.search.symptomId,
-        categoryId: state.search.categoryId
-    }
-} 
+// function mapStateToProps(state) {
+//     return {
+//         symptomId: state.search.symptomId,
+//         categoryId: state.search.categoryId
+//     }
+// } 
 
-export default connect(mapStateToProps, {
+export default connect(null, {
     userSearchTerm: userSearchTerm,
 })(AilmentContainer);

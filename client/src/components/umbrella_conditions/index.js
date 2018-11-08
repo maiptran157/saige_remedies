@@ -41,7 +41,6 @@ class UmbrellaConditions extends Component {
                 </div>
                 <MediaQuery query="(min-width: 1024px)">
                     <HomePage push={history.push}/>
-                    {/* { this.renderInDesktop() } */}
                 </MediaQuery>
             </div>
         )

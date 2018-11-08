@@ -6,6 +6,10 @@ import { connect } from 'react-redux';
 import './home_page.css';
 
 class HomePage extends Component {
+    state = {
+        showMore: false,
+    }
+
     componentDidMount() {
         this.props.getCategoryList();
     }
@@ -18,11 +22,11 @@ class HomePage extends Component {
         });
     }
 
-    renderAll() {
+    moreCategories() {
         const { categories } = this.props;
 
         return categories.splice(categories.length-1).map ( (category) => {
-            return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name}/>
+            return <CategoryContainer img={category.img} key={category._id} name={"More Categories"}/>
         });
     }
     render() {
@@ -31,7 +35,7 @@ class HomePage extends Component {
                 <InputBar push={this.props.push}/>
                 <div className="categories">
                     {this.renderInDesktop()}
-                    {this.renderAll()}
+                    {this.moreCategories()}
                 </div>
             </div>
         )
