@@ -34,5 +34,7 @@
     .search-bar {
         height: 50px;
         width: 400px;
+        text-align: center;
+        padding-left: 0;
     }
 }

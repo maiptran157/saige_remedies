@@ -3,7 +3,6 @@ import './ailment_container.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions'
-import Header from '../header'
 import woodenBackground from '../../assets/images/wood_bg.jpg';
 
 const textStyle = {
@@ -38,6 +37,6 @@ function mapStateToProps(state) {
     }
 } 
 
-export default connect(null, {
+export default connect(mapStateToProps, {
     userSearchTerm: userSearchTerm,
 })(AilmentContainer);
