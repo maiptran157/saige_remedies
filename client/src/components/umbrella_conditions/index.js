@@ -29,7 +29,6 @@ class UmbrellaConditions extends Component {
                 return categories.map((category) => {
                     return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
                 });
-
             }
         }
         return (
