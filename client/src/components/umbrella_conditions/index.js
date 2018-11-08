@@ -19,18 +19,6 @@ class UmbrellaConditions extends Component {
         this.props.getCategoryList();
     }
 
-    renderInDesktop() {
-        const { categories } = this.props;
-        // console.log(this.props.categories[0]);
-        // if (! categories) {
-        //     return null;
-        // }
-        return categories.slice(0, 4).map( (category) => {
-            console.log(category);
-            return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
-        });
-    }
-
     render() {        
         const { modalCheck } = this.state;
         const { categories, history } = this.props;
@@ -53,7 +41,7 @@ class UmbrellaConditions extends Component {
                 </div>
                 <MediaQuery query="(min-width: 1024px)">
                     <HomePage push={history.push}/>
-                    { this.renderInDesktop() }
+                    {/* { this.renderInDesktop() } */}
                 </MediaQuery>
             </div>
         )

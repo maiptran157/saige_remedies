@@ -56,3 +56,9 @@
         margin-bottom: 10px;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .category-box {
+        width: 18%;
+    }
+}
