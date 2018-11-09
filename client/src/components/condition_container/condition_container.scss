@@ -4,78 +4,21 @@
     display: flex;
     flex-wrap: wrap;
     .symptom-group {
-     margin-top: 70px;
-     width: 100%;
-     overflow: scroll;
-     display: flex;
-     justify-content: flex-start;
-     flex-direction: column;
-     align-items: center;
-        .symptom-name {
-            margin: 0;
-            color: whitesmoke;
-            font-weight: bold;
-            text-shadow:rgb(0, 0, 0) 2px 2px;
+    //  margin-top: 70px;
+        position: relative;
+        top: 10%;
+        width: 100%;
+        overflow: scroll;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+            .symptom-name {
+                margin: 0;
+                color: whitesmoke;
+                font-weight: bold;
+                text-shadow:rgb(0, 0, 0) 2px 2px;
         }
     }
 }
 
-@media only screen and (min-width: 320px) and (min-height: 480px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 50px;
-        }
-    }
-}
-
-@media only screen and (min-width: 320px) and (min-height: 568px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 55px;
-        }
-    }
-}
-
-@media only screen and (min-width: 360px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 65px;
-        }
-    }   
-}
-
-@media (min-height: 812px) and (min-width: 375px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 80px;
-        }
-    }
-}
-
-@media (min-height: 731px) and (min-width: 411px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 75px;
-        }
-    }
-}
-
-@media (min-height: 823px) and (min-width: 411px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 85px;
-        }
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    
-}
-
-@media (min-height: 1024px) and (min-width: 768px) {
-    .condition-container {
-        .symptom-group {
-            margin-top: 105px;
-        }
-    }
-}

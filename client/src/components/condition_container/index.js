@@ -6,17 +6,20 @@ import { getConditionsList } from '../../actions/index';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
+import MediaQuery from 'react-responsive';
 
 
 class ConditionsContainer extends Component {
 
     componentDidMount() {
         const { categoryId } = this.props.match.params
+        console.log("CONDITIONS:", this.props.conditions);
         this.props.getConditionsList(categoryId);
 
     }
 
     render() {
+        console.log("PROPS:", this.props);
         const { history } = this.props;
         const style = {
             top: '10%',

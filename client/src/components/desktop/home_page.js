@@ -33,18 +33,6 @@ class HomePage extends Component {
         });
     }
 
-    // moreCategories() {
-    //     const { categories } = this.props;
-
-    //     return categories.splice(categories.length-1).map ( (category) => {
-    //         return (
-    //             <div>
-    //                 <h1 onClick={this.toggleShowMore}>Hello</h1>
-    //             </div>
-    //         )
-    //     });
-    // }
-
     toggleShowMore = (event) => {
         event.preventDefault();
 

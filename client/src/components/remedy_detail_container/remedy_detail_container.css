@@ -1,5 +1,6 @@
 .remedy-detail-container {
-    margin-top: 60px;
+    position: relative;
+    top: 10%;
     overflow: scroll;
 }
 
@@ -75,11 +76,6 @@
     .remedy-detail-description {
         width: 310px;
     }
-
-    .remedy-detail-container {
-        margin-top: 50px;
-    }
-
     .remedy-detail-group {
         width: 320px;
     }
@@ -92,10 +88,6 @@
 
 
 @media only screen and (min-width: 360px) {
-    .remedy-detail-container {
-        margin-top: 60px;
-    }
-
     .remedy-reviews-container {
         padding-top: 5px;
         margin: 5px;    
@@ -124,19 +116,8 @@
     }
 }
 
-@media (min-height: 812px) and (min-width: 375px) {
-    .remedy-detail-container {
-        margin-top: 75px;
-    }
-}
 
-
-
-@media only screen and (min-width: 411px) {
-    .remedy-detail-container {
-        margin-top: 75px;
-    }
-    
+@media only screen and (min-width: 411px) {    
     .remedy-detail-group {
         width: 411px;
     }
@@ -154,9 +135,6 @@
 
 
 @media only screen and (min-width: 600px) {
-    .remedy-detail-container {
-        margin-top: 80px;
-    }
     .remedy-detail-group {
         width: 600px;
     }
@@ -166,10 +144,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .remedy-detail-container {
-        margin-top: 85px;
-    }
-
     .remedy-detail-group {
         width: 768px;
     }
@@ -178,9 +152,4 @@
     }
 }
 
-@media (min-height: 1024px) and (min-width: 768px) {
-    .remedy-detail-container {
-        margin-top: 105px;
-    }
-}
 
