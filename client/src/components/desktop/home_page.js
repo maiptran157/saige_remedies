@@ -21,9 +21,7 @@ class HomePage extends Component {
             return (
             <Fragment>
                 <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} /> 
-                <h1 onClick={this.toggleShowMore}>Hello</h1>
             </Fragment>
-
         )});
     }
 
@@ -60,8 +58,9 @@ class HomePage extends Component {
             <div className="home-container">
                 <InputBar push={this.props.push}/>
                 <div className="categories">
-                    {/* {this.renderInDesktop()} */}
                     {this.state.showLess ? this.renderInDesktop() : this.renderAllCategories()}
+                    <div onClick={this.toggleShowMore}>{this.state.showLess ? "Show More" : "Show Less"}</div>
+
                 </div>
             </div>
         )
