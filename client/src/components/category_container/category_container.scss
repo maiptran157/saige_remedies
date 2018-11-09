@@ -56,3 +56,16 @@
         margin-bottom: 10px;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .category-box {
+        width: 21%;
+    }
+    .category-img {
+        border-radius: 10px;
+        img {
+            padding: 5%;
+            width: 40%;
+        }
+    }
+}

@@ -3,7 +3,6 @@ import './ailment_container.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions'
-import Header from '../header'
 import woodenBackground from '../../assets/images/wood_bg.jpg';
 
 const textStyle = {
@@ -31,12 +30,12 @@ class AilmentContainer extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        symptomId: state.search.symptomId,
-        categoryId: state.search.categoryId
-    }
-} 
+// function mapStateToProps(state) {
+//     return {
+//         symptomId: state.search.symptomId,
+//         categoryId: state.search.categoryId
+//     }
+// } 
 
 export default connect(null, {
     userSearchTerm: userSearchTerm,
