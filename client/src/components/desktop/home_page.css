@@ -8,3 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.show-more {
+    width: 21%;
+}

@@ -28,7 +28,7 @@ class HomePage extends Component {
     renderAllCategories() {
         const { categories } = this.props;
 
-        return categories.map( (category) => {
+        return categories.slice(0,11).map( (category) => {
             return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name}/>
         });
     }
@@ -59,7 +59,7 @@ class HomePage extends Component {
                 <InputBar push={this.props.push}/>
                 <div className="categories">
                     {this.state.showLess ? this.renderInDesktop() : this.renderAllCategories()}
-                    <div onClick={this.toggleShowMore}>{this.state.showLess ? "Show More" : "Show Less"}</div>
+                    <div className="show-more" onClick={this.toggleShowMore}>{this.state.showLess ? "More Categories" : "Less Categories"}</div>
 
                 </div>
             </div>
