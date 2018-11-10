@@ -17,7 +17,7 @@ class SignUp extends Component {
         const { handleSubmit, authError } = this.props;
         const goBackHome = () => {
             setTimeout(() => {
-                this.props.history.push('/')
+                this.props.history.push('/sign-in')
             }, 1000)
         }
         if (this.props.submitSucceeded) {

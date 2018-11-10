@@ -12,13 +12,13 @@ export const addReview = (reviewInfo) => async dispatch => {
     })
     try {
         const response = await axios.post(config.ADD_REVIEW_URL, dataToSend);
-        console.log("response from addReview axios call:", response)
+        // console.log("response from addReview axios call:", response)
         dispatch({
             type: types.ADD_REVIEW,
             payload: response
         })
     } catch (error) {
-        console.log("error message:", error.message);
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -32,7 +32,7 @@ export const getReviewList = (id) => async dispatch => {
             payload: reviewList
         });
     } catch (error) {
-        console.log("error message:", error.message);
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -45,7 +45,7 @@ export const getCategoryList = () => async dispatch => {
             payload: response.data,
         })
     } catch (err) {
-        console.log("error message:", err.message);
+        console.log('Error Message:', err.message);
     }
 }
 
@@ -60,7 +60,7 @@ export const getConditionsList = (id) => async dispatch => {
             payload: response.data,
         })
     } catch (error) {
-        console.log(error.message);
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -86,10 +86,10 @@ export const userSignInInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_IN_INFO}`, dataToSend);
-        console.log("response in asctions", response.data.loggedin);
         localStorage.setItem('loggedin', response.data.loggedin);
         localStorage.setItem('username', response.data.userData.username);
         localStorage.setItem('email', response.data.userData.email);
+        localStorage.setItem('firstName', response.data.userData.fname)
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
@@ -105,8 +105,6 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
-        // console.log(response);
-        localStorage.setItem('token', response.data.token);
         dispatch({
             type: types.GET_USER_SIGN_UP_INFO,
             payload: response.data.message,
@@ -125,7 +123,7 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
             payload: response.success
         })
     } catch (error) {
-        console.log(error.message);
+        console.log('Error Message:', error.message);
     }
 }
 
@@ -139,6 +137,6 @@ export const getSymptom = (userInput) => async dispatch => {
             payload: response,
         })
     } catch (error) {
-        console.log('Error:', error)
+        console.log('Error Message:', error)
     }
 }
