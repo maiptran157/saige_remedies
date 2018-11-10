@@ -4,7 +4,11 @@ $fname = $_POST['firstName'];
 $lname = $_POST['lastName'];
 $email = $_POST['email'];
 $username = $_POST['username'];
-$password = $_POST['password'];
+// $password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+echo password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 $currentDate = '2018-10-20 00:00:00';
 $null = null;
 $active = 'active';
