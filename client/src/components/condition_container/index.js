@@ -26,6 +26,7 @@ class ConditionsContainer extends Component {
     }
 
     render() {
+        console.log("PROPS:", this.props.conditionID);
         const { history } = this.props;
         const style = {
             top: '10%',
@@ -79,11 +80,10 @@ class ConditionsContainer extends Component {
 function mapStateToProps(state) {
     return {
         conditions: state.conditions.conditionList,
-        conditionsID: state.conditionsID
+        conditionID: state.conditionID.conditionsID
     }
 }
 
 export default connect(mapStateToProps, {
     getConditionsList: getConditionsList,
-    getConditionsID: getConditionsID
 })(ConditionsContainer);

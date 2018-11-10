@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import woodenBackground from '../../assets/images/wood_bg.jpg';
+import { getConditionsID } from '../../actions';
+import { connect } from 'react-redux';
 import { formatPostData } from '../../helpers';
 import config from '../../config';
 import axios from 'axios';
 import './ailment_desktop.css'
+import { get } from 'http';
 
 
 
@@ -19,47 +22,53 @@ const background = {
 }
 
 class AilmentDesktop extends Component {
-    state = {
-        conditionDetail: '',
-    }
-    getConditionID = (id) => {
+    // state = {
+    //     conditionDetail: '',
+    // }
+    // getConditionID = (id) => {
         
-        this.getConditionDetail(id);
-        console.log(this.state.conditionDetail);
+    //     this.getConditionDetail(id);
+    //     console.log(this.state.conditionDetail);
         
      
-    }
+    // }
 
-    async getConditionDetail(id) {
-        const dataToSend = formatPostData({ ID: id });
-        try {
-            const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
+    // async getConditionDetail(id) {
+    //     const dataToSend = formatPostData({ ID: id });
+    //     try {
+    //         const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
 
-            if (response.statusText === "OK") {
-                this.setState({
-                    conditionDetail: response.data[0],
-                })
-            }
-        } catch (error) {
-            console.log(error);
-            this.setState({
-                conditionDetail: '',
-            })
-        }
-    }
+    //         if (response.statusText === "OK") {
+    //             this.setState({
+    //                 conditionDetail: response.data[0],
+    //             })
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //         this.setState({
+    //             conditionDetail: '',
+    //         })
+    //     }
+    // }
 
     render() {
-        
-        const { _id, name } = this.props;
+        const { getConditionsID,_id, name } = this.props;
         return (
             <div className="ailment-description">
                 <div className="ailment">
-                    <div onClick={() => this.getConditionID(_id)} style={textStyle} className="ailment-name">{name}</div>
+                    <div onClick={() => getConditionsID(_id)} style={textStyle} className="ailment-name">{name}</div>
                 </div>  
-                <div className="description">{this.state.conditionDetail.description}</div>
             </div>
         )
     }
 }
 
-export default AilmentDesktop;
+function mapStateToProps(state) {
+    return {
+        conditionID: state.conditionID.conditionsID
+    }
+}
+
+export default connect(mapStateToProps, {
+    getConditionsID: getConditionsID
+})(AilmentDesktop);
