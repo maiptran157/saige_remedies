@@ -10,32 +10,53 @@
     left: 0;
     position: relative;
     width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
+}
+
+.sign-up-success-message{
+    top: 10%;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    text-align: center;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    font-size: 5vh;
+    color: white;
 }
 
 .sign-up-header {
     width: 100%;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
     text-align: center;
+    color: white
 }
 
 form {
     width: 100%;
-    display: flex; 
-    align-items: center;
+    display: flex;
     flex-direction: column;
-    height: 800px;
-    font-size: 2vh;
+    align-items: center;
 }
 
-button {
-    width: 40%;
+.sign-up-btn {
+    width: 83vw;
     background-color: white;
-    height: 40px;
-    margin-top: 3.5%;
+    height: 6vh;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: gray
+}
+
+.sign-in-option {
+    color: brown;
+    font-size:1.2rem;
+}
+
+.sign-in-link {
+    color: white;
 }
 
 .auth-error-text {
@@ -52,7 +73,7 @@ button {
 }
 
 @media only screen and (min-width: 769px) {
-    .sign-up-container {
+    /* .sign-up-container {
         width: 100%;
         height: 100%;
         display: flex;
@@ -95,6 +116,6 @@ button {
     .auth-error-text {
         color: darkred;
     }
-    
+     */
     
 }

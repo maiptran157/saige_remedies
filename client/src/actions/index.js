@@ -105,11 +105,11 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.GET_USER_SIGN_UP_INFO}`, dataToSend);
-        console.log(response);
+        // console.log(response);
         localStorage.setItem('token', response.data.token);
         dispatch({
             type: types.GET_USER_SIGN_UP_INFO,
-            payload: response.data,
+            payload: response.data.message,
         })
     } catch (error) {
         console.log('Error Message:', error.message);
