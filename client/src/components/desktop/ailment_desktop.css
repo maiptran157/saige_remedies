@@ -1,0 +1,4 @@
+.ailment-description {
+    display: flex;
+    flex-direction: column;
+}

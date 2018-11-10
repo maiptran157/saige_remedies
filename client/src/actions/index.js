@@ -142,3 +142,11 @@ export const getSymptom = (userInput) => async dispatch => {
         console.log('Error:', error)
     }
 }
+
+export const getConditionsID = (id) => {
+    console.log(id);
+    return {
+        type: types.GET_CONDITIONS_ID,
+        payload: id
+    }
+}
