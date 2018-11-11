@@ -1,5 +1,7 @@
 .review-header{
+    margin-left: 6%;
     display: flex;
+    align-items: center;
     color: white;
     margin-bottom: 10px;
     div {
@@ -25,16 +27,17 @@
     form {
         // width: 325px;
         display: flex;
-        flex-direction: row;
+        width: 100vw;
         height: 40%;
-        align-content: space-evenly;
+        justify-content: center;
         .review {
-            width: 290px;
+            width: 93vw;
             height: 95px;
             display: flex;
             flex-direction: column;
             align-content: space-around;
             font-size: 18px;
+                   
             div {
                 display: flex;
                 span {
@@ -47,24 +50,71 @@
                     margin-bottom: .5em;
                 }
             }
-            .review-area {
-                width: 290px;
-                height: 50px;
-                font-size: 20px;
-                padding-left: 5px;
+
+            .input-and-button{
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 93vw;
+                height: 16vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: white;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    input::-webkit-input-placeholder {
+                    color: gray !important;
+                    }
+             
+                    input:-moz-placeholder { /* Firefox 18- */
+                    color: gray !important;  
+                    }
+                    
+                    input::-moz-placeholder {  /* Firefox 19+ */
+                    color: gray !important;  
+                    }
+                    
+                    input:-ms-input-placeholder {  
+                    color: gray !important;  
+                    }
+ 
+                    .review-area {
+                        border-style: none;
+                        background: none;
+                        // width: 290px;
+                        width: 59vw;
+                        height: 50px;
+                        font-size: 2.5vh;
+                    }
+
+                }
+                    button {
+                        width: 11vw;
+                        height: 6vh;
+                        background: #efc11d;
+                        border-radius: 10px;
+                        font-size: 3vh;
+                        position: relative;
+                    }
             }
+
+            .error-text{
+                color: darkred;
+                font-size: 2vh;
+                margin-left: 6%;
+            }
+            
         };
-        button {
-            width: 45px;
-            height: 45px;
-            background: #efc11d;
-            border-radius: 10px;
-            font-size: 3vh;
-            position: relative;
-            left: 10px;
-            top: 20px;
-        }
+       
     }
+}
+
+.star-rating-area {
+    display: flex;
+    align-items: center;
+    font-size: 2.5vh;
+    margin-left: 6%;
 }
 
 .review-detail {
@@ -121,9 +171,11 @@
     .reviews-container {
         form {
             .review {
-                width: 295px;
+                width: 93vw;
                 .review-area {
-                    width: 295px;
+                    font-size: 2vh;
+                    width: 249px;
+                    height: 6vh;
                 }
             }
             button {
@@ -132,7 +184,7 @@
         }
     }
     .single-review {
-        width: 280px;
+        width: 316px;
     }
 }
 

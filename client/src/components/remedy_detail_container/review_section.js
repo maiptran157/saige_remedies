@@ -5,10 +5,12 @@ import { addReview, getReviewList } from '../../actions';
 import './review_section.scss';
 import '../star_rating/star_rating.scss';
 import '../star_rating/star_rating.scss';
+import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
 const textStyle = {
-    color: 'white'
+    color: 'white',
+    textDecoration: 'underline'
 }
 
 class ReviewList extends Component {
@@ -16,11 +18,12 @@ class ReviewList extends Component {
         super(props);
 
         this.state = {
-            rating: 0
+            rating: 0,
+            ratingError: null
         };
     }
 
-    onStarClick(nextValue, prevValue, name) {
+    onStarClick(nextValue) {
         this.setState({ rating: nextValue });
     }
 
@@ -30,11 +33,14 @@ class ReviewList extends Component {
     }
 
     renderInput(props) {
-        const { input, title, name, type, meta: { touched, error } } = props;
+        const { input, title, type, meta: { touched, error } } = props;
         return (
             <Fragment>
-                <label style={textStyle}>{title}</label>
-                <input {...input} type={type} className="review-area" autoComplete="off" />
+                <div className="input-and-button">
+                    <input {...input} type={type} className="review-area" placeholder={title} autoComplete="off" />
+                    <button className="add-review-button">+</button>
+                </div>
+                <p className="error-text" {...input}> {touched && error} </p>
             </Fragment>
         )
 
@@ -64,8 +70,8 @@ class ReviewList extends Component {
     render() {
         const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
-
-        console.log('Review List:', reviewList);
+        localStorage.setItem('redirectUrl', this.props.pathname);
+        // console.log('Review List:', reviewList);
 
         const displayReview = () => {
             if (reviewList.length > 0) {
@@ -90,8 +96,8 @@ class ReviewList extends Component {
             }
             let starAverage = Math.floor(rating / reviewList.length)
             console.log("Rating:", rating)
-            console.log("Review List Length:", reviewList.length)
-            console.log("Star Average:", starAverage)
+            // console.log("Review List Length:", reviewList.length)
+            // console.log("Star Average:", starAverage)
             return (
                 <div className="star-rating-total">
                     <StarRatingComponent
@@ -104,36 +110,47 @@ class ReviewList extends Component {
             );
         }
 
-        return (<div>
+        return (<Fragment>
             <div className="review-header">
                 <div>Average Rating:</div>
                 {reviewList ? displayRatingTotal() : null}
             </div>
+            <hr />
             <div className="reviews-container">
 
                 {reviewList ? displayReview() : null}
 
                 <form action="" onSubmit={handleSubmit(this.validateUserLogInAndAddReview)}>
                     <div className="review">
-                        <div>
-                            <div className="star-rating-area">
-                                <div className="star-rating-count">Rate this remedy:</div>
-                                <StarRatingComponent
-                                    name="rating"
-                                    starCount={5}
-                                    value={rating}
-                                    onStarClick={this.onStarClick.bind(this)}
-                                />
-                            </div>
+                        <div className="star-rating-area">
+                            <div className="star-rating-count">Rate this remedy:</div>
+                            <StarRatingComponent
+                                name="rating"
+                                starCount={5}
+                                value={rating}
+                                onStarClick={this.onStarClick.bind(this)}
+                            />
                         </div>
-                        <Field type="text" name="review" title="Leave a review:" component={this.renderInput} />
+                        <Field type="text" name="review" title="Leave a review..." component={this.renderInput} />
                     </div>
-                    <button className="add-review-button">+</button>
                 </form>
             </div>
-        </div >
+        </Fragment >
         )
     }
+}
+
+function validate(values) {
+    const { review } = values;
+    const errors = {};
+    const loggedIn = localStorage.getItem('loggegin');
+    console.log("loggedIn:", loggedIn)
+    if (!review) {
+        errors.review = 'Cannot submit an empty review';
+    } else if (!loggedIn) {
+        errors.review = <span> Please <Link style={textStyle} to="/sign-in">Sign In</Link> to leave a review</span>;
+    }
+    return errors;
 }
 
 function mapStateToProps(state) {
@@ -146,6 +163,7 @@ function mapStateToProps(state) {
 
 ReviewList = reduxForm({
     form: 'add_review',
+    validate: validate
 })(ReviewList);
 
 export default connect(mapStateToProps, {
