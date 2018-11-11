@@ -112,7 +112,7 @@
 
 .star-rating-area {
     display: flex;
-    align-items: center;
+    // align-items: center;
     font-size: 2.5vh;
     margin-left: 6%;
 }
@@ -172,6 +172,7 @@
         form {
             .review {
                 width: 93vw;
+                height: 19vh;
                 .review-area {
                     font-size: 2vh;
                     width: 249px;

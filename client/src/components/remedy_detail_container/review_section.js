@@ -19,7 +19,7 @@ class ReviewList extends Component {
 
         this.state = {
             rating: 0,
-            ratingError: null
+            ratingError: ""
         };
     }
 
@@ -52,6 +52,10 @@ class ReviewList extends Component {
         if (this.props.auth === false) {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
+        } else if (this.state.rating === 0) {
+            this.setState({
+                ratingError: 'Rating is empty'
+            })
         } else {
             const { id } = this.props;
             await this.props.addReview({
@@ -62,7 +66,8 @@ class ReviewList extends Component {
             this.props.getReviewList(id);
             this.props.reset(); //clear form
             this.setState({
-                rating: 0 //set rating for input back to 0
+                rating: 0, //set rating for input back to 0
+                ratingError: ""
             })
         }
     }
@@ -123,13 +128,15 @@ class ReviewList extends Component {
                 <form action="" onSubmit={handleSubmit(this.validateUserLogInAndAddReview)}>
                     <div className="review">
                         <div className="star-rating-area">
-                            <div className="star-rating-count">Rate this remedy:</div>
-                            <StarRatingComponent
-                                name="rating"
-                                starCount={5}
-                                value={rating}
-                                onStarClick={this.onStarClick.bind(this)}
-                            />
+                            <div><div className="star-rating-count">Rate this remedy:</div>
+                                <StarRatingComponent
+                                    name="rating"
+                                    starCount={5}
+                                    value={rating}
+                                    onStarClick={this.onStarClick.bind(this)}
+                                />
+                            </div>
+                            <p className={!this.state.ratingError ? "error-text" : ""}>{this.state.ratingError}</p>
                         </div>
                         <Field type="text" name="review" title="Leave a review..." component={this.renderInput} />
                     </div>
@@ -143,7 +150,7 @@ class ReviewList extends Component {
 function validate(values) {
     const { review } = values;
     const errors = {};
-    const loggedIn = localStorage.getItem('loggegin');
+    const loggedIn = localStorage.getItem('loggedin');
     console.log("loggedIn:", loggedIn)
     if (!review) {
         errors.review = 'Cannot submit an empty review';
