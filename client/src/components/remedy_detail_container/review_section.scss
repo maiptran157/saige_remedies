@@ -39,7 +39,6 @@
             font-size: 18px;
                    
             div {
-                display: flex;
                 span {
                     color: white;
                 }
@@ -55,7 +54,7 @@
                 border: 1px solid black;
                 border-radius: 10px;
                 width: 93vw;
-                height: 16vh;
+                height: 27vh;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
@@ -112,9 +111,18 @@
 
 .star-rating-area {
     display: flex;
-    // align-items: center;
+    flex-direction: column;
     font-size: 2.5vh;
     margin-left: 6%;
+    div{
+        display: flex;
+        margin-bottom: 1%;
+    }
+    p{
+        color: darkred;
+        font-size: 2vh;
+        // margin-left: 6%;
+    }
 }
 
 .review-detail {
@@ -175,8 +183,9 @@
                 height: 19vh;
                 .review-area {
                     font-size: 2vh;
-                    width: 249px;
-                    height: 6vh;
+                    // width: 249px;
+                    width: 68vw;
+                    height: 5.5vh;
                 }
             }
             button {
