@@ -1,6 +1,7 @@
 .remedy-detail-container {
     margin-top: 60px;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .remedy-detail-group {
@@ -12,8 +13,8 @@
 
 .remedy-reviews-container {
     width: 100%;
-    margin: 5% 4%;
-    padding: 1%;
+    /* margin: 5% 4%; */
+    /* padding: 1%; */
 }
 
 .remedy-detail-header {
@@ -85,7 +86,7 @@
     }
 
     .remedy-reviews-container {
-        margin: 5px;
+        /* margin: 5px; */
         padding-top: 3px;
     }
 }
@@ -97,8 +98,8 @@
     }
 
     .remedy-reviews-container {
-        padding-top: 5px;
-        margin: 5px;    
+        /* padding-top: 5px;
+        margin: 5px;     */
     }
 
     .remedy-detail-description {
