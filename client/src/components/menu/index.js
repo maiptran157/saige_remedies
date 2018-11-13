@@ -42,7 +42,8 @@ class DropDownMenu extends Component {
         localStorage.removeItem('loggedin');
         localStorage.removeItem('username');
         try {
-            await axios.get(config.LOG_OUT_URL);
+            const response = await axios.get(config.LOG_OUT_URL);
+            console.log("response from server:", response)
         } catch (error) {
             console.log("Error Message:", error);
         }
