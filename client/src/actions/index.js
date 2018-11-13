@@ -82,6 +82,7 @@ export const userSearchTerm = (term) => async dispatch => {
 }
 
 export const userSignInInfo = (userInfo) => async dispatch => {
+    console.log("User info:", userInfo);
     const dataToSend = formatPostData(userInfo);
 
     try {

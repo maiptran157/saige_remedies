@@ -53,7 +53,7 @@
                 border: 1px solid gray;
                 border-radius: 10px;
                 width: 93vw;
-                height: 14vh;
+                height: 19vh;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
@@ -134,24 +134,35 @@
 @media only screen and (min-width: 320px) {
     .review-header {
         div {
-            font-size: 22px;
+            font-size: 3vh;
         }
     }
     .reviews-container {
         form {
             .review {
-                width: 245px;
-                .review-area {
-                    width: 245px;
+                width: 93vw;
+                height: 22vh;
+                .star-rating-area {
+                    margin-bottom: -1%;
                 }
-            }
-            button {
-                left: 13px;
+                .input-and-button {
+                    height: 8vh;
+                    .review-area {
+                        width: 77vw;
+                        height: 4vh;
+                    }
+                }
             }
         }
     }
     .single-review {
-        width: 245px;
+        width: 82vw;
+        margin-top: 0;
+        margin-left: 1em;
+        margin-right: 1em;
+        .review-detail {
+            font-size: 2.25vh;
+        }
     }
 }
 
@@ -160,18 +171,18 @@
     .reviews-container {
         form {
             .review {
-                width: 290px;
+                
                 .review-area {
-                    width: 290px;
+                    
                 }
             }
             button {
-                left: 13px; 
+                
             }
         }
     }
     .single-review {
-        width: 280px;
+        
     }
 }
 
@@ -183,13 +194,9 @@
                 height: 19vh;
                 .review-area {
                     font-size: 2vh;
-                    // width: 249px;
                     width: 68vw;
                     height: 5vh;
                 }
-            }
-            button {
-                left: 13px; 
             }
         }
     }
@@ -199,20 +206,8 @@
 }
 
 @media only screen and (min-width: 411px) {
-    .reviews-container {
-        form {
-            .review {
-                .review-area {
-                    width: 325px;
-                }
-            }
-            button {
-                left: 48px; 
-            }
-        }
-    }
     .single-review {
-        width: 310px;
+        width: 86vw;
     }
 }
 
@@ -221,34 +216,44 @@
         form {
             .review {
                 .review-area {
-                    width: 505px;
+                    
                 }
             }
             button {
-                left: 225px;
+                
             }
         }
     }
     .single-review {
-        width: 493px;
+       
     }   
 }
 
 @media only screen and (min-width: 768px) {
+    .review-header div {
+        font-size: 3vh;
+    }
     .reviews-container {
         form {
             .review {
-                .review-area {
-                    width: 660px;
+                .input-and-button {
+                    margin-top:-4%;
+                    height: 10vh;
+                    .review-area {
+                        width: 75vw;
+                    }
+                    button {
+                        width: 9vw;
+                    }
                 }
-            }
-            button {
-                left: 385px;
-                top: 15px;
+                .error-text {
+                    margin-top: 1%;
+                }
             }
         }
     }
     .single-review {
-        width: 655px;
+        width: 89vw;
+        margin-left: 3.5%;
     }   
 }
