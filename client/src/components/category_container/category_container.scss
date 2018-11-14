@@ -58,9 +58,6 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-}
-
-@media only screen and (min-width: 992px) {
     .category-box {
         width: 21%;
     }
@@ -68,3 +65,12 @@
         font-size: 22px;
     }
 }
+
+// @media only screen and (min-width: 992px) {
+//     .category-box {
+//         width: 21%;
+//     }
+//     .category-name {
+//         font-size: 22px;
+//     }
+// }
