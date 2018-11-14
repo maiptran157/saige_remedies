@@ -15,6 +15,9 @@
 }
 .category-box {
     width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .category-name {
     text-align: center;
@@ -57,15 +60,11 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
     .category-box {
         width: 21%;
     }
-    .category-img {
-        border-radius: 10px;
-        img {
-            padding: 5%;
-            width: 40%;
-        }
+    .category-name {
+        font-size: 22px;
     }
 }

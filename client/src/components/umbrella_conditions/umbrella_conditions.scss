@@ -23,13 +23,11 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
     .categories-container {
-        margin-top: 0;
-        top: 0;
-        height: 100%;
+        justify-content: center;
         .categories-content {
-            display: none;
+            width: 70%;
         }
     }
-} 
+}

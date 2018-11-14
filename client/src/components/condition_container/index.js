@@ -8,7 +8,7 @@ import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
 import MediaQuery from 'react-responsive';
 import AilmentDesktop from '../desktop/ailment_desktop';
-import { getConditionsID } from '../../actions';
+
 
 
 class ConditionsContainer extends Component {
@@ -26,7 +26,6 @@ class ConditionsContainer extends Component {
     }
 
     render() {
-        console.log("PROPS:", this.props.conditionID);
         const { history } = this.props;
         const style = {
             top: '10%',
@@ -68,9 +67,9 @@ class ConditionsContainer extends Component {
                     {ailments()}
                 </div>
                 <div className="desktop-symptom-group">   
-                    <MediaQuery query="(min-width: 1024px)">
+                    {/* <MediaQuery query="(min-width: 1024px)">
                         {this.renderAilmentsDesktop()}
-                    </MediaQuery>
+                    </MediaQuery> */}
                 </div>
             </div>
         )
