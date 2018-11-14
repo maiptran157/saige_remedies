@@ -127,9 +127,7 @@
     }
 
     .remedy-reviews-container {
-        /* width: 370px; */
-        padding-top: 5px;
-        margin: 13px;
+        width: 100vw;
     }
 }
 
