@@ -13,11 +13,11 @@
       "target": "http://localhost:8888"
     }
   },
-  "author": "Scott Bowler",
+  "author": "Mia Tran, Perry Tran, Jaytrin Apinchapong, and Jonathan Gallo",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Learning-Fuze/react_starter.git"
+    "url": "https://github.com/Learning-Fuze/c718_findhomeremedies"
   },
   "dependencies": {
     "axios": "^0.18.0",
