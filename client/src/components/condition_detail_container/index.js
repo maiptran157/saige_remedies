@@ -29,6 +29,7 @@ class ConditionDetailContainer extends Component {
     async getConditionDetail() {
         const { match: { params } } = this.props;
         const { conditionId } = params;
+
         const dataToSend = formatPostData({ ID: conditionId });
         try {
             const response = await axios.post(config.CONDITION_DETAILS_URL, dataToSend);
@@ -38,7 +39,6 @@ class ConditionDetailContainer extends Component {
                     conditionDetail: response.data[0]
                 })
             }
-
         } catch (error) {
             this.setState({
                 conditionDetail: []
@@ -49,7 +49,8 @@ class ConditionDetailContainer extends Component {
     render() {
         const { conditionDetail } = this.state;
         const { name, description, caution, self_help, treatment } = conditionDetail;
-        const { history } = this.props
+        const { history } = this.props;
+
         const displayConditionDesc = () => {
             if (!description) {
                 return <div style={style} >

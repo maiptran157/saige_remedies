@@ -1,13 +1,13 @@
 import types from '../actions/types';
 
 const DEFAULT_STATE = {
-    categories: [],
+    conditionsID: null,
 }
 
 export default (state = DEFAULT_STATE, action) => {
-    switch (action.type) {
-        case types.GET_CATEGORY_LIST:
-            return { ...state, categories: action.payload }
+    switch(action.type) {
+        case types.GET_CONDITIONS_ID: 
+            return {...state, conditionsID: action.payload}
         default:
             return state;
     }

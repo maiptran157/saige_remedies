@@ -5,6 +5,7 @@ export default {
     GET_SINGLE_REVIEW: 'get_single_review',
     GET_CONDITIONS_LIST: 'get_conditions_list',
     GET_SEARCH_SYMPTOM: 'get_search_symptom',
+    GET_CONDITIONS_ID: 'get_condition_id',
     SIGN_UP: 'sign_up',
     GET_SYMPTOM: 'get_symptom',
     GET_SYMPTOM_ERROR: 'get_symptom_error',

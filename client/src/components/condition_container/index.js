@@ -6,14 +6,23 @@ import { getConditionsList } from '../../actions/index';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
+import MediaQuery from 'react-responsive';
+import AilmentDesktop from '../desktop/ailment_desktop';
+
 
 
 class ConditionsContainer extends Component {
-
     componentDidMount() {
-        const { categoryId } = this.props.match.params
+        const { categoryId } = this.props.match.params;
         this.props.getConditionsList(categoryId);
+    }
 
+    renderAilmentsDesktop() {
+        const { symptoms } = this.props.conditions;
+
+        return symptoms.map( (symptom) => {
+            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name}/>
+        });
     }
 
     render() {
@@ -24,8 +33,14 @@ class ConditionsContainer extends Component {
             position: 'fixed',
             color: 'white'
         }
+
         const { symptoms, symptom_group } = this.props.conditions;
         const { categoryId } = this.props.match.params;
+
+        if (!symptoms) {
+            return null;
+        }
+
         const ailments = () => {
             if (this.props.conditions.Errors) {
                 return <h2 style={style}>
@@ -51,6 +66,11 @@ class ConditionsContainer extends Component {
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
                 </div>
+                <div className="desktop-symptom-group">   
+                    {/* <MediaQuery query="(min-width: 1024px)">
+                        {this.renderAilmentsDesktop()}
+                    </MediaQuery> */}
+                </div>
             </div>
         )
     }
@@ -58,10 +78,11 @@ class ConditionsContainer extends Component {
 
 function mapStateToProps(state) {
     return {
-        conditions: state.conditions.conditionList
+        conditions: state.conditions.conditionList,
+        conditionID: state.conditionID.conditionsID
     }
 }
 
 export default connect(mapStateToProps, {
-    getConditionsList: getConditionsList
+    getConditionsList: getConditionsList,
 })(ConditionsContainer);
