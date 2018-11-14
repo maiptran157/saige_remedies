@@ -7,9 +7,6 @@ import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
 import MediaQuery from 'react-responsive';
-import AilmentDesktop from '../desktop/ailment_desktop';
-
-
 
 class ConditionsContainer extends Component {
     componentDidMount() {
@@ -20,8 +17,8 @@ class ConditionsContainer extends Component {
     renderAilmentsDesktop() {
         const { symptoms } = this.props.conditions;
 
-        return symptoms.map( (symptom) => {
-            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name}/>
+        return symptoms.map((symptom) => {
+            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name} />
         });
     }
 
@@ -66,7 +63,7 @@ class ConditionsContainer extends Component {
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
                 </div>
-                <div className="desktop-symptom-group">   
+                <div className="desktop-symptom-group">
                     {/* <MediaQuery query="(min-width: 1024px)">
                         {this.renderAilmentsDesktop()}
                     </MediaQuery> */}
