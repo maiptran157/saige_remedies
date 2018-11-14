@@ -48,6 +48,16 @@
     border-radius: 25px;
     background-color: white;
     padding: 3%;
+    position: relative;
+    height: 150px;
+}
+
+.show-more-description {
+    border-radius: 25px;
+    background-color: white;
+    padding: 3%;
+    position: relative;
+    height: auto;
 }
 
 .condition-detail-paragraph {
@@ -94,6 +104,13 @@
 .remedy-results {
     width: 100%;
 }
+
+.show-more-btn {
+    position: absolute;
+    top: 80%;
+    left: 38%;
+}
+
 
 
 @media only screen and (min-width: 768px) {
