@@ -10,9 +10,9 @@ const textStyle = {
 export default props => {
     return (
         <ul className="web-menu">
-            <hr />
+            {/* <hr /> */}
             <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
-            <hr />
+            {/* <hr /> */}
             <li><Link style={textStyle} to="/">Home</Link></li>
             <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
             <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
