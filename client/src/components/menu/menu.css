@@ -70,7 +70,7 @@
         margin: 0;
     }
     .hamburger-icon > img {
-        width: 80px;
+        width: 65px;
     }
 }
 
@@ -85,7 +85,8 @@
     .web-menu {
         display: flex;
         width: 50%;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        font-size: 20px;
     }
     li {
         text-decoration: none;

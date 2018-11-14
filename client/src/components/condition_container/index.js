@@ -6,9 +6,6 @@ import { getConditionsList } from '../../actions/index';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
-import MediaQuery from 'react-responsive';
-import AilmentDesktop from '../desktop/ailment_desktop';
-
 
 
 class ConditionsContainer extends Component {
@@ -67,9 +64,7 @@ class ConditionsContainer extends Component {
                     {ailments()}
                 </div>
                 <div className="desktop-symptom-group">   
-                    {/* <MediaQuery query="(min-width: 1024px)">
-                        {this.renderAilmentsDesktop()}
-                    </MediaQuery> */}
+
                 </div>
             </div>
         )
