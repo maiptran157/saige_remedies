@@ -47,14 +47,13 @@
 .condition-detail-description {
     border-radius: 25px;
     background-color: white;
-    padding: 4%;
-    width: 85%;
+    padding: 3%;
 }
 
 .condition-detail-paragraph {
     font-size: 20px;
-    padding: 1%;
     width: 100%;
+    margin: 0;
 }
 
 .end-of-result-message {
@@ -105,4 +104,14 @@
         font-size: 30px;
     }
        
+}
+
+@media only screen and (min-width: 922px) {
+    .condition-detail-container {
+        display: flex;
+        justify-content: center;
+    }
+    .condition-detail-group {
+        width: 70%;
+    }
 }
