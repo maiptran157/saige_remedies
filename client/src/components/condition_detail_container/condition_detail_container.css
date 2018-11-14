@@ -1,60 +1,62 @@
 .condition-detail-container {
     top: 10%;
     width: 100%;
-    height: 90%;
     flex-wrap: wrap;
     overflow: scroll;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .condition-detail-group {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .remedy-results-container {
-    left: 0;
     width: 100%;
     align-items: center;
     flex-direction: column;
     display: flex;
-    justify-content: space-around;
-    text-align:center;
+    margin-top: 5%;
+    text-align: center;
 }
 
 .condition-detail-header {
-    font-size: 4.5vh;
-    width: 85%;
-    height: 15%;
+    font-size: 30px;
     display: flex;
-    align-items: center;
     color: white;
     justify-content: center;
     text-shadow: 0px 20px 20px black;
-    margin: 5px 0;
+    margin: 2% 0;
 }
 
 .remedy-result-total-message {
-    margin-top: 5%;
     font-size: 20px;
     color: white;
     width: 85%;
-    height: 15%;
 }
 
 .condition-detail-description {
     border-radius: 25px;
     background-color: white;
-    padding: 4%;
-    width: 85%;
+    padding: 3%;
+    height: 180px;
+}
+
+.show-more-description {
+    border-radius: 10px;
+    background-color: white;
+    padding: 2%;
+    height: auto;
 }
 
 .condition-detail-paragraph {
     font-size: 20px;
-    padding: 1%;
     width: 100%;
+    margin: 0;
 }
 
 .end-of-result-message {
@@ -78,7 +80,7 @@
 .remedy-name {
     width: 100%;
     padding: 2%;
-    font-size: 5vw;
+    font-size: 18px;
     color: black;
     white-space: nowrap;
 }
@@ -96,6 +98,30 @@
     width: 100%;
 }
 
+.show-more-btn {
+    position: absolute;
+    top: 80%;
+    left: 38%;
+}
+
+.center-show-more {
+    display: flex;
+    justify-content: center;   
+    height: 100px;
+    align-items: flex-end;
+}
+
+@media only screen and (min-width: 320px) {
+    .center-show-more {
+        height: 80px;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .center-show-more {
+        height: 100px;
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .remedy-result-total-message {
@@ -105,4 +131,20 @@
         font-size: 30px;
     }
        
+}
+
+@media only screen and (min-width: 922px) {
+    .condition-detail-container {
+        display: flex;
+        justify-content: center;
+    }
+    .condition-detail-group {
+        width: 70%;
+    }
+    .condition-detail-header {
+        font-size: 45px;
+    }
+    .remedy-results {
+        width: 50%;
+    }
 }

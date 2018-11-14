@@ -70,6 +70,29 @@
         margin: 0;
     }
     .hamburger-icon > img {
-        width: 80px;
+        width: 65px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .hamburger-icon {
+        display: none;
+    }
+    .hamburger-container {
+        display: none;
+    }
+    .web-menu {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        font-size: 20px;
+    }
+    li {
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
     }
 }
