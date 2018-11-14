@@ -144,4 +144,7 @@
     .condition-detail-header {
         font-size: 45px;
     }
+    .remedy-results {
+        width: 50%;
+    }
 }
