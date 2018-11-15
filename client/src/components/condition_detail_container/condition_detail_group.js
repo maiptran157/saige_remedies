@@ -15,31 +15,31 @@ class ConditionDetailGroup extends Component {
         const { description, caution, self_help } = this.props;
         if (self_help === "" && caution === "") {
             return (
-                <p className="condition-detail-paragraph">
+                <div className="condition-detail-paragraph">
                     {description}
-                </p>
+                </div>
             )
         } else if (self_help === "") {
             return (
-                <p className="condition-detail-paragraph">
+                <div className="condition-detail-paragraph">
                     {description}
                     <br />
                     <hr/>
                     <span style={style}>Caution:</span> {caution}
-                </p>
+                </div>
             )
         } else if (caution === "") {
             return (
-                <p className="condition-detail-paragraph">
+                <div className="condition-detail-paragraph">
                     {description}
                     <br />
                     <hr/>
                     <span style={style}>Self-help:</span> {self_help}
-                </p>
+                </div>
             )
         } else {
             return (
-                <p className="condition-detail-paragraph">
+                <div className="condition-detail-paragraph">
                     {description}
                     <br />
                     <hr/>
@@ -47,7 +47,7 @@ class ConditionDetailGroup extends Component {
                     <br />
                     <hr/>
                     <span style={style}>Caution:</span> {caution}
-                </p>
+                </div>
             )
         }
     }
@@ -73,14 +73,14 @@ class ConditionDetailGroup extends Component {
                 <div className= { this.state.showLess ? "condition-detail-description" : "show-more-description" } >
                     {this.state.showLess ?
                         <div>
-                            <p className="condition-detail-paragraph">{shortenedDescription}
+                            <div className="condition-detail-paragraph">{shortenedDescription}
                               <div className="center-show-more">
                                 <a className="" onClick={this.toggleMore} href="">Read More</a>
                               </div>  
-                            </p> 
+                            </div> 
                         </div> :  
                         <div>
-                            <p>{this.descriptionPresent()}</p>
+                            <div>{this.descriptionPresent()}</div>
                         </div>
                     }
 
