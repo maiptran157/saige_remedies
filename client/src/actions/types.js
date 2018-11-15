@@ -12,6 +12,7 @@ export default {
     GET_USER_SIGN_UP_INFO: 'get_user_sign_up_info',
     SIGN_UP_ERROR: 'sign_up_error',
     SIGN_IN_ERROR: 'sign_in_error',
+    SIGN_OUT: 'sign_out',
     CHECK_USER_LOG_IN_STATUS: 'check_user_log_in_status',
     SESSION_CHECK: 'session_check'
 };

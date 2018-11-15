@@ -82,7 +82,7 @@ export const userSearchTerm = (term) => async dispatch => {
 }
 
 export const userSignInInfo = (userInfo) => async dispatch => {
-    console.log("User info:", userInfo);
+    // console.log("User info:", userInfo);
     const dataToSend = formatPostData(userInfo);
 
     try {
@@ -153,5 +153,20 @@ export const getConditionsID = (id) => {
     return {
         type: types.GET_CONDITIONS_ID,
         payload: id
+    }
+}
+
+export const signOut = () => async dispatch => {
+    localStorage.removeItem('email');
+    localStorage.removeItem('firstName');
+    localStorage.removeItem('loggedin');
+    localStorage.removeItem('username');
+    try {
+        await axios.get(config.LOG_OUT_URL);
+        dispatch({
+            type: types.SIGN_OUT
+        })
+    } catch (error) {
+        console.log('Error Message:', error)
     }
 }
