@@ -86,8 +86,8 @@
     .web-menu {
         display: flex;
         width: 50%;
-        justify-content: space-evenly;
-        font-size: 20px;
+        justify-content: space-around;
+        font-size: 25px;
     }
     li {
         text-decoration: none;

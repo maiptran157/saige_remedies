@@ -75,7 +75,7 @@ class ConditionDetailGroup extends Component {
                         <div>
                             <p className="condition-detail-paragraph">{shortenedDescription}
                               <div className="center-show-more">
-                                <a className="" onClick={this.toggleMore} href="">Show more...</a>
+                                <a className="" onClick={this.toggleMore} href="">Read More</a>
                               </div>  
                             </p> 
                         </div> :  
