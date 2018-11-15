@@ -1,9 +1,9 @@
+import './menu.css';
 import React, { Component, Fragment } from 'react';
 import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
-import './menu.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import config from '../../config';
+import { connect } from 'react-redux';
+import { signOut } from '../../actions';
 
 const textStyle = {
     textDecoration: 'none',
@@ -36,37 +36,25 @@ class DropDownMenu extends Component {
         this.setState({ showMenu: false });
     }
 
-    async logOut() {
-        localStorage.removeItem('email');
-        localStorage.removeItem('firstName');
-        localStorage.removeItem('loggedin');
-        localStorage.removeItem('username');
-        try {
-            const response = await axios.get(config.LOG_OUT_URL);
-            console.log("response from server:", response)
-        } catch (error) {
-            console.log("Error Message:", error);
+    renderLinks() {
+        const { auth } = this.props;
+        const firstName = localStorage.getItem('firstName');
+        if (auth) {
+            return (<Fragment>
+                <ul>
+                    <hr />
+                    <li>Welcome {firstName}</li>
+                    <hr />
+                    <li><Link style={textStyle} to="/">Home</Link></li>
+                    <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
+                    <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
+                    <li><span onClick={this.props.signOut} style={textStyle} >Sign Out</span></li>
+                </ul>
+            </Fragment>
+            )
         }
-    }
-
-    render() {
-        const displayMenuList = () => {
-            const loggedIn = localStorage.getItem('loggedin');
-            const firstName = localStorage.getItem('firstName');
-            if (loggedIn && firstName) {
-                return <Fragment>
-                    <ul>
-                        <hr />
-                        <li>Welcome {firstName}</li>
-                        <hr />
-                        <li><Link style={textStyle} to="/">Home</Link></li>
-                        <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
-                        <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                        <li><span onClick={this.logOut} style={textStyle} >Sign Out</span></li>
-                    </ul>
-                </Fragment>
-            }
-            return <Fragment>
+        return (
+            <Fragment>
                 <ul>
                     <hr />
                     <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
@@ -77,7 +65,10 @@ class DropDownMenu extends Component {
                     <li><Link style={textStyle} to="/sign-up">Sign Up</Link></li>
                 </ul>
             </Fragment>
-        }
+        );
+    }
+
+    render() {
         return (
             <div className="hamburger-container">
                 <div className="hamburger-icon" onClick={this.showMenu}>
@@ -88,11 +79,19 @@ class DropDownMenu extends Component {
                         this.DropDownMenu = element;
                     }}>
                     <div className="close-symbol" onClick={this.closeMenu}>X</div>
-                    {displayMenuList()}
+                    {this.renderLinks()}
                 </div>
             </div>
         );
     }
 }
 
-export default DropDownMenu;
+function mapStateToProps(state) {
+    return {
+        auth: state.user.auth
+    }
+}
+
+export default connect(mapStateToProps, {
+    signOut: signOut
+})(DropDownMenu);
