@@ -39,7 +39,7 @@ class DropDownMenu extends Component {
     renderLinks() {
         const { auth } = this.props;
         const firstName = localStorage.getItem('firstName');
-        if (auth) {
+        if (auth && firstName) {
             return (<Fragment>
                 <ul>
                     <hr />

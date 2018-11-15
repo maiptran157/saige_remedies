@@ -33,11 +33,12 @@ class ConditionsContainer extends Component {
         const { symptoms, symptom_group } = this.props.conditions;
         const { categoryId } = this.props.match.params;
 
-        if (!symptoms) {
-            return null;
-        }
+        // if (!symptoms) {
+        //     return null;
+        // }
 
         const ailments = () => {
+            console.log("Condition props:", this.props)
             if (this.props.conditions.Errors) {
                 return <h2 style={style}>
                     We apologize for the inconvenience.

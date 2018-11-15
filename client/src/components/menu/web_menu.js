@@ -14,7 +14,7 @@ class WebMenu extends Component {
     renderLinks() {
         const { auth } = this.props;
         const firstName = localStorage.getItem('firstName');
-        if (auth) {
+        if (auth && firstName) {
             return (
                 <Fragment>
                     <li style={textStyle}>Welcome {firstName}</li>

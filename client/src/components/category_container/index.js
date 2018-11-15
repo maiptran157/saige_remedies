@@ -7,7 +7,7 @@ export default props => {
     return (
         <div className="category-box">
             <Link to={`/conditions/${props.id}`} className="category-img">
-                <img src={props.img} alt="" />
+                <img src={props.img} alt="category image" />
             </Link>
             <div className="category-name">{props.name}</div>
         </div>
