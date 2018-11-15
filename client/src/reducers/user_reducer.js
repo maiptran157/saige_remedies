@@ -4,6 +4,7 @@ const DEFAULT_STATE = {
     auth: false,
     signInError: '',
     signUpError: '',
+    signUpCheckMessage: ''
 };
 
 export default (state = DEFAULT_STATE, action) => {
@@ -18,6 +19,10 @@ export default (state = DEFAULT_STATE, action) => {
             return { ...state, auth: false, signInError: action.error }
         case types.SIGN_UP_ERROR:
             return { ...state, auth: false, signUpError: action.error }
+        case types.CHECK_USER_SIGN_UP_INFO_SUCCESS:
+            return { ...state, signUpCheckMessage: action.payload };
+        case types.CHECK_USER_SIGN_UP_INFO_FAIL:
+            return { ...state, signUpCheckMessage: action.error };
         default:
             return state;
     }

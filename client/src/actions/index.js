@@ -82,7 +82,6 @@ export const userSearchTerm = (term) => async dispatch => {
 }
 
 export const userSignInInfo = (userInfo) => async dispatch => {
-    // console.log("User info:", userInfo);
     const dataToSend = formatPostData(userInfo);
 
     try {
@@ -122,15 +121,32 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
 }
 
 export const checkUserLoginStatus = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData({ userData: userInfo });
+    const dataToSend = formatPostData(userInfo);
     try {
         const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS, dataToSend);
         dispatch({
             type: types.CHECK_USER_LOG_IN_STATUS,
-            payload: response.success
+            payload: response
         })
     } catch (error) {
         console.log('Error Message:', error.message);
+    }
+}
+
+export const userSignUpCheck = (userInfo) => async dispatch => {
+    const dataToSend = formatPostData(userInfo);
+    console.log("data to send from userSignUpCheck:", dataToSend)
+    try {
+        const response = await axios.post(config.CHECK_USER_SIGN_UP_URL, dataToSend);
+        dispatch({
+            type: types.CHECK_USER_SIGN_UP_INFO_SUCCESS,
+            payload: response.data
+        })
+    } catch (error) {
+        dispatch({
+            type: types.CHECK_USER_SIGN_UP_INFO_FAIL,
+            error: 'Error trying to check user sign up information'
+        })
     }
 }
 
@@ -138,7 +154,7 @@ export const getSymptom = (userInput) => async dispatch => {
     try {
 
         const response = await axios.post(`${config.INFERMEDICA_URL}`, { prediction: { userInput } });
-        console.log("response in asctions", response);
+        console.log("response in actions", response);
         dispatch({
             type: types.GET_SYMPTOM,
             payload: response,

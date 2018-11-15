@@ -5,7 +5,7 @@ import config from '../../config/index';
 
 class AgreementModal extends Component {
     state = {
-        isOpen: true
+        isOpen: false
     };
 
     openModal = () => this.setState({ isOpen: true });
