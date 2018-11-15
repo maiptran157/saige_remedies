@@ -156,17 +156,14 @@ export const getConditionsID = (id) => {
     }
 }
 
-export const signOut = () => async dispatch => {
+export const signOut = () => {
     localStorage.removeItem('email');
     localStorage.removeItem('firstName');
     localStorage.removeItem('loggedin');
     localStorage.removeItem('username');
-    try {
-        await axios.get(config.LOG_OUT_URL);
-        dispatch({
-            type: types.SIGN_OUT
-        })
-    } catch (error) {
-        console.log('Error Message:', error)
-    }
+    localStorage.removeItem('redirectUrl');
+    localStorage.removeItem('userAgreement');
+    axios.get(config.LOG_OUT_URL);
+    axios.get(`${config.ENABLE_MODAL}`);
+    return { type: types.SIGN_OUT }
 }

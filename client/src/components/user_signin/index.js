@@ -28,7 +28,7 @@ class SignIn extends Component {
                 return this.props.history.push(url);
             } else if (loggedin) {
                 return <div className="sign-in-success-message">
-                    You have signed in
+                    You have signed in successfully
                     {goBackHome()}
                 </div>
             } else if (!this.props.auth && this.props.submitSucceeded) {

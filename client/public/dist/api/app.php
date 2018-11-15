@@ -23,6 +23,9 @@ switch($request){
     case 'modal_check':
         require_once('modal_check.php');
         break;
+    case 'enable_modal':
+        require_once('enable_modal.php');
+        break;   
     case 'remedy_detail':
         require_once('remedy_detail.php');
         break;
