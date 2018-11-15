@@ -97,7 +97,10 @@ export const userSignInInfo = (userInfo) => async dispatch => {
         })
 
     } catch (error) {
-        console.log('Error Message:', error.message);
+        dispatch({
+            type: types.SIGN_IN_ERROR,
+            error: 'Error signing in'
+        })
     }
 }
 
@@ -111,7 +114,10 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
             payload: response.data.message,
         })
     } catch (error) {
-        console.log('Error Message:', error.message);
+        dispatch({
+            type: types.SIGN_UP_ERROR,
+            error: 'Error signing up'
+        })
     }
 }
 

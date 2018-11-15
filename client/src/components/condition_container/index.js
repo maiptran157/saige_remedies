@@ -7,7 +7,6 @@ import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
 
-
 class ConditionsContainer extends Component {
     componentDidMount() {
         const { categoryId } = this.props.match.params;
@@ -17,8 +16,8 @@ class ConditionsContainer extends Component {
     renderAilmentsDesktop() {
         const { symptoms } = this.props.conditions;
 
-        return symptoms.map( (symptom) => {
-            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name}/>
+        return symptoms.map((symptom) => {
+            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name} />
         });
     }
 
@@ -62,9 +61,6 @@ class ConditionsContainer extends Component {
                 <div className="symptom-group">
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
-                </div>
-                <div className="desktop-symptom-group">   
-
                 </div>
             </div>
         )
