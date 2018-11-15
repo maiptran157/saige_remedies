@@ -62,7 +62,7 @@ class DropDownMenu extends Component {
                         <li><Link style={textStyle} to="/">Home</Link></li>
                         <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                         <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                        <li><span onClick={this.logOut} style={textStyle} >Log Out</span></li>
+                        <li><span onClick={this.logOut} style={textStyle} >Sign Out</span></li>
                     </ul>
                 </Fragment>
             }
