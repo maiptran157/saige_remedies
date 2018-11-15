@@ -28,6 +28,27 @@ class SignUp extends Component {
                     {goBackHome()}
                 </div>
             </div>
+        } else if (!this.props.auth && this.props.submitSucceeded) {
+            return (
+                <div className="sign-up-container">
+                    <Header logo={saigeLogo} buttonType="back-button" />
+                    <div className="sign-up-section">
+                        <h3 className="sign-up-fail-message">There was a problem trying to create your account. Please try again.</h3>
+                        <h3 className="sign-up-header">Create your Saige account</h3>
+                        <form onSubmit={handleSubmit(this.userSignUp)}>
+                            <Field name="firstName" label="First name" component={renderInput} type="text" />
+                            <Field name="lastName" label="Last name" component={renderInput} type="text" />
+                            <Field name="username" label="Username" component={renderInput} type="text" />
+                            <Field name="email" label="Email" component={renderInput} type="text" />
+                            <Field name="password" label="Password" component={renderInput} type="password" />
+                            <Field name="confirmPassword" label="Re-enter your password" component={renderInput} type="password" />
+                            <button className="sign-up-btn">Sign Up</button>
+                            <div className="sign-in-option"> Already have an account? <Link className="sign-in-link" to="/sign-in">Sign In</Link></div>
+                            <p className="auth-error-text">{authError}</p>
+                        </form>
+                    </div>
+                </div>
+            )
         }
 
         return (
@@ -86,6 +107,7 @@ SignUp = reduxForm({
 
 function mapStateToProps(state) {
     return {
+        auth: state.user.auth,
         authError: state.user.signUpError
     }
 }

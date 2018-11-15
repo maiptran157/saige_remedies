@@ -13,6 +13,12 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sign-in-option + p {
+    display: none;
 }
 
 .sign-up-success-message{
@@ -24,6 +30,19 @@
     display: flex;
     align-items: center;
     font-size: 5vh;
+    color: white;
+}
+
+.sign-up-fail-message{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    height: 10%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
 }
 
@@ -42,9 +61,10 @@ form {
 }
 
 .sign-up-btn {
+    margin-top: 3%;
     width: 83vw;
     background-color: white;
-    height: 6vh;
+    height: 40px;
     border-radius: 12px;
     font-size: 1.2rem;
     color: gray
@@ -61,6 +81,7 @@ form {
 
 .auth-error-text {
     color: darkred;
+    margin: 0;
 }
 
 @media only screen and (min-width: 320px) {
@@ -69,53 +90,29 @@ form {
 
 
 @media only screen and (min-width: 411px) {
-    
+    .input-container {
+        width: 70vw;
+    }
+    .input-field{
+        width: 70vw;
+        margin-bottom: 1%;
+        font-size: 1.4rem;
+    }
+    .sign-up-btn {
+        width: 70vw;
+    }
 }
 
 @media only screen and (min-width: 769px) {
-    /* .sign-up-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
+    .input-container {
+        width: 50vw;
     }
-    
-    .sign-up-section {
-        top: 0%;
-        left: 20%;
-        position: relative;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .input-field{
+        width: 50vw;
+        margin-bottom: 1%;
+        font-size: 1.4rem;
     }
-    
-    .sign-up-header {
-        width: 100%;
-        margin-bottom: 10px;
-        text-align: center;
+    .sign-up-btn {
+        width: 50vw;
     }
-    
-    form {
-        width: 100%;
-        display: flex; 
-        align-items: center;
-        flex-direction: column;
-        height: 800px;
-        font-size: 2vh;
-    }
-    
-    button {
-        width: 40%;
-        background-color: white;
-        height: 40px;
-        margin-top: 3.5%;
-    }
-    
-    .auth-error-text {
-        color: darkred;
-    }
-     */
-    
 }

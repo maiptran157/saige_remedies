@@ -38,6 +38,7 @@
 }
 
 .hamburger-modal > ul > li {
+    width: 110px;
     list-style-type: none;
     padding: 10% 0;
 }

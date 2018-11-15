@@ -4,6 +4,14 @@
     overflow-x: hidden;
 }
 
+.remedy-detail-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.remedy-detail-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
 .remedy-detail-group {
     width: 360px;
     display: flex;
