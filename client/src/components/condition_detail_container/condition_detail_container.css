@@ -49,7 +49,7 @@
 .show-more-description {
     border-radius: 25px;
     background-color: white;
-    padding: 2%;
+    padding: 3%;
     height: auto;
 }
 
@@ -123,12 +123,21 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .remedy-name {
+        font-size: 30px;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .remedy-result-total-message {
         font-size: 40px;
     }
     .condition-detail-paragraph {
         font-size: 30px;
+    }
+    .remedy-name {
+        font-size: 35px;
     }
        
 }
@@ -139,18 +148,24 @@
         justify-content: center;
     }
     .condition-detail-group {
-        width: 70%;
+        width: 800px;
     }
     .condition-detail-header {
         font-size: 45px;
     }
     .remedy-results {
-        width: 80%;
+        width: 750px;
     }
     .remedy-name {
         font-size: 40px;
     }
     .end-of-result-message {
         font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .condition-detail-group {
+        width: 1000px;
     }
 }
