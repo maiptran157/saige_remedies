@@ -13,7 +13,7 @@ $output = [];
 
 if($result){
     $numRows = mysqli_num_rows($result);
-    if($numRows < 1){
+    if($numRows >= 1){
         $output['userExists'] = true;
     } else{
         $output['userExists'] = false;

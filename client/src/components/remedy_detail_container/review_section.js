@@ -48,7 +48,7 @@ class ReviewList extends Component {
 
 
     validateUserLogInAndAddReview = async (value) => {
-        console.log("auth for validateUserLogIn:", this.props.auth);
+        // console.log("auth for validateUserLogIn:", this.props.auth);
         if (this.props.auth === false) {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
@@ -100,7 +100,7 @@ class ReviewList extends Component {
                 rating += parseInt(reviewList[i].rating);
             }
             let starAverage = Math.floor(rating / reviewList.length)
-            console.log("Rating:", rating)
+            // console.log("Rating:", rating)
             // console.log("Review List Length:", reviewList.length)
             // console.log("Star Average:", starAverage)
             return (
@@ -151,7 +151,7 @@ function validate(values) {
     const { review } = values;
     const errors = {};
     const loggedIn = localStorage.getItem('loggedin');
-    console.log("loggedIn:", loggedIn)
+    // console.log("loggedIn:", loggedIn)
     if (!review) {
         errors.review = 'Cannot submit an empty review';
     } else if (!loggedIn) {
