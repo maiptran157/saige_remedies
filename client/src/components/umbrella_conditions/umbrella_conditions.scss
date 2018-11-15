@@ -1,17 +1,18 @@
 .categories-container {
-    top: 13%;
+    top: 12%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     height: 90%;
     position: relative;
+    // overflow: scroll;
         .categories-content {
             padding: 2%;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            }
+        }
 }
 
 @media only screen and (min-width: 320px) {
@@ -27,7 +28,7 @@
     .categories-container {
         justify-content: center;
         .categories-content {
-            width: 80%;
+            width: 60%;
         }
     }
 }
