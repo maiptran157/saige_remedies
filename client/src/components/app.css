@@ -4,6 +4,8 @@ body {
     overflow: hidden;
     cursor: pointer;
     font-size: 16px;
+    min-width: 320px;
+    min-height: 568px;
 }
 
 .container {

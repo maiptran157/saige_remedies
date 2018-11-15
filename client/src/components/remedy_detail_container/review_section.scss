@@ -76,15 +76,14 @@
                     input:-ms-input-placeholder {  
                     color: gray !important;  
                     }
- 
-                    .review-area {
-                        border-style: none;
-                        background: none;
-                        width: 59vw;
-                        height: 50px;
-                        font-size: 2.5vh;
-                    }
-
+                }
+                .review-area {
+                    border-style: none;
+                    background: none;
+                    border: none;
+                    width: 59vw;
+                    height: 50px;
+                    font-size: 2.5vh;
                 }
                     button {
                         width: 11vw;
@@ -207,7 +206,10 @@
 
 @media only screen and (min-width: 411px) {
     .single-review {
-        width: 86vw;
+        width: 92vw;
+        margin-left: 4%;
+        padding: 3%;
+        box-sizing: border-box;
     }
 }
 
@@ -230,20 +232,26 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .review-header div {
+    .review-header {
+        margin-left: 17%;
+        div {
         font-size: 3vh;
+        }
     }
     .reviews-container {
+        align-items: center;
         form {
             .review {
+                width: 600px;
                 .input-and-button {
-                    margin-top:-4%;
+                    width: 600px;
                     height: 10vh;
                     .review-area {
-                        width: 75vw;
+                        width: 520px;
                     }
                     button {
-                        width: 9vw;
+                        width: 51px;
+                        height: 48px;
                     }
                 }
                 .error-text {
@@ -253,7 +261,48 @@
         }
     }
     .single-review {
-        width: 89vw;
-        margin-left: 3.5%;
+        width: 600px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5%;
+        box-sizing: border-box;
     }   
+}
+
+@media only screen and (min-width: 1024px) {
+    .review-header {
+        margin-left: 17%;
+        div {
+        font-size: 3vh;
+        }
+    }
+    .reviews-container {
+        align-items: center;
+        form {
+            .review {
+                width: 800px;
+                .input-and-button {
+                    width: 800px;
+                    height: 10vh;
+                    .review-area {
+                        width: 620px;
+                    }
+                    button {
+                        width: 51px;
+                        height: 48px;
+                    }
+                }
+                .error-text {
+                    margin-top: 1%;
+                }
+            }
+        }
+    }
+    .single-review {
+        width: 800px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5%;
+        box-sizing: border-box;
+    }  
 }

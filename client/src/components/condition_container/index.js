@@ -62,16 +62,6 @@ class ConditionsContainer extends Component {
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
                 </div>
-<<<<<<< HEAD
-                <div className="desktop-symptom-group">
-                    {/* <MediaQuery query="(min-width: 1024px)">
-                        {this.renderAilmentsDesktop()}
-                    </MediaQuery> */}
-=======
-                <div className="desktop-symptom-group">   
-
->>>>>>> 413d61229b97a35cf1fb76293bd4a87899c40612
-                </div>
             </div>
         )
     }
