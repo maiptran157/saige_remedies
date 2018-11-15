@@ -1,6 +1,6 @@
+import './menu.css';
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './menu.css';
 import { connect } from 'react-redux';
 import { signOut } from '../../actions';
 
