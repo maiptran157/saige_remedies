@@ -43,11 +43,11 @@
     border-radius: 25px;
     background-color: white;
     padding: 3%;
-    height: 180px;
+    height: 105px;
 }
 
 .show-more-description {
-    border-radius: 10px;
+    border-radius: 25px;
     background-color: white;
     padding: 2%;
     height: auto;
@@ -107,19 +107,19 @@
 .center-show-more {
     display: flex;
     justify-content: center;   
-    height: 100px;
+    height: 50px;
     align-items: flex-end;
 }
 
 @media only screen and (min-width: 320px) {
     .center-show-more {
-        height: 80px;
+        height: 15px;
     }
 }
 
 @media only screen and (min-width: 360px) {
     .center-show-more {
-        height: 100px;
+        height: 40px;
     }
 }
 
@@ -145,6 +145,12 @@
         font-size: 45px;
     }
     .remedy-results {
-        width: 50%;
+        width: 80%;
+    }
+    .remedy-name {
+        font-size: 40px;
+    }
+    .end-of-result-message {
+        font-size: 50px;
     }
 }

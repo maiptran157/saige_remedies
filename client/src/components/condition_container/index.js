@@ -63,9 +63,6 @@ class ConditionsContainer extends Component {
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
                 </div>
-                <div className="desktop-symptom-group">   
-
-                </div>
             </div>
         )
     }
