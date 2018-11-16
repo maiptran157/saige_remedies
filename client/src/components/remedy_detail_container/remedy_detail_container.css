@@ -21,8 +21,7 @@
 
 .remedy-reviews-container {
     width: 100%;
-    /* margin: 5% 4%; */
-    /* padding: 1%; */
+    height: -webkit-fill-available;
 }
 
 .remedy-detail-header {
