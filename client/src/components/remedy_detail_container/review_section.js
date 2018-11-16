@@ -100,9 +100,6 @@ class ReviewList extends Component {
                 rating += parseInt(reviewList[i].rating);
             }
             let starAverage = Math.floor(rating / reviewList.length)
-            // console.log("Rating:", rating)
-            // console.log("Review List Length:", reviewList.length)
-            // console.log("Star Average:", starAverage)
             return (
                 <div className="star-rating-total">
                     <StarRatingComponent
@@ -151,7 +148,6 @@ function validate(values) {
     const { review } = values;
     const errors = {};
     const loggedIn = localStorage.getItem('loggedin');
-    // console.log("loggedIn:", loggedIn)
     if (!review) {
         errors.review = 'Cannot submit an empty review';
     } else if (!loggedIn) {

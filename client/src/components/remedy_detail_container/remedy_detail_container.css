@@ -101,7 +101,6 @@
         width: 100vw;
     }
     .remedy-reviews-container{
-        margin-left: 2%;
         width: 100vw;
     }
 }
@@ -164,6 +163,21 @@
     }
     .remedy-detail-description {
         width: 800px;
+    }
+    .remedy-reviews-container {
+        top: 6vh;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1387px) {
+    .remedy-detail-group {
+        width: 100vw;
+        position: relative;
+        top: 2vh;
+    }
+    .remedy-detail-description {
+        width: 1000px;
     }
     .remedy-reviews-container {
         top: 6vh;

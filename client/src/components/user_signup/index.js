@@ -83,16 +83,21 @@ class SignUp extends Component {
 
 const validate = values => {
     const { firstName, lastName, username, email, password, confirmPassword } = values;
-    // console.log(values);
     const errors = {};
     if (!firstName) {
         errors.firstName = "Please enter your first name.";
+    } else if (firstName.length > 10) {
+        errors.firstName = "First name cannot be longer than 10 characters";
     }
     if (!lastName) {
         errors.lastName = "Please enter your last name.";
+    } else if (lastName.length > 10) {
+        errors.firstName = "Last name cannot be longer than 10 characters";
     }
     if (!username) {
         errors.username = "Please choose your username";
+    } else if (/[#$%*&@!'"]/gm.test(username)) {
+        errors.username = "Username cannot include these special characters";
     }
     if (!email) {
         errors.email = "Please enter your email";

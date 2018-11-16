@@ -1,5 +1,4 @@
 .review-header{
-    margin-left: 6%;
     display: flex;
     align-items: center;
     color: white;
@@ -132,9 +131,8 @@
 
 @media only screen and (min-width: 320px) {
     .review-header {
-        div {
             font-size: 3vh;
-        }
+            margin-left: 9%;
     }
     .reviews-container {
         form {
@@ -219,10 +217,8 @@
 
 @media only screen and (min-width: 768px) {
     .review-header {
-        margin-left: 17%;
-        div {
+        margin-left: 20%;
         font-size: 3vh;
-        }
     }
     .reviews-container {
         align-items: center;
@@ -255,9 +251,31 @@
     }   
 }
 
+@media only screen and (min-width: 878px) {
+    .review-header {
+        margin-left: 22%;
+    }
+    .reviews-container {
+        form {
+            .review {
+                .input-and-button {
+                    .review-area {
+                    }
+                    button {
+                    }
+                }
+                .error-text {
+                }
+            }
+        }
+    }
+    .single-review {
+    }   
+}
+
 @media only screen and (min-width: 1024px) {
     .review-header {
-        margin-left: 23.5vw;
+        margin-left: 16%;
         div {
         font-size: 3vh;
         }
@@ -272,11 +290,11 @@
                     width: 800px;
                     height: 10vh;
                     .review-area {
-                        width: 620px;
+                        width: 685px;
                     }
                     button {
-                        width: 51px;
-                        height: 48px;
+                        width: 65px;
+                        height: 65px;
                     }
                 }
                 .error-text {
@@ -287,9 +305,37 @@
     }
     .single-review {
         width: 800px;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 5%;
-        box-sizing: border-box;
+    }  
+}
+
+@media only screen and (min-width: 1387px) {
+    .review-header {
+        margin-left: 27%;
+    }
+    .reviews-container {
+        align-items: center;
+        form {
+            .review {
+                width: 1000px;
+                height: 30vh;
+                .input-and-button {
+                    width: 1000px;
+                    height: 10vh;
+                    .review-area {
+                        width: 895px;
+                    }
+                    button {
+                        width: 80px;
+                        height: 78px;
+                    }
+                }
+                .error-text {
+                    margin-top: 1%;
+                }
+            }
+        }
+    }
+    .single-review {
+        width: 1000px;
     }  
 }
