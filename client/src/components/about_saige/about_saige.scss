@@ -9,7 +9,8 @@
     left: 10%;
     width: 80%;
     color: white;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     h1 {
         span {
             img {
@@ -50,13 +51,9 @@
         display: flex;
         flex-wrap: wrap;
     .about-saige {
-        position: relative;
-        top: 0%;
-        left: 25%;
-        width: 70%;
-        color: white;
-        overflow: scroll;
+        width: 80%;
         h1 {
+            font-size: 2.5em;
             span {
                 img {
                     width: 45px;
@@ -65,19 +62,28 @@
                 }
             }
         p {
-            font-size: 20px;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 2em;
         }
         .tech-used {
             .front-end-tech {
+                h3{
+                    font-size: 1.7em;
+                }
                 img {
-                    width: 45px;
-                    height: 45px;
+                    width: 70px;
+                    height: 70px;
                     }
                 }
             .back-end-tech {
+                h3{
+                    font-size: 1.7em;
+                }
                 img {
-                    width: 45px;
-                    height: 45px;
+                    width: 70px;
+                    height: 70px;
                     }
                  }
             }
