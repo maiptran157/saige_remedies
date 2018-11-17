@@ -11,7 +11,7 @@ if($result){
         while($symptomName = mysqli_fetch_assoc($result)['name']){
             $soundex = soundex($symptomName);
             $soundexQuery = "UPDATE symptom SET soundex_value = '$soundex' WHERE name = '$symptomName'";
-            // mysqli_query($conn, $soundexQuery);
+            mysqli_query($conn, $soundexQuery);
         }
     }
 }
