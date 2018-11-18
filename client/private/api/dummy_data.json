@@ -1,209 +1,247 @@
 [{
 	"Name": "Allergy",
-	"Category": "Allergies",
+	"Category": "Allergy",
 	"Description": "Allergies often develop when the body's immune system overreacts to an external irritant such as pollen, insect stings, and certain plants, or internal substances such as chemicals and foods. The allergens trigger a reaction in those who have a built-in or natural sensitivity.",
 	"Treatment": [{
-		"Herb": ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
-		"Remedy": "Make a nettle infusion. Take's 1.66 to 2.33 cups (450 to 600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 1.25 cups (300 ml) of water and take daily for 3 months at a time."
-	}, {
-		"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
-		"Remedy": "Make a decoction from the herb and take 1.25 cups (300 ml) a day."
-	}]
-}, {
+			"Herb": ["Nettle (Urtica dioica)", "Elderflower (Sambucus nigra)"],
+			"Remedy": "Make a nettle infusion. Take's 1.66 to 2.33 cups (450 to 600 ml) a day for 3 months at a time. Alternatively, make an infusion with 1 tsp of each herb to 1.25 cups (300 ml) of water and take daily for 3 months at a time."
+		},
+		{
+			"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
+			"Remedy": "Make a decoction from the herb and take 1.25 cups (300 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Hay Fever",
-	"Category": "Allergies",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+	"Category": "Allergy",
+	"Description": "an allergy caused by pollen or dust in which the mucous membranes of the eyes and nose are itchy and inflamed, causing a runny nose and watery eyes.",
 	"Treatment": [{
 		"Herb": ["Elderflower (Sambucus nigra)"],
 		"Remedy": "Make an infusion and take 1.25 to 1.66 cups (300 to 450 ml) a day. Take for a few months before, as well as during, the hay fever season.."
 	}]
-}, {
+},
+{
 	"Name": "Eczema",
-	"Category": "Allergies",
+	"Category": "Allergy",
 	"Description": "Characterized by red, inflamed skin, eczema causes irritation, flaking, scaling, and tiny blisters. Although it is often the result of an allergic reaction to certain substances, eczema can also be inherited, result from prolonged contact with an irritant, or it may simply appear for an unknown reason. It is best to consult a professional practitioner as eczema is difficult to self-treat. However, the following remedies, taken for at least a week, can bring relief. Two remedies may be used at once. Chickweed reduces soreness or itchiness, and oats can be used to impart a soothing, emollient effect to bathwater. See also Skin Rashes.",
 	"Caution": "If there is no improvement, or if the condition deteriorates, consult a professional practitioner.",
 	"Treatment": [{
-		"Herb": ["Peppermint (Mentha x piperita)", "Chickweed (Stellaria media)"],
-		"Remedy": "Make peppermint lotion by infusing 1 tsp of herb to .75 cup (150 ml) of water. Leave for 10 minutes, then strain and cool. Use to wash gently over the affected skin 2 to 3 times a day.",
-		"Option": "Add 2 drops of peppermint oil to 1 tsp of any of the chickweed preparations."
-	}, {
-		"Herb": ["Gotu kola (Centella asiatica)"],
-		"Remedy": "Dust the affected area with powder 2 to 3 times a day. Alternatively, mix the powder with enough water to make a thick paste and spread over the affected area 1 to 2 times a day."
-	}]
-}, {
+			"Herb": ["Peppermint (Mentha x piperita)", "Chickweed (Stellaria media)"],
+			"Remedy": "Make peppermint lotion by infusing 1 tsp of herb to .75 cup (150 ml) of water. Leave for 10 minutes, then strain and cool. Use to wash gently over the affected skin 2 to 3 times a day.",
+			"Option": "Add 2 drops of peppermint oil to 1 tsp of any of the chickweed preparations."
+		},
+		{
+			"Herb": ["Gotu kola (Centella asiatica)"],
+			"Remedy": "Dust the affected area with powder 2 to 3 times a day. Alternatively, mix the powder with enough water to make a thick paste and spread over the affected area 1 to 2 times a day."
+		}
+	]
+},
+{
 	"Name": "Wheezing",
-	"Category": "Allergies",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+	"Category": "Allergy",
+	"Description": "A person’s breathe with a whistling or rattling sound in the chest, as a result of obstruction in the air passages.",
 	"Treatment": [{
-		"Herb": ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
-		"Remedy": "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
-	}, {
-		"Herb": ["German chamomile (Chamomilla recutita)"],
-		"Remedy": "Make an infusion with 2 heaping tsp of the herb to .75 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
-		"Option": "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
-	}, {
-		"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
-		"Remedy": "Make a decoction and take up to 1.25 cups (300 ml) a day."
-	}]
-}, {
+			"Herb": ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
+			"Remedy": "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
+		},
+		{
+			"Herb": ["German chamomile (Chamomilla recutita)"],
+			"Remedy": "Make an infusion with 2 heaping tsp of the herb to .75 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
+			"Option": "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
+		},
+		{
+			"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
+			"Remedy": "Make a decoction and take up to 1.25 cups (300 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Shortness of Breath",
-	"Category": "Allergies",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+	"Category": "Allergy",
+	"Description": "Difficulty in breathing. Medically referred to as dyspnea. Shortness of breath can be caused by respiratory (breathing passages and lungs) or circulatory (heart and blood vessels) conditions and other conditions such as severe anemia or high fever.",
 	"Treatment": [{
-		"Herb": ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
-		"Remedy": "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
-	}, {
-		"Herb": ["German chamomile (Chamomilla recutita)"],
-		"Remedy": "Make an infusion with 2 heaping tsp of the herb to .75 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
-		"Option": "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
-	}, {
-		"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
-		"Remedy": "Make a decoction and take up to 1.25 cups (300 ml) a day."
-	}]
-}, {
+			"Herb": ["Nettle (Urtica dioica)", "Thyme (Thymus vulgaris)"],
+			"Remedy": "Make an infusion using 15 g of each herb to 3 cups of water and drink throughout the day."
+		},
+		{
+			"Herb": ["German chamomile (Chamomilla recutita)"],
+			"Remedy": "Make an infusion with 2 heaping tsp of the herb to .75 cup (150 ml) of water and leave to stand for 10 minutes in a covered saucepan. Remove the lid, inhale the steam, and strain and drink the tea.",
+			"Option": "Use the essential oil in a steam inhalation, or inhale 2 drops of undiluted oil placed on a handkerchief."
+		},
+		{
+			"Herb": ["Baical skullcap (Scutellaria baicalensis)"],
+			"Remedy": "Make a decoction and take up to 1.25 cups (300 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Breathing Difficulty",
-	"Category": "Allergies",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+	"Category": "Allergy",
+	"Description": "Shortness of breath: Difficulty in breathing. Medically referred to as dyspnea. Shortness of breath can be caused by respiratory (breathing passages and lungs) or circulatory (heart and blood vessels) conditions and other conditions such as severe anemia or high fever.",
 	"Treatment": [{
 		"Herb": ["Cramp Bark (Viburnum opulus)"],
 		"Remedy": "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
 	}]
-}, {
-	"Name": "Tight Chest",
-	"Category": "Allergies",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-	"Treatment": [{
-		"Herb": ["Cramp bark (Viburnum opulus)"],
-		"Remedy": "Take 1 tsp of tincture with water up to 8 times a day for 3 days, then reduce the dose to a maximum of 1 tsp 3 times a day for 7 days."
-	}]
-}, {
+},
+{
 	"Name": "Anemia",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "There are several types of anemia. Iron deficiency anemia, caused by blood loss from a wound or menstrual bleeding, can be countered with herbs. Bitter herbs, such as gentian, improve the absorption of nutrients, and nettle contains plenty of iron. Increase your intake of other green herbs that contain iron.",
 	"Caution": "Seek professional advice to determine the type of anemia you have before home treatment.",
 	"Treatment": [{
-		"Herb": ["Gentian (Gentiana lutea)", "Wormwood (Artemisia absinthium)"],
-		"Remedy": "Take 2 to 5 drops of either tincture with water, half an hour before meals.",
-		"Caution": "Do not take wormwood during pregnancy."
-	}, {
-		"Herb": ["Chiretta (Swertia chirata)"],
-		"Remedy": "Take 5 to 10 drops of tincture with water 3 times a day before meals."
-	}]
-}, {
+			"Herb": ["Gentian (Gentiana lutea)", "Wormwood (Artemisia absinthium)"],
+			"Remedy": "Take 2 to 5 drops of either tincture with water, half an hour before meals.",
+			"Caution": "Do not take wormwood during pregnancy."
+		},
+		{
+			"Herb": ["Chiretta (Swertia chirata)"],
+			"Remedy": "Take 5 to 10 drops of tincture with water 3 times a day before meals."
+		}
+	]
+},
+{
 	"Name": "High Blood Pressure",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
 	"Caution": "Seek professional advice, especially if already taking medication for a circulatory condition.",
 	"Treatment": [{
-		"Herb": ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
-		"Remedy": "Take a garlic tablet or eat 1 to 2 fresh garlic cloves each day. Drink .5 cup (125 ml) of beetroot or pomegranate juice once a day.",
-		"Note": "These are most effective when used to support a healthy circulation and prevent illness."
-	}, {
-		"Herb": ["Ginkgo (Ginkgo biloba)"],
-		"Remedy": "Take tablets or .5 tsp of fluid extract with water twice a day for approximately 2 to 3 months at a time."
-	}, {
-		"Herb": ["Ginger (Zingiber officinale)"],
-		"Remedy": "Grate 1 tsp of fresh ginger into your food each day."
-	}]
-}, {
+			"Herb": ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
+			"Remedy": "Take a garlic tablet or eat 1 to 2 fresh garlic cloves each day. Drink .5 cup (125 ml) of beetroot or pomegranate juice once a day.",
+			"Note": "These are most effective when used to support a healthy circulation and prevent illness."
+		},
+		{
+			"Herb": ["Ginkgo (Ginkgo biloba)"],
+			"Remedy": "Take tablets or .5 tsp of fluid extract with water twice a day for approximately 2 to 3 months at a time."
+		},
+		{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Grate 1 tsp of fresh ginger into your food each day."
+		}
+	]
+},
+{
 	"Name": "Arteriosclerosis",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Mild cases of high blood pressure and arteriosclerosis (hardening of the arteries) can benefit from herbs. Garlic thins the blood, reduces fatty deposits, and lowers blood pressure; beetroot and ginkgo aid circulation, reduce blood pressure, and prevent arteriosclerosis; and ginger improves circulation, especially to the capillaries.",
 	"Caution": "Seek professional advice, especially if already taking medication for a circulatory condition.",
 	"Treatment": [{
-		"Herb": ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
-		"Remedy": "Take a garlic tablet or eat 1 to 2 fresh garlic cloves each day. Drink .5 cup (125 ml) of beetroot or pomegranate juice once a day.",
-		"Note": "These are most effective when used to support a healthy circulation and prevent illness."
-	}, {
-		"Herb": ["Ginkgo (Ginkgo biloba)"],
-		"Remedy": "Take tablets or .5 tsp of fluid extract with water twice a day for approximately 2 to 3 months at a time."
-	}, {
-		"Herb": ["Ginger (Zingiber officinale)"],
-		"Remedy": "Grate 1 tsp of fresh ginger into your food each day."
-	}]
-}, {
+			"Herb": ["Garlic (Allium sativum)", "Beet (Beta vulgaris)", "Pomegranate (Punica granatum)"],
+			"Remedy": "Take a garlic tablet or eat 1 to 2 fresh garlic cloves each day. Drink .5 cup (125 ml) of beetroot or pomegranate juice once a day.",
+			"Note": "These are most effective when used to support a healthy circulation and prevent illness."
+		},
+		{
+			"Herb": ["Ginkgo (Ginkgo biloba)"],
+			"Remedy": "Take tablets or .5 tsp of fluid extract with water twice a day for approximately 2 to 3 months at a time."
+		},
+		{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Grate 1 tsp of fresh ginger into your food each day."
+		}
+	]
+},
+{
 	"Name": "Palpitations",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Palpitations occur when the heart suddenly beats faster or irregularly. They can result from stress, anxiety, and nervous tension; however, they may also be caused simply by drinking too much caffeine (in tea, coffee, and cola drinks). In rare cases, palpitations indicate a heart problem. They are a key symptom of panic attacks, which are characterized by sudden, acute feelings of fear and anxiety.",
 	"Caution": "Seek immediate professional advice if palpitations last for several minutes.",
 	"Treatment": [{
-		"Herb": ["Linden (Tilia spp.)"],
-		"Remedy": "Make an infusion with up to 20 g of linden to 3 cups (750 ml) of water. Divide into 3 to 4 doses and drink throughout the day."
-	}, {
-		"Herb": ["Dan shen (Salvia miltiorrhiza)"],
-		"Remedy": "Make a decoction and take 3 to 4 doses during the day for up to 1 week. Alternatively, take half the daily dose for up to 2  to 3 weeks.",
-		"Cautions": "Do not take dan shen with anticoagulant or antiplatelet drugs, or during pregnancy."
-	}]
-}, {
+			"Herb": ["Linden (Tilia spp.)"],
+			"Remedy": "Make an infusion with up to 20 g of linden to 3 cups (750 ml) of water. Divide into 3 to 4 doses and drink throughout the day."
+		},
+		{
+			"Herb": ["Dan shen (Salvia miltiorrhiza)"],
+			"Remedy": "Make a decoction and take 3 to 4 doses during the day for up to 1 week. Alternatively, take half the daily dose for up to 2  to 3 weeks.",
+			"Cautions": "Do not take dan shen with anticoagulant or antiplatelet drugs, or during pregnancy."
+		}
+	]
+},
+{
 	"Name": "Panic Attacks",
-	"Category": "Circulatory Problems",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
+	"Category": "Circulatory",
+	"Description": "A panic attack is a sudden episode of intense fear that triggers severe physical reactions when there is no real danger or apparent cause. Panic attacks can be very frightening. When panic attacks occur, you might think you're losing control, having a heart attack or even dying.",
 	"Treatment": [{
-		"Herb": ["Linden (Tilia spp.)", "Valerian (Valeriana officinalis)"],
-		"Remedy": "Make an infusion using 1 tsp of linden and .5 tsp of powdered valerian to .75 cup (150 ml) of water. Drink 2.33 cups (600 ml) a day."
-	}, {
-		"Herb": ["Motherwort (Leonurus cardiaca)", "linden (Tilia spp.)"],
-		"Remedy": "Make an infusion of motherwort or make an infusion using .5 tsp of each herb to 1 cup (150 ml) of water. Drink up to 4 cups (600 ml) of either remedy a day.",
-		"Caution": "Do not take motherwort during pregnancy."
-	}]
-}, {
+			"Herb": ["Linden (Tilia spp.)", "Valerian (Valeriana officinalis)"],
+			"Remedy": "Make an infusion using 1 tsp of linden and .5 tsp of powdered valerian to .75 cup (150 ml) of water. Drink 2.33 cups (600 ml) a day."
+		},
+		{
+			"Herb": ["Motherwort (Leonurus cardiaca)", "linden (Tilia spp.)"],
+			"Remedy": "Make an infusion of motherwort or make an infusion using .5 tsp of each herb to 1 cup (150 ml) of water. Drink up to 4 cups (600 ml) of either remedy a day.",
+			"Caution": "Do not take motherwort during pregnancy."
+		}
+	]
+},
+{
 	"Name": "Poor Circulation",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Poor circulation can cause discomfort and painful chilblains (sores caused by poor local blood flow) on the fingers and toes. By stimulating the circulation and getting more 'warmth' into the system with herbs and exercise, the blood flow to the hands and feet is improved.",
 	"Caution": "Seek professional advice if fingers and toes frequently become cold and numb.",
 	"Treatment": [{
-		"Herb": ["Cayenne (Capsicum frutescens)"],
-		"Remedy": "Take cayenne tablets in winter.",
-		"Option": "Add a pinch of cayenne powder or cayenne sauce to every main meal.",
-		"Caution": "Do not take tablets during pregnancy."
-	}, {
-		"Herb": ["Cramp bark (Viburnum opulus)"],
-		"Remedy": "Make a decoction using 15 g of cramp bark to 3 cups (750 ml) of water and take 3 doses each day."
-	}]
-}, {
+			"Herb": ["Cayenne (Capsicum frutescens)"],
+			"Remedy": "Take cayenne tablets in winter.",
+			"Option": "Add a pinch of cayenne powder or cayenne sauce to every main meal.",
+			"Caution": "Do not take tablets during pregnancy."
+		},
+		{
+			"Herb": ["Cramp bark (Viburnum opulus)"],
+			"Remedy": "Make a decoction using 15 g of cramp bark to 3 cups (750 ml) of water and take 3 doses each day."
+		}
+	]
+},
+{
 	"Name": "Varicose Veins",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Varicose veins result from a weakness, or increased pressure, in the veins. This causes the thin supporting walls of the veins to bulge out, resulting in distended veins and the pooling of blood.",
 	"Self-help": "Home treatment should aim to relieve pressure on the veins. Varicose vein sufferers should avoid tight clothing around the waist or legs.",
 	"Caution": "Do not massage or rub varicose veins.",
 	"Treatment": [{
-		"Herb": ["Witch hazel (Hamamelis virginiana)", "Calendula (Calendula officinalis)"],
-		"Remedy": "Gently apply distilled witch hazel or witch hazel cream or ointment to the affected area 1 to 2 times a day, or combine equal parts of the creams of both herbs and apply 1 to 2 times a day.",
-		"Note": "This remedy is particularly effective on painful varicose veins."
-	}, {
-		"Herb": ["Yarrow (Achillea millefolium)"],
-		"Remedy": "(External) Wash varicose veins in a cool infusion, or apply the ointment 1 to 2 times a day.   (Internal) Make an infusion and leave for 10 minutes. Take .75 to 1.25 cups (150 to 300 ml) a day for up to 10 weeks.",
-		"Caution": "Do not take yarrow during pregnancy."
-	}]
-}, {
+			"Herb": ["Witch hazel (Hamamelis virginiana)", "Calendula (Calendula officinalis)"],
+			"Remedy": "Gently apply distilled witch hazel or witch hazel cream or ointment to the affected area 1 to 2 times a day, or combine equal parts of the creams of both herbs and apply 1 to 2 times a day.",
+			"Note": "This remedy is particularly effective on painful varicose veins."
+		},
+		{
+			"Herb": ["Yarrow (Achillea millefolium)"],
+			"Remedy": "(External) Wash varicose veins in a cool infusion, or apply the ointment 1 to 2 times a day.   (Internal) Make an infusion and leave for 10 minutes. Take .75 to 1.25 cups (150 to 300 ml) a day for up to 10 weeks.",
+			"Caution": "Do not take yarrow during pregnancy."
+		}
+	]
+},
+{
 	"Name": "Hemorrhoids",
-	"Category": "Circulatory Problems",
+	"Category": "Circulatory",
 	"Description": "Hemorrhoids are usually caused by constipation. Many herbs can be of use in relieving these conditions.",
 	"Treatment": [{
-		"Herb": ["Witch Hazel (Hamamelis virginiana)", "Lesser Celandine (Ranunculus ficaria)"],
-		"Remedy": "Apply either distilled witch hazel or witch hazel ointment, or lesser Celandine ointment, 1 to 2 times a day."
-	}, {
-		"Herb": [" Common Oak (Quercus robur)", "Calendula (Calendula officinalis)"],
-		"Remedy": "Mix 1 tsp of common oak bark powder with 2.5 tbsp of calendula ointment and apply 1 to 2 times a day."
-	}]
-}, {
+			"Herb": ["Witch Hazel (Hamamelis virginiana)", "Lesser Celandine (Ranunculus ficaria)"],
+			"Remedy": "Apply either distilled witch hazel or witch hazel ointment, or lesser Celandine ointment, 1 to 2 times a day."
+		},
+		{
+			"Herb": [" Common Oak (Quercus robur)", "Calendula (Calendula officinalis)"],
+			"Remedy": "Mix 1 tsp of common oak bark powder with 2.5 tbsp of calendula ointment and apply 1 to 2 times a day."
+		}
+	]
+},
+{
 	"Name": "Hives",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Are  usually caused by an allergic reaction, but can also be triggered by heat, cold, or sunlight. They only last for a few hours but will often recur. For the most effective relief, apply chickweed cream and take one of the internal remedies.",
 	"Treatment": [{
-		"Herb": ["Nettle (Urtica dioica)", "Heartsease (Viola tricolor)", "Calendula (Calendula officinalis)"],
-		"Remedy": "(Internal) Drink an infusion of 5 g of each herb and 3 cups (750 ml) of water regularly during the day. Repeat for 1 week. If symptoms persist, take for another week."
-	}, {
-		"Herb": ["Dandelion (Taraxacum officinale)", "Yellow Dock (Rumex crispus)", "Burdock (Arctium lappa)"],
-		"Remedy": "(Internal) Make a decoction with 5 g of each root to 3 cups (750 ml) of water. Drink 1.25 cups (300 ml) a day and repeat for at least 1 week.",
-		"Caution": "Do not take yellow dock in pregnancy."
-	}, {
-		"Herb": ["Chickweed (Stellaria media)"],
-		"Remedy": "(External) Apply cream as required."
-	}]
-}, {
+			"Herb": ["Nettle (Urtica dioica)", "Heartsease (Viola tricolor)", "Calendula (Calendula officinalis)"],
+			"Remedy": "(Internal) Drink an infusion of 5 g of each herb and 3 cups (750 ml) of water regularly during the day. Repeat for 1 week. If symptoms persist, take for another week."
+		},
+		{
+			"Herb": ["Dandelion (Taraxacum officinale)", "Yellow Dock (Rumex crispus)", "Burdock (Arctium lappa)"],
+			"Remedy": "(Internal) Make a decoction with 5 g of each root to 3 cups (750 ml) of water. Drink 1.25 cups (300 ml) a day and repeat for at least 1 week.",
+			"Caution": "Do not take yellow dock in pregnancy."
+		},
+		{
+			"Herb": ["Chickweed (Stellaria media)"],
+			"Remedy": "(External) Apply cream as required."
+		}
+	]
+},
+{
 	"Name": "Skin Rashes",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Have many causes, such as allergy, infection, irritation, bites, stings, and temperature changes. Use these remedies to alleviate itchiness and swelling.",
 	"Caution": "If there is any sign of infection seek professional advice.",
 	"Treatment": [{
@@ -211,21 +249,25 @@
 		"Remedy": "Apply calendula or comfrey ointment, cream, or lotion to troubled areas 2 to 4 times a day. For the lotion, make an infusion, strain, cool, and then apply.",
 		"Caution": "Do not apply comfrey to broken skin."
 	}]
-}, {
+},
+{
 	"Name": "Burn",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "(small-scale) usually respond well to herbal medicine, but even small burns may be deep and can quickly become infected. Before using a remedy, bathe the burned area in clean, cold water and keep the area cool for up to 3 hours with a clean cotton cloth that has been soaked in cold water.",
 	"Caution": "If there is any sign of infection seek professional advice.",
 	"Treatment": [{
-		"Herb": ["Aloe Vera (Aloe vera)", "Lavender (Lavandula officinalis)"],
-		"Remedy": "Apply aloe vera gel or neat lavender essential oil to the affected area as needed."
-	}, {
-		"Herb": ["Calendula (Calendula officinalis)"],
-		"Remedy": "Infuse 1 heaping tbsp of herb in .75 cup (150 ml) of water. Strain, cool, and apply as a lotion to the affected area as required."
-	}]
-}, {
-    "Name": "Healing Wounds",
-    "Category": "Umbrella Conditon",
+			"Herb": ["Aloe Vera (Aloe vera)", "Lavender (Lavandula officinalis)"],
+			"Remedy": "Apply aloe vera gel or neat lavender essential oil to the affected area as needed."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Infuse 1 heaping tbsp of herb in .75 cup (150 ml) of water. Strain, cool, and apply as a lotion to the affected area as required."
+		}
+	]
+},
+{
+	"Name": "Healing Wounds",
+	"Category": "Skin",
 	"Description": "Minor wounds, bruises, and grazes are part of everyday life, and the remedies listed make effective home treatments.",
 	"Caution": "Seek immediate medical attention for serious or deep wounds, bruising, or scrapes, especially if the pain has not considerably lessened after 24 hours.",
 	"Treatment": [{
@@ -233,197 +275,238 @@
 		"Remedy": "Apply comfrey ointment at the edges of the wound or, once a scab has formed, use a comfrey poultice. Use aloe vera gel to cleanse the wound.",
 		"Caution": "Do not use comfrey on an open wound."
 	}]
-}, {
+},
+{
 	"Name": "Bruises",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Minor wounds, bruises, and grazes are part of everyday life, and the remedies listed make effective home treatments.",
 	"Caution": "Seek immediate medical attention for serious or deep wounds, bruising, or scrapes, especially if the pain has not considerably lessened after 24 hours.",
 	"Treatment": [{
-		"Herb": ["Herb name (Binomial nomenclature)"],
-		"Remedy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
-	}, {
-		"Herb": ["Herb name (Binomial nomenclature)", "Herb name (Binomial nomenclature)"],
-		"Remedy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
+		"Herb": ["Herbs Arnica (Arnica montan)", "Witch Hazel (Hamamelis virginiana)"],
+		"Remedy": "Apply arnica ointment to bruises and swellings 2 to 3 times a day, or use distilled witch hazel, as above.",
+		"Caution": "Do not use arnica on broken skin."
 	}]
-}, {
+},
+{
 	"Name": "Cold Sores",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Cold sores are caused by the herpes simplex virus, and usually occur when the body has an infection or has been exposed to sunshine or wind. Tiny blisters form, mainly around the nostrils and lips.",
 	"Treatment": [{
-		"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
-	}, {
-		"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
-		"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day.(External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
-	}]
-}, {
+			"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
+			"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day.(External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
+		}
+	]
+},
+{
 	"Name": "Shingles",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Shingles and chicken pox are the result of a similar virus, causing sores to form all over the body. Shingles are a sign that the nervous system is run down and open to infection, so herbs that support the nerves and the immune system as a whole are as important as ones that work topically.",
 	"Cautions": "Always consult a professional practitioner if you have, or suspect you have, shingles.",
 	"Treatment": [{
-		"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
-	}, {
-		"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
-		"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day. (External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
-	}, {
-		"Herb": ["Lemon balm (Melissa officinalis)"],
-		"Remedy": " (Internal) Make an infusion and drink up to 3 cups (750 ml) a day. (External) Make a lotion by infusing 1.5 tbsp of fresh or 3 tsp of dried leaves in .75 cup (150 ml) of water for 10 minutes. Strain and dab onto spots 3 to 5 times a day."
-	}]
-}, {
+			"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
+			"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day. (External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
+		},
+		{
+			"Herb": ["Lemon balm (Melissa officinalis)"],
+			"Remedy": " (Internal) Make an infusion and drink up to 3 cups (750 ml) a day. (External) Make a lotion by infusing 1.5 tbsp of fresh or 3 tsp of dried leaves in .75 cup (150 ml) of water for 10 minutes. Strain and dab onto spots 3 to 5 times a day."
+		}
+	]
+},
+{
 	"Name": "Chicken Pox",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Shingles and chicken pox are the result of a similar virus, causing sores to form all over the body. Shingles are a sign that the nervous system is run down and open to infection, so herbs that support the nerves and the immune system as a whole are as important as ones that work topically.",
 	"Cautions": "Always consult a professional practitioner if you have, or suspect you have, shingles.",
 	"Treatment": [{
-		"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
-	}, {
-		"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
-		"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day. (External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
-	}, {
-		"Herb": ["Lemon balm (Melissa officinalis)"],
-		"Remedy": " (Internal) Make an infusion and drink up to 3 cups (750 ml) a day. (External) Make a lotion by infusing 1.5 tbsp of fresh or 3 tsp of dried leaves in .75 cup (150 ml) of water for 10 minutes. Strain and dab onto spots 3 to 5 times a day."
-	}]
-}, {
+			"Herb": ["Echinacea (Echinacea spp.)", "St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take .5 tsp of tincture of either herb with water 2 to 3 times a day. Alternatively, take echinacea tablets or capsules, or make an infusion of St. John's wort and drink up to .75 cup (150 ml) a day."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)", "Ginger (Zingiber officinale)", "Lemon (Citrus limon)"],
+			"Remedy": "(Internal) Eat 1 to 2 cloves of garlic and 1 to 2 slices (1 g) of fresh ginger a day. (External) Apply either fresh ginger, half a clove of garlic, or lemon juice to unopened cold sores, shingles, or pockmarks up to 6 times a day."
+		},
+		{
+			"Herb": ["Lemon balm (Melissa officinalis)"],
+			"Remedy": " (Internal) Make an infusion and drink up to 3 cups (750 ml) a day. (External) Make a lotion by infusing 1.5 tbsp of fresh or 3 tsp of dried leaves in .75 cup (150 ml) of water for 10 minutes. Strain and dab onto spots 3 to 5 times a day."
+		}
+	]
+},
+{
 	"Name": "Warts",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Warts, caused by the papilloma virus, can be difficult to clear. With persistence, the remedies here are often effective.",
 	"Cautions": "Take professional advice if you notice a sudden change to a wart.",
 	"Treatment": [{
-		"Herb": ["Aloe vera (Aloe vera)"],
-		"Remedy": "Apply the gel directly to the wart 2 to 3 times a day for up to 3 months."
-	}, {
-		"Herb": ["Arborvitae (Thuja occidentalis)"],
-		"Remedy": "Apply neat tincture to the wart 1 to 2 times a day for up to 3 months."
-	}]
-}, {
+			"Herb": ["Aloe vera (Aloe vera)"],
+			"Remedy": "Apply the gel directly to the wart 2 to 3 times a day for up to 3 months."
+		},
+		{
+			"Herb": ["Arborvitae (Thuja occidentalis)"],
+			"Remedy": "Apply neat tincture to the wart 1 to 2 times a day for up to 3 months."
+		}
+	]
+},
+{
 	"Name": "Athlete's Foot",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Athlete's foot is a fungus (tinea) that grows in the skin between and under the toes, causing it to split and peel away. This itchy, sore condition can be difficult to treat at home.",
 	"Treatment": [{
-		"Herb": ["Turmeric (Curcuma longa)", "Calendula (Calendula officinalis)"],
-		"Remedy": "Mix .5 tsp of turmeric powder with 3 tsp (15 ml) of calendula ointment. Rub in between and under the toes each day."
-	}, {
-		"Herb": ["Garlic (Allium sativum)"],
-		"Remedy": "Rub on .5 clove 2 to 3 times a day."
-	}, {
-		"Herb": ["Comfrey (Symphytum officinale)"],
-		"Remedy": "Make a poultice and firmly apply to the affected area for 1 to 2 hours each day.",
-		"Caution": "Do not use comfrey on broken skin."
-	}]
-}, {
+			"Herb": ["Turmeric (Curcuma longa)", "Calendula (Calendula officinalis)"],
+			"Remedy": "Mix .5 tsp of turmeric powder with 3 tsp (15 ml) of calendula ointment. Rub in between and under the toes each day."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": "Rub on .5 clove 2 to 3 times a day."
+		},
+		{
+			"Herb": ["Comfrey (Symphytum officinale)"],
+			"Remedy": "Make a poultice and firmly apply to the affected area for 1 to 2 hours each day.",
+			"Caution": "Do not use comfrey on broken skin."
+		}
+	]
+},
+{
 	"Name": "Acne",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Acne generally occurs during the teenage years and results in whiteheads, pustules, and cysts, usually on the face and back.",
 	"Treatment": [{
-		"Herb": ["Tea tree (Melaleuca alternifolia)", "Clove (Eugenia caryophyllata)", "Garlic (Allium sativum)"],
-		"Remedy": "Dab 1 drop of neat tea tree or clove essential oil onto the pus-filled head of a boil or pimple twice a day. Alternatively, cut a clove of garlic in half and rub over the area twice a day."
-	}, {
-		"Herb": ["Calendula (Calendula officinalis)"],
-		"Remedy": "Apply ointment or cream, or dab undiluted tincture onto the pus-filled area twice a day."
-	}, {
-		"Herb": ["Comfrey (Symphytum officinale)"],
-		"Remedy": "Apply comfrey ointment or cream to the pus-filled area twice a day.",
-		"Caution": "Do not use comfrey on broken skin."
-	}]
-}, {
+			"Herb": ["Tea tree (Melaleuca alternifolia)", "Clove (Eugenia caryophyllata)", "Garlic (Allium sativum)"],
+			"Remedy": "Dab 1 drop of neat tea tree or clove essential oil onto the pus-filled head of a boil or pimple twice a day. Alternatively, cut a clove of garlic in half and rub over the area twice a day."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Apply ointment or cream, or dab undiluted tincture onto the pus-filled area twice a day."
+		},
+		{
+			"Herb": ["Comfrey (Symphytum officinale)"],
+			"Remedy": "Apply comfrey ointment or cream to the pus-filled area twice a day.",
+			"Caution": "Do not use comfrey on broken skin."
+		}
+	]
+},
+{
 	"Name": "Boils",
-	"Category": "Skin Problems",
+	"Category": "Skin",
 	"Description": "Boils are large, pus-filled areas of skin. They either disperse or burst in a week. As boils are often the body's way of expelling toxins, recurrent boils may indicate a weakened immune system. They can also suggest diabetes or a deep-seated bacterial infection.",
 	"Cautions": "Do not squeeze or burst boils or acne pimples as the infection may spread. Seek professional advice for recurrent boils.",
 	"Treatment": [{
-		"Herb": ["Tea tree (Melaleuca alternifolia)", "Clove (Eugenia caryophyllata)", "Garlic (Allium sativum)"],
-		"Remedy": "Dab 1 drop of neat tea tree or clove essential oil onto the pus-filled head of a boil or pimple twice a day. Alternatively, cut a clove of garlic in half and rub over the area twice a day."
-	}, {
-		"Herb": ["Calendula (Calendula officinalis)"],
-		"Remedy": "Apply ointment or cream, or dab undiluted tincture onto the pus-filled area twice a day."
-	}, {
-		"Herb": ["Comfrey (Symphytum officinale)"],
-		"Remedy": "Apply comfrey ointment or cream to the pus-filled area twice a day.",
-		"Caution": "Do not use comfrey on broken skin."
-	}]
-}, {
+			"Herb": ["Tea tree (Melaleuca alternifolia)", "Clove (Eugenia caryophyllata)", "Garlic (Allium sativum)"],
+			"Remedy": "Dab 1 drop of neat tea tree or clove essential oil onto the pus-filled head of a boil or pimple twice a day. Alternatively, cut a clove of garlic in half and rub over the area twice a day."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Apply ointment or cream, or dab undiluted tincture onto the pus-filled area twice a day."
+		},
+		{
+			"Herb": ["Comfrey (Symphytum officinale)"],
+			"Remedy": "Apply comfrey ointment or cream to the pus-filled area twice a day.",
+			"Caution": "Do not use comfrey on broken skin."
+		}
+	]
+},
+{
 	"Name": "Nausea",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Nausea can occur for various reasons, including food poisoning, infections, fever, migraine, stress, or emotional problems, as well as travel sickness. For short-term conditions, there are many herbs that reduce or relieve the unpleasant, empty, gnawing symptoms of nausea and vomiting. Most of the herbs listed are also very useful for travel sickness.",
 	"Caution": "Seek professional advice if nausea is severe or is recurrent. ",
 	"Treatment": [{
 		"Herb": ["Ginger (Zingiber officinale)", "Galangal (Alpinia officinarum)", "Turmeric (Curcuma longa"],
 		"Remedy": "Make an infusion with one of the herbs listed using about 1 to 2 slices (0.5 g) of fresh root or .25 to .5 tsp of dried, powdered, or grated root to .75 cup (150 ml) of water. Use the fresh root if possible. Infuse for at least 5 minutes and sip while hot. Drink up to 3 cups (750 ml) a day. Add 1 to 2 cloves (Eugenia caryophyllata) if desired."
 	}]
-}, {
+},
+{
 	"Name": "Vomitting",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Vomitting can occur for various reasons, including food poisoning, infections, fever, migraine, stress, or emotional problems, as well as travel sickness. For short-term conditions, there are many herbs that reduce or relieve the unpleasant, empty, gnawing symptoms of nausea and vomiting. Most of the herbs listed are also very useful for travel sickness.",
 	"Caution": "Seek professional advice if nausea is severe or is recurrent. ",
 	"Treatment": [{
 		"Herb": [" Black horehound (Ballota nigra)"],
 		"Remedy": " Make an infusion and drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Herb name (Binomial nomenclature)", "Herb name (Binomial nomenclature)"],
-		"Remedy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
 	}]
-}, {
+},
+{
 	"Name": "Gas",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Gas and Bloating are common digestive problems. As a preventative, take bitter herbs, such as centaury and gentian, which improve digestion. Infusions of aromatic plants such as fennel, cardamom, anise, lemon verbena, or peppermint are effective remedies. All the herbs listed under General Remedies can be combined by adjusting the measurements of each herb using the same proportion to water.",
 	"Caution": "Bitters are generally unsuitable and unpalatable for children under 5. All types or species of mint (Mentha spp.) are unsuitable for children under 5.",
 	"Treatment": [{
-		"Herb": ["Centaury (Erythraea centaurium)", "Gentian (Gentiana lutea)"],
-		"Remedy": "Take 5 to 10 drops of tincture 3 times a day with water."
-	}, {
-		"Herb": ["Fennel (Foeniculum vulgare)", "Anise (Pimpinella anisum)"],
-		"Remedy": "Make an infusion with .25 to .5 tsp of fennel or anise seeds per .75 cup (150 ml) of water and drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Cardamom (Elettaria cardamomum)"],
-		"Remedy": " Make an infusion with the crushed seeds of 2 cardamoms per .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Lemon verbena (Lippia citriodora)"],
-		"Remedy": "Make an infusion using 1 tsp of dried or 2 tsp of fresh leaves per 1 cup (150 ml) of water and take up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Peppermint (Mentha x piperita)"],
-		"Remedy": "Make an infusion and drink up to 3 cups (750 ml) a day."
-	}]
-}, {
+			"Herb": ["Centaury (Erythraea centaurium)", "Gentian (Gentiana lutea)"],
+			"Remedy": "Take 5 to 10 drops of tincture 3 times a day with water."
+		},
+		{
+			"Herb": ["Fennel (Foeniculum vulgare)", "Anise (Pimpinella anisum)"],
+			"Remedy": "Make an infusion with .25 to .5 tsp of fennel or anise seeds per .75 cup (150 ml) of water and drink up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Cardamom (Elettaria cardamomum)"],
+			"Remedy": " Make an infusion with the crushed seeds of 2 cardamoms per .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Lemon verbena (Lippia citriodora)"],
+			"Remedy": "Make an infusion using 1 tsp of dried or 2 tsp of fresh leaves per 1 cup (150 ml) of water and take up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Peppermint (Mentha x piperita)"],
+			"Remedy": "Make an infusion and drink up to 3 cups (750 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Bloating",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Gas and Bloating are common digestive problems. As a preventative, take bitter herbs, such as centaury and gentian, which improve digestion. Infusions of aromatic plants such as fennel, cardamom, anise, lemon verbena, or peppermint are effective remedies. All the herbs listed under General Remedies can be combined by adjusting the measurements of each herb using the same proportion to water.",
 	"Caution": "Bitters are generally unsuitable and unpalatable for children under 5. All types or species of mint (Mentha spp.) are unsuitable for children under 5.",
 	"Treatment": [{
-		"Herb": [" Centaury (Erythraea centaurium)", "Gentian (Gentiana lutea)"],
-		"Remedy": "Take 5 to 10 drops of tincture 3 times a day with water."
-	}, {
-		"Herb": [" Fennel (Foeniculum vulgare)", "Anise (Pimpinella anisum)"],
-		"Remedy": "Make an infusion with .25 to .5 tsp of fennel or anise seeds per .75 cup (150 ml) of water and drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Cardamom (Elettaria cardamomum)"],
-		"Remedy": " Make an infusion with the crushed seeds of 2 cardamoms per .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Lemon verbena (Lippia citriodora)"],
-		"Remedy": "Make an infusion using 1 tsp of dried or 2 tsp of fresh leaves per 1 cup (150 ml) of water and take up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Peppermint (Mentha x piperita)"],
-		"Remedy": "Make an infusion and drink up to 3 cups (750 ml) a day."
-	}]
-}, {
+			"Herb": [" Centaury (Erythraea centaurium)", "Gentian (Gentiana lutea)"],
+			"Remedy": "Take 5 to 10 drops of tincture 3 times a day with water."
+		},
+		{
+			"Herb": [" Fennel (Foeniculum vulgare)", "Anise (Pimpinella anisum)"],
+			"Remedy": "Make an infusion with .25 to .5 tsp of fennel or anise seeds per .75 cup (150 ml) of water and drink up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Cardamom (Elettaria cardamomum)"],
+			"Remedy": " Make an infusion with the crushed seeds of 2 cardamoms per .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Lemon verbena (Lippia citriodora)"],
+			"Remedy": "Make an infusion using 1 tsp of dried or 2 tsp of fresh leaves per 1 cup (150 ml) of water and take up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Peppermint (Mentha x piperita)"],
+			"Remedy": "Make an infusion and drink up to 3 cups (750 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Mouth Ulcers",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Many astringent herbs can be used to treat mouth ulcers and tighten up weak gums and loose teeth. Sage is particularly effective as it also disinfects the mouth. Myrrh tincture will sting, but it will also increase the rate of healing.",
 	"Treatment": [{
-		"Herb": ["Myrrh (Commiphora molmol)"],
-		"Remedy": "Dab neat tincture onto mouth ulcers and infected gums once every hour."
-	}, {
-		"Herb": ["Sage (Salvia officinalis)"],
-		"Remedy": "Use an infusion as a mouthwash, or rub gums with leaves or powder."
-	}, {
-		"Herb": ["Myrrh (Commiphora molmol)", "Echinacea (Echinacea spp.)", "Licorice (Glycyrrhiza glabra)"],
-		"Remedy": "Mix equal parts of the tinctures and apply neat or diluted (1 part tincture to 5 parts water) every hour."
-	}]
-}, {
+			"Herb": ["Myrrh (Commiphora molmol)"],
+			"Remedy": "Dab neat tincture onto mouth ulcers and infected gums once every hour."
+		},
+		{
+			"Herb": ["Sage (Salvia officinalis)"],
+			"Remedy": "Use an infusion as a mouthwash, or rub gums with leaves or powder."
+		},
+		{
+			"Herb": ["Myrrh (Commiphora molmol)", "Echinacea (Echinacea spp.)", "Licorice (Glycyrrhiza glabra)"],
+			"Remedy": "Mix equal parts of the tinctures and apply neat or diluted (1 part tincture to 5 parts water) every hour."
+		}
+	]
+},
+{
 	"Name": "Constipation",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Herbs help both constipation and diarrhea by gently restoring normal bowel function. Constipation often results from insufficient intake of fruit, vegetables, and whole grains, while diarrhea is usually caused by intestinal infection or inflammation, such as food poisoning. Irritable bowel syndrome gives rise to alternating bouts of constipation and diarrhea, and spastic constipation results from tension and muscle spasm in the colon.",
 	"Caution": "Seek professional advice for persistent constipation or diarrhea.",
 	"Treatment": [{
@@ -432,9 +515,10 @@
 		"Note": "Yellow dock is one of the mildest laxatives and should be tried first. If this has no effect, take a single dose of Chinese rhubarb each day. This has a stronger action than yellow dock.",
 		"Caution": "Do not take Chinese rhubarb or yellow dock during pregnancy."
 	}]
-}, {
+},
+{
 	"Name": "Diarrhea",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Herbs help both constipation and diarrhea by gently restoring normal bowel function. Constipation often results from insufficient intake of fruit, vegetables, and whole grains, while diarrhea is usually caused by intestinal infection or inflammation, such as food poisoning. Irritable bowel syndrome gives rise to alternating bouts of constipation and diarrhea, and spastic constipation results from tension and muscle spasm in the colon.",
 	"Caution": "Seek professional advice for persistent constipation or diarrhea.",
 	"Treatment": [{
@@ -443,150 +527,182 @@
 		"Note": "If using Bistort or Black Catechu (the most astringent herbs), mix with demulcents such as Psyllium Seeds (Plantago spp.) or Marshmallow Root (Althaea officinalis). Add 1 tsp, plus a pinch of Peppermint (Mentha x piperita) or other Mint (Mentha spp.), per 1 cup (225 ml) of decoction.",
 		"Caution": "Do not take for more than 3 days at a time and do not take again for 3 days. If there is no improvement, seek professional advice. Do not take sage in pregnancy. Do not give mint to children under 5."
 	}]
-}, {
+},
+{
 	"Name": "Acidity",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Acidity, caused by too much acid production, suggests a poor or inappropriate diet. Cut out acidic foods, such as oranges, red meat, spinach, and tomatoes, as well as alcohol and tobacco if possible.",
 	"Treatment": [{
-		"Herb": ["Slippery Elm (Ulmus rubra)", "Arrowroot (Maranta arundinacea)", "Iceland Moss (Cetraria islandica)"],
-		"Remedy": "Make an infusion with 2 heaping tsp of one of the herbs to .5 cup (100 ml) of water. Leave for 15 minutes. Take .5 cup (100 ml) up to 4 times a day."
-	}, {
-		"Herb": ["Fennel (Foeniculum vulgare)", "Galbanum (Ferula gummosa)", "Anise (Pimpinella anisum)"],
-		"Remedy": "Make an infusion using 1 heaping tsp of fennel or anise seeds, or galbanum herb, to 3 cups (750 ml) of water. Drink during the day."
-	}]
-}, {
+			"Herb": ["Slippery Elm (Ulmus rubra)", "Arrowroot (Maranta arundinacea)", "Iceland Moss (Cetraria islandica)"],
+			"Remedy": "Make an infusion with 2 heaping tsp of one of the herbs to .5 cup (100 ml) of water. Leave for 15 minutes. Take .5 cup (100 ml) up to 4 times a day."
+		},
+		{
+			"Herb": ["Fennel (Foeniculum vulgare)", "Galbanum (Ferula gummosa)", "Anise (Pimpinella anisum)"],
+			"Remedy": "Make an infusion using 1 heaping tsp of fennel or anise seeds, or galbanum herb, to 3 cups (750 ml) of water. Drink during the day."
+		}
+	]
+},
+{
 	"Name": "Indigestion",
-    "Category": "Umbrella Conditon",
+	"Category": "Digestive",
 	"Description": "Indigestion, caused by too much acid production, suggests a poor or inappropriate diet. Cut out acidic foods, such as oranges, red meat, spinach, and tomatoes, as well as alcohol and tobacco if possible.",
 	"Treatment": [{
 		"Herb": ["German chamomile (Chamomilla recutita)"],
 		"Remedy": "Make an infusion in a covered container. Drink up to 3 cups (750 ml) a day."
 	}]
-}, {
+},
+{
 	"Name": "Anxiety",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as stress, anxiety, and tension take hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
-		"Herb": ["Valerian (Valeriana officinalis)"],
-		"Remedy": "Take 10 drops of tincture in water every hour for up to 2 weeks at a time."
-	}, {
-		"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
-		"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
-	}, {
-		"Herb": ["St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
-		"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
-	}]
-}, {
+			"Herb": ["Valerian (Valeriana officinalis)"],
+			"Remedy": "Take 10 drops of tincture in water every hour for up to 2 weeks at a time."
+		},
+		{
+			"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
+			"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
+		},
+		{
+			"Herb": ["St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
+			"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
+		}
+	]
+},
+{
 	"Name": "Depression",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as depression takes hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
-		"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
-		"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
-	}, {
-		"Herb": ["St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
-		"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
-	}]
-}, {
+			"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
+			"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
+		},
+		{
+			"Herb": ["St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
+			"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
+		}
+	]
+},
+{
 	"Name": "Tension",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Many people have experienced lack of well-being and feelings of powerlessness that develop as stress, anxiety, and tension take hold. There is no instant answer, but a remarkable number of herbs can reduce these symptoms, and, by supporting the nervous system, gradually restore health.",
 	"Self-help": "When emotionally stressed, it is important to eat well, exercise regularly, and allow time for relaxation. Yoga and Tai Chi can be particularly helpful.",
 	"Treatment": [{
-		"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
-		"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
-	}, {
-		"Herb": ["St. John's Wort (Hypericum perforatum)"],
-		"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
-		"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
-	}]
-}, {
+			"Herb": ["Lemon Balm (Melissa officinalis)", "Damiana (Turnera diffusa,)", "Skullcap (Scutellaria lateriflora)"],
+			"Remedy": "Make an infusion using one of the herbs. Drink up to 2.33 cups (600 ml) a day."
+		},
+		{
+			"Herb": ["St. John's Wort (Hypericum perforatum)"],
+			"Remedy": "Take tablets or make an infusion and drink up to 2.33 cups (600 ml) a day.",
+			"Note": "This remedy may take 2 to 3 weeks before there is a noticeable effect."
+		}
+	]
+},
+{
 	"Name": "Head Pain",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Neuralgia is the pain caused by an irritated, damaged, or trapped nerve. It usually occurs in brief, severe bouts and can be felt shooting along the nerve. Although it is difficult to treat, the following remedies may bring relief to minor problems.",
 	"Treatment": [{
-		"Herb": ["Clove (Eugenia caryophyllata)"],
-		"Remedy": "Mix .5 tsp of powder with water to make a thick paste and apply to the head."
-	}, {
-		"Herb": ["St. John's Wort (Hypericum perforatum)", "Lavender (Lavandula officinalis)", "Clove (Eugenia caryophyllata)"],
-		"Remedy": "Apply neat St. John's wort infused oil to painful areas, or add 20 drops each of clove and lavender essential oil to 2 tbsp plus 2 tsp (50 ml) of St. John's wort infused oil and then apply every 2 to 3 hours as required."
-	}, {
-		"Herb": ["Peppermint (Mentha x piperita)"],
-		"Remedy": "Make an infusion with 25 g of herb to 3 cups (750 ml) of water and bathe the affected area. Alternatively, dilute 20 drops of essential oil in 2 tbsp plus 2 tsp (50 ml) of carrier oil and gently massage into the painful area.",
-		"Caution": "Do not use on children under 5."
-	}]
-}, {
+			"Herb": ["Clove (Eugenia caryophyllata)"],
+			"Remedy": "Mix .5 tsp of powder with water to make a thick paste and apply to the head."
+		},
+		{
+			"Herb": ["St. John's Wort (Hypericum perforatum)", "Lavender (Lavandula officinalis)", "Clove (Eugenia caryophyllata)"],
+			"Remedy": "Apply neat St. John's wort infused oil to painful areas, or add 20 drops each of clove and lavender essential oil to 2 tbsp plus 2 tsp (50 ml) of St. John's wort infused oil and then apply every 2 to 3 hours as required."
+		},
+		{
+			"Herb": ["Peppermint (Mentha x piperita)"],
+			"Remedy": "Make an infusion with 25 g of herb to 3 cups (750 ml) of water and bathe the affected area. Alternatively, dilute 20 drops of essential oil in 2 tbsp plus 2 tsp (50 ml) of carrier oil and gently massage into the painful area.",
+			"Caution": "Do not use on children under 5."
+		}
+	]
+},
+{
 	"Name": "Toothache",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Neuralgia is the pain caused by an irritated, damaged, or trapped nerve. It usually occurs in brief, severe bouts and can be felt shooting along the nerve. Although it is difficult to treat, the following remedies may bring relief to minor problems.",
 	"Caution": "Seek professional advice if there is fever, or swelling of the gums with toothache",
 	"Treatment": [{
-		"Herb": ["Clove (Eugenia caryophyllata)"],
-		"Remedy": "Chew a clove or rub 1  to 2 drops of neat essential oil onto the affected tooth 2 to 3 times a day for up to 3 days."
-	}, {
-		"Herb": ["St. John's Wort (Hypericum perforatum)", "Lavender (Lavandula officinalis)", "Clove (Eugenia caryophyllata)"],
-		"Remedy": "Apply neat St. John's wort infused oil to painful areas, or add 20 drops each of clove and lavender essential oil to 2 tbsp plus 2 tsp (50 ml) of St. John's wort infused oil and then apply every 2 to 3 hours as required."
-	}, {
-		"Herb": ["Peppermint (Mentha x piperita)"],
-		"Remedy": "Make an infusion with 25 g of herb to 3 cups (750 ml) of water and bathe the affected area. Alternatively, dilute 20 drops of essential oil in 2 tbsp plus 2 tsp (50 ml) of carrier oil and gently massage into the painful area.",
-		"Caution": "Do not use on children under 5."
-	}]
-}, {
+			"Herb": ["Clove (Eugenia caryophyllata)"],
+			"Remedy": "Chew a clove or rub 1  to 2 drops of neat essential oil onto the affected tooth 2 to 3 times a day for up to 3 days."
+		},
+		{
+			"Herb": ["St. John's Wort (Hypericum perforatum)", "Lavender (Lavandula officinalis)", "Clove (Eugenia caryophyllata)"],
+			"Remedy": "Apply neat St. John's wort infused oil to painful areas, or add 20 drops each of clove and lavender essential oil to 2 tbsp plus 2 tsp (50 ml) of St. John's wort infused oil and then apply every 2 to 3 hours as required."
+		},
+		{
+			"Herb": ["Peppermint (Mentha x piperita)"],
+			"Remedy": "Make an infusion with 25 g of herb to 3 cups (750 ml) of water and bathe the affected area. Alternatively, dilute 20 drops of essential oil in 2 tbsp plus 2 tsp (50 ml) of carrier oil and gently massage into the painful area.",
+			"Caution": "Do not use on children under 5."
+		}
+	]
+},
+{
 	"Name": "Headache",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Headaches are caused by many factors, such as toothache, neck tension, eyestrain, and hangovers. It is important to diagnose and treat the underlying cause, which could mean visiting a dentist, optician, or osteopath in the first instance. Herbal medicine can be very helpful for headaches, although choosing the right herbs can be difficult.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
 		"Herb": ["Lavender (Lavandula officinalis)"],
 		"Remedy": "Rub a few drops of neat essential oil on the temples."
 	}]
-}, {
+},
+{
 	"Name": "Sinus Headache",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Headaches are caused by many factors, such as toothache, neck tension, eyestrain, and hangovers. It is important to diagnose and treat the underlying cause, which could mean visiting a dentist, optician, or osteopath in the first instance. Herbal medicine can be very helpful for headaches, although choosing the right herbs can be difficult.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
-		"Herb": ["Lavender (Lavandula officinalis)"],
-		"Remedy": "Rub a few drops of neat essential oil on the temples."
-	}, {
-		"Herb": ["Linden (Tilia spp.)"],
-		"Remedy": "Make an infusion using 1 heaping tsp of linden to .75 cup (150 ml) of water, or use teabags. Drink up to 3 cups (750 ml) a day."
-	}]
-}, {
+			"Herb": ["Lavender (Lavandula officinalis)"],
+			"Remedy": "Rub a few drops of neat essential oil on the temples."
+		},
+		{
+			"Herb": ["Linden (Tilia spp.)"],
+			"Remedy": "Make an infusion using 1 heaping tsp of linden to .75 cup (150 ml) of water, or use teabags. Drink up to 3 cups (750 ml) a day."
+		}
+	]
+},
+{
 	"Name": "Migraine",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Headaches and migraine can be very debilitating, especially when they occur frequently. Migraine is a more specific problem. The remedies aim both to prevent the onset of a migraine as well as treat the symptoms.",
 	"Caution": "For migraine or recurrent headaches, consult a professional practitioner to diagnose and treat the underlying cause.",
 	"Treatment": [{
-		"Herb": ["Skullcap (Scutellaria lateriflora)"],
-		"Remedy": "Make an infusion using 1 heaping tsp of herb to .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Lavender (Lavandula officinalis)"],
-		"Remedy": "Rub a few drops of neat essential oil on the temples."
-	}]
-}, {
+			"Herb": ["Skullcap (Scutellaria lateriflora)"],
+			"Remedy": "Make an infusion using 1 heaping tsp of herb to .75 cup (150 ml) of water. Drink up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Lavender (Lavandula officinalis)"],
+			"Remedy": "Rub a few drops of neat essential oil on the temples."
+		}
+	]
+},
+{
 	"Name": "Hangover",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Hangovers are not a nerve problem in a direct sense, but they should be treated in the same way as any other type of mild poisoning that requires detoxification and headache relief. Make sure you also drink plenty of water.",
 	"Treatment": [{
 		"Herb": ["Dandelion (Taraxacum officinale)"],
 		"Remedy": "Make a decoction using 15 g of root to 3 cups (750 ml) of water. Take the decoction in small quantities at frequent intervals throughout the day"
 	}]
-}, {
+},
+{
 	"Name": "Insomnia",
-    "Category": "Umbrella Conditon",
+	"Category": "Nerve",
 	"Description": "Difficulty in sleeping affects everyone at one time or another. Herbs can provide a safe and gentle solution to this problem.",
 	"Treatment": [{
 		"Herb": ["German Chamomile (Chamomilla recutita)", "Linden (Tilia spp.)", "Lavender (Lavandula officinalis)", "Passionflower (Passiflora incarnata)"],
-		"Remedy": "The above herbs are listed in ascending order of strength. Start with the weakest, German chamomile, and if it does not help, try the next strongest. Make an infusion in a covered container using 1 to 2 heaping tsp per Â¾ cup (150 ml) of water. Take prior to sleeping. Alternatively, take 1 tsp of tincture with water up to 3 times a night."
+		"Remedy": "The above herbs are listed in ascending order of strength. Start with the weakest, German chamomile, and if it does not help, try the next strongest. Make an infusion in a covered container using 1 to 2 heaping tsp per  ¾ cup (150 ml) of water. Take prior to sleeping. Alternatively, take 1 tsp of tincture with water up to 3 times a night."
 	}]
-}, {
+},
+{
 	"Name": "Cough",
-    "Category": "Umbrella Conditon",
+	"Category": "Respiratory",
 	"Description": "The act of coughing is usually a reaction to irritant particles in the bronchial tubes. It is worthwhile to consider the type of cough you have and where it is centered. Herbal remedies can then be chosen to work effectively to clear or ease the cough. Productive, chest coughs may produce white, yellow, or green phlegm. Unproductive coughs are dry and irritant and often take a long time to clear. Bronchitis occurs when the lining of the lungs' airways becomes inflamed, resulting in a chest cough, possible breathlessness, and a raised temperature. Use both an external and an internal remedy.",
 	"Caution": "Seek professional advice if a cough lasts for more than 1 week without a cold or infection.",
 	"Treatment": [{
@@ -594,67 +710,697 @@
 		"Remedy": "Take 3 cups (750 ml) of infusion a day.",
 		"Caution": "Do not apply thyme oil during pregnancy."
 	}]
-}, {
-	"Name": "Sore & Tired Eyes",
-    "Category": "Umbrella Conditon",
+},
+{
+	"Name": "Sore and Tired Eyes",
+	"Category": "Respiratory",
 	"Description": "Rather than treating the eyes themselves, these remedies benefit the mucous tissue lining the eyes, which is contiguous with the nose and throat. Problems affecting the linings of the eyes often respond well to local treatment with herbal remedies, but care must be taken not to irritate the eyes with particles of herbs left in the lotion.",
 	"Treatment": [{
 		"Herb": ["German Chamomile (Chamomilla recutita)", "Ju Hua (Chrysanthemum x morifolium)"],
 		"Remedy": "Make a compress by infusing a German chamomile teabag, or make a poultice with 15 g of either herb to 1 cup (250 ml) of water. Cool, squeeze out the excess, and place the teabag or poultice over the eye."
 	}]
-}, {
+},
+{
 	"Name": "Conjunctivitis",
-    "Category": "Umbrella Conditon",
+	"Category": "Respiratory",
 	"Description": "Rather than treating the eyes themselves, these remedies benefit the mucous tissue lining the eyes, which is contiguous with the nose and throat. Problems affecting the linings of the eyes often respond well to local treatment with herbal remedies, but care must be taken not to irritate the eyes with particles of herbs left in the lotion.",
 	"Treatment": [{
 		"Herb": ["Eyebright (Euphrasia officinalis)", "Cornflower (Centaurea cyanus)"],
 		"Remedy": "Make an infusion with either herb and strain. When warm (not hot), put in an eyebath and bathe eyes well. Use no more than twice a day.",
 		"Caution": "Seek professional advice if there is no improvement in 3 to 4 days."
 	}]
-}, {
+},
+{
 	"Name": "Nosebleeds",
-    "Category": "Umbrella Conditon",
+	"Category": "Respiratory",
 	"Description": "Many herbs are reputed to stop nosebleeds, and most are effective. Using an herb as snuff is a traditional way of staunching a nosebleed.",
-	"Self-help": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet.",
 	"Caution": "If the nosebleed continues for some hours or is very heavy, seek immediate professional advice.",
 	"Treatment": [{
-		"Herb": ["Eyebright (Euphrasia spp.)", "Nettle (Urtica dioica)"],
-		"Remedy": "As a prevention to nosebleeds, make an infusion using 25 g of either herb to 3 cups of water. Take up to 2 .5 cups a day."
-	}, {
-		"Herb": ["Wild Geranium (Geranium maculatum)"],
-		"Remedy": "First, pinch the nostrils and tilt back the head. Then sniff .5 tsp of the powdered herb."
-	}]
-}, {
+			"Herb": ["Eyebright (Euphrasia spp.)", "Nettle (Urtica dioica)"],
+			"Remedy": "As a prevention to nosebleeds, make an infusion using 25 g of either herb to 3 cups of water. Take up to 2.5 cups a day."
+		},
+		{
+			"Herb": ["Wild Geranium (Geranium maculatum)"],
+			"Remedy": "First, pinch the nostrils and tilt back the head. Then sniff .5 tsp of the powdered herb."
+		}
+	]
+},
+{
 	"Name": "Colds",
-    "Category": "Umbrella Conditon",
+	"Category": "Respiratory",
 	"Description": "The common cold, with which most of us are only too familiar, is a viral infection normally affecting the nose and throat. Flu is considerably more debilitating and may include fever, headache, muscular pain, nausea, and vomiting. Both have a habit of striking when we are stressed or run down. Herbal home treatment is especially suitable for these familiar 'self-limiting' ailments since it enables us to make life more comfortable, control fever, and improve the body's recovery rate.",
 	"Self-help": "Reduce fever and temperature by washing with cool or cold water and drinking plenty of liquid, especially when sweating.",
 	"Caution": "Remember that in the very young and very old, even a common cold can develop into pneumonia. Always seek professional advice if symptoms persist or suddenly get worse.",
 	"Treatment": [{
-		"Herb": ["Lemon (Citrus limon)", "Cinnamon (Cinnamomum spp.)"],
-		"Remedy": "Drink the freshly squeezed juice of 1 lemon, neat or diluted in warm water.",
-		"Option": "Add 1 tsp of honey to the juice and .5 tsp of cinnamon powder."
-	}, {
-		"Herb": ["Ginger (Zingiber officinale)"],
-		"Remedy": "Infuse 2 to 3 slices (1 g) of fresh ginger with .75 cup (150 ml) of water for 5 minutes. Take up to 3 cups (750 ml) a day."
-	}, {
-		"Herb": ["Elderberry (Sambucus nigra)", "Lemon (Citrus limon)"],
-		"Remedy": "Take 1 tsp (5 ml) of elderberry tincture or extract in warm water up to 3 times a day. Add in freshly squeezed juice from half a lemon."
-	}]
-}, {
-	"Name": "Condition Name",
-	"Category": "Umbrella Conditon",
-	"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros. Sed vel nulla lacinia, porttitor ante ut, scelerisque diam.",
-	"Self-help": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet.",
-	"Caution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"Herb": ["Lemon (Citrus limon)", "Cinnamon (Cinnamomum spp.)"],
+			"Remedy": "Drink the freshly squeezed juice of 1 lemon, neat or diluted in warm water.",
+			"Option": "Add 1 tsp of honey to the juice and .5 tsp of cinnamon powder."
+		},
+		{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Infuse 2 to 3 slices (1 g) of fresh ginger with .75 cup (150 ml) of water for 5 minutes. Take up to 3 cups (750 ml) a day."
+		},
+		{
+			"Herb": ["Elderberry (Sambucus nigra)", "Lemon (Citrus limon)"],
+			"Remedy": "Take 1 tsp (5 ml) of elderberry tincture or extract in warm water up to 3 times a day. Add in freshly squeezed juice from half a lemon."
+		}
+	]
+},
+{
+	"Name": "Fever (high)",
+	"Category": "Respiratory",
+	"Description": "The common cold, with which most of us are only too familiar, is a viral infection normally affecting the nose and throat. Flu is considerably more debilitating and may include fever, headache, muscular pain, nausea, and vomiting. Both have a habit of striking when we are stressed or run down. Herbal home treatment is especially suitable for these familiar self limiting ailments since it enables us to make life more comfortable, control fever, and improve the body’s recovery rate.",
+	"Self-help": "Reduce fever and temperature by washing with cool or cold water and drinking plenty of liquid, especially when sweating.",
+	"Caution": "Remember that in the very young and very old, even a common cold can develop into pneumonia. Always seek professional advice if symptoms persist or suddenly get worse.",
 	"Treatment": [{
-		"Herb": ["Herb name (Binomial nomenclature)"],
-		"Remedy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros."
-	}, {
-		"Herb": ["Herb name (Binomial nomenclature)", "Herb name (Binomial nomenclature)"],
-		"Remedy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla tortor, varius non libero sit amet, pulvinar congue eros.",
-		"Note": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"Option": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"Caution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			"Herb": ["Yarrow (Achillea millefolium)", "Boneset (Eupatorium perfoliatum)", "Cayenne (Capsicum frutescens)"],
+			"Remedy": "Make an infusion using 1 tsp each of yarrow and boneset, with a pinch of cayenne, to .75 cup (150 ml) of water. Brew for 5 minutes and drink hot. Take up to 2  cups (600 ml) a day.",
+			"Option": "Add 1 or 2 of the following herbs: 2 to 3 cloves (Eugenia caryophyllata), .5 tsp of powdered or grated fresh ginger (Zingiber officinale), .5 tsp of chopped or powdered cinnamon bark (Cinnamomum spp.), 1 to 2 crushed cardamom seeds (Elettaria cardamomum), 2 to 3 crushed peppercorns (Piper nigrum).",
+			"Caution": "Do not take yarrow during pregnancy."
+		},
+		{
+			"Herb": ["Wormwood (Artemisia absinthium)", "Gentian (Gentiana lutea)"],
+			"Remedy": "Take 10 drops of either tincture with water 3 times a day in addition to the above remedy",
+			"Caution": "Do not take Wormwood during pregnancy."
+		}
+	]
+},
+{
+	"Name": "Fever (Mild)",
+	"Category": "Respiratory",
+	"Description": "The common cold, with which most of us are only too familiar, is a viral infection normally affecting the nose and throat. Flu is considerably more debilitating and may include fever, headache, muscular pain, nausea, and vomiting. Both have a habit of striking when we are stressed or run down. Herbal home treatment is especially suitable for these familiar self limiting ailments since it enables us to make life more comfortable, control fever, and improve the body’s recovery rate.",
+	"Self-help": "Reduce fever and temperature by washing with cool or cold water and drinking plenty of liquid, especially when sweating.",
+	"Caution": "Remember that in the very young and very old, even a common cold can develop into pneumonia. Always seek professional advice if symptoms persist or suddenly get worse.",
+	"Treatment": [{
+			"Herb": ["Yarrow (Achillea millefolium)", "Elderberry (Sambucus nigra)"],
+			"Remedy": "Make an infusion with .5 tsp of each herb in .3 cup (100 ml) water. Brew for 10 minutes and drink up to 2.3 cups (600 ml) a day.",
+			"Caution": "Do not take yarrow during pregnancy."
+		},
+		{
+			"Herb": ["Onion (Allium cepa)"],
+			"Remedy": "Bake a large onion at 400ºF (200ºC) for 40 minutes. Remove, and mix the juice with an equal amount of honey. Take 1 to 2 tsp an hour up to 8 times a day."
+		}
+	]
+},
+{
+	"Name": "Sore Throat",
+	"Category": "Respiratory",
+	"Description": "A sore throat is pain, scratchiness or irritation of the throat that often worsens when you swallow. The most common cause of a sore throat (pharyngitis) is a viral infection, such as a cold or the flu.",
+	"Caution": "Always seek professional advice and treatment for children under 5 suffering from tonsillitis.",
+	"Treatment": [{
+			"Herb": ["Tamarind (Tamarindus indica)", "Lemon (Citrus limon)"],
+			"Remedy": "Gargle with either a decoction of tamarind fruit or 1 tbsp (20 ml) of lemon juice, either neat or diluted in warm water."
+		},
+		{
+			"Herb": ["Rosemary (Rosmarinus officinalis)", "Sage (Salvia officinalis)", "Myrrh (Commiphora molmol)", "Echinacea (Echinacea spp.)"],
+			"Remedy": " Method 1: Dilute 1 tsp of equal parts of all tinctures in 5 tsp of warm water and gargle. Swallow the mixture (except if pregnant). Method 2: Make a sage infusion, brew for 10 minutes, and allow to cool a little. Gargle, then swallow. Add 1 tsp (5 ml) of vinegar and 1 tsp of honey to strengthen its action.",
+			"Caution": "Do not swallow sage during pregnancy."
+		}
+	]
+},
+{
+	"Name": "Tonsillitis",
+	"Category": "Respiratory",
+	"Description": "is inflammation of the tonsils, two oval-shaped pads of tissue at the back of the throat — one tonsil on each side. Signs and symptoms of tonsillitis include swollen tonsils, sore throat, difficulty swallowing and tender lymph nodes on the sides of the neck.",
+	"Caution": "Always seek professional advice and treatment for children under 5 suffering from tonsillitis.",
+	"Treatment": [{
+			"Herb": ["Tamarind (Tamarindus indica)", "Lemon (Citrus limon)"],
+			"Remedy": "Gargle with either a decoction of tamarind fruit or 1 tbsp (20 ml) of lemon juice, either neat or diluted in warm water."
+		},
+		{
+			"Herb": ["Rosemary (Rosmarinus officinalis)", "Sage (Salvia officinalis)", "Myrrh (Commiphora molmol)", "Echinacea (Echinacea spp.)"],
+			"Remedy": " Method 1: Dilute 1 tsp of equal parts of all tinctures in 5 tsp of warm water and gargle. Swallow the mixture (except if pregnant). Method 2: Make a sage infusion, brew for 10 minutes, and allow to cool a little. Gargle, then swallow. Add 1 tsp (5 ml) of vinegar and 1 tsp of honey to strengthen its action.",
+			"Caution": "Do not swallow sage during pregnancy."
+		}
+	]
+},
+{
+	"Name": "Earache",
+	"Category": "Respiratory",
+	"Description": "Excessive nasal congestion is not always easy to treat and suggests poor air quality, inappropriate diet, or an allergy. The shape of the nose and sinuses (the air-filled cavities in the bones around the nose) can also play a role in this condition. Sinuses can become blocked with fluid, causing painful pressure. Earache may be caused by local infection.",
+	"Caution": "Seek professional advice for earache, especially in children.",
+	"Treatment": [{
+			"Herb": ["Lavender (Lavandula officinalis)"],
+			"Remedy": "Place 2 drops of essential oil on a cotton ball and plug into the ear."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": " Break open a garlic oil capsule, place 2 drops on a cotton ball, and plug into the affected ear. Alternatively, crush a large clove of garlic and soak in 1 tbsp of sunflower or olive oil for at least 24 hours. Strain the oil and warm it to body temperature. Then place2 drops on a cotton ball and plug into the ear."
+		}
+	]
+},
+{
+	"Name": "Sprains",
+	"Category": "Musculoskeletal",
+	"Description": "Minor damaged areas benefit from herbs such as arnica and comfrey, which soothe bruising and speed up the healing process. Apply as soon as possible after treatment.",
+	"Caution": "Always seek professional treatment for broken bones, fractures, and severe sprains.",
+	"Treatment": [{
+		"Herb": ["Arnica (Arnica montana)"],
+		"Remedy": "Apply ointment or cream to the damaged area and gently massage into the skin at least 3 times a day.",
+		"Caution": "Do not use arnica on broken skin."
 	}]
-}]
+},
+{
+	"Name": "Fractures",
+	"Category": "Musculoskeletal",
+	"Description": "Minor damaged areas benefit from herbs such as arnica and comfrey, which soothe bruising and speed up the healing process. Apply as soon as possible after treatment.",
+	"Caution": "Always seek professional treatment for broken bones, fractures, and severe sprains.",
+	"Treatment": [{
+		"Herb": ["Comfrey (Symphytum officinale,)"],
+		"Remedy": "Gently apply ointment, cream, or infused oil to the area at least 3 times a day.",
+		"Caution": "Do not use comfrey on broken skin."
+	}]
+},
+{
+	"Name": "Tired and Aching Muscles",
+	"Category": "Musculoskeletal",
+	"Description": "Muscle aches and cramps are entirely normal, particularly after strenuous activity, and the pain should lessen in time.",
+	"Treatment": [{
+			"Herb": ["Arnica (Arnica montana)"],
+			"Remedy": "Apply cream or ointment.",
+			"Caution": "Do not use comfrey on broken skin."
+		},
+		{
+			"Herb": ["Thyme (Thymus vulgaris)", "Rosemary (Rosmarinus officinalis)"],
+			"Remedy": "Make an infusion with 25 g of one herb to 3 cups (750 ml) water. Brew for 10 minutes, strain into a bath, and soak for 20 minutes."
+		}
+	]
+},
+{
+	"Name": "Cramps",
+	"Category": "Musculoskeletal",
+	"Description": "Muscle aches and cramps are entirely normal, particularly after strenuous activity, and the pain should lessen in time.",
+	"Treatment": [{
+		"Herb": ["Cramp Bark (Viburnum opulus)"],
+		"Remedy": "(Internal) Take 1 tsp of tincture with water up to 3 times a day. (External) Rub neat tincture firmly into the affected area."
+	}]
+},
+{
+	"Name": "Muscle Spasms",
+	"Category": "Musculoskeletal",
+	"Description": "Muscle aches and cramps are entirely normal, particularly after strenuous activity, and the pain should lessen in time.",
+	"Treatment": [{
+		"Herb": ["Cramp Bark (Viburnum opulus)"],
+		"Remedy": "(Internal) Take 1 tsp of tincture with water up to 3 times a day. (External) Rub neat tincture firmly into the affected area."
+	}]
+},
+{
+	"Name": "Arthritis",
+	"Category": "Musculoskeletal",
+	"Description": "The most common ailment characterized by joint pain and stiffness is arthritis, which is caused by inflammation of the joints. Aging or wear and tear may be the cause, but some arthritic conditions, and other joint problems such as gout, are due to the buildup of waste products in the joints.",
+	"Self-help": "Improving posture, managing anxiety, and using herbal remedies to help the body eliminate toxins can all help control these conditions. Avoid acid forming foods such as red meat, spinach, tomatoes, and oranges. Regular (but not excessive) exercise is beneficial, as is a relaxed, positive attitude.",
+	"Caution": "For severe arthritis, consult a professional practitioner. Do not take devil’s claw, black cohosh, or celery seed during pregnancy.",
+	"Treatment": [{
+			"Herb": ["Devil’s Claw (Harpagophytum procumbens)"],
+			"Remedy": "Take tablets (see General cautions)."
+		},
+		{
+			"Herb": ["Lemon (Citrus limon)"],
+			"Remedy": "Squeeze the juice from a lemon and drink neat or diluted in water each morning."
+		},
+		{
+			"Herb": ["White Willow (Salix alba)"],
+			"Remedy": "Take tablets, or make a decoction using 10 g of root to 3 cups (750 ml) water. Take in 3 doses over 1 to 2 days as required."
+		}
+	]
+},
+{
+	"Name": "Inflamed Joints",
+	"Category": "Musculoskeletal",
+	"Description": "The most common ailment characterized by joint pain and stiffness is arthritis, which is caused by inflammation of the joints. Aging or wear and tear may be the cause, but some arthritic conditions, and other joint problems such as gout, are due to the buildup of waste products in the joints.",
+	"Self-help": "Improving posture, managing anxiety, and using herbal remedies to help the body eliminate toxins can all help control these conditions. Avoid acid forming foods such as red meat, spinach, tomatoes, and oranges. Regular (but not excessive) exercise is beneficial, as is a relaxed, positive attitude.",
+	"Caution": "For severe arthritis, consult a professional practitioner. Do not take devil’s claw, black cohosh, or celery seed during pregnancy.",
+	"Treatment": [{
+			"Herb": ["Devil’s Claw (Harpagophytum procumbens)"],
+			"Remedy": "Take tablets (see General cautions)."
+		},
+		{
+			"Herb": ["Lemon (Citrus limon)"],
+			"Remedy": "Squeeze the juice from a lemon and drink neat or diluted in water each morning."
+		},
+		{
+			"Herb": ["White Willow (Salix alba)"],
+			"Remedy": "Take tablets, or make a decoction using 10 g of root to 3 cups (750 ml) water. Take in 3 doses over 1 to 2 days as required."
+		}
+	]
+},
+{
+	"Name": "Gout",
+	"Category": "Musculoskeletal",
+	"Description": "The most common ailment characterized by joint pain and stiffness is arthritis, which is caused by inflammation of the joints. Aging or wear and tear may be the cause, but some arthritic conditions, and other joint problems such as gout, are due to the buildup of waste products in the joints.",
+	"Self-help": "Improving posture, managing anxiety, and using herbal remedies to help the body eliminate toxins can all help control these conditions. Avoid acid forming foods such as red meat, spinach, tomatoes, and oranges. Regular (but not excessive) exercise is beneficial, as is a relaxed, positive attitude.",
+	"Caution": "For severe arthritis, consult a professional practitioner. Do not take devil’s claw, black cohosh, or celery seed during pregnancy.",
+	"Treatment": [{
+		"Herb": ["Celery (Apium graveolens)"],
+		"Remedy": "Take tablets, or make a decoction with the seeds. Divide into 3 doses and drink during the day or add 25 g of seeds to food per day (see General cautions)."
+	}]
+},
+{
+	"Name": "Back Pain",
+	"Category": "Musculoskeletal",
+	"Description": "Above all, back problems require specialist attention and plenty of rest. Herbal remedies contribute to overall improvement by alleviating pain and muscle tension, and helping to make life more comfortable.",
+	"Caution": "Back problems need specialist care. For chronic or severe back pain, seek the advice of a professional practitioner to gain the most benefit from herbal medicine.",
+	"Treatment": [{
+			"Herb": ["Cramp Bark (Viburnum opulus)", "Prickly Ash (Zanthoxylum americanum)"],
+			"Remedy": "Make a decoction using 15 g of cramp bark and 5 g of prickly ash bark to 3 cups (750 ml) of water. Strain and rub into the affected area, or use 1 tbsp of tincture and apply in the same way",
+			"Note": "Use especially for tense neck and lumbar regions."
+		},
+		{
+			"Herb": ["Thyme (Thymus vulgaris)"],
+			"Remedy": "Make an infusion using 25 g of herb to 3 cups (750 ml) of water and strain into a bath. Soak for 20 minutes."
+		},
+		{
+			"Herb": ["St. John’s Wort (Hypericum perforatum)", "Lavender (Lavandula officinalis)", "Pepper (Piper nigrum)", "Crampbark (Viburnum opulus)"],
+			"Remedy": "Take 2 tbsp of sunflower oil or St. John’s Wort infused oil, add 20 drops of lavender essential oil, 10 drops each of rosemary and pepper essential oil, and 1 tsp of cramp bark tincture. Shake and rub into tense areas, either after a bath or having first warmed the area with a hot towel.",
+			"Option": "Other uses Use for sciatica and other back problems that cause neuralgia, as well as for stiff joints and chronic muscle ache."
+		}
+	]
+},
+{
+	"Name": "Athlete’s Foot",
+	"Category": "Fungal",
+	"Description": "Athlete’s foot is a fungus (tinea) that grows in the skin between and under the toes, causing it to split and peel away. This itchy, sore condition can be difficult to treat at home.",
+	"Treatment": [{
+			"Herb": ["Turmeric (Curcuma longa)", "Calendula (Calendula officinalis)"],
+			"Remedy": "Mix .5 tsp of turmeric powder with 3 tsp (15 ml) of calendula ointment. Rub in between and under the toes each day."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": "Rub on .5 clove 2 to 3 times a day."
+		},
+		{
+			"Herb": ["Comfrey (Symphytum officinale)"],
+			"Remedy": "Make a poultice and firmly apply to the affected area for 1 to 2 hours each day.",
+			"Caution": "Do not use comfrey on broken skin."
+		}
+	]
+},
+{
+	"Name": "Urinary Infections",
+	"Category": "Fungal",
+	"Description": "Cystitis (an infection of the bladder and urinary tubules) can be a serious problem if it spreads to the kidneys. Mild cystitis and other urinary infections can be cured with a mixture of antiseptic herbs such as buchu and soothing herbs such as marshmallow. Taking echinacea or garlic at the same time improves the body’s resistance to infection. Bilberry or cranberry, which are from the same genus, are excellent for urinary infections.",
+	"Caution": "Seek immediate professional help if cystitis is severe or recurrent, or if there is blood in the urine or pain around the kidneys or small of the back.",
+	"Treatment": [{
+			"Herb": ["Buchu (Barosma betulina)", "Cornsilk (Zea mays)", "Marshmallow (Althaea officinalis)"],
+			"Remedy": "Make an infusion with 5 g of each herb to 3 cups (750 ml) of water. Divide into 4 doses and drink throughout the day.",
+			"Option": "Substitute Juniper (Juniperus communis) or Goldenrod (Solidago virgaurea) for buchu.",
+			"Caution": "Do not take juniper or buchu during pregnancy."
+		},
+		{
+			"Herb": ["Bilberry (Vaccinium myrtillus)"],
+			"Remedy": "Make a decoction of the berries and drink 1 to 2 cups (450 to 600 ml) a day.",
+			"Option": "Cranberry juice may be substituted for bilberry decoction."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)", "Echinacea (Echinacea spp.)"],
+			"Remedy": "Take either or both herbs in capsule or tablet form.",
+			"Note": "Take in addition to other remedies."
+		}
+	]
+},
+{
+	"Name": "Fungal Infecton",
+	"Category": "Fungal",
+	"Description": "Fungal infections are common and can be hard to treat. Vaginal yeast infection is increasingly found as a side effect of conventional antibiotic treatment. Calendula is helpful for treating this troublesome condition. Candidiasis (accelerated growth of Candida albicans, a yeastlike organism within the gut) can cause considerable problems, but mild cases may be helped with antiseptic and antifungal herbs, such as garlic. All types of fungal infections can be helped with herbs that boost the immune system, such as echinacea, as well as by applying an external remedy to the affected area.",
+	"Self-help": "Candidiasis sufferers can take probiotic capsules or live yogurt to help the growth of beneficial bacteria in the intestines. For yeast infection, live yogurt can be inserted into the vagina.",
+	"Caution": "Seek professional advice for candidiasis, as it is often a difficult condition to treat.",
+	"Treatment": [{
+			"Herb": ["Echinacea (Echinacea spp.)", "Thyme (Thymus vulgaris)"],
+			"Remedy": "Mix 2 parts echinacea tincture to 1 part thyme tincture and take 1 tsp twice a day with water."
+		},
+		{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": "Take 1 to 2 garlic cloves a day, crushed and swallowed with water or mixed with food."
+		}
+	]
+},
+{
+	"Name": "Yeast Infection",
+	"Category": "Fungal",
+	"Description": "Fungal infections are common and can be hard to treat. Vaginal yeast infection is increasingly found as a side effect of conventional antibiotic treatment. Calendula is helpful for treating this troublesome condition. Candidiasis (accelerated growth of Candida albicans, a yeast like organism within the gut) can cause considerable problems, but mild cases may be helped with antiseptic and antifungal herbs, such as garlic. All types of fungal infections can be helped with herbs that boost the immune system, such as echinacea, as well as by applying an external remedy to the affected area.",
+	"Self-help": "Candidiasis sufferers can take probiotic capsules or live yogurt to help the growth of beneficial bacteria in the intestines. For yeast infection, live yogurt can be inserted into the vagina.",
+	"Caution": "Seek professional advice for candidiasis, as it is often a difficult condition to treat.",
+	"Treatment": [{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Make an infusion and allow to cool. Strain and use as a douche or wash.",
+			"Option": "Add the infusion to a bath and soak for 20 minutes."
+		},
+		{
+			"Herb": ["Tea Tree (Melaleuca alternifolia)"],
+			"Remedy": "Use pessaries or place 1 to 2 drops of essential oil diluted with 3 drops of olive oil on a tampon and insert into the vagina (this may sting). Remove after 2 to 3 hours and only use once a day.",
+			"Caution": "During pregnancy, use these pessaries and tampons only with professional advice."
+		}
+	]
+},
+{
+	"Name": "Oral Thrush",
+	"Category": "Fungal",
+	"Description": "Oral candidiasis, also known as oral thrush among other names, is candidiasis that occurs in the mouth. That is, oral candidiasis is a mycosis (yeast or fungal infection) of Candida species on the mucous membranes of the mouth. Candida albicans is the most commonly implicated organism in this condition.",
+	"Self-help": "Candidiasis sufferers can take probiotic capsules or live yogurt to help the growth of beneficial bacteria in the intestines.",
+	"Caution": "Seek professional advice for candidiasis, as it is often a difficult condition to treat.",
+	"Treatment": [{
+		"Herb": ["Licorice (Glycyrrhiza glabra)", "Myrrh (Commiphora molmol)", "Echinacea (Echinacea spp.)"],
+		"Remedy": "Mix equal parts of the tincture of each herb. Take 1 tsp as a mouthwash with water every 3 to 4 hours, as required."
+	}]
+},
+{
+	"Name": "Candidiasis",
+	"Category": "Fungal",
+	"Description": "Invasive candidiasis is an infection caused by a yeast (a type of fungus) called Candida.  Unlike Candida infections in the mouth and throat (also called thrush) or vaginal yeast infections, which are localized to one part of the body,  invasive candidiasis is a serious infection that can affect the blood, heart, brain, eyes, bones, or other parts of the body.",
+	"Self-help": "Candidiasis sufferers can take probiotic capsules or live yogurt to help the growth of beneficial bacteria in the intestines.",
+	"Caution": "Seek professional advice for candidiasis, as it is often a difficult condition to treat.",
+	"Treatment": [{
+			"Herb": ["Elderflower (Sambucus nigra)", "Calendula (Calendula officinalis)", "Thyme (Thymus vulgaris)"],
+			"Remedy": "Make an infusion with 8 g of each herb to 3 cups (750 ml) water and drink 1.25 to 1.5 cups (300 to 450 ml) each day."
+		},
+		{
+			"Herb": ["Pau d’Arco (Tabebuia spp.)"],
+			"Remedy": "Make a decoction with 12 g bark to 3 cups (750 ml) of water. Divide into 3 to 4 doses and drink throughout the day. Alternatively, take capsules or .5 tsp of tincture with water up to 3 times a day."
+		}
+	]
+},
+{
+	"Name": "Digestive Upsets",
+	"Category": "Children",
+	"Description": "Digestive upsets that result in diarrhea and constipation can be the result of food intolerance or allergy in infants, especially when foods such as dairy are being introduced into the diet. Other minor digestive upsets due to infection or inflammation can cause loss of appetite.",
+	"Treatment": [{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Give .5 level tsp of powder with .25 cup (75 ml) of hot water 1 to 2 times a day."
+		},
+		{
+			"Herb": ["German Chamomile (Chamomilla recutita)"],
+			"Remedy": "Make an infusion with 1 level tsp to .75 cup (150 ml) of water. Give up to 1.5 cups (450 ml) a day."
+		},
+		{
+			"Herb": ["Anise (Pimpinella anisum)", "Fennel (Foeniculum vulgare)"],
+			"Remedy": "Make an infusion with 1 level tsp of either of the seeds to .75 cup (150 ml) of water. Give up to 1 cup (300 ml) a day."
+		},
+		{
+			"Herb": ["Slippery Elm (Ulmus rubra)"],
+			"Remedy": "Mix 1 tsp of powder with hot water to make a paste, then blend with cold or warm water as required and flavor with honey, cinnamon, or maple syrup. Give up to 50g powder in doses during the day."
+		}
+	]
+},
+{
+	"Name": "Gas",
+	"Category": "Children",
+	"Description": "Digestive upsets that result in diarrhea and constipation can be the result of food intolerance or allergy in infants, especially when foods such as dairy are being introduced into the diet. Other minor digestive upsets due to infection or inflammation can cause loss of appetite.",
+	"Treatment": [{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Give .5 level tsp of powder with .25 cup (75 ml) of hot water 1 to 2 times a day."
+		},
+		{
+			"Herb": ["German Chamomile (Chamomilla recutita)"],
+			"Remedy": "Make an infusion with 1 level tsp to .75 cup (150 ml) of water. Give up to 1 .6 cups (450 ml) a day."
+		},
+		{
+			"Herb": ["Anise (Pimpinella anisum)", "Fennel (Foeniculum vulgare)"],
+			"Remedy": "Make an infusion with 1 level tsp of either of the seeds to .75 cup (150 ml) of water. Give up to 1 cup (300 ml) a day."
+		},
+		{
+			"Herb": ["Slippery Elm (Ulmus rubra)"],
+			"Remedy": "Mix 1 tsp of powder with hot water to make a paste, then blend with cold or warm water as required and flavor with honey, cinnamon, or maple syrup. Give up to 50g powder in doses during the day."
+		}
+	]
+},
+{
+	"Name": "Colic",
+	"Category": "Children",
+	"Description": "Colic is a spasm of the gut causing cramping pain in the abdomen. It usually occurs during the first 3 months of life, particularly after feeding in the evening, when the digestion may not be working so well.",
+	"Treatment": [{
+			"Herb": ["Ginger (Zingiber officinale)"],
+			"Remedy": "Give .25 level tsp of powder with .25 cup (75 ml) of hot water 1 to 2 times a day."
+		},
+		{
+			"Herb": ["German Chamomile (Chamomilla recutita)"],
+			"Remedy": "Make an infusion with 1 level tsp to .75 cup (150 ml) of water. Give up to 1 .6 cups (450 ml) a day."
+		},
+		{
+			"Herb": ["Anise (Pimpinella anisum)", "Fennel (Foeniculum vulgare)"],
+			"Remedy": "Make an infusion with 1 level tsp of either of the seeds to .75 cup (150 ml) of water. Give up to 1 cup (300 ml) a day."
+		},
+		{
+			"Herb": ["Slippery Elm (Ulmus rubra)"],
+			"Remedy": "Mix 1 tsp of powder with hot water to make a paste, then blend with cold or warm water as required and flavor with honey, cinnamon, or maple syrup. Give up to 50g powder in doses during the day."
+		}
+	]
+},
+{
+	"Name": "Diaper Rash",
+	"Category": "Children",
+	"Description": "Diaper rash occurs when urine, moisture, and irritants in the diaper cause the baby’s skin to become red, sore, and damp. It’s essential to clean the baby thoroughly at each diaper change. Ensure that cloth diapers are thoroughly rinsed, avoid leaving a wet, chafing diaper on the baby, and remove the diaper completely whenever possible.",
+	"Treatment": [{
+			"Herb": ["Chickweed (Stellaria media)"],
+			"Remedy": "Apply ointment 1 to 2 times a day."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Apply ointment or cream to clean, dry skin at each diaper change.",
+			"Note": "For diaper rash, the ointment is best."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)", "Nettle (Urtica dioica)"],
+			"Remedy": "Make an infusion with 1 level tsp of each herb to .75 cup (150 ml) of water. Give .75  to 1.25 cup (150 to 300 ml) a day."
+		}
+	]
+},
+{
+	"Name": "Inflamed Skin Rashes",
+	"Category": "Children",
+	"Description": "Diaper rash occurs when urine, moisture, and irritants in the diaper cause the baby’s skin to become red, sore, and damp. It’s essential to clean the baby thoroughly at each diaper change. Ensure that cloth diapers are thoroughly rinsed, avoid leaving a wet, chafing diaper on the baby, and remove the diaper completely whenever possible.",
+	"Treatment": [{
+			"Herb": ["Chickweed (Stellaria media)"],
+			"Remedy": "Apply ointment 1 to 2 times a day."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Apply ointment or cream to clean, dry skin at each diaper change.",
+			"Note": "For diaper rash, the ointment is best."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)", "Nettle (Urtica dioica)"],
+			"Remedy": "Make an infusion with 1 level tsp of each herb to .75 cup (150 ml) of water. Give .75 to 1.25 cup (150 to 300 ml) a day."
+		}
+	]
+},
+{
+	"Name": "Cradle Cap",
+	"Category": "Children",
+	"Description": "Cradle cap is a thick yellow-brown encrustation on the baby’s scalp, caused by overactivity of the sebum oil glands.",
+	"Treatment": [{
+		"Herb": ["Olive (Olea europaea)"],
+		"Remedy": "Apply olive oil to the affected area 1 to 2 times a day."
+	}]
+},
+{
+	"Name": "Teething",
+	"Category": "Children",
+	"Description": "Teething is the process by which an infant's first teeth (the deciduous teeth, often called baby teeth or milk teeth) sequentially appear by emerging through the gums, typically arriving in pairs. The mandibular central incisors are the first primary teeth to erupt, usually between 6 and 10 months of age.",
+	"Treatment": [{
+		"Herb": ["German Chamomile (Chamomilla recutita)", "Slippery Elm (Ulmus rubra)"],
+		"Remedy": "Give German chamomile infusion (see Digestive Upsets) or make a paste from slippery elm powder and the infusion, and rub on the gums."
+	}]
+},
+{
+	"Name": "Irregular Cycle",
+	"Category": "Reproductive",
+	"Description": "The menstrual cycle can be disturbed for many reasons, most of them relating to hormonal imbalances. Other causes include stress, too much or too little exercise, weight problems, food sensitivity or allergy, steroids, the contraceptive pill, chronic illness, vitamin and mineral deficiency, and even excess caffeine, alcohol, or smoking. To determine the underlying cause, it is important to consult a professional practitioner. The normal menstrual cycle lasts about 28 days.If this cycle varies greatly from one period to another without reason, it could be termed irregular.",
+	"Self-help": "Combine herbal remedies with a diet high in fresh vegetables and fruit, and low in fatty foods, sugar, and alcohol. Try not to smoke. Regular exercise, particularly of the waist and pelvis, is helpful, as is a relaxed attitude to life. All reproductive problems will benefit from this simple approach.",
+	"Caution": "For any chronic menstrual problem, it is wise to seek professional attention, especially if your periods are very heavy or painful.",
+	"Treatment": [{
+			"Herb": ["Chaste Tree (Vitex agnus-castus)"],
+			"Remedy": "Take tablets, or take 30 to 40 drops (1.5 to 2 ml) of tincture with water each morning on waking for at least 2 months."
+		},
+		{
+			"Herb": ["Motherwort (Leonurus cardiaca)"],
+			"Remedy": "Make an infusion and take .75 to 1 .25 cups (150 to 300 ml) a day for up to 3 monthly cycles.",
+			"Caution": "Do not take if menstrual bleeding is heavy."
+		}
+	]
+},
+{
+	"Name": "Fluid Retention",
+	"Category": "Reproductive",
+	"Description": "The menstrual cycle can be disturbed for many reasons, most of them relating to hormonal imbalances. Other causes include stress, too much or too little exercise, weight problems, food sensitivity or allergy, steroids, the contraceptive pill, chronic illness, vitamin and mineral deficiency, and even excess caffeine, alcohol, or smoking. To determine the underlying cause, it is important to consult a professional practitioner.",
+	"Self-help": "Combine herbal remedies with a diet high in fresh vegetables and fruit, and low in fatty foods, sugar, and alcohol. Try not to smoke. Regular exercise, particularly of the waist and pelvis, is helpful, as is a relaxed attitude to life. All reproductive problems will benefit from this simple approach.",
+	"Caution": "For any chronic menstrual problem, it is wise to seek professional attention, especially if your periods are very heavy or painful.",
+	"Treatment": [{
+		"Herb": ["Dandelion (Taraxacum officinale)"],
+		"Remedy": "Make an infusion with the leaves and drink up to 1.5 cups (450 ml) a day."
+	}]
+},
+{
+	"Name": "Breast Tenderness",
+	"Category": "Reproductive",
+	"Description": "The menstrual cycle can be disturbed for many reasons, most of them relating to hormonal imbalances. Other causes include stress, too much or too little exercise, weight problems, food sensitivity or allergy, steroids, the contraceptive pill, chronic illness, vitamin and mineral deficiency, and even excess caffeine, alcohol, or smoking. To determine the underlying cause, it is important to consult a professional practitioner.",
+	"Self-help": "Combine herbal remedies with a diet high in fresh vegetables and fruit, and low in fatty foods, sugar, and alcohol. Try not to smoke. Regular exercise, particularly of the waist and pelvis, is helpful, as is a relaxed attitude to life. All reproductive problems will benefit from this simple approach.",
+	"Caution": "For any chronic menstrual problem, it is wise to seek professional attention, especially if your periods are very heavy or painful.",
+	"Treatment": [{
+			"Herb": ["German Chamomile (Chamomilla recutita)"],
+			"Remedy": "Make a compress with an infusion of 50g of herb and 1 cup (250 ml) of water. Place gently over the breasts. Repeat as often as required to achieve relief."
+		},
+		{
+			"Herb": ["Calendula (Calendula officinalis)"],
+			"Remedy": "Apply ointment to the nipples. If breastfeeding, wipe off the ointment before feeding."
+		}
+	]
+},
+{
+	"Name": "Heavy Menstrual Bleeding",
+	"Category": "Reproductive",
+	"Description": "The menstrual cycle can be disturbed for many reasons, most of them relating to hormonal imbalances. Other causes include stress, too much or too little exercise, weight problems, food sensitivity or allergy, steroids, the contraceptive pill, chronic illness, vitamin and mineral deficiency, and even excess caffeine, alcohol, or smoking. To determine the underlying cause, it is important to consult a professional practitioner. The normal menstrual cycle lasts about 28 days.If this cycle varies greatly from one period to another without reason, it could be termed irregular. Heavy periods can result in anemia.If your period lasts longer than 5 days or if you have to change your protection every 2 hours, your periods may be too heavy.",
+	"Self-help": "Combine herbal remedies with a diet high in fresh vegetables and fruit, and low in fatty foods, sugar, and alcohol. Try not to smoke. Regular exercise, particularly of the waist and pelvis, is helpful, as is a relaxed attitude to life. All reproductive problems will benefit from this simple approach.",
+	"Caution": "For any chronic menstrual problem, it is wise to seek professional attention, especially if your periods are very heavy or painful.",
+	"Treatment": [{
+			"Herb": ["Chuang Xiong (Ligusticum wallachii)", "White Peony (Paeonia lactiflora)", "Dong Quai (Angelica sinensis)", "Rehmannia (Rehmannia glutinosa)"],
+			"Remedy": "Mix equal parts of each root and make a decoction using 15 g of the mixture to 3 cups (750 ml) of water. Drink in 3 equal doses throughout the day.",
+			"Note": "Any of these herbs will help, but they are best together, in which form they are known as Four Things Soup."
+		},
+		{
+			"Herb": ["Shepherd’s Purse (Capsella bursa-pastoris)", "Nettle (Urtica dioica)"],
+			"Remedy": "Make an infusion using 7.5 g of each herb (or 15 g of shepherd’s purse only) to 3 cups (750 ml) of water. Divide into 3 to 4 doses and drink throughout the day.",
+			"Caution": "Do not take if menstrual bleeding is heavy."
+		}
+	]
+},
+{
+	"Name": "Period Pain",
+	"Category": "Reproductive",
+	"Description": "The menstrual cycle can be disturbed for many reasons, most of them relating to hormonal imbalances. Other causes include stress, too much or too little exercise, weight problems, food sensitivity or allergy, steroids, the contraceptive pill, chronic illness, vitamin and mineral deficiency, and even excess caffeine, alcohol, or smoking. To determine the underlying cause, it is important to consult a professional practitioner. Period pain have many causes and are experienced at some stage by most women.Breast tenderness, sore nipples, and fluid retention are common symptoms.",
+	"Self-help": "Combine herbal remedies with a diet high in fresh vegetables and fruit, and low in fatty foods, sugar, and alcohol. Try not to smoke. Regular exercise, particularly of the waist and pelvis, is helpful, as is a relaxed attitude to life. All reproductive problems will benefit from this simple approach.",
+	"Caution": "For any chronic menstrual problem, it is wise to seek professional attention, especially if your periods are very heavy or painful.",
+	"Treatment": [{
+			"Herb": ["Wild Yam (Dioscorea villosa)", "Cramp Bark (Viburnum opulus)", "Black Haw (Viburnum prunifolium)"],
+			"Remedy": "Make a decoction using 15g of herb to 3 cups (750 ml) of water. Sip small amounts during the day; or take 2 tsp of tincture with water 3 to 4 times a day for up to 3 days, then reduce the dose to 1 tsp a day for 5 days, or take tablets."
+		},
+		{
+			"Herb": ["White Peony (Paeonia lactiflora)"],
+			"Remedy": "Make a decoction using 20 g of root to 3 cups (750 ml) of water. Sip this throughout the day."
+		}
+	]
+},
+{
+	"Name": "Aiding Conception",
+	"Category": "Reproductive",
+	"Description": "Although much more research is needed, herbal medicine does appear to increase fertility in women who are trying to conceive, especially if the problem is related to hormonal imbalances, age, or the amount of mucus produced by the cervix. Where there appears to be no physical problem preventing conception, for example a blocked fallopian tube, ovarian cysts, or internal scarring, herbal medicines are well worth trying. Diet, exercise, and lifestyle may also play a significant role in improving fertility.",
+	"Treatment": [{
+			"Herb": ["Chaste Tree (Vitex agnus-castus)"],
+			"Remedy": "Take tablets or take 20 to 40 drops of tincture with water each morning for a maximum of 3 months at a time."
+		},
+		{
+			"Herb": ["Dong Quai (Angelica sinensis)"],
+			"Remedy": "Take tablets or make a decoction using 12g of root to 3 cups (750 ml) of water and drink each day for up to 3 months.",
+			"Caution": "Discontinue if you become pregnant."
+		}
+	]
+},
+{
+	"Name": "Low Sex Drive",
+	"Category": "Reproductive",
+	"Description": "Although much more research is needed, herbal medicine does appear to increase fertility in women who are trying to conceive, especially if the problem is related to hormonal imbalances, age, or the amount of mucus produced by the cervix. Where there appears to be no physical problem preventing conception, for example a blocked fallopian tube, ovarian cysts, or internal scarring, herbal medicines are well worth trying. Diet, exercise, and lifestyle may also play a significant role in improving fertility.",
+	"Treatment": [{
+			"Herb": ["Schisandra (Schisandra chinensis)"],
+			"Remedy": "Soak 5 g (a small handful) of berries in water overnight. Strain the berries and make a decoction with 1 cup (250 ml) of water. Brew for 15 minutes and take the dose each day."
+		},
+		{
+			"Herb": ["Shatavari (Asparagus racemosus)"],
+			"Remedy": "Take 1 tsp of tincture twice a day with water."
+		}
+	]
+},
+{
+	"Name": "Failing Memory",
+	"Category": "Elderly",
+	"Description": "Memory loss (amnesia) is unusual forgetfulness. You may not be able to remember new events, recall one or more memories of the past, or both. The memory loss may be for a short time and then resolve (transient). Or, it may not go away, and, depending on the cause, it can get worse over time.",
+	"Treatment": [{
+			"Herb": ["Ginkgo (Ginkgo biloba)"],
+			"Remedy": "Take ginkgo tablets. These need to be taken regularly for at least 3 months."
+		},
+		{
+			"Herb": ["Gotu kola (Centella asiatica)"],
+			"Remedy": "Take tablets or .5 tsp tincture twice a day."
+		}
+	]
+},
+{
+	"Name": "Concentration",
+	"Category": "Elderly",
+	"Description": "Difficulty concentrating is a normal and periodic occurrence for most people. Tiredness and emotional stress can cause concentration problems in most people. Hormonal changes, such as those experienced during menopause or pregnancy, can also affect how we think and concentrate. ",
+	"Treatment": [{
+			"Herb": ["Ginkgo (Ginkgo biloba)"],
+			"Remedy": "Take ginkgo tablets. These need to be taken regularly for at least 3 months."
+		},
+		{
+			"Herb": ["Gotu kola (Centella asiatica)"],
+			"Remedy": "Take tablets or .5 tsp tincture twice a day."
+		}
+	]
+},
+{
+	"Name": "Poor Circulation",
+	"Category": "Elderly",
+	"Description": "An inadequacy of blood flow. Inadequate blood flow to a particular area of the body can result in too little oxygen being delivered to that area, a condition known as hypoxia.",
+	"Treatment": [{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": "Take 1 to 2 raw cloves a day with food, or take garlic tablets or capsules on a regular basis."
+		},
+		{
+			"Herb": ["Buckwheat (Fagopyrum esculentum)"],
+			"Remedy": "Make a standard infusion and drink up to 1.25 cup (300 ml) a day."
+		}
+	]
+},
+{
+	"Name": "High Blood Pressure",
+	"Category": "Elderly",
+	"Description": "High blood pressure (HBP or hypertension) is when your blood pressure, the force of your blood pushing against the walls of your blood vessels, is consistently too high.",
+	"Treatment": [{
+			"Herb": ["Garlic (Allium sativum)"],
+			"Remedy": "Take 1 to 2 raw cloves a day with food, or take garlic tablets or capsules on a regular basis."
+		},
+		{
+			"Herb": ["Buckwheat (Fagopyrum esculentum)"],
+			"Remedy": "Make a standard infusion and drink up to 1.25 cup (300 ml) a day."
+		}
+	]
+},
+{
+	"Name": "Chronic Infections",
+	"Category": "Elderly",
+	"Description": "A chronic disease is one lasting 3 months or more, by the definition of the U.S. National Center for Health Statistics. Chronic diseases generally cannot be prevented by vaccines or cured by medication, nor do they just disappear.",
+	"Treatment": [{
+		"Herb": ["Garlic (Allium sativum)", "Echinacea (Echinacea spp.)"],
+		"Remedy": "Take 1 to 2 raw cloves of garlic each day with food, or take either herb in tablet or capsule form on a regular basis."
+	}]
+},
+{
+	"Name": "Weakened Liver",
+	"Category": "Elderly",
+	"Description": "Cirrhosis (pronounced sur-o-sis) is a stage of liver disease that occurs when cells in the liver are damaged and scar tissue forms. In cirrhosis, normal areas of liver are surrounded by scarred areas that do not function properly.",
+	"Treatment": [{
+		"Herb": ["Rehmannia (Rehmannia glutinosa)"],
+		"Remedy": "Chew 5g of root 1 to 3 times a day, or make a decoction with 5 g of root to 1 cup (250 ml) of water and take 1 to 3 times a day."
+	}]
+},
+{
+	"Name": "Metabolism",
+	"Category": "Elderly",
+	"Description": "A metabolic disorder can happen when abnormal chemical reactions in the body alter the normal metabolic process. It can also be defined as inherited single gene anomaly, most of which are autosomal recessive.",
+	"Treatment": [{
+		"Herb": ["Rehmannia (Rehmannia glutinosa)"],
+		"Remedy": "Chew 5g of root 1 to 3 times a day, or make a decoction with 5 g of root to 1 cup (250 ml) of water and take 1 to 3 times a day."
+	}]
+},
+{
+	"Name": "Weakened Digestion",
+	"Category": "Elderly",
+	"Description": "Indigestion, also known as dyspepsia, is a condition of impaired digestion. Symptoms may include upper abdominal fullness, heartburn, nausea, belching, or upper abdominal pain.",
+	"Treatment": [{
+		"Herb": ["Gentian (Gentiana lutea)"],
+		"Remedy": "Take 5 to 10 drops of tincture with water about 30 minutes before eating, 3 times a day.",
+		"Caution": "Do not take gentian if you suffer from acid indigestion or a peptic ulcer."
+	}]
+}
+]
+
+
