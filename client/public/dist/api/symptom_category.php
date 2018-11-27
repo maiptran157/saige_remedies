@@ -6,7 +6,7 @@ $output=[];
 
 //print('symptom_category running: ');
 
-$query = "SELECT ID AS _id, short_name AS name, `URL` as img FROM symptom_group";
+$query = "SELECT ID AS _id, `URL` as img FROM symptom_group";
 
 $result = mysqli_query($conn, $query);
 
