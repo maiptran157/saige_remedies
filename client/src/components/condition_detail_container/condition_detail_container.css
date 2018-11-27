@@ -1,5 +1,5 @@
 .condition-detail-container {
-    top: 10%;
+    top: 80px;
     width: 100%;
     flex-wrap: wrap;
     overflow: scroll;
@@ -121,7 +121,7 @@
         font-size: 15px;
     }
     .condition-detail-description {
-        height: 100px;
+        height: 65px;
     }
     .condition-detail-paragraph {
         font-size: 16px;
@@ -146,9 +146,7 @@
         font-size: 35px;
     }
     .condition-detail-description {
-        height: 160px;
-    } 
-    .center-show-more {
+        height: 95px;
     } 
 }
 
@@ -171,9 +169,6 @@
     }
     .end-of-result-message {
         font-size: 50px;
-    }
-    .center-show-more {
-
     }
 }
 
