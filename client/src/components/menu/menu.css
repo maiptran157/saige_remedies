@@ -87,7 +87,7 @@
         display: flex;
         width: 50%;
         justify-content: space-around;
-        font-size: 1.75vh;
+        font-size: 1.1rem;
     }
     li {
         text-decoration: none;
@@ -98,8 +98,20 @@
     }
 }
 
+@media only screen and (min-width: 500px) {
+    .hamburger-icon > img {
+        width: 62%;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .web-menu {
-        font-size: 2vh;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .web-menu {
+        font-size: 1.5rem;
     }
 }

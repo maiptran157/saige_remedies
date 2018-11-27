@@ -44,6 +44,7 @@
     border-radius: 25px;
     background-color: white;
     padding: 3%;
+    position: relative;
     height: 105px;
 }
 
@@ -106,9 +107,9 @@
 }
 
 .center-show-more {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;   
+    position: absolute;
+    bottom: 5%;
+    right: 5%
     /* align-items: flex-end; */
 }
 
