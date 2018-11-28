@@ -21,7 +21,6 @@
     align-items: center;
     flex-direction: column;
     display: flex;
-    margin-top: 5%;
     text-align: center;
 }
 
@@ -175,5 +174,11 @@
 @media only screen and (min-width: 1200px) {
     .condition-detail-group {
         width: 1000px;
+    }
+}
+
+@media only screen and (min-height: 1200px) {
+    .condition-detail-container {
+        top: 140px;
     }
 }
