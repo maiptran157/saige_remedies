@@ -1,9 +1,9 @@
 .categories-container {
-    top: 12%;
+    // top: 12%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 90%;
+    height: 100%;
     position: relative;
     // overflow: scroll;
         .categories-content {
@@ -12,6 +12,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            height: 100%;
+            margin-top: 20px;
         }
 }
 
@@ -19,7 +21,7 @@
     
     .categories-container {
         overflow: scroll;
-        top: 80px;
+        // top: 80px;
     }
 }
 
@@ -37,6 +39,14 @@
         justify-content: center;
         .categories-content {
             width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    .categories-container {
+        .categories-content {
+            width: 80%;
         }
     }
 }
