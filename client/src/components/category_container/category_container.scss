@@ -66,3 +66,9 @@
         width: 90%;
     }
 }
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    .category-box {
+        width: 27%;
+    }
+}
