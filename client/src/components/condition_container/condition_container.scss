@@ -4,8 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     .symptom-group {
-        position: relative;
-        top: 13%;
+        // position: relative;
+        // top: 13%;
+        margin-top: 70px;
         width: 100%;
         overflow: scroll;
         display: flex;
@@ -17,6 +18,45 @@
                 color: whitesmoke;
                 font-weight: bold;
                 text-shadow:rgb(0, 0, 0) 2px 2px;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 80px;
+        }
+    }
+} 
+
+@media only screen and (min-width: 600px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 80px;
+        }
+    }
+} 
+
+@media only screen and (min-height: 800px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 85px;
+        }
+    }
+}
+@media only screen and (min-height: 1000px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 110px;
+        }
+    }
+}
+
+@media only screen and (min-height: 1200px) {
+    .condition-container {
+        .symptom-group {
+            margin-top: 165px;
         }
     }
 }
