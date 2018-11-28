@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     align-content: space-between;
-    position: fixed;
+    position: sticky;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;

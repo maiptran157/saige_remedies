@@ -8,24 +8,34 @@
 }
  
 .logo > img {
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
+    width: 50px;
     width: -moz-available;
     width: fill-available;
 } 
 
+@media only screen and (min-width: 500px) {
+    .logo > img {
+        width: 50px;
+    }
+}
 
+@media only screen and (min-width: 768px) {
+    .logo > img {
+        width: 70px;
+    }
+}
 @media only screen and (min-width: 992px) {
+    .logo > img {
+        width: 90px;
+    }
     .logo-container {
         width: 5%;
-    }
-    
-    .logo > img {
-        width: 100%;
     }
 }
 
 @media only screen and (min-width: 1024px) and (min-height: 1366px) {
-    .logo-container {
-        width: 130px;
+    .logo > img {
+        width: 70px;
     }
 }

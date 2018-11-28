@@ -1,8 +1,7 @@
 .condition-detail-container {
-    top: 80px;
     width: 100%;
     flex-wrap: wrap;
-    overflow: scroll;
+    /* overflow: scroll; */
     position: relative;
     display: flex;
     justify-content: center;
