@@ -1,8 +1,6 @@
-.remedy-detail-container {
-    margin-top: 80px;
-    overflow-y: auto;
+/* .remedy-detail-container {
     overflow-x: hidden;
-}
+} */
 
 .remedy-detail-container::-webkit-scrollbar {
     width: 0;
