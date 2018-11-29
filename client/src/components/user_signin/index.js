@@ -31,7 +31,7 @@ class SignIn extends Component {
                     You have signed in successfully
                     {goBackHome()}
                 </div>
-            } else if (!this.props.auth && this.props.submitSucceeded) {
+            } else if (!this.props.auth && this.props.error === "Error signing in") {
                 return <Fragment>
                     <h3 className="sign-in-fail-message">Email or password is incorrect. Please try again.</h3>
                     <h3 className="sign-in-header">Sign in your Saige account</h3>

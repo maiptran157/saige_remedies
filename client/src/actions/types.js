@@ -16,5 +16,6 @@ export default {
     CHECK_USER_LOG_IN_STATUS: 'check_user_log_in_status',
     CHECK_USER_SIGN_UP_INFO_SUCCESS: 'check_user_sign_up_info_success',
     CHECK_USER_SIGN_UP_INFO_FAIL: 'check_user_sign_up_info_fail',
-    SESSION_CHECK: 'session_check'
+    SESSION_CHECK: 'session_check',
+    RESET_AUTH: 'reset_auth'
 };

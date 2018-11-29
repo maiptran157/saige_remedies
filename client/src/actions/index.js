@@ -183,3 +183,7 @@ export const signOut = () => {
     axios.get(`${config.ENABLE_MODAL}`);
     return { type: types.SIGN_OUT }
 }
+
+export const resetAuth = () => {
+    return { type: types.RESET_AUTH }
+}
