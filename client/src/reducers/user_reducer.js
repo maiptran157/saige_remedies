@@ -23,6 +23,8 @@ export default (state = DEFAULT_STATE, action) => {
             return { ...state, signUpCheckMessage: action.payload };
         case types.CHECK_USER_SIGN_UP_INFO_FAIL:
             return { ...state, signUpCheckMessage: action.error };
+        case types.RESET_AUTH:
+            return { ...state, auth: false }
         default:
             return state;
     }

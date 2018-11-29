@@ -18,12 +18,12 @@ class UmbrellaConditions extends Component {
         this.props.getCategoryList();
     }
 
-    render() {        
+    render() {
         const { modalCheck } = this.state;
         const { categories, history } = this.props;
-
+        console.log("categories:", categories)
         const categoryList = () => {
-            if ( !categories) {
+            if (!categories) {
                 return null;
             } else {
                 return categories.map((category) => {
@@ -33,7 +33,7 @@ class UmbrellaConditions extends Component {
         }
         return (
             <div className="categories-container">
-                {modalCheck ? null : <AgreementModal/> }
+                {modalCheck ? null : <AgreementModal />}
                 <Header push={history.push} logo={saigeLogo} />
                 <div className="categories-content">
                     {categoryList()}

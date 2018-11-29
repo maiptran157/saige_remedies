@@ -3,7 +3,7 @@ import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { userSignUpInfo, userSignUpCheck } from '../../actions';
+import { userSignUpInfo, userSignUpCheck, resetAuth } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 import './user_signup.css';
@@ -35,20 +35,23 @@ class SignUp extends Component {
                 </form>
             </Fragment>
         }
-        const goBackHome = () => {
+        const goToSignIn = () => {
             setTimeout(() => {
                 this.props.history.push('/sign-in')
             }, 1000)
         }
         if (this.props.auth) {
+            this.props.resetAuth();
+            console.log("Props in Success Sign Up Message", this.props)
             return <div className="sign-up-container">
                 <Header logo={saigeLogo} buttonType="back-button" />
                 <div className="sign-up-success-message">
                     You have successfully created an account
-                    {goBackHome()}
+                    {goToSignIn()}
                 </div>
             </div>
         } else if (this.props.signUpCheckMessage.userExists) {
+            debugger;
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
@@ -58,7 +61,7 @@ class SignUp extends Component {
                     </div>
                 </div>
             )
-        } else if (!this.props.auth && this.props.submitSucceeded) {
+        } else if (!this.props.auth && this.props.error === "Error signing up") {
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
@@ -97,7 +100,7 @@ const validate = values => {
     if (!username) {
         errors.username = "Please choose your username";
     } else if (/[#$%*&@!'"]/gm.test(username)) {
-        errors.username = "Username cannot include these special characters";
+        errors.username = "Username cannot include these special characters # $ % * & @ ! \' or \" ";
     }
     if (!email) {
         errors.email = "Please enter your email";
@@ -123,11 +126,13 @@ function mapStateToProps(state) {
     return {
         auth: state.user.auth,
         authError: state.user.signUpError,
-        signUpCheckMessage: state.user.signUpCheckMessage
+        signUpCheckMessage: state.user.signUpCheckMessage,
+        resetAuth: resetAuth
     }
 }
 
 export default connect(mapStateToProps, {
     userSignUpInfo: userSignUpInfo,
-    userSignUpCheck: userSignUpCheck
+    userSignUpCheck: userSignUpCheck,
+    resetAuth: resetAuth
 })(SignUp);
