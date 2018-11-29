@@ -98,7 +98,7 @@
         width: 100vw;
     }
     .remedy-reviews-container{
-        width: 100vw;
+        /* width: 100vw; */
     }
 }
 
@@ -107,7 +107,7 @@
     .remedy-detail-group {
         width: 100vw;
         position: relative;
-        top: 3vh;
+        /* top: 3vh; */
     }
 
     .remedy-detail-description {
@@ -115,9 +115,9 @@
     }
 
     .remedy-reviews-container {
-        width: 100vw;
+        /* width: 100vw; */
         position: relative;
-        top: 4vh;
+        /* top: 4vh; */
     }
 }
 
@@ -126,13 +126,13 @@
     .remedy-detail-group {
         width: 100vw;
         position: relative;
-        top: 5vh;
+        /* top: 5vh; */
     }
     .remedy-detail-description {
         width: 93vw;
     }
     .remedy-reviews-container{
-        top: 6vh;
+        /* top: 6vh; */
         margin-left: 0;
     }
 }
@@ -147,7 +147,7 @@
         width: 600px;
     }
     .remedy-reviews-container {
-        top: 6vh;
+        /* top: 6vh; */
         margin-left: 0;
     }
 }
@@ -156,13 +156,13 @@
     .remedy-detail-group {
         width: 100vw;
         position: relative;
-        top: 2vh;
+        /* top: 2vh; */
     }
     .remedy-detail-description {
         width: 800px;
     }
     .remedy-reviews-container {
-        top: 6vh;
+        /* top: 6vh; */
         margin-left: 0;
     }
 }
@@ -171,13 +171,13 @@
     .remedy-detail-group {
         width: 100vw;
         position: relative;
-        top: 2vh;
+        /* top: 2vh; */
     }
     .remedy-detail-description {
         width: 1000px;
     }
     .remedy-reviews-container {
-        top: 6vh;
+        /* top: 6vh; */
         margin-left: 0;
     }
 }

@@ -1,11 +1,12 @@
 .review-header{
     display: flex;
-    align-items: center;
     color: white;
+    justify-content: center;
     margin-bottom: 10px;
+    margin-top: 15px;
     div {
         font-size: 25px;
-        margin-right: 10px;
+        margin-right: 4px;
     }
 }
 
@@ -111,11 +112,10 @@
     display: flex;
     flex-direction: column;
     font-size: 2.5vh;
-    margin-left: 6%;
-    margin-bottom: .1em;
+    // margin-left: 6%;
+    // margin-bottom: .1em;
     div{
         display: flex;
-        margin-bottom: 1%;
     }
     p{
         color: darkred;
@@ -130,9 +130,9 @@
 
 
 @media only screen and (min-width: 320px) {
-    .review-header {
-            font-size: 3vh;
-            margin-left: 9%;
+    .review-header > div{
+            font-size: 1.4rem;;
+            // margin-left: 9%;
     }
     .reviews-container {
         form {
@@ -217,7 +217,7 @@
 
 @media only screen and (min-width: 768px) {
     .review-header {
-        margin-left: 20%;
+        // margin-left: 20%;
         font-size: 3vh;
     }
     .reviews-container {
@@ -253,7 +253,7 @@
 
 @media only screen and (min-width: 878px) {
     .review-header {
-        margin-left: 22%;
+        // margin-left: 22%;
     }
     .reviews-container {
         form {
@@ -275,7 +275,7 @@
 
 @media only screen and (min-width: 1024px) {
     .review-header {
-        margin-left: 16%;
+        // margin-left: 16%;
         div {
         font-size: 3vh;
         }
@@ -310,7 +310,7 @@
 
 @media only screen and (min-width: 1387px) {
     .review-header {
-        margin-left: 27%;
+        // margin-left: 27%;
     }
     .reviews-container {
         align-items: center;
