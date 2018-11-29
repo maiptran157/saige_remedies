@@ -10,7 +10,6 @@ import './user_signup.css';
 
 class SignUp extends Component {
     userSignUp = async (values) => {
-        console.log('User Sign Up Info:', values);
         await this.props.userSignUpCheck(values);
         if (!this.props.signUpCheckMessage.userExists) {
             this.props.userSignUpInfo(values);
@@ -18,7 +17,6 @@ class SignUp extends Component {
     }
     render() {
         const { handleSubmit, authError } = this.props;
-        console.log("SignUp props:", this.props);
         const renderField = () => {
             return <Fragment>
                 <h3 className="sign-up-header">Create your Saige account</h3>
@@ -42,7 +40,6 @@ class SignUp extends Component {
         }
         if (this.props.auth) {
             this.props.resetAuth();
-            console.log("Props in Success Sign Up Message", this.props)
             return <div className="sign-up-container">
                 <Header logo={saigeLogo} buttonType="back-button" />
                 <div className="sign-up-success-message">
@@ -51,7 +48,6 @@ class SignUp extends Component {
                 </div>
             </div>
         } else if (this.props.signUpCheckMessage.userExists) {
-            debugger;
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
