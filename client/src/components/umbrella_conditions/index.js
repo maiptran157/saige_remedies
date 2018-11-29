@@ -21,7 +21,6 @@ class UmbrellaConditions extends Component {
     render() {
         const { modalCheck } = this.state;
         const { categories, history } = this.props;
-        console.log("categories:", categories)
         const categoryList = () => {
             if (!categories) {
                 return null;

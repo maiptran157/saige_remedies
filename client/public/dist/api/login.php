@@ -60,7 +60,7 @@ if($hashResult){
             }
         } else {
             echo 'Invalid password.';
-        }}}
+        }}};
 
 
 
