@@ -11,7 +11,7 @@
 }
 
 .remedy-detail-group {
-    width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +25,7 @@
 .remedy-detail-header {
     font-size: 4vh;
     color: white;
-    margin: 2% 0;
+    margin: 2% 0;       
     text-align: center;
     text-shadow: 0px 4px 4px black;
 }
@@ -81,9 +81,6 @@
     .remedy-detail-description {
         width: 92vw;
     }
-    .remedy-detail-group {
-        width: 100vw;
-    }
 
     .remedy-reviews-container {
         padding-top: 3px;
@@ -94,22 +91,13 @@
     .remedy-detail-description {
         width: 84vw;
     }
-    .remedy-detail-group {
-        width: 100vw;
-    }
     .remedy-reviews-container{
         /* width: 100vw; */
     }
 }
 
 
-@media only screen and (min-width: 411px) {    
-    .remedy-detail-group {
-        width: 100vw;
-        position: relative;
-        /* top: 3vh; */
-    }
-
+@media only screen and (min-width: 411px) {  
     .remedy-detail-description {
         width: 93vw;
     }
@@ -123,11 +111,6 @@
 
 
 @media only screen and (min-width: 600px) {
-    .remedy-detail-group {
-        width: 100vw;
-        position: relative;
-        /* top: 5vh; */
-    }
     .remedy-detail-description {
         width: 93vw;
     }
@@ -138,11 +121,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .remedy-detail-group {
-        width: 100vw;
-        position: relative;
-        top: 0;
-    }
     .remedy-detail-description {
         width: 600px;
     }
@@ -153,11 +131,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .remedy-detail-group {
-        width: 100vw;
-        position: relative;
-        /* top: 2vh; */
-    }
     .remedy-detail-description {
         width: 800px;
     }
@@ -168,11 +141,6 @@
 }
 
 @media only screen and (min-width: 1387px) {
-    .remedy-detail-group {
-        width: 100vw;
-        position: relative;
-        /* top: 2vh; */
-    }
     .remedy-detail-description {
         width: 1000px;
     }
