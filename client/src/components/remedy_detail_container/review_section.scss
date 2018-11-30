@@ -13,7 +13,7 @@
 .single-review {
     padding: 1em;
     background-color: white;
-    width: 325px;
+    // width: 325px;
     list-style-type: none;
     font-size: 15px;
     margin: 1em;
@@ -25,18 +25,23 @@
     display: flex;
     flex-direction: column-reverse;
     form {
-        display: flex;
-        width: 100vw;
-        height: 40%;
-        justify-content: center;
+        // display: flex;
+        // width: 100vw;
+        // height: 40%;
+        // justify-content: center;
         .review {
-            width: 93vw;
-            height: 95px;
+            height: 160px;
             display: flex;
             flex-direction: column;
             align-content: space-around;
             font-size: 18px;
-                   
+
+            .add-review-button {
+                width: 110px;
+                font-size: 15px;
+                height: 40px;
+                margin-top: 4px;
+            }       
             div {
                 span {
                     color: white;
@@ -52,12 +57,20 @@
             .input-and-button{
                 border: 1px solid gray;
                 border-radius: 10px;
-                width: 93vw;
-                height: 19vh;
-                display: flex;
+                width: 100%;
+                // width: 93vw;
+                // height: 19vh;
+                // display: flex;
+                position: relative;
                 align-items: center;
                 justify-content: space-evenly;
                 background-color: white;
+                button.mobile-add-review-button {
+                    position: absolute;
+                    right: 0;
+                    // height: 70px;
+                    width: 70px;
+                }
                 div {
                     display: flex;
                     flex-direction: column;
@@ -81,26 +94,18 @@
                     border-style: none;
                     background: none;
                     border: none;
-                    width: 59vw;
-                    height: 50px;
+                    width: 100%;
+                    height: 100%;
                     font-size: 2.5vh;
+                    font-family: 'Quicksand', sans-serif;
                 }
-                    button {
-                        width: 11vw;
-                        height: 6vh;
-                        background: #efc11d;
-                        border-radius: 10px;
-                        color: white;
-                        font-size: 3vh;
-                        position: relative;
-                        border-color: white;
-                    }
             }
 
             .error-text{
                 color: darkred;
                 font-size: 2vh;
-                margin-left: 6%;
+                margin: 0;
+                margin-left: 15px;
             }
             
         };
@@ -112,14 +117,15 @@
     display: flex;
     flex-direction: column;
     font-size: 2.5vh;
-    // margin-left: 6%;
-    // margin-bottom: .1em;
+    
     div{
         display: flex;
     }
     p{
         color: darkred;
         font-size: 2vh;
+        margin: 0;
+        margin-bottom: 5px;
     }
 }
 
@@ -132,144 +138,122 @@
 @media only screen and (min-width: 320px) {
     .review-header > div{
             font-size: 1.4rem;;
-            // margin-left: 9%;
     }
     .reviews-container {
         form {
             .review {
-                width: 93vw;
-                height: 22vh;
+                .add-review-button {
+                    display: none;
+                }
+                width: 310px;
                 .star-rating-area {
-                    margin-bottom: -1%;
                 }
                 .input-and-button {
-                    height: 8vh;
+                    height: 60px;
                     .review-area {
-                        width: 77vw;
-                        height: 4vh;
+                        width: 75%;
+                    }
+                    button.mobile-add-review-button {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 10px;
                     }
                 }
             }
         }
     }
     .single-review {
-        width: 82vw;
-        margin-top: 0;
-        margin-left: 1em;
-        margin-right: 1em;
         .review-detail {
             font-size: 2.25vh;
         }
     }
 }
 
-
 @media only screen and (min-width: 360px) {
     .reviews-container {
         form {
             .review {
-                
-                .review-area {
-                    
+                .input-and-button {
+                    height: 70px;
+                    button.mobile-add-review-button {
+                        width: 70px;
+                        height: 70px;
+                    }
                 }
-            }
-            button {
-                
+              
             }
         }
     }
-    .single-review {
-        
-    }
 }
 
-@media only screen and (min-width: 375px) {
+
+@media only screen and (min-width: 411px) {
     .reviews-container {
         form {
             .review {
-                width: 93vw;
-                height: 19vh;
-                .review-area {
-                    font-size: 2vh;
-                    width: 68vw;
-                    height: 5vh;
-                }
+                width: 390px;
             }
         }
     }
-    .single-review {
-        width: 316px;
-    }
 }
 
-@media only screen and (min-width: 411px) {
-    .single-review {
-        width: 92vw;
-        margin-left: 4%;
-        padding: 3%;
-        box-sizing: border-box;
+@media only screen and (min-width: 500px) {
+    .reviews-container {
+        form {
+            .review {
+                width: 480px;
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 600px) {
-
+    .reviews-container {
+        form {
+            .review {
+                width: 550px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .review-header {
-        // margin-left: 20%;
         font-size: 3vh;
     }
     .reviews-container {
         align-items: center;
         form {
+            height: 240px;
             .review {
                 width: 600px;
+                height: 250px;
                 .input-and-button {
                     width: 600px;
-                    height: 10vh;
+                    height: 90px;
                     .review-area {
-                        width: 520px;
+                        width: 100%;
                     }
-                    button {
-                        width: 51px;
-                        height: 48px;
+                    button.mobile-add-review-button {
+                        display: none;
+                        height: 130px;
                     }
                 }
-                .error-text {
-                    margin-top: 1%;
+                button.add-review-button {
+                    display: block;
                 }
             }
         }
     }
     .single-review {
-        width: 600px;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 5%;
+        width: 720px;
         box-sizing: border-box;
     }   
 }
 
 @media only screen and (min-width: 878px) {
-    .review-header {
-        // margin-left: 22%;
-    }
-    .reviews-container {
-        form {
-            .review {
-                .input-and-button {
-                    .review-area {
-                    }
-                    button {
-                    }
-                }
-                .error-text {
-                }
-            }
-        }
-    }
     .single-review {
+        width: 700px;
     }   
 }
 
@@ -285,20 +269,11 @@
         form {
             .review {
                 width: 800px;
-                height: 24vh;
                 .input-and-button {
                     width: 800px;
-                    height: 10vh;
+                    height: 120px;
                     .review-area {
-                        width: 685px;
                     }
-                    button {
-                        width: 65px;
-                        height: 65px;
-                    }
-                }
-                .error-text {
-                    margin-top: 1%;
                 }
             }
         }
@@ -309,28 +284,14 @@
 }
 
 @media only screen and (min-width: 1387px) {
-    .review-header {
-        // margin-left: 27%;
-    }
+
     .reviews-container {
         align-items: center;
         form {
             .review {
                 width: 1000px;
-                height: 30vh;
                 .input-and-button {
                     width: 1000px;
-                    height: 10vh;
-                    .review-area {
-                        width: 895px;
-                    }
-                    button {
-                        width: 80px;
-                        height: 78px;
-                    }
-                }
-                .error-text {
-                    margin-top: 1%;
                 }
             }
         }
