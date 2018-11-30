@@ -77,6 +77,14 @@
     margin-bottom: 2%;
 }
 
+.popup-content  {
+    border-radius: 15px;
+}
+
+.technique {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 320px) {
     .remedy-detail-description {
         width: 92vw;

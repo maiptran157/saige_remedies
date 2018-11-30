@@ -10,7 +10,7 @@ class ConditionDetailGroup extends Component {
         showLess: true,
     }
 
-    
+
     descriptionPresent() {
         const { description, caution, self_help } = this.props;
         if (self_help === "" && caution === "") {
@@ -24,7 +24,7 @@ class ConditionDetailGroup extends Component {
                 <div className="condition-detail-paragraph">
                     {description}
                     <br />
-                    <hr/>
+                    <hr />
                     <span style={style}>Caution:</span> {caution}
                 </div>
             )
@@ -33,7 +33,7 @@ class ConditionDetailGroup extends Component {
                 <div className="condition-detail-paragraph">
                     {description}
                     <br />
-                    <hr/>
+                    <hr />
                     <span style={style}>Self-help:</span> {self_help}
                 </div>
             )
@@ -42,10 +42,10 @@ class ConditionDetailGroup extends Component {
                 <div className="condition-detail-paragraph">
                     {description}
                     <br />
-                    <hr/>
+                    <hr />
                     <span style={style}>Self-help:</span> {self_help}
                     <br />
-                    <hr/>
+                    <hr />
                     <span style={style}>Caution:</span> {caution}
                 </div>
             )
@@ -58,27 +58,27 @@ class ConditionDetailGroup extends Component {
         });
     }
     render() {
-    
+
         const { description } = this.props;
         if (!description) {
             return null;
         };
         const shortenedDescription = description.split(' ').slice(0, 13).join(' ') + '...';
- 
+
         return (
             <div className="condition-detail-group">
                 <div className="condition-detail-header">
                     {this.props.name}
                 </div>
-                <div className= { this.state.showLess ? "condition-detail-description" : "show-more-description" } >
+                <div className={this.state.showLess ? "condition-detail-description" : "show-more-description"} >
                     {this.state.showLess ?
                         <div>
                             <div className="condition-detail-paragraph">{shortenedDescription}
-                              <div className="center-show-more">
-                                <a className="" onClick={this.toggleMore} href="">...Read More</a>
-                              </div>  
-                            </div> 
-                        </div> :  
+                                <div className="center-show-more">
+                                    <a className="" onClick={this.toggleMore} href="">...Read More</a>
+                                </div>
+                            </div>
+                        </div> :
                         <div>
                             <div>{this.descriptionPresent()}</div>
                         </div>

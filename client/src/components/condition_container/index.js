@@ -38,7 +38,7 @@ class ConditionsContainer extends Component {
         // }
 
         const ailments = () => {
-            console.log("Condition props:", this.props)
+            // console.log("Condition props:", this.props)
             if (this.props.conditions.Errors) {
                 return <h2 style={style}>
                     We apologize for the inconvenience.
