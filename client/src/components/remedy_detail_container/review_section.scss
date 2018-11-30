@@ -25,10 +25,10 @@
     display: flex;
     flex-direction: column-reverse;
     form {
-        display: flex;
-        width: 100vw;
-        height: 40%;
-        justify-content: center;
+        // display: flex;
+        // width: 100vw;
+        // height: 40%;
+        // justify-content: center;
         .review {
             height: 160px;
             display: flex;
@@ -224,23 +224,23 @@
     .reviews-container {
         align-items: center;
         form {
+            height: 240px;
             .review {
                 width: 600px;
-                height: 200px;
+                height: 250px;
                 .input-and-button {
                     width: 600px;
+                    height: 90px;
                     .review-area {
                         width: 100%;
                     }
                     button.mobile-add-review-button {
                         display: none;
+                        height: 130px;
                     }
                 }
                 button.add-review-button {
                     display: block;
-                }
-                .error-text {
-                    margin-top: 1%;
                 }
             }
         }
@@ -252,19 +252,6 @@
 }
 
 @media only screen and (min-width: 878px) {
-
-    .reviews-container {
-        form {
-            .review {
-                .input-and-button {
-                    .review-area {
-                    }
-                }
-                .error-text {
-                }
-            }
-        }
-    }
     .single-review {
         width: 700px;
     }   
@@ -282,15 +269,11 @@
         form {
             .review {
                 width: 800px;
-                height: 24vh;
                 .input-and-button {
                     width: 800px;
-                    
+                    height: 120px;
                     .review-area {
                     }
-                }
-                .error-text {
-                    margin-top: 1%;
                 }
             }
         }
@@ -307,17 +290,8 @@
         form {
             .review {
                 width: 1000px;
-                height: 30vh;
                 .input-and-button {
                     width: 1000px;
-                    height: 10vh;
-                    .review-area {
-    
-                    }
-
-                }
-                .error-text {
-                    margin-top: 1%;
                 }
             }
         }

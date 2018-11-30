@@ -39,7 +39,7 @@ class ReviewList extends Component {
                 <div className="input-and-button">
                     <textarea {...input} type={type} className="review-area" placeholder={title} autoComplete="off"/>
                     <button className="mobile-add-review-button">+</button>
-                    
+    
                 </div>
                 <p className="error-text" {...input}> {touched && error} </p>
                 <button className="add-review-button">Post Review</button>
