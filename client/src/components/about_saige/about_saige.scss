@@ -1,93 +1,58 @@
 .about-saige-container {
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-.about-saige {
-    position: relative;
-    // top: 10%;
-    left: 10%;
-    width: 80%;
-    color: white;
-    overflow-y: auto;
-    overflow-x: hidden;
-    h1 {
-        span {
-            img {
-                width: 45px;
-                height: 45px;
-                }
-            }
-        }
-    p {
-        font-size: 20px;
-    }
-    .tech-used {
-        .front-end-tech {
-            img {
-                width: 45px;
-                height: 45px;
-                }
-            }
-        .back-end-tech {
-            img {
-                width: 45px;
-                height: 45px;
-                }
-             }
-        }
-    }
- }
-
-
-@media only screen and (min-width: 320px) {
-    
-}
-
- @media only screen and (min-width: 769px) {
-    .about-saige-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     .about-saige {
-        width: 80%;
+        font-size: 18px;
+        margin-top: 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: white;
         h1 {
-            font-size: 2.5em;
-            span {
-                img {
-                    width: 45px;
-                    height: 45px;
-                    }
-                }
-            }
-        p {
-            font-size: 30px;
+            margin: 0;
         }
-        h2 {
-            font-size: 2em;
+        p {
+            width: 100%;
         }
         .tech-used {
             .front-end-tech {
-                h3{
-                    font-size: 1.7em;
-                }
+                width: 100%;
                 img {
-                    width: 70px;
-                    height: 70px;
+                    width: 45px;
+                    margin-right: 10px;
                     }
                 }
             .back-end-tech {
-                h3{
-                    font-size: 1.7em;
-                }
                 img {
-                    width: 70px;
-                    height: 70px;
+                    width: 45px;
+                    margin-right: 10px;
                     }
-                 }
+                }
             }
         }
-     }
- }
- 
+    }
+
+
+
+@media only screen and (min-width: 600px) {
+    .about-saige-container {
+        .about-saige {
+            font-size: 30px;
+            .tech-used {
+                .front-end-tech {
+                    img {
+                        width: 80px;
+                    }
+                }
+                .back-end-tech {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

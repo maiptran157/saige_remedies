@@ -22,7 +22,7 @@ class AboutSaige extends Component {
             <div className="about-saige-container">
             <Header match={match.path} logo={saigeLogo} />
             <div className="about-saige">
-                <h1>About Saige<span><img src={saigeIcon} alt="" /></span></h1>
+                <h1>About Saige</h1>
                 <p>Saige Remedies was created based on the idea that natural remedies passed down from mothers to the next generation can be as effective as your visit to the doctor, and staying healthy can start with natural ingredients found locally.</p>
                 <h2>Technologies used:</h2>
                 <div className="tech-used">
@@ -32,7 +32,6 @@ class AboutSaige extends Component {
                         <img src={cssIcon} />
                         <img src={SassIcon} />
                         <img src={javascriptIcon} />
-                        <img src={es6Icon} />
                         <img src={reactIcon} />
                         <img src={reduxIcon} />
                     </div>
