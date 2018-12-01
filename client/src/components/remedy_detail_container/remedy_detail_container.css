@@ -37,8 +37,8 @@
 }
 
 .detail-paragraph {
-    font-size: 3vh;
-    padding: 4%;
+    font-size: 20px;
+    padding: 2%;
 }
 
 .other-treatment-result-total-message {
@@ -93,14 +93,17 @@
     .remedy-reviews-container {
         padding-top: 3px;
     }
+    .detail-paragraph {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (min-width: 375px) {
     .remedy-detail-description {
         width: 84vw;
     }
-    .remedy-reviews-container{
-        /* width: 100vw; */
+    .detail-paragraph {
+        font-size: 18px;
     }
 }
 
@@ -114,6 +117,9 @@
         /* width: 100vw; */
         position: relative;
         /* top: 4vh; */
+    }
+    .detail-paragraph {
+        font-size: 25px;
     }
 }
 
@@ -135,6 +141,9 @@
     .remedy-reviews-container {
         /* top: 6vh; */
         margin-left: 0;
+    }
+    .detail-paragraph {
+        font-size: 30px;
     }
 }
 

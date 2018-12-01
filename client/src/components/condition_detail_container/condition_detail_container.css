@@ -124,20 +124,20 @@
         height: 30px;
     }
     .remedy-name {
-        font-size: 15px;
+        font-size: 12px;
     }
     .condition-detail-description {
         height: 65px;
     }
     .condition-detail-paragraph {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
 
 @media only screen and (min-width: 600px) {
     .remedy-name {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -149,7 +149,7 @@
         font-size: 30px;
     }
     .remedy-name {
-        font-size: 35px;
+        font-size: 25px;
     }
     .condition-detail-description {
         height: 95px;
@@ -175,7 +175,7 @@
         width: 750px;
     }
     .remedy-name {
-        font-size: 40px;
+        font-size: 30px;
     }
     .end-of-result-message {
         font-size: 50px;
