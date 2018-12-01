@@ -2,8 +2,8 @@
     width: 350px;
     height: 70px;
     border-radius: 10px;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-bottom: 20px;
+    /* margin-top: 2%; */
     display: flex;
     align-items: center;
 }
@@ -51,5 +51,23 @@ a {
     }
     .ailment-name {
         font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .ailment {
+        width: 800px;
+    }
+    .ailment-name {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ailment {
+        width: 1000px;
+    }
+    ailment-name {
+        font-size: 42px;
     }
 }
