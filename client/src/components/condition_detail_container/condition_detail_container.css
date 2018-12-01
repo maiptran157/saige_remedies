@@ -134,10 +134,19 @@
     }
 }
 
+@media only screen and (min-width: 360px) {
+    .remedy-name {
+        font-size: 15px;
+    }
+}
+
 
 @media only screen and (min-width: 600px) {
     .remedy-name {
         font-size: 20px;
+    }
+    .condition-detail-header {
+        font-size: 40px;
     }
 }
 
@@ -155,21 +164,16 @@
         height: 95px;
     } 
     .condition-detail-header {
-        font-size: 3rem;
+        font-size: 50px;
     }
 }
 
 @media only screen and (min-width: 922px) {
-    .condition-detail-container {
-        /* display: flex;
-        align-items: center; */
-        /* justify-content: center; */
-    }
     .condition-detail-group {
         width: 800px;
     }
     .condition-detail-header {
-        font-size: 45px;
+        font-size: 70px;
     }
     .remedy-results {
         width: 750px;
