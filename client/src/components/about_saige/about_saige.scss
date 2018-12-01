@@ -1,14 +1,12 @@
 .about-saige-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 100%;
     .about-saige {
         font-size: 18px;
         margin-top: 10px;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
         text-align: center;
         color: white;
         h1 {
