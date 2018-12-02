@@ -22,7 +22,7 @@ class RemedyDetailGroup extends Component {
                     if (!i) {
                         return [current];
                     }
-                    return prev.concat(<Popup key={i} trigger={<span className="technique">{value}</span>} position="right center">
+                    return prev.concat(<Popup key={i} trigger={<span className="technique">{value}</span>} position="bottom center">
                         <div>{description}</div>
                     </Popup>, current);
                 }, [])
