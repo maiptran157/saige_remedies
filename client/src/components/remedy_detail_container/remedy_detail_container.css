@@ -96,6 +96,10 @@
     .detail-paragraph {
         font-size: 14px;
     }
+    .popup-content {
+        font-size: 20px !important;
+        width: 150px !important;
+    }
 }
 
 @media only screen and (min-width: 375px) {
@@ -132,6 +136,7 @@
         /* top: 6vh; */
         margin-left: 0;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -144,6 +149,9 @@
     }
     .detail-paragraph {
         font-size: 30px;
+    }
+    .popup-content {
+        width: 270px !important;
     }
 }
 
