@@ -12,7 +12,6 @@ export const addReview = (reviewInfo) => async dispatch => {
     })
     try {
         const response = await axios.post(config.ADD_REVIEW_URL, dataToSend);
-        // console.log("response from addReview axios call:", response)
         dispatch({
             type: types.ADD_REVIEW,
             payload: response
@@ -70,7 +69,6 @@ export const userSearchTerm = (term) => async dispatch => {
 
     try {
         const response = await axios.post(`${config.SEARCH_SYMPTOM_URL}`, dataToSend);
-        console.log(response);
         dispatch({
             type: types.GET_SEARCH_SYMPTOM,
             payload: response,
@@ -135,7 +133,6 @@ export const checkUserLoginStatus = (userInfo) => async dispatch => {
 
 export const userSignUpCheck = (userInfo) => async dispatch => {
     const dataToSend = formatPostData(userInfo);
-    console.log("data to send from userSignUpCheck:", dataToSend)
     try {
         const response = await axios.post(config.CHECK_USER_SIGN_UP_URL, dataToSend);
         dispatch({
@@ -154,7 +151,6 @@ export const getSymptom = (userInput) => async dispatch => {
     try {
 
         const response = await axios.post(`${config.INFERMEDICA_URL}`, { prediction: { userInput } });
-        console.log("response in actions", response);
         dispatch({
             type: types.GET_SYMPTOM,
             payload: response,
@@ -165,7 +161,6 @@ export const getSymptom = (userInput) => async dispatch => {
 }
 
 export const getConditionsID = (id) => {
-    console.log(id);
     return {
         type: types.GET_CONDITIONS_ID,
         payload: id

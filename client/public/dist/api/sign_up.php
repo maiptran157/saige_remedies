@@ -7,18 +7,14 @@ $username = $_POST['username'];
 // $password = $_POST['password'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-echo password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-$currentDate = '2018-10-20 00:00:00';
 $null = null;
 $active = 'active';
-$stmtUser = $conn->prepare("INSERT INTO user (ID, fname, lname, email, username, status, created_date) VALUES (?,?,?,?,?,?,?)");
-$stmtUser->bind_param("sssssss", $null, $fname, $lname, $email, $username, $active, $currentDate);
+$stmtUser = $conn->prepare("INSERT INTO user (ID, fname, lname, email, username, status) VALUES (?,?,?,?,?,?)");
+$stmtUser->bind_param("ssssss", $null, $fname, $lname, $email, $username, $active);
 
 if(!$stmtUser->execute()){
     echo 'stmtUser failed to execute';
 } 
-// else {echo 'user created';}
 
 $stmtUser->close();
 $query = "SELECT u.ID
