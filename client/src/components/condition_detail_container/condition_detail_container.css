@@ -91,6 +91,8 @@
     font-size: 18px;
     color: black;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .remedy-name-container {
@@ -136,7 +138,7 @@
 
 @media only screen and (min-width: 360px) {
     .remedy-name {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 

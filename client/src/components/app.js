@@ -57,8 +57,7 @@ class App extends Component {
 
     scrollToTop() {
         console.log("Up arrow btn was clicked!")
-        // document.getElementsByClassName('symptom-group')[0].scrollTo(0, 0)
-        window.scrollTo(0, 0)
+        window.scroll(0, 0)
     }
 
     render() {
