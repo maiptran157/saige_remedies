@@ -17,3 +17,10 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.back-to-top-btn {
+    position: fixed;
+    width: 50px;
+    right: 50px;
+    bottom: 30px;
+}

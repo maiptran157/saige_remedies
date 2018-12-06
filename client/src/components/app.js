@@ -14,6 +14,7 @@ import { Route, Switch } from 'react-router-dom';
 import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
 import MediaQuery from "react-responsive";
+import upArrow from '../assets/images/double-up-arrow.svg'
 // import LoadingPage from './loading_page/loading_page';
 
 const background = {
@@ -27,11 +28,19 @@ class App extends Component {
     }
 
     componentDidMount() {
-        setTimeout( () => {
+        setTimeout(() => {
             this.setState({
                 loading: false,
             });
         }, 3000);
+    }
+
+    scrollTop = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementsByClassName("back-to-top-btn").style.display = "block";
+        } else {
+            document.getElementsByClassName("back-to-top-btn").style.display = "none";
+        }
     }
 
     render() {
@@ -53,6 +62,7 @@ class App extends Component {
                     <Route path="/meet-the-team" component={MeetTheTeam} />
                     <Route component={NotFoundPage} />
                 </Switch>
+                <img className="back-to-top-btn" onScroll={this.scrollTop} src={upArrow} alt="" />
             </div>
         )
     }
