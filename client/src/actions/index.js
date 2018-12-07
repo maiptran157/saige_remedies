@@ -87,7 +87,7 @@ export const userSignInInfo = (userInfo) => async dispatch => {
         localStorage.setItem('loggedin', response.data.loggedin);
         localStorage.setItem('username', response.data.userData.username);
         localStorage.setItem('email', response.data.userData.email);
-        localStorage.setItem('firstName', response.data.userData.fname)
+        localStorage.setItem('firstName', response.data.userData.fname);
         dispatch({
             type: types.GET_USER_SIGN_IN_INFO,
             payload: response,
