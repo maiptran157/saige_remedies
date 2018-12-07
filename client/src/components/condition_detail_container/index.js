@@ -7,7 +7,7 @@ import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import axios from 'axios';
 import config from '../../config';
 import { formatPostData } from '../../helpers';
-import ReactLoading from 'react-loading'
+import ReactLoading from 'react-loading';
 
 const style = {
     display: 'flex',

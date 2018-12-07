@@ -31,12 +31,17 @@ flex-wrap: wrap;
 
 .sign-in-btn {
     margin-top: 3%;
-    width: 83vw;
+    width: 80px;
     background-color: white;
     height: 40px;
     border-radius: 12px;
     font-size: 1.2rem;
     color: gray
+}
+
+.sign-in-btn:hover{
+    color: white;
+    background-color: #EFC11D;
 }
 
 .sign-up-option{
@@ -84,9 +89,9 @@ flex-wrap: wrap;
 
 
 @media only screen and (min-width: 411px) {
-    .sign-in-btn{
+    /* .sign-in-btn{
         width: 70vw;
-    }
+    } */
 }
 
 
@@ -114,7 +119,7 @@ flex-wrap: wrap;
     .sign-in-header{
         text-align: center;
     }
-    .sign-in-btn{
+    /* .sign-in-btn{
         width: 50vw;
-    }
+    } */
 }

@@ -8,6 +8,11 @@ import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 import './user_signup.css';
 
+const signUpBtnStyle = {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+}
+
 class SignUp extends Component {
     userSignUp = async (values) => {
         await this.props.userSignUpCheck(values);
@@ -27,7 +32,7 @@ class SignUp extends Component {
                     <Field name="email" label="Email" component={renderInput} type="text" />
                     <Field name="password" label="Password" component={renderInput} type="password" />
                     <Field name="confirmPassword" label="Re-enter your password" component={renderInput} type="password" />
-                    <button className="sign-up-btn">Sign Up</button>
+                    <div className="input-container" style={signUpBtnStyle}><button className="sign-up-btn">Sign Up</button></div>
                     <div className="sign-in-option"> Already have an account? <Link className="sign-in-link" to="/sign-in">Sign In</Link></div>
                     <p className="auth-error-text">{authError}</p>
                 </form>

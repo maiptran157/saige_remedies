@@ -14,7 +14,6 @@ import { Route, Switch } from 'react-router-dom';
 import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
 import MediaQuery from "react-responsive";
-import upArrow from '../assets/images/double-up-arrow.svg'
 // import LoadingPage from './loading_page/loading_page';
 
 const background = {
@@ -25,21 +24,20 @@ const background = {
 class App extends Component {
     constructor(props) {
         super(props);
-        this.displayScrollBtn = this.displayScrollBtn.bind(this);
         this.state = {
             loading: true,
         }
+        this.displayScrollBtn = this.displayScrollBtn.bind(this);
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        window.addEventListener('scroll', this.displayScrollBtn);
-        document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
         setTimeout(() => {
             this.setState({
                 loading: false,
             });
         }, 3000);
+        window.addEventListener('scroll', this.displayScrollBtn);
     }
 
     componentWillUnmount() {
@@ -47,17 +45,13 @@ class App extends Component {
     }
 
     displayScrollBtn() {
-        console.log("displayScrollBtn is called")
-        if (document.getElementsByClassName('symptom-group')[0] && document.getElementsByClassName('symptom-group')[0].scrollHeight >= 700) {
-            document.getElementsByClassName("back-to-top-btn")[0].style.display = "block";
-        } else {
-            document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+        if (document.getElementsByClassName('symptom-group').length > 0) {
+            if (document.getElementsByClassName('symptom-group')[0].scrollHeight > 700) {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "block";
+            } else {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+            }
         }
-    }
-
-    scrollToTop() {
-        console.log("Up arrow btn was clicked!")
-        window.scroll(0, 0)
     }
 
     render() {
@@ -79,7 +73,6 @@ class App extends Component {
                     <Route path="/meet-the-team" component={MeetTheTeam} />
                     <Route component={NotFoundPage} />
                 </Switch>
-                <img className="back-to-top-btn" onClick={() => { this.scrollToTop() }} src={upArrow} alt="" />
             </div>
         )
     }

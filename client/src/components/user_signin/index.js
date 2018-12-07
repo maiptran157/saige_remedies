@@ -8,6 +8,11 @@ import { userSignInInfo } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 
+const signInBtnStyle = {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+}
+
 class SignIn extends Component {
     userSignIn = async (values) => {
         await this.props.userSignInInfo(values);
@@ -22,6 +27,18 @@ class SignIn extends Component {
                 this.props.history.push('/')
             }, 1000)
         }
+        const renderField = () => {
+            return <Fragment>
+                <h3 className="sign-in-header">Sign in your Saige account</h3>
+                <form onSubmit={handleSubmit(this.userSignIn)}>
+                    <Field name="email" label="Email" component={renderInput} type="text" />
+                    <Field name="password" label="Password" component={renderInput} type="password" />
+                    <div className="input-container" style={signInBtnStyle}><button className="sign-in-btn">Sign In</button></div>
+                    <div className="sign-up-option"> Don't have an account? <Link className="sign-up-link" to="/sign-up">Sign Up</Link></div>
+                    <p className="auth-error-text">{authError}</p>
+                </form>
+            </Fragment>
+        }
         const displaySignIn = () => {
             if (url && loggedin) {
                 localStorage.removeItem('redirectUrl');
@@ -34,26 +51,10 @@ class SignIn extends Component {
             } else if (this.props.authError === "Error signing in") {
                 return <Fragment>
                     <h3 className="sign-in-fail-message">Email or password is incorrect. Please try again.</h3>
-                    <h3 className="sign-in-header">Sign in your Saige account</h3>
-                    <form onSubmit={handleSubmit(this.userSignIn)}>
-                        <Field name="email" label="Email" component={renderInput} type="text" />
-                        <Field name="password" label="Password" component={renderInput} type="password" />
-                        <button className="sign-in-btn">Sign In</button>
-                        <div className="sign-up-option"> Don't have an account? <Link className="sign-up-link" to="/sign-up">Sign Up</Link></div>
-                        <p className="auth-error-text">{authError}</p>
-                    </form>
+                    {renderField()}
                 </Fragment>
             } else {
-                return <Fragment>
-                    <h3 className="sign-in-header">Sign in your Saige account</h3>
-                    <form onSubmit={handleSubmit(this.userSignIn)}>
-                        <Field name="email" label="Email" component={renderInput} type="text" />
-                        <Field name="password" label="Password" component={renderInput} type="password" />
-                        <button className="sign-in-btn">Sign In</button>
-                        <div className="sign-up-option"> Don't have an account? <Link className="sign-up-link" to="/sign-up">Sign Up</Link></div>
-                        <p className="auth-error-text">{authError}</p>
-                    </form>
-                </Fragment>
+                return renderField()
             }
         }
 
