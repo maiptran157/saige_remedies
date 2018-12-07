@@ -52,6 +52,9 @@ class App extends Component {
                 document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
             }
         }
+        if (document.getElementsByClassName('popup-content').length > 0) {
+            document.getElementsByClassName('popup-content')[0].style.display = "none"
+        }
     }
 
     render() {

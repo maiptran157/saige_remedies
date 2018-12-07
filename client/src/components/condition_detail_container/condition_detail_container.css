@@ -61,6 +61,10 @@
     margin: 0;
 }
 
+.condition-detail-paragraph a:hover {
+    color:#EFC11D;
+}
+
 .end-of-result-message {
     font-size: 10px;
     color: white;
@@ -87,6 +91,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.remedy-name:hover {
+    color: white;
 }
 
 .remedy-name-container {
