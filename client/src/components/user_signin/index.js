@@ -53,21 +53,24 @@ class SignIn extends Component {
             </Fragment>
         }
         const displaySignIn = () => {
-            this.hideSignUpLoading();
             if (url && loggedin) {
+                this.hideSignUpLoading();
                 localStorage.removeItem('redirectUrl');
                 return this.props.history.push(url);
             } else if (loggedin) {
+                this.hideSignUpLoading();
                 return <div className="sign-in-success-message">
                     You have signed in successfully
                     {goBackHome()}
                 </div>
             } else if (this.props.authError === "Error signing in") {
+                this.hideSignUpLoading();
                 return <Fragment>
                     <h3 className="sign-in-fail-message">Email or password is incorrect. Please try again.</h3>
                     {renderField()}
                 </Fragment>
             } else {
+                this.hideSignUpLoading();
                 return renderField()
             }
         }
