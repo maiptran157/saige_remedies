@@ -37,9 +37,8 @@ class ReviewList extends Component {
         return (
             <Fragment>
                 <div className="input-and-button">
-                    <textarea {...input} type={type} className="review-area" placeholder={title} autoComplete="off"/>
+                    <textarea {...input} type={type} className="review-area" placeholder={title} autoComplete="off" />
                     <button className="mobile-add-review-button">+</button>
-    
                 </div>
                 <p className="error-text" {...input}> {touched && error} </p>
                 <button className="add-review-button">Post Review</button>
@@ -152,7 +151,7 @@ function validate(values) {
     const loggedIn = localStorage.getItem('loggedin');
     if (!review) {
         errors.review = 'Cannot submit an empty review';
-    } else if (!loggedIn) {
+    } else if (loggedIn === "undefined" || !loggedIn) {
         errors.review = <span> Please <Link style={textStyle} to="/sign-in">Sign In</Link> to leave a review</span>;
     }
     return errors;

@@ -22,16 +22,36 @@ const background = {
 }
 
 class App extends Component {
-    state = {
-        loading: true,
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+        }
+        this.displayScrollBtn = this.displayScrollBtn.bind(this);
     }
 
     componentDidMount() {
-        setTimeout( () => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
             this.setState({
                 loading: false,
             });
         }, 3000);
+        window.addEventListener('scroll', this.displayScrollBtn);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.displayScrollBtn);
+    }
+
+    displayScrollBtn() {
+        if (document.getElementsByClassName('symptom-group').length > 0) {
+            if (document.getElementsByClassName('symptom-group')[0].scrollHeight > 700) {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "block";
+            } else {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+            }
+        }
     }
 
     render() {
@@ -39,7 +59,7 @@ class App extends Component {
         //     return <LoadingPage/>
         // }
         return (
-            <div className="container" style={background}>
+            <div className="container" style={background} onScroll={this.displayScrollBtn}>
                 {/* <AgreementModal/> */}
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />

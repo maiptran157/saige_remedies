@@ -10,11 +10,11 @@
     left: 0;
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
 }
 
 .sign-in-option + p {
@@ -62,12 +62,17 @@ form {
 
 .sign-up-btn {
     margin-top: 3%;
-    width: 83vw;
+    width: 100px;
     background-color: white;
     height: 40px;
     border-radius: 12px;
     font-size: 1.2rem;
     color: gray
+}
+
+.sign-up-btn:hover {
+    color: white;
+    background-color: #EFC11D;
 }
 
 .sign-in-option {
@@ -98,9 +103,9 @@ form {
         margin-bottom: 1%;
         font-size: 1.4rem;
     }
-    .sign-up-btn {
+    /* .sign-up-btn {
         width: 70vw;
-    }
+    } */
 }
 
 @media only screen and (min-width: 769px) {
@@ -112,7 +117,7 @@ form {
         margin-bottom: 1%;
         font-size: 1.4rem;
     }
-    .sign-up-btn {
+    /* .sign-up-btn {
         width: 50vw;
-    }
+    } */
 }

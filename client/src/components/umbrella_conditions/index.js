@@ -8,7 +8,6 @@ import AgreementModal from '../modal';
 import './umbrella_conditions.scss';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 
-
 class UmbrellaConditions extends Component {
     state = {
         modalCheck: localStorage.getItem('loggedin'),

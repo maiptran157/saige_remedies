@@ -27,7 +27,6 @@ class RemedyDetailContainer extends Component {
     }
 
     async getRemedyDetail() {
-        console.log(this.props)
         const { remedyId } = this.props.match.params;
         const dataToSend = formatPostData({ ID: remedyId });
         try {
