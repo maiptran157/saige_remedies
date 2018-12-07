@@ -18,8 +18,12 @@
     overflow: hidden;
 }
 
+.hamburger-modal > ul {
+    margin-top: 35px;
+}
+
 .full-size {
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .hamburger-icon {
@@ -58,9 +62,12 @@
 }
 
 .close-symbol {
-    width: 5%;
+    margin-top: -10px;
+    font-size: 50px;
+    width: 10%;
     font-weight: bolder;
-    padding: 5px;    
+    padding: 5px;
+    text-align: center; 
 }
 
 .web-menu {

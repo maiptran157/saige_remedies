@@ -28,12 +28,10 @@ class DropDownMenu extends Component {
     }
 
     closeMenu(event) {
-        if (!this.DropDownMenu.contains(event.target)) {
-            this.setState({ showMenu: false, }, () => {
-                document.removeEventListener('click', this.closeMenu)
-            });
-        }
-        this.setState({ showMenu: false });
+        event.preventDefault();
+        this.setState({ showMenu: false, }, () => {
+            document.removeEventListener('click', this.closeMenu)
+        });
     }
 
     renderLinks() {
@@ -56,9 +54,7 @@ class DropDownMenu extends Component {
         return (
             <Fragment>
                 <ul>
-                    <hr />
                     <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
-                    <hr />
                     <li><Link style={textStyle} to="/">Home</Link></li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
@@ -78,7 +74,7 @@ class DropDownMenu extends Component {
                     ref={(element) => {
                         this.DropDownMenu = element;
                     }}>
-                    <div className="close-symbol" onClick={this.closeMenu}>X</div>
+                    <div className="close-symbol" onClick={this.closeMenu}>x</div>
                     {this.renderLinks()}
                 </div>
             </div>
