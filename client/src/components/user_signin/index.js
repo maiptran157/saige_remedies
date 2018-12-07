@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { userSignInInfo } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
+import ReactLoading from 'react-loading';
 
 const signInBtnStyle = {
     display: 'flex',
@@ -15,7 +16,18 @@ const signInBtnStyle = {
 
 class SignIn extends Component {
     userSignIn = async (values) => {
+        document.getElementsByClassName('sign-in-loading')[0].style.display = "";
         await this.props.userSignInInfo(values);
+    }
+
+    componentDidMount() {
+        this.hideSignUpLoading();
+    }
+
+    hideSignUpLoading = (event) => {
+        if (document.getElementsByClassName('sign-in-loading').length > 0) {
+            document.getElementsByClassName('sign-in-loading')[0].style.display = "none";
+        }
     }
 
     render() {
@@ -33,6 +45,7 @@ class SignIn extends Component {
                 <form onSubmit={handleSubmit(this.userSignIn)}>
                     <Field name="email" label="Email" component={renderInput} type="text" />
                     <Field name="password" label="Password" component={renderInput} type="password" />
+                    <ReactLoading className="sign-in-loading" type="bubbles" />
                     <div className="input-container" style={signInBtnStyle}><button className="sign-in-btn">Sign In</button></div>
                     <div className="sign-up-option"> Don't have an account? <Link className="sign-up-link" to="/sign-up">Sign Up</Link></div>
                     <p className="auth-error-text">{authError}</p>
@@ -40,6 +53,7 @@ class SignIn extends Component {
             </Fragment>
         }
         const displaySignIn = () => {
+            this.hideSignUpLoading();
             if (url && loggedin) {
                 localStorage.removeItem('redirectUrl');
                 return this.props.history.push(url);
