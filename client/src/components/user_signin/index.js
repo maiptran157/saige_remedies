@@ -21,10 +21,10 @@ class SignIn extends Component {
     }
 
     componentDidMount() {
-        this.hideSignUpLoading();
+        this.hideSignInLoading();
     }
 
-    hideSignUpLoading = (event) => {
+    hideSignInLoading = (event) => {
         if (document.getElementsByClassName('sign-in-loading').length > 0) {
             document.getElementsByClassName('sign-in-loading')[0].style.display = "none";
         }
@@ -54,23 +54,23 @@ class SignIn extends Component {
         }
         const displaySignIn = () => {
             if (url && loggedin) {
-                this.hideSignUpLoading();
+                this.hideSignInLoading();
                 localStorage.removeItem('redirectUrl');
                 return this.props.history.push(url);
             } else if (loggedin) {
-                this.hideSignUpLoading();
+                this.hideSignInLoading();
                 return <div className="sign-in-success-message">
                     You have signed in successfully
                     {goBackHome()}
                 </div>
             } else if (this.props.authError === "Error signing in") {
-                this.hideSignUpLoading();
+                this.hideSignInLoading();
                 return <Fragment>
                     <h3 className="sign-in-fail-message">Email or password is incorrect. Please try again.</h3>
                     {renderField()}
                 </Fragment>
             } else {
-                this.hideSignUpLoading();
+                this.hideSignInLoading();
                 return renderField()
             }
         }

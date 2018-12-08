@@ -7,6 +7,7 @@ import { userSignUpInfo, userSignUpCheck, resetAuth } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 import './user_signup.css';
+import ReactLoading from 'react-loading';
 
 const signUpBtnStyle = {
     display: 'flex',
@@ -15,11 +16,23 @@ const signUpBtnStyle = {
 
 class SignUp extends Component {
     userSignUp = async (values) => {
+        document.getElementsByClassName('sign-up-loading')[0].style.display = "";
         await this.props.userSignUpCheck(values);
         if (!this.props.signUpCheckMessage.userExists) {
-            this.props.userSignUpInfo(values);
+            await this.props.userSignUpInfo(values);
         }
     }
+
+    componentDidMount() {
+        this.hideSignUpLoading();
+    }
+
+    hideSignUpLoading = (event) => {
+        if (document.getElementsByClassName('sign-up-loading').length > 0) {
+            document.getElementsByClassName('sign-up-loading')[0].style.display = "none";
+        }
+    }
+
     render() {
         const { handleSubmit, authError } = this.props;
         const renderField = () => {
@@ -32,6 +45,7 @@ class SignUp extends Component {
                     <Field name="email" label="Email" component={renderInput} type="text" />
                     <Field name="password" label="Password" component={renderInput} type="password" />
                     <Field name="confirmPassword" label="Re-enter your password" component={renderInput} type="password" />
+                    <ReactLoading className="sign-up-loading" type="bubbles" />
                     <div className="input-container" style={signUpBtnStyle}><button className="sign-up-btn">Sign Up</button></div>
                     <div className="sign-in-option"> Already have an account? <Link className="sign-in-link" to="/sign-in">Sign In</Link></div>
                     <p className="auth-error-text">{authError}</p>
@@ -44,6 +58,7 @@ class SignUp extends Component {
             }, 1000)
         }
         if (this.props.auth) {
+            this.hideSignUpLoading();
             this.props.resetAuth();
             return <div className="sign-up-container">
                 <Header logo={saigeLogo} buttonType="back-button" />
@@ -53,6 +68,7 @@ class SignUp extends Component {
                 </div>
             </div>
         } else if (this.props.signUpCheckMessage.userExists) {
+            this.hideSignUpLoading();
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
@@ -63,6 +79,7 @@ class SignUp extends Component {
                 </div>
             )
         } else if (!this.props.auth && this.props.error === "Error signing up") {
+            this.hideSignUpLoading();
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
