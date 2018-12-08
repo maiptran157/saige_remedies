@@ -7,6 +7,12 @@ import MediaQuery from "react-responsive";
 import AgreementModal from '../modal';
 import './umbrella_conditions.scss';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
+import ReactLoading from 'react-loading';
+
+const style = {
+    display: 'flex',
+    justifyContent: 'center'
+}
 
 class UmbrellaConditions extends Component {
     state = {
@@ -22,7 +28,9 @@ class UmbrellaConditions extends Component {
         const { categories, history } = this.props;
         const categoryList = () => {
             if (!categories) {
-                return null;
+                return <div style={style}>
+                    <ReactLoading type="bubbles" />
+                </div>
             } else {
                 return categories.map((category) => {
                     return <CategoryContainer id={category._id} img={category.img} key={category._id} name={category.name} />
