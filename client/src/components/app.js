@@ -31,7 +31,9 @@ class App extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
+        document.getElementsByClassName('container')[0].scrollTo({
+            top: 0,
+        });
         setTimeout(() => {
             this.setState({
                 loading: false,
