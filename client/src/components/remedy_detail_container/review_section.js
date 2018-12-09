@@ -7,6 +7,13 @@ import '../star_rating/star_rating.scss';
 import '../star_rating/star_rating.scss';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
+import ReactLoading from 'react-loading';
+
+const loadingStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    display: 'none'
+}
 
 const textStyle = {
     color: 'white',
@@ -49,7 +56,7 @@ class ReviewList extends Component {
 
 
     validateUserLogInAndAddReview = async (value) => {
-        // console.log("auth for validateUserLogIn:", this.props.auth);
+
         if (this.props.auth === false) {
             localStorage.setItem('redirectUrl', this.props.pathname);
             this.props.push('/sign-in');
@@ -58,6 +65,9 @@ class ReviewList extends Component {
                 ratingError: 'Rating is empty'
             })
         } else {
+            if (document.getElementsByClassName('add-review-loading').length > 0) {
+                document.getElementsByClassName('add-review-loading')[0].style.display = ""
+            }
             const { id } = this.props;
             await this.props.addReview({
                 review: value.review,
@@ -70,6 +80,9 @@ class ReviewList extends Component {
                 rating: 0, //set rating for input back to 0
                 ratingError: ""
             })
+            if (document.getElementsByClassName('add-review-loading').length > 0) {
+                document.getElementsByClassName('add-review-loading')[0].style.display = "none"
+            }
         }
     }
 
@@ -77,7 +90,6 @@ class ReviewList extends Component {
         const { rating } = this.state;
         const { reviewList, handleSubmit } = this.props;
         localStorage.setItem('redirectUrl', this.props.pathname);
-        // console.log('Review List:', reviewList);
 
         const displayReview = () => {
             if (reviewList.length > 0) {
@@ -122,7 +134,9 @@ class ReviewList extends Component {
             <div className="reviews-container">
 
                 {reviewList ? displayReview() : null}
-
+                <div className="add-review-loading" style={loadingStyle}>
+                    <ReactLoading type="bubbles" />
+                </div>
                 <form action="" onSubmit={handleSubmit(this.validateUserLogInAndAddReview)}>
                     <div className="review">
                         <div className="star-rating-area">

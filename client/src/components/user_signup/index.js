@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 import './user_signup.css';
 import ReactLoading from 'react-loading';
 
+const signUpLoadingStyle = {
+    display: 'none'
+}
+
 const signUpBtnStyle = {
     display: 'flex',
     flexDirection: 'row-reverse'
@@ -21,10 +25,6 @@ class SignUp extends Component {
         if (!this.props.signUpCheckMessage.userExists) {
             await this.props.userSignUpInfo(values);
         }
-    }
-
-    componentDidMount() {
-        this.hideSignUpLoading();
     }
 
     hideSignUpLoading = (event) => {
@@ -45,7 +45,7 @@ class SignUp extends Component {
                     <Field name="email" label="Email" component={renderInput} type="text" />
                     <Field name="password" label="Password" component={renderInput} type="password" />
                     <Field name="confirmPassword" label="Re-enter your password" component={renderInput} type="password" />
-                    <ReactLoading className="sign-up-loading" type="bubbles" />
+                    <ReactLoading style={signUpLoadingStyle} className="sign-up-loading" type="bubbles" />
                     <div className="input-container" style={signUpBtnStyle}><button className="sign-up-btn">Sign Up</button></div>
                     <div className="sign-in-option"> Already have an account? <Link className="sign-in-link" to="/sign-in">Sign In</Link></div>
                     <p className="auth-error-text">{authError}</p>
