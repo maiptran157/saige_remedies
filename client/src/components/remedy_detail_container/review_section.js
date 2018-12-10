@@ -127,13 +127,13 @@ class ReviewList extends Component {
 
         return (<Fragment>
             <div className="review-header">
-                <div>Average Rating:</div>
-                {reviewList ? displayRatingTotal() : null}
+                {reviewList ? <Fragment><div>Average Rating:</div> {displayRatingTotal()} </Fragment> : "This remedy has not been rated."}
             </div>
             <hr />
             <div className="reviews-container">
 
-                {reviewList ? displayReview() : null}
+                {reviewList ? displayReview() : "0 Review"}
+                <div className="review-header">Reviews:</div>
                 <div className="add-review-loading" style={loadingStyle}>
                     <ReactLoading type="bubbles" />
                 </div>
