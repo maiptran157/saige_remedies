@@ -134,9 +134,15 @@
 }
 
 
+@media only screen and (min-width: 500px) {
+    .remedy-detail-description {
+        width: 480px;
+    }
+}
+
 @media only screen and (min-width: 600px) {
     .remedy-detail-description {
-        width: 93vw;
+        width: 550px;
     }
     .remedy-reviews-container{
         margin-left: 0;
