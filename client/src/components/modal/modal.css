@@ -51,10 +51,11 @@
   text-align: center;
 }
 
-button {
+.agree-button>button {
   border-radius: 50px;
-  width: 170px;
-  height: 50px;
+  border: none;
+  width: 104px;
+  height: 38px;
   font-size: 20px;
   background-color: #EFC11D;
   color: white;

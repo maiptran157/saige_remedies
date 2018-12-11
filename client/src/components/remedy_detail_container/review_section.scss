@@ -43,6 +43,9 @@
                 font-size: 20px;
                 height: 40px;
                 margin-top: 4px;
+                border-radius: 50px;
+                background-color: #EFC11D;
+                color: #fff;
             }       
             div {
                 span {
@@ -68,6 +71,10 @@
                     position: absolute;
                     right: 0;
                     width: 70px;
+                    border-radius: 50px;
+                    font-size: 20px;
+                    background-color: #EFC11D;
+                    color: #fff;
                 }
                 .mobile-add-review-button:hover {
                     border: none;

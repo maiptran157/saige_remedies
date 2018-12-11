@@ -28,7 +28,7 @@ class DropDownMenu extends Component {
     }
 
     closeMenu(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({ showMenu: false, }, () => {
             document.removeEventListener('click', this.closeMenu)
         });
