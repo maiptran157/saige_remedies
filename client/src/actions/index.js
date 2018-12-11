@@ -113,7 +113,7 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
     } catch (error) {
         dispatch({
             type: types.SIGN_UP_ERROR,
-            error: 'Error signing up'
+            error: 'Error signing up',
         })
     }
 }
