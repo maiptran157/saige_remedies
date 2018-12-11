@@ -3,7 +3,7 @@
 }
 
 .hamburger-modal {
-    width: 50vw;
+    width: 63vw;
     height: 100vh;
     z-index: 1;
     position: absolute;
@@ -23,7 +23,7 @@
 }
 
 .full-size {
-    max-width: 250px;
+    max-width: 400px;
 }
 
 .hamburger-icon {
@@ -75,11 +75,23 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .full-size {
+        max-width: 300px;
+    }
     .hamburger-icon {
         margin: 0;
     }
     .hamburger-icon > img {
         width: 65px;
+    }
+    .close-symbol {
+        font-size: 70px;
+    }
+    .hamburger-modal > ul {
+        font-size: 20px;
+    }
+    .hamburger-modal > ul > li {
+        width: 112px;
     }
 }
 

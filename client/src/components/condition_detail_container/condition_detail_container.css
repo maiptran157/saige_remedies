@@ -41,8 +41,7 @@
     background-color: white;
     padding: 3%;
     position: relative;
-    height: 105px;
-    width: 90%;
+    width: 80%;
     margin-bottom: 20px;
 }
 
@@ -50,9 +49,7 @@
     border-radius: 25px;
     background-color: white;
     padding: 3%;
-    /* height: auto; */
-    width: 90%;
-    /* margin-bottom: 20px; */
+    width: 80%;
 }
 
 .condition-detail-paragraph {
@@ -127,19 +124,16 @@
         height: 30px;
     }
     .remedy-name {
-        font-size: 12px;
-    }
-    .condition-detail-description {
-        height: 65px;
+        font-size: 20px;
     }
     .condition-detail-paragraph {
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (min-width: 360px) {
     .remedy-name {
-        font-size: 13px;
+        font-size: 20px;
     }
 }
 
@@ -163,9 +157,6 @@
     .remedy-name {
         font-size: 25px;
     }
-    .condition-detail-description {
-        height: 95px;
-    } 
     .condition-detail-header {
         font-size: 50px;
     }
@@ -179,7 +170,7 @@
         font-size: 70px;
     }
     .remedy-results {
-        width: 750px;
+        width: 697px;
     }
     .remedy-name {
         font-size: 30px;
@@ -192,6 +183,9 @@
 @media only screen and (min-width: 1200px) {
     .condition-detail-group {
         width: 1000px;
+    }
+    .remedy-results {
+        width: 860px;
     }
 }
 

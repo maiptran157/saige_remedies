@@ -30,7 +30,7 @@ flex-wrap: wrap;
 
 .sign-in-btn {
     margin-top: 3%;
-    width: 80px;
+    width: 110px;
     background-color: white;
     height: 40px;
     border-radius: 12px;
@@ -73,7 +73,7 @@ flex-wrap: wrap;
     width: 100%;
     margin: 0;
     position: relative;
-    height: 60px;
+    height: 66px;
     background-color: red;
     display: flex;
     align-items: center;

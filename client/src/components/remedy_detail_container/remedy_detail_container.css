@@ -157,6 +157,9 @@
     .remedy-reviews-container {
         margin-left: 0;
     }
+    .remedy-detail-header {
+        font-size: 42px;
+    }
     .detail-paragraph {
         font-size: 35px;
     }

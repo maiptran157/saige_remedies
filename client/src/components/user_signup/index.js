@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import { connect } from 'react-redux';
 import { userSignUpInfo, userSignUpCheck, resetAuth } from '../../actions';
 import { renderInput } from '../helper';
@@ -18,13 +18,24 @@ const signUpBtnStyle = {
     flexDirection: 'row-reverse'
 }
 
+const signInAfterSignUpStyle = {
+    textDecoration: 'underline'
+}
+
 class SignUp extends Component {
     userSignUp = async (values) => {
         document.getElementsByClassName('sign-up-loading')[0].style.display = "";
         await this.props.userSignUpCheck(values);
         if (!this.props.signUpCheckMessage.userExists) {
             await this.props.userSignUpInfo(values);
+            if (this.props.auth) {
+                this.props.reset();
+            }
         }
+    }
+
+    resetAuthAfterSignUp = async () => {
+        await this.props.resetAuth();
     }
 
     hideSignUpLoading = (event) => {
@@ -57,18 +68,15 @@ class SignUp extends Component {
                 this.props.history.push('/sign-in')
             }, 1000)
         }
+
         if (this.props.auth) {
-            this.hideSignUpLoading();
-            this.props.resetAuth();
             return <div className="sign-up-container">
                 <Header logo={saigeLogo} buttonType="back-button" />
                 <div className="sign-up-success-message">
-                    You have successfully created an account
-                    {goToSignIn()}
+                    You have successfully created an account. Please <span><Link style={signInAfterSignUpStyle} className="sign-in-link" to="/sign-in" onClick={this.resetAuthAfterSignUp}>sign in</Link></span>.
                 </div>
             </div>
         } else if (this.props.signUpCheckMessage.userExists) {
-            this.hideSignUpLoading();
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
@@ -79,7 +87,6 @@ class SignUp extends Component {
                 </div>
             )
         } else if (!this.props.auth && this.props.error === "Error signing up") {
-            this.hideSignUpLoading();
             return (
                 <div className="sign-up-container">
                     <Header logo={saigeLogo} buttonType="back-button" />
@@ -145,7 +152,6 @@ function mapStateToProps(state) {
         auth: state.user.auth,
         authError: state.user.signUpError,
         signUpCheckMessage: state.user.signUpCheckMessage,
-        resetAuth: resetAuth
     }
 }
 

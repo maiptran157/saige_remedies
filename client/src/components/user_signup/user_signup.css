@@ -24,10 +24,9 @@
     height: 80vh;
     position: relative;
     text-align: center;
-    display: flex;
-    align-items: center;
+    justify-content: center;
     font-size: 5vh;
-    color: white;
+    color: #EFC11D;
 }
 
 .sign-up-fail-message{
@@ -35,7 +34,7 @@
     width: 100%;
     margin: 0;
     position: relative;
-    height: 10%;
+    height: 66px;
     background-color: red;
     display: flex;
     align-items: center;
@@ -59,7 +58,7 @@ form {
 
 .sign-up-btn {
     margin-top: 3%;
-    width: 100px;
+    width: 120px;
     background-color: white;
     height: 40px;
     border-radius: 12px;

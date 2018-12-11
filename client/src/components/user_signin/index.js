@@ -61,7 +61,9 @@ class SignIn extends Component {
                 this.hideSignInLoading();
                 return <div className="sign-in-success-message">
                     You have signed in successfully
-                    {goBackHome()}
+                    {setTimeout(() => {
+                        goBackHome()
+                    }, 700)}
                 </div>
             } else if (this.props.authError === "Error signing in") {
                 this.hideSignInLoading();

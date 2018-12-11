@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signOut } from '../../actions';
+import { signOut, resetAuth } from '../../actions';
 
 const textStyle = {
     textDecoration: 'none',
@@ -28,10 +28,14 @@ class DropDownMenu extends Component {
     }
 
     closeMenu(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({ showMenu: false, }, () => {
             document.removeEventListener('click', this.closeMenu)
         });
+    }
+
+    resetAuthAfterSignUp = async () => {
+        await this.props.resetAuth();
     }
 
     renderLinks() {
@@ -58,7 +62,7 @@ class DropDownMenu extends Component {
                     <li><Link style={textStyle} to="/">Home</Link></li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                    <li><Link style={textStyle} to="/sign-up">Sign Up</Link></li>
+                    <li><Link style={textStyle} to="/sign-up" onClick={this.resetAuthAfterSignUp}>Sign Up</Link></li>
                 </ul>
             </Fragment>
         );
@@ -89,5 +93,6 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {
-    signOut: signOut
+    signOut: signOut,
+    resetAuth: resetAuth
 })(DropDownMenu);
