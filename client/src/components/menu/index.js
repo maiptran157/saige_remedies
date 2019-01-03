@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signOut, resetAuth } from '../../actions';
+import { signOut, resetAuth, checkUserLoginStatus } from '../../actions';
 
 const textStyle = {
     textDecoration: 'none',
@@ -38,8 +38,14 @@ class DropDownMenu extends Component {
         await this.props.resetAuth();
     }
 
+    componentWillMount() {
+        this.props.checkUserLoginStatus();
+    }
+
     renderLinks() {
-        const { auth } = this.props;
+        const { auth, loginStatus } = this.props;
+        console.log("===auth===", auth)
+        console.log("===loginStatus===", loginStatus)
         const firstName = localStorage.getItem('firstName');
         if (auth && firstName) {
             return (<Fragment>
@@ -88,11 +94,13 @@ class DropDownMenu extends Component {
 
 function mapStateToProps(state) {
     return {
-        auth: state.user.auth
+        auth: state.user.auth,
+        loginStatus: state.user.loginStatus.data
     }
 }
 
 export default connect(mapStateToProps, {
     signOut: signOut,
-    resetAuth: resetAuth
+    resetAuth: resetAuth,
+    checkUserLoginStatus: checkUserLoginStatus,
 })(DropDownMenu);
