@@ -118,14 +118,15 @@ export const userSignUpInfo = (userInfo) => async dispatch => {
     }
 }
 
-export const checkUserLoginStatus = (userInfo) => async dispatch => {
-    const dataToSend = formatPostData(userInfo);
+export const checkUserLoginStatus = () => async dispatch => {
+
     try {
-        const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS, dataToSend);
+        const response = await axios.post(config.CHECK_USER_LOG_IN_STATUS);
         dispatch({
             type: types.CHECK_USER_LOG_IN_STATUS,
             payload: response
         })
+
     } catch (error) {
         console.log('Error Message:', error.message);
     }
@@ -175,7 +176,7 @@ export const signOut = () => {
     localStorage.removeItem('redirectUrl');
     localStorage.removeItem('userAgreement');
     axios.get(config.LOG_OUT_URL);
-    axios.get(`${config.ENABLE_MODAL}`);
+    axios.get(config.ENABLE_MODAL);
     return { type: types.SIGN_OUT }
 }
 
