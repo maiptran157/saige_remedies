@@ -39,13 +39,15 @@ class DropDownMenu extends Component {
     }
 
     componentWillMount() {
-        this.props.checkUserLoginStatus();
+        this.props.checkUserLoginStatus().then(() => {
+            if (this.props.loginStatus.success === false) {
+                this.props.signOut();
+            }
+        });
     }
 
     renderLinks() {
-        const { auth, loginStatus } = this.props;
-        console.log("===auth===", auth)
-        console.log("===loginStatus===", loginStatus)
+        const { auth } = this.props;
         const firstName = localStorage.getItem('firstName');
         if (auth && firstName) {
             return (<Fragment>
