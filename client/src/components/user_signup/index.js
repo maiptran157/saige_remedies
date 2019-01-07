@@ -44,6 +44,13 @@ class SignUp extends Component {
         }
     }
 
+    goToSignIn = (delay = 1000) => {
+        setTimeout(() => {
+            this.props.history.push('/sign-in')
+        }, delay);
+        return null;
+    }
+
     render() {
         const { handleSubmit, authError } = this.props;
         const renderField = () => {
@@ -62,11 +69,6 @@ class SignUp extends Component {
                     <p className="auth-error-text">{authError}</p>
                 </form>
             </Fragment>
-        }
-        const goToSignIn = () => {
-            setTimeout(() => {
-                this.props.history.push('/sign-in')
-            }, 1000)
         }
 
         if (this.props.auth) {
