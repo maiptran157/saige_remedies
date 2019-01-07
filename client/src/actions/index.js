@@ -174,7 +174,6 @@ export const signOut = () => {
     localStorage.removeItem('loggedin');
     localStorage.removeItem('username');
     localStorage.removeItem('redirectUrl');
-    localStorage.removeItem('userAgreement');
     axios.get(config.LOG_OUT_URL);
     axios.get(config.ENABLE_MODAL);
     return { type: types.SIGN_OUT }

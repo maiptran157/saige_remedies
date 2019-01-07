@@ -46,6 +46,11 @@ class DropDownMenu extends Component {
         });
     }
 
+    signOut = async () => {
+        this.props.signOut();
+        localStorage.removeItem('userAgreement');
+    }
+
     renderLinks() {
         const { auth } = this.props;
         const firstName = localStorage.getItem('firstName');
@@ -58,7 +63,7 @@ class DropDownMenu extends Component {
                     <li><Link style={textStyle} to="/">Home</Link></li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                    <li><span onClick={this.props.signOut} style={textStyle} >Sign Out</span></li>
+                    <li><span onClick={this.signOut} style={textStyle} >Sign Out</span></li>
                 </ul>
             </Fragment>
             )
@@ -97,7 +102,7 @@ class DropDownMenu extends Component {
 function mapStateToProps(state) {
     return {
         auth: state.user.auth,
-        loginStatus: state.user.loginStatus.data
+        loginStatus: state.user.loginStatus.data,
     }
 }
 
