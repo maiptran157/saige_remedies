@@ -65,9 +65,9 @@ class App extends Component {
         // }
         return (
             <div className="container" style={background} onScroll={this.displayScrollBtn}>
-                {/* <AgreementModal/> */}
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
+                    <Route path={"/conditions/undefined/undefined"} component={NotFoundPage} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
                     <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
                     <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />

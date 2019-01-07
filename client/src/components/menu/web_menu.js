@@ -2,7 +2,7 @@ import './menu.css';
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { signOut, resetAuth } from '../../actions';
+import { signOut, resetAuth, checkUserLoginStatus } from '../../actions';
 
 const textStyle = {
     textDecoration: 'none',
@@ -10,6 +10,22 @@ const textStyle = {
 }
 
 class WebMenu extends Component {
+    resetAuthAfterSignUp = async () => {
+        await this.props.resetAuth();
+    }
+
+    componentWillMount() {
+        this.props.checkUserLoginStatus().then(() => {
+            if (this.props.loginStatus.success === false) {
+                this.props.signOut();
+            }
+        });
+    }
+
+    signOut = async () => {
+        this.props.signOut();
+        localStorage.removeItem('userAgreement');
+    }
 
     renderLinks() {
         const { auth } = this.props;
@@ -20,7 +36,7 @@ class WebMenu extends Component {
                     <li style={textStyle}>Welcome {firstName}</li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                    <li><span onClick={this.props.signOut} style={textStyle}>Sign Out</span></li>
+                    <li><span onClick={this.signOut} style={textStyle}>Sign Out</span></li>
                 </Fragment>
             )
         }
@@ -32,10 +48,6 @@ class WebMenu extends Component {
                 <li><Link style={textStyle} to="/sign-up" onClick={this.resetAuthAfterSignUp}>Sign Up</Link></li>
             </Fragment>
         );
-    }
-
-    resetAuthAfterSignUp = async () => {
-        await this.props.resetAuth();
     }
 
     render() {
@@ -50,11 +62,13 @@ class WebMenu extends Component {
 
 function mapStateToProps(state) {
     return {
-        auth: state.user.auth
+        auth: state.user.auth,
+        loginStatus: state.user.loginStatus.data,
     }
 }
 
 export default connect(mapStateToProps, {
     signOut: signOut,
-    resetAuth: resetAuth
+    resetAuth: resetAuth,
+    checkUserLoginStatus: checkUserLoginStatus,
 })(WebMenu);
