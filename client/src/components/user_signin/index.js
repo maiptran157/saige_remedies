@@ -15,6 +15,12 @@ const signInBtnStyle = {
 }
 
 class SignIn extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            signInSuccessMessage: 'You have signed in successfully.'
+        }
+    }
     userSignIn = async (values) => {
         document.getElementsByClassName('sign-in-loading')[0].style.display = "";
         await this.props.userSignInInfo(values);
@@ -30,15 +36,18 @@ class SignIn extends Component {
         }
     }
 
+    goBackHome = (delay = 1000) => {
+        setTimeout(() => {
+            this.props.history.push('/')
+        }, delay)
+        return null;
+    }
+
     render() {
         const { handleSubmit, authError } = this.props;
         const url = localStorage.getItem('redirectUrl');
         const loggedin = localStorage.getItem('loggedin') === 'true';
-        const goBackHome = () => {
-            setTimeout(() => {
-                this.props.history.push('/')
-            }, 1000)
-        }
+
         const renderField = () => {
             return <Fragment>
                 <h3 className="sign-in-header">Sign in your Saige account</h3>
@@ -60,10 +69,8 @@ class SignIn extends Component {
             } else if (loggedin) {
                 this.hideSignInLoading();
                 return <div className="sign-in-success-message">
-                    You have signed in successfully
-                    {setTimeout(() => {
-                        goBackHome()
-                    }, 700)}
+                    {this.state.signInSuccessMessage}
+                    {this.goBackHome()}
                 </div>
             } else if (this.props.authError === "Error signing in") {
                 this.hideSignInLoading();
