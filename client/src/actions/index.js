@@ -182,3 +182,7 @@ export const signOut = () => {
 export const resetAuth = () => {
     return { type: types.RESET_AUTH }
 }
+
+export const resetAuthError = () => {
+    return { type: types.RESET_AUTH_ERROR }
+}
