@@ -11,9 +11,7 @@ import AboutSaige from './about_saige';
 import MeetTheTeam from './meet_the_team';
 import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
-import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
-import MediaQuery from "react-responsive";
 // import LoadingPage from './loading_page/loading_page';
 
 const background = {
@@ -42,13 +40,19 @@ class App extends Component {
         window.addEventListener('scroll', this.displayScrollBtn);
     }
 
+    componentDidUpdate() {
+        document.getElementsByClassName('container')[0].scrollTo({
+            top: 0,
+        });
+    }
+
     componentWillUnmount() {
         window.removeEventListener('scroll', this.displayScrollBtn);
     }
 
     displayScrollBtn() {
         if (document.getElementsByClassName('symptom-group').length > 0) {
-            if (document.getElementsByClassName('symptom-group')[0].scrollHeight > 700) {
+            if (document.getElementsByClassName('symptom-group')[0].scrollHeight > 800) {
                 document.getElementsByClassName("back-to-top-btn")[0].style.display = "block";
             } else {
                 document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";

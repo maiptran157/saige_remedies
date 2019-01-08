@@ -15,13 +15,13 @@ class ConditionsContainer extends Component {
     componentDidMount() {
         const { categoryId } = this.props.match.params;
         this.props.getConditionsList(categoryId);
-        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 700) {
+        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 800) {
             document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
         }
     }
 
     componentDidUpdate() {
-        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 700) {
+        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 800) {
             document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
         }
     }

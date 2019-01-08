@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
-import { Field, reduxForm, reset } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { userSignUpInfo, userSignUpCheck, resetAuth } from '../../actions';
+import { userSignUpInfo, userSignUpCheck, resetAuth, resetAuthError } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 import './user_signup.css';
@@ -49,6 +49,10 @@ class SignUp extends Component {
             this.props.history.push('/sign-in')
         }, delay);
         return null;
+    }
+
+    componentWillUnmount() {
+        this.props.resetAuthError();
     }
 
     render() {
@@ -127,7 +131,7 @@ const validate = values => {
     if (!username) {
         errors.username = "Please choose your username";
     } else if (/[#$%*&@!'"]/gm.test(username)) {
-        errors.username = "Username cannot include these special characters # $ % * & @ ! \' or \" ";
+        errors.username = "Username cannot include these special characters #, $, %, *, &, @, !, \', or \". ";
     }
     if (!email) {
         errors.email = "Please enter your email";
@@ -160,5 +164,6 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps, {
     userSignUpInfo: userSignUpInfo,
     userSignUpCheck: userSignUpCheck,
-    resetAuth: resetAuth
+    resetAuth: resetAuth,
+    resetAuthError: resetAuthError,
 })(SignUp);

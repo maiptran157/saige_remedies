@@ -4,7 +4,7 @@ import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { userSignInInfo } from '../../actions';
+import { userSignInInfo, resetAuthError } from '../../actions';
 import { renderInput } from '../helper';
 import { Link } from 'react-router-dom';
 import ReactLoading from 'react-loading';
@@ -18,7 +18,7 @@ class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            signInSuccessMessage: 'You have signed in successfully.'
+            signInSuccessMessage: 'You have signed in successfully. You will be directed to home page shortly.'
         }
     }
     userSignIn = async (values) => {
@@ -28,6 +28,10 @@ class SignIn extends Component {
 
     componentDidMount() {
         this.hideSignInLoading();
+    }
+
+    componentWillUnmount() {
+        this.props.resetAuthError();
     }
 
     hideSignInLoading = (event) => {
@@ -70,7 +74,7 @@ class SignIn extends Component {
                 this.hideSignInLoading();
                 return <div className="sign-in-success-message">
                     {this.state.signInSuccessMessage}
-                    {this.goBackHome()}
+                    {this.goBackHome(2000)}
                 </div>
             } else if (this.props.authError === "Error signing in") {
                 this.hideSignInLoading();
@@ -123,4 +127,5 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps, {
     userSignInInfo: userSignInInfo,
+    resetAuthError: resetAuthError,
 })(SignIn);
