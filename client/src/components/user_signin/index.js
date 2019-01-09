@@ -79,7 +79,7 @@ class SignIn extends Component {
             } else if (loggedin) {
                 this.hideSignInLoading();
                 return <div className="sign-in-success-message">
-                    {this.state.signInSuccessMessage}
+                    {url.length > 1 ? 'You have signed in successfully. You will be directed to previous page shortly.' : this.state.signInSuccessMessage}
                     {this.goBackHome(2000)}
                 </div>
             } else if (this.props.authError === "Error signing in") {
