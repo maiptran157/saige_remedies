@@ -7,14 +7,17 @@ $symptomGroupID = $_POST['ID'];
 
 if($symptomGroupID == 12){
     $query = "SELECT s.ID AS _id, s.name  
-                FROM symptom AS s";
+              FROM symptom AS s
+              ORDER BY s.name
+             ";
     } else {
         $query = "SELECT s.ID AS _id, s.name  
-            FROM symptom AS s 
-            JOIN symptoms_groups AS sg ON s.ID = sg.symptom_id 
-            JOIN symptom_group AS g ON g.ID = sg.symptom_group_id 
-            WHERE g.ID = '$symptomGroupID'
-          ";}
+                  FROM symptom AS s 
+                  JOIN symptoms_groups AS sg ON s.ID = sg.symptom_id 
+                  JOIN symptom_group AS g ON g.ID = sg.symptom_group_id 
+                  WHERE g.ID = '$symptomGroupID'
+                  ORDER BY s.name
+                  ";}
 
 $result = mysqli_query($conn, $query);
 
