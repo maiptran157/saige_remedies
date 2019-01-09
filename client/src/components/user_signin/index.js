@@ -41,8 +41,14 @@ class SignIn extends Component {
     }
 
     goBackHome = (delay = 1000) => {
+        const url = localStorage.getItem('redirectUrl');
         setTimeout(() => {
-            this.props.history.push('/')
+            if (url) {
+                this.props.history.push(url)
+            }
+            else {
+                this.props.history.push('/')
+            }
         }, delay)
         return null;
     }

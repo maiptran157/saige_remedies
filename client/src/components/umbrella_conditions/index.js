@@ -16,10 +16,11 @@ const style = {
 
 class UmbrellaConditions extends Component {
     state = {
-        modalCheck: localStorage.getItem('loggedin'),
+        modalCheck: localStorage.getItem('userAgreement'),
     }
 
     componentDidMount() {
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
         this.props.getCategoryList();
     }
 
