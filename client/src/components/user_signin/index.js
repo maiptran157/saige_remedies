@@ -41,8 +41,14 @@ class SignIn extends Component {
     }
 
     goBackHome = (delay = 1000) => {
+        const url = localStorage.getItem('redirectUrl');
         setTimeout(() => {
-            this.props.history.push('/')
+            if (url) {
+                this.props.history.push(url)
+            }
+            else {
+                this.props.history.push('/')
+            }
         }, delay)
         return null;
     }
@@ -73,7 +79,7 @@ class SignIn extends Component {
             } else if (loggedin) {
                 this.hideSignInLoading();
                 return <div className="sign-in-success-message">
-                    {this.state.signInSuccessMessage}
+                    {url && url.length > 1 ? 'You have signed in successfully. You will be directed to previous page shortly.' : this.state.signInSuccessMessage}
                     {this.goBackHome(2000)}
                 </div>
             } else if (this.props.authError === "Error signing in") {

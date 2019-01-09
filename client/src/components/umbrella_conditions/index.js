@@ -20,6 +20,7 @@ class UmbrellaConditions extends Component {
     }
 
     componentDidMount() {
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
         this.props.getCategoryList();
     }
 

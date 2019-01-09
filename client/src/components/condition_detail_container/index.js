@@ -23,6 +23,7 @@ class ConditionDetailContainer extends Component {
     }
 
     componentDidMount() {
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
         this.getConditionDetail();
     }
 

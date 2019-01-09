@@ -11,9 +11,10 @@ import reactIcon from '../../assets/images/react.png';
 import reduxIcon from '../../assets/images/redux.png';
 import SassIcon from '../../assets/images/Sass.png';
 
-
-
 class AboutSaige extends Component {
+    componentDidMount() {
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
+    }
     render() {
         const { match } = this.props
         return (
@@ -44,6 +45,5 @@ class AboutSaige extends Component {
         )
     }
 }
-
 
 export default AboutSaige;

@@ -13,6 +13,7 @@ class ConditionsContainer extends Component {
         super(props);
     }
     componentDidMount() {
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
         const { categoryId } = this.props.match.params;
         this.props.getConditionsList(categoryId);
         if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 800) {
