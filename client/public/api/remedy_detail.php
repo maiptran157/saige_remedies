@@ -30,6 +30,7 @@ $reviewsQuery = "SELECT r.ID AS review_id, u.username, r.date_posted, r.review, 
                     ON r.remedy_id = rem.ID
                  WHERE r.remedy_ID = '$remedyID'
                  AND u.status = 'active'
+                 ORDER BY r.date_posted
                 ";
 
 $reviewResult = mysqli_query($conn, $reviewsQuery);
