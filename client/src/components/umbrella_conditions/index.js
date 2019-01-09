@@ -16,7 +16,7 @@ const style = {
 
 class UmbrellaConditions extends Component {
     state = {
-        modalCheck: localStorage.getItem('userAgreement'),
+        modalCheck: localStorage.getItem('loggedin'),
     }
 
     componentDidMount() {
