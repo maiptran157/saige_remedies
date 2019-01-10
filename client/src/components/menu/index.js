@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
 import './menu.css';
+import React, { Component, Fragment } from 'react';
+import hamburgerMenu from '../../assets/images/hamburger_white_shadow.png';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { signOut, resetAuth, checkUserLoginStatus } from '../../actions';
 
 const textStyle = {
     textDecoration: 'none',
@@ -9,8 +11,8 @@ const textStyle = {
 }
 
 class DropDownMenu extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             showMenu: false,
         }
@@ -20,23 +22,66 @@ class DropDownMenu extends Component {
 
     showMenu(event) {
         event.preventDefault();
-
         this.setState({ showMenu: true, }, () => {
             document.addEventListener('click', this.closeMenu)
         });
     }
 
     closeMenu(event) {
-        if (!this.DropDownMenu.contains(event.target)) {
-            this.setState({ showMenu: false, }, () => {
-                document.removeEventListener('click', this.closeMenu)
-            });
+        // event.preventDefault();
+        this.setState({ showMenu: false, }, () => {
+            document.removeEventListener('click', this.closeMenu)
+        });
+    }
+
+    resetAuthAfterSignUp = async () => {
+        await this.props.resetAuth();
+    }
+
+    componentWillMount() {
+        this.props.checkUserLoginStatus().then(() => {
+            if (this.props.loginStatus.success === false) {
+                this.props.signOut();
+            }
+        });
+    }
+
+    signOut = async () => {
+        this.props.signOut();
+        localStorage.removeItem('userAgreement');
+    }
+
+    renderLinks() {
+        const { auth } = this.props;
+        const firstName = localStorage.getItem('firstName');
+        if (auth && firstName) {
+            return (<Fragment>
+                <ul>
+                    <hr />
+                    <li>Welcome {firstName}</li>
+                    <hr />
+                    <li><Link style={textStyle} to="/">Home</Link></li>
+                    <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
+                    <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
+                    <li><span onClick={this.signOut} style={textStyle} >Sign Out</span></li>
+                </ul>
+            </Fragment>
+            )
         }
-        this.setState({ showMenu: false });
+        return (
+            <Fragment>
+                <ul>
+                    <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
+                    <li><Link style={textStyle} to="/">Home</Link></li>
+                    <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
+                    <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
+                    <li><Link style={textStyle} to="/sign-up" onClick={this.resetAuthAfterSignUp}>Sign Up</Link></li>
+                </ul>
+            </Fragment>
+        );
     }
 
     render() {
-
         return (
             <div className="hamburger-container">
                 <div className="hamburger-icon" onClick={this.showMenu}>
@@ -46,22 +91,23 @@ class DropDownMenu extends Component {
                     ref={(element) => {
                         this.DropDownMenu = element;
                     }}>
-                    {/* Need to link the pages once they are built out? */}
-                    <div className="close-symbol" onClick={this.closeMenu}>X</div>
-                    <div className="buffer-box"></div>
-                    <ul>
-                        <hr />
-                        <li><Link style={textStyle} to="/sign-in">Sign In</Link></li>
-                        <hr />
-                        <li><Link style={textStyle} to="/">Home</Link></li>
-                        <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
-                        <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                        <li><button>Log Out</button></li>
-                    </ul>
+                    <div className="close-symbol" onClick={this.closeMenu}>x</div>
+                    {this.renderLinks()}
                 </div>
             </div>
         );
     }
 }
 
-export default DropDownMenu;
+function mapStateToProps(state) {
+    return {
+        auth: state.user.auth,
+        loginStatus: state.user.loginStatus.data,
+    }
+}
+
+export default connect(mapStateToProps, {
+    signOut: signOut,
+    resetAuth: resetAuth,
+    checkUserLoginStatus: checkUserLoginStatus,
+})(DropDownMenu);

@@ -11,9 +11,8 @@ import AboutSaige from './about_saige';
 import MeetTheTeam from './meet_the_team';
 import NotFoundPage from './not_found_page';
 import { Route, Switch } from 'react-router-dom';
-import AgreementModal from '../components/modal/index';
 import backgroundImg from '../assets/images/background_image.jpg';
-import LoadingPage from './loading_page/loading_page';
+// import LoadingPage from './loading_page/loading_page';
 
 const background = {
     backgroundImage: `url(${backgroundImg})`,
@@ -21,27 +20,58 @@ const background = {
 }
 
 class App extends Component {
-    // state = {
-    //     loading: true,
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+        }
+        this.displayScrollBtn = this.displayScrollBtn.bind(this);
+    }
 
-    // componentDidMount() {
-    //     setTimeout( () => {
-    //         this.setState({
-    //             loading: false,
-    //         });
-    //     }, 3000);
-    // }
+    componentDidMount() {
+        document.getElementsByClassName('container')[0].scrollTo({
+            top: 0,
+        });
+        setTimeout(() => {
+            this.setState({
+                loading: false,
+            });
+        }, 3000);
+        window.addEventListener('scroll', this.displayScrollBtn);
+    }
+
+    componentDidUpdate() {
+        document.getElementsByClassName('container')[0].scrollTo({
+            top: 0,
+        });
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.displayScrollBtn);
+    }
+
+    displayScrollBtn() {
+        if (document.getElementsByClassName('symptom-group').length > 0) {
+            if (document.getElementsByClassName('symptom-group')[0].scrollHeight > 800) {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "block";
+            } else {
+                document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+            }
+        }
+        if (document.getElementsByClassName('popup-content').length > 0) {
+            document.getElementsByClassName('popup-content')[0].style.display = "none"
+        }
+    }
 
     render() {
         // if (this.state.loading) {
         //     return <LoadingPage/>
         // }
         return (
-            <div className="container" style={background}>
-                {/* <AgreementModal/> */}
+            <div className="container" style={background} onScroll={this.displayScrollBtn}>
                 <Switch>
                     <Route path="/" exact component={UmbrellaConditions} />
+                    <Route path={"/conditions/undefined/undefined"} component={NotFoundPage} />
                     <Route path="/conditions/:categoryId" exact component={ConditionContainer} />
                     <Route path="/conditions/:categoryId/:conditionId" component={ConditionDetailContainer} />
                     <Route path="/remedy/:remedyId" component={RemedyDetailContainer} />

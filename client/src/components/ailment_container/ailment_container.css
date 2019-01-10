@@ -2,16 +2,23 @@
     width: 350px;
     height: 70px;
     border-radius: 10px;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
+    box-shadow: 0 10px 10px #000;
+}
+
+.ailment:hover{
+    box-shadow: rgb(0, 0, 0) 0px 13px 13px;
 }
 
 .ailment-name {
     padding-left: 10%;
     font-size: 25px;
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
 }
 
 a {
@@ -25,14 +32,49 @@ a {
     }
 }
 
-
 @media only screen and (min-width: 360px) {
     .ailment{
         width: 330px;
     }
 }
 
-
 @media only screen and (min-width: 411px) {
     
+}
+
+@media only screen and (min-width: 600px) {
+    .ailment {
+        width: 500px;
+    }
+    .ailment-name {
+        padding-left: 40px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ailment {
+        width: 600px;
+    }
+    .ailment-name {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .ailment {
+        width: 800px;
+    }
+    .ailment-name {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ailment {
+        width: 1000px;
+    }
+    ailment-name {
+        font-size: 42px;
+    }
 }

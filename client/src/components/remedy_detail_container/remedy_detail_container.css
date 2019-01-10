@@ -1,10 +1,13 @@
-.remedy-detail-container {
-    margin-top: 60px;
-    overflow: scroll;
+.remedy-detail-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.remedy-detail-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
 }
 
 .remedy-detail-group {
-    width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,14 +15,12 @@
 
 .remedy-reviews-container {
     width: 100%;
-    margin: 5% 4%;
-    padding: 1%;
 }
 
 .remedy-detail-header {
     font-size: 4vh;
     color: white;
-    margin: 2% 0;
+    margin: 2% 0;       
     text-align: center;
     text-shadow: 0px 4px 4px black;
 }
@@ -31,8 +32,8 @@
 }
 
 .detail-paragraph {
-    font-size: 3vh;
-    padding: 4%;
+    font-size: 20px;
+    padding: 2%;
 }
 
 .other-treatment-result-total-message {
@@ -71,118 +72,118 @@
     margin-bottom: 2%;
 }
 
-@media only screen and (min-width: 320px) {
-    .remedy-detail-description {
-        width: 310px;
-    }
-
-    .remedy-detail-container {
-        margin-top: 55px;
-    }
-
-    .remedy-detail-group {
-        width: 320px;
-    }
-
-    .remedy-reviews-container {
-        width: 309px;
-        margin: 5px;
-        padding-top: 3px;
-    }
+.popup-content  {
+    border-radius: 15px;
 }
 
+.technique {
+    text-decoration: underline;
+}
 
-@media only screen and (min-width: 360px) {
-    .remedy-detail-container {
-        margin-top: 60px;
+.technique:hover {
+    color:#EFC11D;
+}
+
+@media only screen and (min-width: 320px) {
+    .remedy-detail-description {
+        width: 260px;
     }
 
     .remedy-reviews-container {
-        width: 340px;
-        padding-top: 5px;
-        margin: 5px;    
+        padding-top: 3px;
     }
-
-    .remedy-detail-description {
-        width: 340px;
-    }
-
-    .remedy-detail-group {
-        width: 360px;
-    }
-
     .detail-paragraph {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 16px;
+        padding: 5%;
+    }
+    .popup-content {
+        font-size: 16px !important;
+        width: 130px !important;
+        padding: 10px !important;
     }
 }
 
 @media only screen and (min-width: 375px) {
     .remedy-detail-description {
-        width: 350px;
+        width: 318px;
     }
-    .remedy-detail-group {
-        width: 375px;
+    .detail-paragraph {
+        font-size: 18px;
     }
-}
-
-@media (min-height: 812px) and (min-width: 375px) {
-    .remedy-detail-container {
-        margin-top: 75px;
+    .popup-content {
+        width: 130px !important;
     }
 }
 
 
-
-@media only screen and (min-width: 411px) {
-    .remedy-detail-container {
-        margin-top: 75px;
-    }
-    
-    .remedy-detail-group {
-        width: 411px;
-    }
-
+@media only screen and (min-width: 411px) {  
     .remedy-detail-description {
-        width: 390px;
+        width: 318px;
     }
 
     .remedy-reviews-container {
-        width: 370px;
-        padding-top: 5px;
-        margin: 13px;
+        position: relative;
+    }
+    .detail-paragraph {
+        font-size: 20px;
+    }
+    .popup-content {
+        font-size: 20px !important;
+        width: 150px !important;
     }
 }
 
 
+@media only screen and (min-width: 500px) {
+    .remedy-detail-description {
+        width: 480px;
+    }
+}
 
-@media only screen and (min-width: 769px) {
-    .remedy-detail-container {
-        top: 0%;
-        width: 100%;
-        height: 100%;
-        flex-wrap: wrap;
-        overflow: scroll;
-        position: relative;
+@media only screen and (min-width: 600px) {
+    .remedy-detail-description {
+        width: 550px;
     }
-    
-    .remedy-detail-group {
-        left: 20%;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-    
-    .remedy-reviews-container {
-        left: 20%;
-        width: 80%;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+    .remedy-reviews-container{
+        margin-left: 0;
     }
 
 }
+
+@media only screen and (min-width: 768px) {
+    .remedy-detail-description {
+        width: 600px;
+    }
+    .remedy-reviews-container {
+        margin-left: 0;
+    }
+    .remedy-detail-header {
+        font-size: 42px;
+    }
+    .detail-paragraph {
+        font-size: 35px;
+    }
+    .popup-content {
+        width: 380px !important;
+        font-size: 35px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .remedy-detail-description {
+        width: 800px;
+    }
+    .remedy-reviews-container {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1387px) {
+    .remedy-detail-description {
+        width: 1000px;
+    }
+    .remedy-reviews-container {
+        margin-left: 0;
+    }
+}
+

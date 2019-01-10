@@ -1,5 +1,5 @@
 <?php
-require_once('../../public/api/post/mysql_connect.php');
+require_once('../../public/dist/api/mysql_connect.php');
 
 $json_data = file_get_contents('dummy_data.json');
 $decode = json_decode($json_data,true);

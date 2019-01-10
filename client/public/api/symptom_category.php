@@ -6,7 +6,7 @@ $output=[];
 
 //print('symptom_category running: ');
 
-$query = "SELECT ID AS _id, short_name AS name, `URL` as img FROM symptom_group";
+$query = "SELECT ID AS _id, short_name AS name, `URL` as img FROM symptom_group ORDER BY name";
 
 $result = mysqli_query($conn, $query);
 
@@ -17,5 +17,8 @@ if(mysqli_num_rows($result) > 0){
 } else {
     $output['Errors'][] = 'Invalid search. No data available.';
 }
+
+$allCategory = array_shift($output);
+$output[] = $allCategory;
 
 ?>

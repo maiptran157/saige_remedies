@@ -5,11 +5,18 @@ export default {
     GET_SINGLE_REVIEW: 'get_single_review',
     GET_CONDITIONS_LIST: 'get_conditions_list',
     GET_SEARCH_SYMPTOM: 'get_search_symptom',
-    SIGN_UP: 'sign_up',
+    GET_CONDITIONS_ID: 'get_condition_id',
     GET_SYMPTOM: 'get_symptom',
     GET_SYMPTOM_ERROR: 'get_symptom_error',
     GET_USER_SIGN_IN_INFO: 'get_user_sign_in_info',
     GET_USER_SIGN_UP_INFO: 'get_user_sign_up_info',
+    SIGN_UP_ERROR: 'sign_up_error',
+    SIGN_IN_ERROR: 'sign_in_error',
+    SIGN_OUT: 'sign_out',
     CHECK_USER_LOG_IN_STATUS: 'check_user_log_in_status',
-    SESSION_CHECK: 'session_check'
+    CHECK_USER_SIGN_UP_INFO_SUCCESS: 'check_user_sign_up_info_success',
+    CHECK_USER_SIGN_UP_INFO_FAIL: 'check_user_sign_up_info_fail',
+    SESSION_CHECK: 'session_check',
+    RESET_AUTH: 'reset_auth',
+    RESET_AUTH_ERROR: 'reset_auth_error'
 };

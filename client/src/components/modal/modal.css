@@ -18,29 +18,28 @@
   width: 60%;
   height: 65%;
   z-index: 1;
-  overflow-y: scroll;
-  
 }
 
 .basic-modal-content h1 {
   border-bottom: 1px solid #dedede;
-  margin-bottom: 20px;
-  padding-bottom: 25px;
+  margin: 0;
+  padding-bottom: 20px;
   text-align: center;
+  color: #EFC11D;
 }
 
-.basic-modal-close {
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 50%;
-  font-weight: bold;
-  color: #dedede;
-  cursor: pointer;
+.basic-modal-content p {
+  position: relative;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.basic-modal-content p::-webkit-scrollbar {
+  width: 0;
+}
+
+.basic-modal-content p::-webkit-scrollbar-thumb {
+  border-radius: 10px;
 }
 
 .basic-modal-close:hover {
@@ -52,6 +51,13 @@
   text-align: center;
 }
 
-button {
+.agree-button>button {
   border-radius: 50px;
+  border: none;
+  width: 104px;
+  height: 38px;
+  font-size: 20px;
+  background-color: #EFC11D;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
 }

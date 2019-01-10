@@ -8,31 +8,30 @@
 }
 
 .search-bar {
-    padding-left: 5%;
+    padding-left: 20px;
     width: 100%;
     height: 50%;
-    font-size: 20px;
+    font-size: 17px;
     border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .display-none {
     display: none;
 }
 
-@media only screen and (min-width: 320px) {
-    
-}
-
-@media only screen and (min-width: 411px) {
-    
-}
-
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
     .search-form {
-        display: none;
+        width: 80%;
     }
-    
+}
+
+@media only screen and (min-width: 992px) {
     .search-bar {
-        display: none;
+        width: 90%;
+    }
+    .search-form {
+        width: 40%;
+        margin-left: 3%;
     }
 }

@@ -4,13 +4,11 @@
     display: flex;
     flex-wrap: wrap;
 .meet-the-team {
-    top: 10%;
     left: 0;
     width: 100%;
     height: 90%;
     position: relative;
     color: white; 
-    overflow: auto;
     h1 {
         text-align: center
     }
@@ -47,15 +45,6 @@
     }
  }
 
-
-@media only screen and (min-width: 320px) {
-    
-}
-
-@media only screen and (min-width: 411px) {
-    
-}
-
  @media only screen and (min-width: 769px) {
     .meet-the-team-container {
         width: 100%;
@@ -63,13 +52,10 @@
         display: flex;
         flex-wrap: wrap;
     .meet-the-team {
-        top: 0%;
-        left: 20%;
-        width: 80%;
+        width: 100%;
         height: 100%;
         position: relative;
         color: white; 
-        overflow: auto;
         h1 {
             text-align: center
         }

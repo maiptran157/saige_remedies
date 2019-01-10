@@ -8,6 +8,7 @@ import portfolio from '../../assets/images/portfolio.png';
 import saigeTeam from './saige_team';
 
 export default props => {
+    localStorage.setItem('redirectUrl', '/meet-the-team')
     const displayMembers = () => {
         if (!saigeTeam) {
             return <div className="meet-the-team">Loading...</div>

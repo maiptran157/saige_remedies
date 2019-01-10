@@ -71,8 +71,10 @@ class RemedyDetailContainer extends Component {
                 for (let i = 0; i < ingredients.length; i++) {
                     if (i === ingredients.length - 1) {
                         ingredientsString += `and ${ingredients[i].ingredient.replace(matchRegex, "")}`
-                    } else {
+                    } else if (i === ingredients.length - 2) {
                         ingredientsString += `${ingredients[i].ingredient.replace(matchRegex, "")} `
+                    } else {
+                        ingredientsString += `${ingredients[i].ingredient.replace(matchRegex, "")}, `
                     }
                 }
             }

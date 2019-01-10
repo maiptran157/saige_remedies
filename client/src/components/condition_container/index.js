@@ -6,12 +6,40 @@ import { getConditionsList } from '../../actions/index';
 import Header from '../header';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
-
+import upArrow from '../../assets/images/double-up-arrow.svg';
 
 class ConditionsContainer extends Component {
+    constructor(props) {
+        super(props);
+    }
     componentDidMount() {
-        const { categoryId } = this.props.match.params
+        localStorage.setItem('redirectUrl', this.props.location.pathname);
+        const { categoryId } = this.props.match.params;
         this.props.getConditionsList(categoryId);
+        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 800) {
+            document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+        }
+    }
+
+    componentDidUpdate() {
+        if (document.getElementsByClassName('symptom-group')[0].scrollHeight <= 800) {
+            document.getElementsByClassName("back-to-top-btn")[0].style.display = "none";
+        }
+    }
+
+    renderAilmentsDesktop() {
+        const { symptoms } = this.props.conditions;
+
+        return symptoms.map((symptom) => {
+            return <AilmentDesktop _id={symptom._id} key={symptom._id} name={symptom.name} />
+        });
+    }
+
+    scrollToTop() {
+        document.getElementsByClassName('container')[0].scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     }
 
     render() {
@@ -22,8 +50,10 @@ class ConditionsContainer extends Component {
             position: 'fixed',
             color: 'white'
         }
+
         const { symptoms, symptom_group } = this.props.conditions;
         const { categoryId } = this.props.match.params;
+
         const ailments = () => {
             if (this.props.conditions.Errors) {
                 return <h2 style={style}>
@@ -43,11 +73,12 @@ class ConditionsContainer extends Component {
             }
         }
         return (
-            <div className="condition-container" >
+            <div className="condition-container">
                 <Header push={history.push} logo={saigeLogo} />
                 <div className="symptom-group">
                     <h1 className="symptom-name">{symptom_group}</h1>
                     {ailments()}
+                    <div className="back-to-top-btn" onClick={() => { this.scrollToTop() }}><img src={upArrow} alt="" /></div>
                 </div>
             </div>
         )
@@ -56,10 +87,11 @@ class ConditionsContainer extends Component {
 
 function mapStateToProps(state) {
     return {
-        conditions: state.conditions.conditionList
+        conditions: state.conditions.conditionList,
+        conditionID: state.conditionID.conditionsID
     }
 }
 
 export default connect(mapStateToProps, {
-    getConditionsList: getConditionsList
+    getConditionsList: getConditionsList,
 })(ConditionsContainer);
