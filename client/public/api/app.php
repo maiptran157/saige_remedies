@@ -56,6 +56,9 @@ switch($request){
     case 'infermedica_api':
         require_once('infermedica_api.php');
         break;
+    case 'update_review':
+        require_once('update_review.php');
+        break;
     default:
         $output['Errors'] = 'Request URL failed';
 }
