@@ -57,9 +57,7 @@ class DropDownMenu extends Component {
         if (auth && firstName) {
             return (<Fragment>
                 <ul>
-                    <hr />
-                    <li>Welcome {firstName}</li>
-                    <hr />
+                    <li className="welcome-text">Welcome {firstName}</li>
                     <li><Link style={textStyle} to="/">Home</Link></li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
