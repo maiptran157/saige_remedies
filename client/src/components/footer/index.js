@@ -2,6 +2,10 @@ import './footer.scss';
 import React, { Component } from 'react';
 import DisclaimerInfoModal from '../modal/disclaimer_info_modal';
 
+const textStyle = {
+    textDecoration: 'none'
+}
+
 class Footer extends Component {
     constructor(props) {
         super(props);
@@ -13,10 +17,10 @@ class Footer extends Component {
         console.log("Footer state:", this.state);
         return <div className="footer">
             <hr />
-            <ul>
-                <li className="disclaimer-tag" onClick={() => this.setState({ showModal: true })}>Disclaimer</li>
+            <div>
+                <div className="disclaimer-tag" style={textStyle} onClick={() => this.setState({ showModal: true })}>Disclaimer</div>
                 <DisclaimerInfoModal openModal={this.state.showModal} />
-            </ul>
+            </div>
         </div>
     }
 }

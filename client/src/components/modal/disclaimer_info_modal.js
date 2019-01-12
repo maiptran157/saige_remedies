@@ -12,8 +12,9 @@ class DisclaimerInfoModal extends Component {
     closeModal = () => this.setState({ openModal: false });
 
     render() {
+        console.log("DisclaimerInfoModal state:", this.state);
         console.log("DisclaimerInfoModal props:", this.props);
-        console.log("DisclaimerInfoModal state:", this.state)
+
         if (this.state.openModal) {
             return (
                 <div className="basic-modal" onClick={this.close}>

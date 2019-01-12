@@ -1,18 +1,14 @@
 .categories-container {
-    // top: 12%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
     position: relative;
-    // overflow: scroll;
         .categories-content {
             padding: 2%;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            height: 100%;
             margin-top: 20px;
             .category-box {
                 .category-img:hover{
@@ -26,7 +22,6 @@
     
     .categories-container {
         overflow: scroll;
-        // top: 80px;
     }
 }
 
