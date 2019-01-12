@@ -1,45 +1,22 @@
 import React, { Component } from 'react';
 import './modal.css';
-import axios from 'axios';
-import config from '../../config/index';
 
-class AgreementModal extends Component {
-    state = {
-        isOpen: false
-    };
-
-    openModal = () => this.setState({ isOpen: true });
-
-    componentDidMount() {
-        this.modalCheck()
+class DisclaimerInfoModal extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            openModal: this.props.openModal
+        };
     }
 
-    closeModal = () => {
-        this.modalAgree();
-        this.setState({
-            isOpen: false
-        });
-    }
-
-    async modalCheck() {
-        const response = await axios.get(`${config.MODAL_CHECK}`);
-        const userAgreementLocalStorage = localStorage.getItem('userAgreement');
-        if (response.data.userAgreement || userAgreementLocalStorage) {
-            this.closeModal();
-        } else {
-            this.openModal();
-        }
-    }
-
-    async modalAgree() {
-        const response = await axios.get(`${config.MODAL_AGREE}`);
-        localStorage.setItem('userAgreement', response.data.userAgreement);
-    }
+    closeModal = () => this.setState({ openModal: false });
 
     render() {
-        if (this.state.isOpen) {
+        console.log("DisclaimerInfoModal props:", this.props);
+        console.log("DisclaimerInfoModal state:", this.state)
+        if (this.state.openModal) {
             return (
-                <div onLoad={this.modalCheck} className="basic-modal" onClick={this.close}>
+                <div className="basic-modal" onClick={this.close}>
                     <div onClick={e => e.stopPropagation()} className="basic-modal-content">
                         <h1>Disclaimer</h1>
                         <p>
@@ -57,4 +34,4 @@ class AgreementModal extends Component {
     }
 }
 
-export default AgreementModal;
+export default DisclaimerInfoModal;

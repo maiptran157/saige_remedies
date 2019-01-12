@@ -29,6 +29,7 @@
 }
 
 .basic-modal-content p {
+  color: black;
   position: relative;
   max-height: 45vh;
   overflow-y: auto;
