@@ -89,7 +89,7 @@ class DropDownMenu extends Component {
                     ref={(element) => {
                         this.DropDownMenu = element;
                     }}>
-                    <div className="close-symbol" onClick={this.closeMenu}>x</div>
+                    <div className="close-symbol" onClick={this.closeMenu}><span>x</span></div>
                     {this.renderLinks()}
                 </div>
             </div>
