@@ -18,6 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-button:hover, a:hover, .back-to-top-btn:hover, .close-symbol span:hover, .hamburger-icon:hover, .disclaimer-tag:hover {
+button:hover, a:hover, .back-to-top-btn:hover, .close-symbol span:hover, .hamburger-icon:hover, .sign-out-text:hover, .disclaimer-tag:hover {
     cursor: pointer;
 }

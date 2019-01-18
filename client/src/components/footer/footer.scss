@@ -1,22 +1,24 @@
 .footer {
     width: 100vw;
-    color: white;
-    background-color: #352c23;
+    color: #352c23;
+    // color: white;
+    // background-color: #352c23;
     div {
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 3px;
+        text-align: center;
         .disclaimer-tag {
-            font-size: 20px;
+            text-decoration: underline;
         }
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .disclaimer-tag {
-        font-size: 1.3rem;
-    }
-}
+// @media only screen and (min-width: 992px) {
+//     .disclaimer-tag {
+//         font-size: 1.3rem;
+//     }
+// }
 
