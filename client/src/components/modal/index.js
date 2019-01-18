@@ -48,7 +48,6 @@ class AgreementModal extends Component {
                         <div className="agree-button">
                             <button onClick={this.closeModal}>Agree</button>
                         </div>
-
                     </div>
                 </div>
             )
