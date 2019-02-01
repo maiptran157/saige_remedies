@@ -27,8 +27,7 @@ class DropDownMenu extends Component {
         });
     }
 
-    closeMenu(event) {
-        // event.preventDefault();
+    closeMenu() {
         this.setState({ showMenu: false, }, () => {
             document.removeEventListener('click', this.closeMenu)
         });
@@ -48,7 +47,6 @@ class DropDownMenu extends Component {
 
     signOut = async () => {
         this.props.signOut();
-        localStorage.removeItem('userAgreement');
     }
 
     renderLinks() {
@@ -57,13 +55,11 @@ class DropDownMenu extends Component {
         if (auth && firstName) {
             return (<Fragment>
                 <ul>
-                    <hr />
-                    <li>Welcome {firstName}</li>
-                    <hr />
+                    <li className="welcome-text">Welcome {firstName}</li>
                     <li><Link style={textStyle} to="/">Home</Link></li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                    <li><span onClick={this.signOut} style={textStyle} >Sign Out</span></li>
+                    <li><span className="sign-out-text" onClick={this.signOut} style={textStyle} >Sign Out</span></li>
                 </ul>
             </Fragment>
             )
@@ -91,7 +87,7 @@ class DropDownMenu extends Component {
                     ref={(element) => {
                         this.DropDownMenu = element;
                     }}>
-                    <div className="close-symbol" onClick={this.closeMenu}>x</div>
+                    <div className="close-symbol" onClick={this.closeMenu}><span>x</span></div>
                     {this.renderLinks()}
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './about_saige.scss';
 import Header from '../header';
+import Footer from '../footer';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import cssIcon from '../../assets/images/css.png';
 import htmlIcon from '../../assets/images/html.png';
@@ -41,6 +42,7 @@ class AboutSaige extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

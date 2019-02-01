@@ -5,6 +5,7 @@ import { getCategoryList } from '../../actions/index'
 import CategoryContainer from '../category_container';
 import MediaQuery from "react-responsive";
 import AgreementModal from '../modal';
+import Footer from '../footer';
 import './umbrella_conditions.scss';
 import saigeLogo from '../../assets/images/saige_logo_no_stem_100px.png';
 import ReactLoading from 'react-loading';
@@ -45,6 +46,7 @@ class UmbrellaConditions extends Component {
                 <div className="categories-content">
                     {categoryList()}
                 </div>
+                <Footer />
             </div>
         )
     }

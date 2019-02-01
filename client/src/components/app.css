@@ -1,11 +1,11 @@
 body { 
     margin: 0;
     overflow: hidden;
-    cursor: pointer;
     font-size: 16px;
     min-width: 320px;
     min-height: 568px;
     font-family: 'Quicksand', sans-serif;
+    cursor: default;
 }
 
 .container {
@@ -16,4 +16,8 @@ body {
     flex-wrap: wrap;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+button:hover, a:hover, .back-to-top-btn:hover, .close-symbol span:hover, .hamburger-icon:hover, .sign-out-text:hover, .disclaimer-tag:hover {
+    cursor: pointer;
 }

@@ -24,7 +24,6 @@ class WebMenu extends Component {
 
     signOut = async () => {
         this.props.signOut();
-        localStorage.removeItem('userAgreement');
     }
 
     renderLinks() {
@@ -33,10 +32,10 @@ class WebMenu extends Component {
         if (auth && firstName) {
             return (
                 <Fragment>
-                    <li style={textStyle}>Welcome {firstName}</li>
+                    <li className="welcome-text" style={textStyle}>Welcome {firstName}</li>
                     <li><Link style={textStyle} to="/about-saige">About Saige</Link></li>
                     <li><Link style={textStyle} to="/meet-the-team">Meet the Team</Link></li>
-                    <li><span onClick={this.signOut} style={textStyle}>Sign Out</span></li>
+                    <li><span className="sign-out-text" onClick={this.signOut} style={textStyle}>Sign Out</span></li>
                 </Fragment>
             )
         }

@@ -1,4 +1,4 @@
-.basic-modal {
+.basic-modal, .disclaimer-info-modal {
   background-color: rgba(0, 0, 0, .7);
   display: flex;
   height: 100vh;
@@ -9,18 +9,17 @@
   z-index: 1000;
 }
 
-.basic-modal-content {
+.basic-modal-content, .disclaimer-info-modal-content {
   background-color: white;
   border-radius: 20px;
   margin: auto;
   padding: 25px;
   position: relative;
   width: 60%;
-  height: 65%;
   z-index: 1;
 }
 
-.basic-modal-content h1 {
+.basic-modal-content h1, .disclaimer-info-modal-content h1 {
   border-bottom: 1px solid #dedede;
   margin: 0;
   padding-bottom: 20px;
@@ -28,23 +27,25 @@
   color: #EFC11D;
 }
 
-.basic-modal-content p {
+@media only screen and (max-width: 375px) {
+  .basic-modal-content h1, .disclaimer-info-modal-content h1 {
+    font-size: 25px;
+  }
+}
+
+.basic-modal-content p, .disclaimer-info-modal-content p {
+  color: black;
   position: relative;
   max-height: 45vh;
   overflow-y: auto;
 }
 
-.basic-modal-content p::-webkit-scrollbar {
+.basic-modal-content p::-webkit-scrollbar, .disclaimer-info-modal-content p::-webkit-scrollbar {
   width: 0;
 }
 
-.basic-modal-content p::-webkit-scrollbar-thumb {
+.basic-modal-content p::-webkit-scrollbar-thumb, .disclaimer-info-modal-content p::-webkit-scrollbar-thumb {
   border-radius: 10px;
-}
-
-.basic-modal-close:hover {
-  color: #ff0000;
-  background-color: #dedede;
 }
 
 .agree-button {
