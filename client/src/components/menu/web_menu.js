@@ -24,7 +24,6 @@ class WebMenu extends Component {
 
     signOut = async () => {
         this.props.signOut();
-        localStorage.removeItem('userAgreement');
     }
 
     renderLinks() {

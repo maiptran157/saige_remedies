@@ -27,6 +27,12 @@
   color: #EFC11D;
 }
 
+@media only screen and (max-width: 375px) {
+  .basic-modal-content h1, .disclaimer-info-modal-content h1 {
+    font-size: 25px;
+  }
+}
+
 .basic-modal-content p, .disclaimer-info-modal-content p {
   color: black;
   position: relative;

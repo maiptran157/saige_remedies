@@ -4,10 +4,6 @@ import searchOption from './input_bar_predefined_options';
 import { connect } from 'react-redux';
 import { userSearchTerm } from '../../actions/index';
 
-const display = {
-  display: 'none',
-}
-
 class InputBar extends Component {
   constructor(props) {
     super(props);
@@ -17,8 +13,8 @@ class InputBar extends Component {
     };
   }
 
-  componentDidMount() {
-    this.checkPage();
+  async componentDidMount() {
+    await this.checkPage();
   }
 
   handleValueChange = (event) => {
@@ -34,7 +30,7 @@ class InputBar extends Component {
     }, 300);
   }
   checkPage() {
-    if (this.props.match === '/meet-the-team' || this.props.match === '/about-saige') {
+    if (this.props.match === '/meet-the-team' || this.props.match === '/about-saige' || this.props.match === '/conditions/undefined/undefined') {
       this.setState({
         match: true,
       })

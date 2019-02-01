@@ -8,18 +8,7 @@ const textStyle = {
 class DisclaimerInfoModal extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     openModal: false
-        // };
     }
-
-    // componentWillReceiveProps() {
-    //     this.setState({
-    //         openModal: this.props.openModal
-    //     })
-    // }
-
-    // closeModal = () => this.setState({ openModal: false });
 
     render() {
         if (this.props.openModal) {

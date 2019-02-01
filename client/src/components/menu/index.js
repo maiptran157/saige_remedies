@@ -27,8 +27,7 @@ class DropDownMenu extends Component {
         });
     }
 
-    closeMenu(event) {
-        // event.preventDefault();
+    closeMenu() {
         this.setState({ showMenu: false, }, () => {
             document.removeEventListener('click', this.closeMenu)
         });
@@ -48,7 +47,6 @@ class DropDownMenu extends Component {
 
     signOut = async () => {
         this.props.signOut();
-        localStorage.removeItem('userAgreement');
     }
 
     renderLinks() {
