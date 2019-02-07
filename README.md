@@ -1,13 +1,23 @@
-# c718_findhomeremedies
+# Saige Remedies
 
-# info
-https://docs.google.com/document/u/1/d/e/2PACX-1vR_eqf41XG-m_A_eYMZe8kH_Y3RVKm8zUF6fqAd7KvfmE_O3kBUqtP45wwTBjWyuxCaNZ08Bcxje8Gl/pub
+> Health and lifestyle application to help you find natural home remedies for your health.
 
-# team members
-- Mia Tran
-- Jaytrin Apinchapong
-- Jonathan Gallo
-- Perry Tran
+### Setup Instructions
 
-# mentors
-- tbd
+> 1. Fork this repo
+> 1. Clone your forked copy of this repo
+>    - `git clone https://github.com/[Your Username]/c718_findhomeremedies.git`
+> 1. Change directory into the newly cloned repo
+>    - `cd c718_findhomeremedies`
+> 1. Install dependencies 
+>    - `npm install`
+> 1. Start dev server
+>    - `npm start`
+> 1. Open a browser and navigate to `localhost:3000`
+
+### Bundle For Deployment
+
+> 1. Run webpack to bundle files
+>    - `npm run bundle`
+> 
+> **NOTE:** *After bundling you can not directly run your app locally. You must run your app from the root directory of a server.*
